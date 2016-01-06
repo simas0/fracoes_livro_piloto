@@ -1,1 +1,1 @@
-# Livro-Aberto-de-Matematica-texto-do-projeto-
+# Livro-Aberto-de-Matematica-texto-do-projeto
