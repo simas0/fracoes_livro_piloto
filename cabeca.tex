@@ -1,0 +1,381 @@
+
+\usepackage{amssymb,amsmath,amsthm,amscd}
+%\usepackage[all]{xy}
+\usepackage[latin1]{inputenc}
+\usepackage{lipsum}
+\usepackage[brazil]{babel}
+%\usepackage{pdfsync} % sync the pdf file to inverse 'search' (using Sumatra)
+%\usepackage[pdftex]{graphicx}
+\usepackage{graphicx, enumerate}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+\usepackage{chngcntr}
+\usepackage[autostyle]{csquotes}
+\usepackage{hyperref}% to use \url{..} or \hyperref[label_name]{''link text''}
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+
+\DeclareGraphicsRule{.wmf}{bmp}{}{}% declare WMF filename extension
+
+%\usepackage{psfrag}
+
+\addtolength{\textwidth}{100pt} \addtolength{\textheight}{58pt}
+\addtolength{\hoffset}{-50pt} \addtolength{\voffset}{-15pt}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\setlength{\topmargin}{-0.9 in} \setlength{\textwidth}{6.50 in}
+%\setlength{\oddsidemargin}{0.2 in} \setlength{\evensidemargin}{0.2 in}
+\setlength{\textheight}{9.5 in} \setlength{\marginparwidth}{0.5 in}
+\setlength{\marginparsep}{0.5 in}
+\renewcommand{\baselinestretch}{1.5}
+
+
+\newcommand{\comment}[1]{\marginpar{\quad\sffamily{\tiny #1 \par}}}
+%\usepackage[notref,notcite]{showkeys}
+
+%\usepackage[hypertex]{hyperref}
+%\usepackage{hyperref}
+
+
+\numberwithin{equation}{section}
+
+\counterwithin{table}{section}
+
+% theorems, some fancy :)
+
+\newcommand{\sol}{\noindent{\bf Solução: }}
+\newtheoremstyle{fancy1}{10pt}{10pt}{\itshape}{12pt}{\textsc\bgroup}{.\egroup}{8pt}{}
+
+\newtheoremstyle{fancy2}{10pt}{10pt}{}{0pt}{\itshape}{:}{8pt}{ }
+
+\newtheoremstyle{EP}{10pt}{7pt}{}{1pt}{\textsl{\textbf{Questão}} }{: }{}{#2}
+
+\theoremstyle{fancy2}
+\newtheorem{q}{{\textsl{\bf Questão}}}
+
+
+\theoremstyle{fancy1}
+\newtheorem{cor}[equation]{Corollary}
+\newtheorem{lem}[equation]{Lemma}
+\newtheorem{prop}[equation]{Proposition}
+\newtheorem{thm}{Teorema}
+\newtheorem{problem}{Problem}
+\newtheorem{main}{Theorem}
+\newtheorem*{main*}{Theorem}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor*}{Corollary}
+\newtheorem{claim}{Claim}
+\newtheorem*{mainc}{Corollary C}
+
+
+\newtheorem*{problem*}{Problem}
+\newtheorem{exercise}{Exercise}
+
+%\renewcommand{\themain}{\Alph{main}}
+%\renewcommand{\thetable}{\theequation}
+%\setcounter{table}{\value{section}}
+
+
+
+\theoremstyle{fancy2}
+\newtheorem{definition}{Definição}
+\newtheorem{rem}{Observação}
+\newtheorem*{rem*}{Remark}
+\newtheorem{exemplo}{Exemplo}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\aref}[1]{Addendum~\ref{#1}}
+\newcommand{\cref}[1]{Corollary~\ref{#1}}
+\newcommand{\dref}[1]{Definition~\ref{#1}}
+\newcommand{\eref}[1]{Example~\ref{#1}}
+\newcommand{\lref}[1]{Lemma~\ref{#1}}
+\newcommand{\pref}[1]{Proposition~\ref{#1}}
+\newcommand{\rref}[1]{Remark~\ref{#1}}
+\newcommand{\tref}[1]{Theorem~\ref{#1}}
+\newcommand{\sref}[1]{Seção~\ref{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%Greek letters
+
+\newcommand{\ga}{\alpha}
+\newcommand{\gb}{\beta}
+\newcommand{\gc}{\gamma}
+\newcommand{\gd}{\delta}
+\newcommand{\gl}{\lambda}
+%\newcommand{\gL}{\Lambda}
+\newcommand{\gt}{\theta}
+\newcommand{\gep}{\epsilon}
+%\newcommand{\gS}{\Sigma}
+\newcommand{\gs}{\sigma}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\e}{\epsilon}
+\newcommand{\gC}{\Gamma}
+\newcommand{\gS}{\Sigma}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%complex proj. space, quat. proj. space,  Cayley plane, Sphere
+
+
+\newcommand{\RP}{\mathbb{R\mkern1mu P}}
+\newcommand{\CP}{\mathbb{C\mkern1mu P}}
+\newcommand{\HP}{\mathbb{H\mkern1mu P}}
+\newcommand{\CaP}{\mathrm{Ca}\mathbb{\mkern1mu P}^2}
+%\newcommand{§}{\mathbb{S}}
+\newcommand{\Sph}{\mathbb{S}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% complex, real, integers
+
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+ \newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\QH}{{\mathbb{H}}}
+%\newcommand{\Ra}{{\mathbb{Q}} }
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Lie groups
+
+% \renewcommand{\H }{\ensuremath{\operatorname{H}}}
+% \newcommand{\I}{\ensuremath{\operatorname{I}}}
+% \newcommand{\E}{\ensuremath{\operatorname{E}}}
+% \newcommand{\F}{\ensuremath{\operatorname{F}}}
+% \newcommand{\G}{\ensuremath{\operatorname{G}}}
+% \newcommand{\D}{\ensuremath{\operatorname{D}}}
+% \newcommand{\SO}{\ensuremath{\operatorname{SO}}}
+% 
+% %\renewcommand{Ø}{\ensuremath{\operatorname{O}}}
+% \newcommand{\Sp}{\ensuremath{\operatorname{Sp}}}
+% %\newcommand{\U}{\ensuremath{\operatorname{U}}}
+% \newcommand{\SU}{\ensuremath{\operatorname{SU}}}
+% \newcommand{\Spin}{\ensuremath{\operatorname{Spin}}}
+% \newcommand{\Pin}{\ensuremath{\operatorname{Pin}}}
+% \newcommand{\T}{\ensuremath{\operatorname{T}}}
+% \renewcommand{§}{\ensuremath{\operatorname{S}}}
+% \renewcommand{¶}{\ensuremath{\operatorname{P}}}
+% \newcommand{\No}{\ensuremath{\operatorname{N}}}
+% 
+% \newcommand{\K}{\ensuremath{\operatorname{K}}}
+% \renewcommand{\L}{\ensuremath{\operatorname{L}}}
+% \newcommand{\W}{\ensuremath{\operatorname{W}}}
+% %\newcommand{\Q}{\ensuremath{\operatorname{Q}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%Lie algebras
+
+\newcommand{\fg}{{\mathfrak{g}}}
+\newcommand{\fk}{{\mathfrak{k}}}
+\newcommand{\fh}{{\mathfrak{h}}}
+\newcommand{\fm}{{\mathfrak{m}}}
+\newcommand{\fn}{{\mathfrak{n}}}
+\newcommand{\fa}{{\mathfrak{a}}}
+\newcommand{\fb}{{\mathfrak{b}}}
+\newcommand{\fr}{{\mathfrak{r}}}
+\newcommand{\fp}{{\mathfrak{p}}}
+\newcommand{\fgl}{{\mathfrak{gl}}}
+\newcommand{\fl}{{\mathfrak{l}}}
+\newcommand{\fso}{{\mathfrak{so}}}
+\newcommand{\fsu}{{\mathfrak{su}}}
+\newcommand{\fu}{{\mathfrak{u}}}
+\newcommand{\ft}{{\mathfrak{t}}}
+\newcommand{\fz}{{\mathfrak{z}}}
+\newcommand{\fsp}{{\mathfrak{sp}}}
+\newcommand{\ff}{{\mathfrak{f}}}
+
+
+\newcommand{\fspin}{{\mathfrak{spin}}}
+\newcommand{\fspi}{{\mathfrak{spin}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% inner products, mods, brackets
+
+\newcommand{\pro}[2]{\langle #1 , #2 \rangle}
+\newcommand{\gen}[1]{\langle #1 \rangle}
+\newcommand{\orth}[2]{\text{S(O(#1)O(#2))}}
+\def\con#1=#2(#3){#1 \equiv #2 \bmod{#3}}
+\newcommand{\Lbr}{\bigl(}
+\newcommand{\Rbr}{\bigr)}
+\newcommand{\bml}{\bigl\langle}
+\newcommand{\bmr}{\bigr\rangle}
+\newcommand{\ml}{\langle}                     % Riemannian metric (left )
+\newcommand{\mr}{\rangle}                    % Riemannian metric (right)
+
+\newcommand{\pel}{\parallel}                    % parallel lines
+
+% arrows
+
+
+\def\jjoinrel{\mathrel{\mkern-4mu}}
+\def\llongrightarrow{\relbar\jjoinrel\longrightarrow}
+\def\lllongrightarrow{\relbar\jjoinrel\llongrightarrow}
+\def\Lllongrightarrow{\relbar\jjoinrel\relbar\jjoinrel\llongrightarrow}
+
+%\newcommand{\ra}{\rightarrow}
+\newcommand{\hra}{\hookrightarrow}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\llra}{\longleftrightarrow}
+\newcommand{\Lra}{\Longrightarrow}
+\newcommand{\Ra}{\Rightarrow }
+\newcommand{\La}{\Leftarrow }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% mathematical operators
+\newcommand{\sign}{\ensuremath{\operatorname{sign}}}
+
+\newcommand{\tr}{\ensuremath{\operatorname{tr}}}
+\newcommand{\diag}{\ensuremath{\operatorname{diag}}}
+\newcommand{\Aut}{\ensuremath{\operatorname{Aut}}}
+\newcommand{\Int}{\ensuremath{\operatorname{Int}}}
+\newcommand{\rank}{\ensuremath{\operatorname{rk}}}
+%\newcommand{\dim}{\ensuremath{\operatorname{dim}}}
+\newcommand{\codim}{\ensuremath{\operatorname{codim}}}
+\newcommand{\corank}{\ensuremath{\operatorname{corank}}}
+\renewcommand{\Im}{\ensuremath{\operatorname{Im}}}
+\newcommand{\Ad}{\ensuremath{\operatorname{Ad}}}
+\newcommand{\ad}{\ensuremath{\operatorname{ad}}}
+\newcommand{\diam}{\ensuremath{\operatorname{diam}}}
+\renewcommand{\sec}{\ensuremath{\operatorname{sec}}}
+\newcommand{\Ric}{\ensuremath{\operatorname{Ric}}}
+\newcommand{\ric}{\ensuremath{\operatorname{ric}}}
+\newcommand{\vol}{\ensuremath{\operatorname{vol}}}
+\newcommand{\II}{\ensuremath{\operatorname{II}}}
+
+\DeclareMathOperator{\Sym}{Sym} \DeclareMathOperator{\Real}{Real}
+\DeclareMathOperator{\Or}{O} \DeclareMathOperator{\Iso}{Iso}
+\DeclareMathOperator{\symrank}{symrank}
+\DeclareMathOperator{\symdeg}{symdeg}
+\DeclareMathOperator{\cohom}{cohom}
+\DeclareMathOperator{\kernel}{kernel}
+\DeclareMathOperator{\Map}{Map} \DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\trace}{trace} \DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\arccotan}{arccotan}
+\DeclareMathOperator{\parity}{par} \DeclareMathOperator{\pr}{pr}
+\DeclareMathOperator{\ind}{index} \DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Kernel}{Ker}
+     \DeclareMathOperator{\Exp}{Exp}
+\DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Gr}{Gr} \DeclareMathOperator{\nul}{null}
+\DeclareMathOperator{\spam}{span}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% tilde's hat's bar's
+
+\newcommand{\wh}{\widehat}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% good looking + and +/-
+
+\newcommand{\Kpmo}{K_{\scriptscriptstyle{0}}^{\scriptscriptstyle{±}}}
+\newcommand{\Kpo}{K_{\scriptscriptstyle{0}}^{\scriptscriptstyle{+}}}
+\newcommand{\Kmo}{K_{\scriptscriptstyle{0}}^{\scriptscriptstyle{-}}}
+\newcommand{\Kpm}{K^{\scriptscriptstyle{±}}}
+\newcommand{\Kp}{K^{\scriptscriptstyle{+}}}
+\newcommand{\Km}{K^{\scriptscriptstyle{-}}}
+\newcommand{\Ko}{K_{\scriptscriptstyle{0}}}
+
+\newcommand{\Ho}{H_{\scriptscriptstyle{0}}}
+\newcommand{\Ktpm}{\tilde{K}^{\scriptscriptstyle{±}}}
+\newcommand{\Kbpm}{\bar{K}^{\scriptscriptstyle{±}}}
+\newcommand{\Kbp}{\bar{K}^{\scriptscriptstyle{+}}}
+\newcommand{\Kbm}{\bar{K}^{\scriptscriptstyle{-}}}
+\newcommand{\Ktm}{\tilde{K}^{\scriptscriptstyle{-}}}
+\newcommand{\Ktp}{\tilde{K}^{\scriptscriptstyle{+}}}
+\newcommand{\Hb}{\bar{H}}
+\newcommand{\Ht}{\tilde{H}}
+
+\newcommand{\ovl}{\overline}
+
+
+
+
+
+\newcommand{\Shp}{S^{\scriptscriptstyle{+}}}
+\newcommand{\Shm}{S^{\scriptscriptstyle{-}}}
+\newcommand{\Shpm}{S^{\scriptscriptstyle{±}}}
+\newcommand{\Dp}{D^{\scriptscriptstyle{+}}}
+\newcommand{\Dm}{D^{\scriptscriptstyle{-}}}
+\newcommand{\Dpm}{D^{\scriptscriptstyle{±}}}
+\newcommand{\Bp}{B^{\scriptscriptstyle{+}}}
+\newcommand{\Bm}{B^{\scriptscriptstyle{-}}}
+\newcommand{\Bpm}{B^{\scriptscriptstyle{±}}}
+\newcommand{\lp}{l^{\scriptscriptstyle{+}}}
+\newcommand{\lm}{l^{\scriptscriptstyle{-}}}
+\newcommand{\lpm}{l^{\scriptscriptstyle{±}}}
+
+%general small looking subscript 0
+
+\newcommand{\subo}{_{\scriptscriptstyle{0}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% useful ones
+
+\newcommand{\no}{\noindent}
+\newcommand{\co}{{cohomogeneity}}
+\newcommand{\coo}{{cohomogeneity one}}
+\newcommand{\com}{{cohomogeneity one manifold}}
+\newcommand{\coms}{{cohomogeneity one manifolds}}
+\newcommand{\coa}{{cohomogeneity one action}}
+\newcommand{\coas}{{cohomogeneity one actions}}
+
+\newcommand{\ka}{Kähler }
+\newcommand{\holo}{holomorphic }
+\newcommand{\herm}{Hermitian}
+\newcommand{\cpt}{compact }
+\newcommand{\mfld}{manifold}
+\newcommand{\hbc}{holomorphic bisectional curvature }
+\newcommand{\sff}{second fundamental form}
+\newcommand{\spa}{\mbox{span}}
+\newcommand{\kk}{\kappa}
+
+\renewcommand{\sc}{sectional curvature}
+\newcommand{\cu}{curvature}
+\newcommand{\nn}{non-negative}
+\newcommand{\nnc}{non-negative curvature}
+\newcommand{\nnsc}{non-negative sectional curvature}
+\newcommand{\pc}{positive curvature}
+\newcommand{\psc}{positive sectional curvature}
+\newcommand{\pcu}{positively curved}
+\newcommand{\qp}{quasi positive}
+\newcommand{\ap}{almost positive}
+
+
+\newcommand{\np}{nonprincipal}
