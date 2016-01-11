@@ -7,6 +7,13 @@
 *.out
 *.toc
 
+## Novos arquivos para ignorar
+livro_didatico_V01.tex
+*.ods
+*.pdf
+*.backup
+*.png
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*
