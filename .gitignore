@@ -13,6 +13,10 @@ livro_didatico_V01.tex
 *.pdf
 *.backup
 *.png
+*.bib
+*.dropbox
+*.gitignore~
+*.bib~
 
 ## Intermediate documents:
 *.dvi
