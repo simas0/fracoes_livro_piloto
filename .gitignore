@@ -18,6 +18,7 @@ livro_didatico_V01.tex
 *.gitignore~
 *.bib~
 *.planner
+*.xcf
 
 ## Intermediate documents:
 *.dvi
