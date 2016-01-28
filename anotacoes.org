@@ -1,0 +1,35 @@
+* Detalhes técnicos
+** pdf com QR para links
+* Escolas particulares
+** Função de divulgação (renomadas)
+** Não representam uma proporção grande de matrículas
+   - Qual é a fração?
+* Adoção do material
+** Massificação durante a elaboração
+* Fontes de renda para a OBMEP
+** Repasse do ministério
+   - sob pretexto de baixar os custos de educação
+** PNLD
+** Venda de livros (pouquíssima porcentagem)
+* Opções de licença
+** CC em geral
+*** Vantagens
+    - ajuda na disseminação em geral do material:
+      todo material "All rights reserved" requer autorizações explicitas
+** CC BY
+*** Vantagens
+**** Muito difícil o projeto morrer
+****
+*** Desvantagens
+**** Licenças muito abertas complicam a inclusão de material de terceiros
+     - a melhor pra isso é CC BY NC SA
+** CC BY NC
+*** Vantagens
+*** Desvantagens
+* Usos já bem estabelecidos
+** OEM
+** Wikipedia
+** OpenCourseWare
+   - MIT OpenCourseWare has been releasing its materials under a CC BY-NC-SA license since 2004. Today, MIT OCW has over 1900 courses available freely and openly online for anyone, anywhere to adapt, translate, and redistribute.
+
+
