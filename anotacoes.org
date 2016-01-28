@@ -32,4 +32,8 @@
 ** OpenCourseWare
    - MIT OpenCourseWare has been releasing its materials under a CC BY-NC-SA license since 2004. Today, MIT OCW has over 1900 courses available freely and openly online for anyone, anywhere to adapt, translate, and redistribute.
 
+** [[http://www.uff.br/cdme/][CDME]]
+** [[http://www.mais.mat.br/wiki/P%C3%A1gina_principal][Mais recursos educacionais]]
+** [[http://www.mais.mat.br/wiki/P%C3%A1gina_principal][REA]] (vários recursos interessantes, já vi todos até o MRE acima)
+
 
