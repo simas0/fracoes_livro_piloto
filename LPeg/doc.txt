@@ -1,0 +1,62 @@
+====== Capítulo 1 - Todo, metade, um terço, um quarto, ..., um décimo, um onze avos, ..., um centésimo, ... ======
+
+<WRAP professor> Este capítulo tem por objetivo introduzir frações unitárias "um quarto de..." e apresentar esta quantidade em diversos modelos visuais "disco, retângulo, hexágono, um lado de um triângulo equilátero, bolinhas". Diversos jogos e atividades. Devemos também estabelecer a ordenação das frações unitárias.
+
+Nosso objetivo na construção dos números é completar a reta (bijeção). Em particular, no caso dos racionais as frações unitárias serão essenciais para alcançar todos os racionais. 
+
+Identificar e representar a partir de modelos visuais frações unitárias quaisquer. Comparar frações unitárias. Utilizar a linguagem um sétimo, sétima parte, metade, um meio, um terço, um doze avos, um décimo, um centésimo.
+</WRAP>
+
+**Representações contínuas e discretas juntos?**
+
+<WRAP introdutorio>
+
+<WRAP imagem> Retângulo representando uma barra de chocolate sem subdivisões, sem linhas dentro do retângulo </WRAP>
+
+Dividir uma barra de chocolate para três crianças. Sem rabiscar na figura. Quanto do chocolate deve ficar para cada criança?
+</WRAP>
+
+<WRAP professor> Esperamos despertar a necessidade do uso da expressão **um terço** e de criar uma representação visual desta ideia.
+</WRAP>
+
+===== Discussão e atividades iniciais (ou Fazendo Conexões?)=====
+
+Apresentar diferentes representações da mesma fração unitária. Por exemplo: dividir um retângulo em dois retângulos congruentes, depois cortar um destes retângulos pela diagonal e o outro em outros dois retângulos congruentes.
+
+===== Modelo abstrato ===== 
+
+Tem que entrar a representação na reta. Sugestão: jogo para estudantes com dislexia. Outro é um jogo com uma fita representando a reta numérica e os estudantes devem marcar as frações $1/2, 1/3 , \cdots, 1/10$.
+
+Número será definido como um ponto da "reta numérica" (reta com dois pontos escolhidos, um chamado zero e outro será um).
+
+
+===== Atividades, exercícios e desafios ===== 
+
+<WRAP exercicio> O pai de Joãozinho e Maria dividiu uma barra de chocolates ao meio e depois dividiu uma das partes em três partes iguais como representado na figura abaixo. Entregou as 3 partes menores para Joãozinho e a outra parte para Maria. Quem recebeu mais pedaços de chocolate? Quem recebeu mais chocolate Joãozinho ou Maria?
+
+<WRAP figura> inserir a figura "chocolate partido" (feita a mão) </WRAP>
+
+<WRAP resposta> Joãozinho recebeu três pedaços de chocolate e Maria apenas 1, portanto, Joãozinho recebeu mais pedaços de chocolate. Contudo os três pedaços de Joãzinho correspondem a metade da barra de chocolate. Portanto, ambos receberam a mesma quantidade de chocolate.</WRAP> 
+
+<WRAP professor> Este exercício pode parecer deslocado porque o estudante ainda não sabe dividir $1/2$ por 3. Mas esperamos apenas que ele observe que a quantidade (de chocolate) pode ser a mesma ainda que o número de pedaços seja diferente.</WRAP>
+</WRAP>
+
+<WRAP exercicio> Identifique em quais dos modelos visuais abaixo a área da parte hachurada representa melhor cada uma das frações das áreas 1/2, 1/3 e 1/5:
+
+<WRAP imagem> figuras com diversas formas envolvendo modelos diversos.</WRAP>
+
+{{ :cap1:figuras.jpg?200 |}}
+
+<WRAP professor> Importante observar ao estudante que são iguais em área, não necessariamente em forma.</WRAP>
+</WRAP>
+
+Criar aplicativo com o pinguim e frações unitárias.
+
+Tangram --> áreas equivalentes com figuras diferentes.
+
+Atividades da coleção Math Makes Sense vol. 4 pag. 176. Envolvendo estimativas.
+
+A tecnologia pode ajudar a perceber frações unitárias menores, tipo $1/35$ ou $1/100$. Tipo do vol. 4 canadense p.176.
+
+$asdf
+===== Refletindo ===== 
