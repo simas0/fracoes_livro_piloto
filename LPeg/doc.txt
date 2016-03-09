@@ -1,33 +1,84 @@
-====== Capítulo 1 - Todo, metade, um terço, um quarto, ..., um décimo, um onze avos, ..., um centésimo, ... ======
+====== Capítulo 1 - Todo, metade, um terço, um quarto, ..., um décimo, um onze avos, ..., um centésimo, ..., um milésimo, ... ======
 
 <WRAP professor> Este capítulo tem por objetivo introduzir frações unitárias "um quarto de..." e apresentar esta quantidade em diversos modelos visuais "disco, retângulo, hexágono, um lado de um triângulo equilátero, bolinhas". Diversos jogos e atividades. Devemos também estabelecer a ordenação das frações unitárias.
 
 Nosso objetivo na construção dos números é completar a reta (bijeção). Em particular, no caso dos racionais as frações unitárias serão essenciais para alcançar todos os racionais. 
 
 Identificar e representar a partir de modelos visuais frações unitárias quaisquer. Comparar frações unitárias. Utilizar a linguagem um sétimo, sétima parte, metade, um meio, um terço, um doze avos, um décimo, um centésimo.
+
+modelo de círculo deixa evidente a fração considerada e a fração complementar.
+
+**PREMISSAS**:
+
+  - BNC: **MTMT3FOA017** (Resolver e elaborar problemas de divisão (repartir uma coleção em partes iguais, determinar quantas vezes uma quantidade cabe em outra, metade e terça parte), em linguagem verbal, com o suporte de imagens ou materiais de manipulação); **MTMT4FOA019** (Reconhecer e representar frações usuais de quantidades contínuas e discretas, relacionando-as às frações unitárias) e **MTMT4FOA020** (Reconhecer que, em uma unidade dividida em 10 partes iguais, cada parte corresponde a um décimo e que, em uma unidade dividida em 100 partes iguais, cada parte corresponde a um centésimo, representando simbolicamente décimos e centésimos, bem como elaborando composições e decomposições de números decimais (décimos e centésimos).
+  - O aluno já conhece e usa a reta numerada para representar os números Naturais;
+  - 
+
+
+**OBJETIVOS ESPECÍFICOS** 
+Identificar e representar a partir de modelos visuais frações unitárias quaisquer;  
+Utilizar a linguagem um sétimo, sétima parte, metade, um meio, um terço, um doze avos, um décimo, um centésimo;
+
+
+**OBS**:
+  * Não tratar de modelos discretos;
+  * Deixar frações com denominadores maiores do que 4 para uma próxima seção;
+  * Valorizar a atividade em grupo e a discussão;
+  * Tratar a comparação pela ordem sem formalizar; 
+
+**DÚVIDAS**
+Vamos usar o modelo dos círculos?
+
+
+
+
+
 </WRAP>
 
 **Representações contínuas e discretas juntos?**
 
-<WRAP introdutorio>
+<WRAP Atividades iniciais>
 
-<WRAP imagem> Retângulo representando uma barra de chocolate sem subdivisões, sem linhas dentro do retângulo </WRAP>
+**ATIVIDADE 1** 
+(Objetivo específicos: Diferenciar a divisão em três partes da divisão em três partes "iguais")
+(Atividade a ser realizada em grupos: grupos de 3 alunos) 
 
-Dividir uma barra de chocolate para três crianças. Sem rabiscar na figura. Quanto do chocolate deve ficar para cada criança?
-</WRAP>
+Para o lanche, três irmão vão repartir uma barra de chocolate. Como eles podem fazer essa divisão? 
+{{ :cap1:barra_chocolate.jpg?direct&100 |}}
+
+**ATIVIDADE II**
+(Objetivo específicos: Identificar uma divisão em partes "iguais"; compreender as expressoes metade, terco/terca parte e quarto/quarta parte como formas de nomear partes de uma equiparticao)
+(Atividade a ser realizada em grupos: grupos de 3 ou 4 alunos) 
+
+Estas crianças estão repartindo pizzas. Observe como cada grupo repartiu a sua pizza.
+IMAGEM: 3 GRUPOS DE CRIANÇAS que contemplem as seguintes divisoes: 
+GRUPO COM DUAS CRIANCAS: {{ :cap1:nao_metade.jpg?direct&100 |}}
+Grupo com tres criancas: {{ :cap1:nao_tercos.jpg?direct&100 |}}
+Grupo com tres criancas: {{ :cap1:quartos.jpg?direct&100 |}}
+
+Para discussão:
+  - Em qual dos grupos, os participantes receberao quantidades iguais de pizza;	
+
+
+ATIVIDADE III 
+
 
 <WRAP professor> Esperamos despertar a necessidade do uso da expressão **um terço** e de criar uma representação visual desta ideia.
 </WRAP>
 
+
 ===== Discussão e atividades iniciais (ou Fazendo Conexões?)=====
+
+No problema acima tivemos alguns aspectos imortantes a serem destacados
 
 Apresentar diferentes representações da mesma fração unitária. Por exemplo: dividir um retângulo em dois retângulos congruentes, depois cortar um destes retângulos pela diagonal e o outro em outros dois retângulos congruentes.
 
+Incluir atividades com a questão das partes iguais e para fixar a importância do todo (área, perímetro, número de peças, etc.). Sugestão utilizar as figuras do Van-der-walle, página 326.
 ===== Modelo abstrato ===== 
 
 Tem que entrar a representação na reta. Sugestão: jogo para estudantes com dislexia. Outro é um jogo com uma fita representando a reta numérica e os estudantes devem marcar as frações $1/2, 1/3 , \cdots, 1/10$.
 
-Número será definido como um ponto da "reta numérica" (reta com dois pontos escolhidos, um chamado zero e outro será um).
+O caráter abstrato do número. Número não será definido. Mas deixaremos claro que existe um número para cada ponto da "reta numérica" e que para cada ponto da reta numérica há um número. Reconhecemos a dificuldade dessas questões.
 
 
 ===== Atividades, exercícios e desafios ===== 
@@ -50,6 +101,13 @@ Número será definido como um ponto da "reta numérica" (reta com dois pontos e
 <WRAP professor> Importante observar ao estudante que são iguais em área, não necessariamente em forma.</WRAP>
 </WRAP>
 
+<WRAP exercicio>
+Quais das oito figuras a seguir estão divididas em quatro partes iguais? Explique os motivos que levaram a sua escolha.
+<WRAP figura>{{ :cap1:exer-01.png?500 |}}</WRAP>
+<WRAP resposta>(A), (C), (D), (G) e (H). </WRAP>
+<WRAP professor>É importante que, com exercícios como este, o aluno ganhe a habilidade de identificar quando um todo está ou não dividido em partes iguais. Também é importante que o aluno perceba que uma figura pode estar divida em partes iguais sem que estas partes sejam congruentes, como nos mostra a Figura (C).</WRAP>
+</WRAP>
+
 Criar aplicativo com o pinguim e frações unitárias.
 
 Tangram --> áreas equivalentes com figuras diferentes.
@@ -58,5 +116,5 @@ Atividades da coleção Math Makes Sense vol. 4 pag. 176. Envolvendo estimativas
 
 A tecnologia pode ajudar a perceber frações unitárias menores, tipo $1/35$ ou $1/100$. Tipo do vol. 4 canadense p.176.
 
-$asdf
+
 ===== Refletindo ===== 
