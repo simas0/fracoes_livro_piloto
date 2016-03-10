@@ -7,11 +7,17 @@ inspect = require"inspect"
 local lpeg = require 'lpeg'
 local R, P, S, C, Cs, Cg, Ct, Cc = lpeg.R, lpeg.P, lpeg.S, lpeg.C, lpeg.Cs, lpeg.Cg, lpeg.Ct, lpeg.Cc
 
-local function token(id, patt) return Ct(Cc(id) * C(patt)) end
+local function token(id, patt) return Ct( Cg(P('') / id, 'tag') * Cg( patt, 'value' ) ) end
+
+function surround(id, openp, midp, endp)
+    openp = P(openp)
+    endp = endp and P(endp) or openp
+    return openp * token(id, midp) * endp
+end
 
 local digit = R('09')
 local alpha = R('AZ', 'az') + S('áéíóúàèìòùâêÂÊÁÉÍÓÚÀÈÌÒÙüãẽõçÇÃẼÕ')
-local harmless = digit + alpha + S('():/+-!?.,; ')
+local harmless = digit + alpha + S([[():/+-!?.,; ]])
 local symb = S('\\{}$&#^*|_~%=<>\n\t"\'')
 local known = harmless + symb
 
@@ -20,9 +26,16 @@ local killunknown = Cs( ( C(known) / '%1' + P(1) / '(símbolo desconhecido)' )^0
 doc = killunknown:match(doc)
 
 local simpletext = harmless^1
-local title = P('=====') * Ct( Cg(P('') / 'title', 'tag') * Cg( simpletext, 'value' ) ) * P('=====')
+local bold = surround('bold', '**', simpletext)
+local under = surround('under', '__', simpletext)
+local italic = surround('italic', [[//]], (harmless - P([[//]]))^1 )
+local mono = surround('mono', "''", simpletext)
+local title = P('=====') * token('title', simpletext) * P('=====')
 
-local document = Ct( ( title + known )^1 )
+
+
+
+local document = Ct( ( title + bold + under + italic + mono + known )^1 )
 
 print(inspect(document:match(doc), {newline='\n', indent="  "}))
 
