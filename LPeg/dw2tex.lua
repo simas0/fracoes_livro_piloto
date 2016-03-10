@@ -39,8 +39,6 @@ local known = digit + alpha + symb
 local killunknown = Cs( ( C(known) / '%1' + C(P(1)) / '(símbolo desconhecido:%1)' )^0 )
 doc = killunknown:match(doc)
 
-print(doc)
-
 local special = P('**') + P('__') + P([[//]]) + P("''") + P('====') + P('$') + P('<WRAP') + P('</WRAP')
 local harmless = ( digit + alpha + symb ) - special
 
@@ -51,11 +49,13 @@ local italic = surround('italic', [[//]], (harmless - P([[//]]))^1 )
 local mono = surround('mono', "''", simpletext)
 local simplemath = surround('simplemath', '$', simpletext)
 local title = P('=====') * token('title', simpletext) * P('=====')
+local decotext = bold + under + italic + mono + simplemath + title + C(simpletext)
 
 local W = V'W'
+local envname = P('professor') + P('exercicio') + P('resposta') + P('abstrato') + P('conexoes') + P('explorando') + P('imagem') + P('introdutorio') + P('massa') + P('refletindo') + P('figura')
 local wrap = P{
    W,
-   W = P('<WRAP professor>') * Ct( Cg(P('') / 'wrap', 'tag') * Cg(P('') / 'professor', 'type') * Cg( Ct( ( C(simpletext) + (V'W') )^1 ), 'value' ) ) * P('</WRAP>')
+   W = Ct( P('<WRAP ') * Cg( C( envname ), 'type') * P('>') * Cg(P('') / 'wrap', 'tag') * Cg( Ct( ( decotext + (V'W') )^1 ), 'value' ) ) * P('</WRAP>')
 }
 
 local document = Ct( ( title + bold + under + italic + mono + simplemath + wrap + C(simpletext) + C(known) )^1 )
