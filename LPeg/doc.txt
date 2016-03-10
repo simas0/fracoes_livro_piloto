@@ -14,6 +14,12 @@ modelo de círculo deixa evidente a fração considerada e a fração complement
   - O aluno já conhece e usa a reta numerada para representar os números Naturais;
   - 
 
+<WRAP professor>
+bla
+<WRAP professor>
+ble
+</WRAP>
+</WRAP>
 
 **OBJETIVOS ESPECÍFICOS** 
 Identificar e representar a partir de modelos visuais frações unitárias quaisquer;  
@@ -118,3 +124,15 @@ A tecnologia pode ajudar a perceber frações unitárias menores, tipo $1/35$ ou
 
 
 ===== Refletindo ===== 
+
+<WRAP professor>
+bla
+<WRAP professor>
+ble
+</WRAP>
+</WRAP>
+
+<WRAP professor>
+ble
+</WRAP>
+
