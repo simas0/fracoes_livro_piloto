@@ -1,10 +1,10 @@
-====== Capítulo 1 - Todo, metade, um terço, um quarto, ..., um décimo, um onze avos, ..., um centésimo, ..., um milésimo, ... ======
+====== Capítulo 1 - Todo, metade, um terço e um quarto ======
 
 <WRAP professor> Este capítulo tem por objetivo introduzir frações unitárias "um quarto de..." e apresentar esta quantidade em diversos modelos visuais "disco, retângulo, hexágono, um lado de um triângulo equilátero, bolinhas". Diversos jogos e atividades. Devemos também estabelecer a ordenação das frações unitárias.
 
 Nosso objetivo na construção dos números é completar a reta (bijeção). Em particular, no caso dos racionais as frações unitárias serão essenciais para alcançar todos os racionais. 
 
-Identificar e //representar// a partir de __modelos__ visuais ''frações'' unitárias quaisquer. Comparar frações unitárias. Utilizar a linguagem um sétimo, sétima parte, metade, um meio, um terço, um doze avos, um décimo, um centésimo.
+Identificar e representar a partir de modelos visuais frações unitárias quaisquer. Comparar frações unitárias. Utilizar a linguagem um sétimo, sétima parte, metade, um meio, um terço, um doze avos, um décimo, um centésimo.
 
 modelo de círculo deixa evidente a fração considerada e a fração complementar.
 
@@ -14,12 +14,6 @@ modelo de círculo deixa evidente a fração considerada e a fração complement
   - O aluno já conhece e usa a reta numerada para representar os números Naturais;
   - 
 
-<WRAP professor>
-bla
-<WRAP professor>
-ble
-</WRAP>
-</WRAP>
 
 **OBJETIVOS ESPECÍFICOS** 
 Identificar e representar a partir de modelos visuais frações unitárias quaisquer;  
@@ -27,7 +21,7 @@ Utilizar a linguagem um sétimo, sétima parte, metade, um meio, um terço, um d
 
 
 **OBS**:
-  * Não tratar de modelos discretos;
+  * Não tratar de modelos discretos;  Parece que decidimos trabalhar apenas com contínuas num primeiro momento. Devemos bater o martelo em 15/03;
   * Deixar frações com denominadores maiores do que 4 para uma próxima seção;
   * Valorizar a atividade em grupo e a discussão;
   * Tratar a comparação pela ordem sem formalizar; 
@@ -35,25 +29,39 @@ Utilizar a linguagem um sétimo, sétima parte, metade, um meio, um terço, um d
 **DÚVIDAS**
 Vamos usar o modelo dos círculos?
 
+</WRAP>
 
 
 
+<WRAP introdutorio>
+
+<WRAP exercicio>
+Simas: Não estou nada feliz com esta atividade para introdução ao capítulo.
+
+<WRAP professor> 
+Objetivo específicos: Diferenciar a divisão em três partes da divisão em três partes "iguais" e despertar para a necessidade de uma expressão que signifique "uma das três partes iguais".
+
+Tente conduzir os estudantes a dizerem que a divisão deve ser em "partes iguais". Você pode observar que no caso de dois irmãos, cada um deve ter receber a "metade" do chocolate. Para representar uma parte da divisão em três partes iguais, precisamos da expressão "um terço" do chocolate ou "a terça parte" do chocolate.
+</WRAP>
+
+(Atividade a ser realizada em grupos: grupos de 3 alunos) 
+
+Para o lanche, três irmão vão repartir uma barra de chocolate. Um deles sugere uma divisão como abaixo. O que você acha dessa divisão?
+<WRAP imagem> Barra de chocolate retangular. Mas repartida em três partes com "áreas" diferentes.</WRAP>
+
+Discuta com seus colegas uma divisão que pareça mais adequada a todos os irmãos. Quanto do chocolate tem em cada uma destas partes em que vocês o dividiram?
+
+<WRAP imagem> Barra de chocolate retangular repartida em três partes com "áreas" iguais.</WRAP>
+
+{{ :cap1:barra_chocolate.jpg?direct&100 |}}
 
 </WRAP>
 
-**Representações contínuas e discretas juntos?**
 
-<WRAP Atividades iniciais>
-
-**ATIVIDADE 1** 
-(Objetivo específicos: Diferenciar a divisão em três partes da divisão em três partes "iguais")
-(Atividade a ser realizada em grupos: grupos de 3 alunos) 
-
-Para o lanche, três irmão vão repartir uma barra de chocolate. Como eles podem fazer essa divisão? 
-{{ :cap1:barra_chocolate.jpg?direct&100 |}}
-
-**ATIVIDADE II**
-(Objetivo específicos: Identificar uma divisão em partes "iguais"; compreender as expressoes metade, terco/terca parte e quarto/quarta parte como formas de nomear partes de uma equiparticao)
+<WRAP exercicio>
+<WRAP professor> 
+Objetivo específicos: Identificar uma divisão em partes "iguais"; compreender as expressões metade, terco/terca parte e quarto/quarta parte como formas de nomear partes de uma equipartição
+</WRAP>
 (Atividade a ser realizada em grupos: grupos de 3 ou 4 alunos) 
 
 Estas crianças estão repartindo pizzas. Observe como cada grupo repartiu a sua pizza.
@@ -64,54 +72,102 @@ Grupo com tres criancas: {{ :cap1:quartos.jpg?direct&100 |}}
 
 Para discussão:
   - Em qual dos grupos, os participantes receberao quantidades iguais de pizza;	
+</WRAP>
 
-
-ATIVIDADE III 
-
+<WRAP exercicio>
 
 <WRAP professor> Esperamos despertar a necessidade do uso da expressão **um terço** e de criar uma representação visual desta ideia.
 </WRAP>
+</WRAP>
+</WRAP>
 
-
-===== Discussão e atividades iniciais (ou Fazendo Conexões?)=====
+<WRAP conexoes>
 
 No problema acima tivemos alguns aspectos imortantes a serem destacados
 
-Apresentar diferentes representações da mesma fração unitária. Por exemplo: dividir um retângulo em dois retângulos congruentes, depois cortar um destes retângulos pela diagonal e o outro em outros dois retângulos congruentes.
+Você já sabe que quando dividimos um objeto em duas partes iguais, cada uma delas é chamada de //metade do objeto//. Como você deve ter percebido na atividade acima às vezes precisamos nos referir a uma parte de um objeto que foi dividido em três partes iguais. Neste caso, chamamos cada uma das partes de //um terço do objeto// original. Por exemplo, se dividimos uma barra de chocolate em três partes iguais cada uma delas representa //um terço do chocolate//.
+
+Do mesmo modo ao dividirmos um objeto em quatro ou cinco partes iguais, cada uma das partes será chamada respectivamente de //um quarto// e //um quinto do objeto original//.\\
+
+Na História da Humanidade os números foram criados inicialmente para contar objetos (animais, pedras, pessoas, etc.). Embora os números tenham outros usos, eles foram criados para representar //quantidades//, por exemplo: Em uma casa vivem dois adultos e três crianças. Quando dizemos 
+
+//"Meia barra de chocolate para cada um."\\
+
+"Acrescente um terço de xícara de farinha de trigo."\\
+
+"Após um quarto de século o feitiço perderá seu efeito."\\
+
+"Um quinto de todo ouro pesado nas Casas de Fundição no Brasil era pago em impostos à coroa portuguesa."//\\
+
+também estamos nos referindo a quantidades (de chocolate, de farinha de trigo, de século, de ouro) e por isso também representamos estas quantidades por números. 
 
 Incluir atividades com a questão das partes iguais e para fixar a importância do todo (área, perímetro, número de peças, etc.). Sugestão utilizar as figuras do Van-der-walle, página 326.
-===== Modelo abstrato ===== 
+</WRAP>
+
+<WRAP abstrato>
+Se meio, um terço, um quarto e um quinto são números, quais são os símbolos que representam estes números? Como estes números surgem da divisão de 1 parte em partes iguais, nós os representaremos por\\
+
+meio --> $\frac{1}{2}$,\\
+um terço --> $\frac{1}{3}$,\\
+um quarto --> $\frac{1}{4}$ e\\
+um quinto --> $\frac{1}{5}$.\\
+
+<WRAP professor> Esta representação costuma parecer estranha aos estudantes porque até agora os números eram representados apenas por algarismos e sempre na horizontal. Mas é importante explicar que esta é uma convenção mundial hoje, mas que alguns povos antigos já tiveram representações diferentes para estes números. (ver inclui referência).</WRAP>
+
+Como vimos todo número tem uma representação na reta numérica. Esta representação ordena os números da esquerda para a direita, isto é, um número que está à esquerda de outro é menor do que este.
+
+{{ :cap1:2016-03-11_08.12.05.jpg?300 |}}
+
+Os números meio, um terço, um quarto e um quinto surgem a partir da divisão de uma unidade (uma barra de chocolate, uma xícara de farinha de trigo, um século, um quilograma de ouro) em partes iguais, logo todos eles são números menores do que 1 e maiores do que 0 (meia barra de chocolate é mais do que nada e menos que uma barra inteira). Assim estão todos entre o 0 e o 1 na reta numérica.
+
+<WRAP exercicio> 
+</WRAP>
+
+
+Você saberia dizer qual é o menor dos números $\frac{1}{2}$ ou $\frac{1}{3}$? (Pense em uma barra de chocolates dividida para 2 ou 3 pessoas, em qual das situações a fração correspondente a cada pessoa é maior?)
+
 
 Tem que entrar a representação na reta. Sugestão: jogo para estudantes com dislexia. Outro é um jogo com uma fita representando a reta numérica e os estudantes devem marcar as frações $1/2, 1/3 , \cdots, 1/10$.
 
 O caráter abstrato do número. Número não será definido. Mas deixaremos claro que existe um número para cada ponto da "reta numérica" e que para cada ponto da reta numérica há um número. Reconhecemos a dificuldade dessas questões.
+</WRAP>
 
-
-===== Atividades, exercícios e desafios ===== 
+<WRAP massa>
 
 <WRAP exercicio> O pai de Joãozinho e Maria dividiu uma barra de chocolates ao meio e depois dividiu uma das partes em três partes iguais como representado na figura abaixo. Entregou as 3 partes menores para Joãozinho e a outra parte para Maria. Quem recebeu mais pedaços de chocolate? Quem recebeu mais chocolate Joãozinho ou Maria?
 
-<WRAP figura> inserir a figura "chocolate partido" (feita a mão) </WRAP>
+<WRAP figura> inserir a figura "chocolate partido" (feita a mão) {{ :cap1:20160311_061902.jpg?200 |}} </WRAP>
 
 <WRAP resposta> Joãozinho recebeu três pedaços de chocolate e Maria apenas 1, portanto, Joãozinho recebeu mais pedaços de chocolate. Contudo os três pedaços de Joãzinho correspondem a metade da barra de chocolate. Portanto, ambos receberam a mesma quantidade de chocolate.</WRAP> 
 
 <WRAP professor> Este exercício pode parecer deslocado porque o estudante ainda não sabe dividir $1/2$ por 3. Mas esperamos apenas que ele observe que a quantidade (de chocolate) pode ser a mesma ainda que o número de pedaços seja diferente.</WRAP>
 </WRAP>
 
-<WRAP exercicio> Identifique em quais dos modelos visuais abaixo a área da parte hachurada representa melhor cada uma das frações das áreas 1/2, 1/3 e 1/5:
-
-<WRAP imagem> figuras com diversas formas envolvendo modelos diversos.</WRAP>
-
-{{ :cap1:figuras.jpg?200 |}}
-
-<WRAP professor> Importante observar ao estudante que são iguais em área, não necessariamente em forma.</WRAP>
-</WRAP>
-
 <WRAP exercicio>
-Quais das oito figuras a seguir estão divididas em quatro partes iguais? Explique os motivos que levaram a sua escolha.
+Quais das figuras a seguir estão divididas em quatro partes que representam mesma área? Explique os motivos que levaram a sua escolha.
+
+Enunciados alternativos para evitar a palavra "área" acima. 
+    - Em quais das oito figuras a seguir cada uma das quatro partes representa um quarto da figura? Explique os motivos que levaram a sua escolha.
+    - Imagine que as figuras a seguir representam barras de chocolate. Quais delas estão divididas em 4 partes com mesma quantidade? Explique os motivos que levaram a sua escolha.
+    - Imagine que as figuras a seguir representam barras de chocolate. Em quais dela a divisão para 4 pessoas parece uma divisão equitativa (ou //justa//)? Explique os motivos que levaram a sua escolha.
+
 <WRAP figura>{{ :cap1:exer-01.png?500 |}}</WRAP>
 <WRAP resposta>(A), (C), (D), (G) e (H). </WRAP>
-<WRAP professor>É importante que, com exercícios como este, o aluno ganhe a habilidade de identificar quando um todo está ou não dividido em partes iguais. Também é importante que o aluno perceba que uma figura pode estar divida em partes iguais sem que estas partes sejam congruentes, como nos mostra a Figura (C).</WRAP>
+<WRAP professor>É importante que, com exercícios como este, o aluno ganhe a habilidade de identificar quando um todo está ou não dividido em partes iguais. Também é importante que o aluno perceba que uma figura pode estar divida em partes iguais sem que estas partes sejam congruentes, como nos mostra a Figura (C). Importante observar que para uma figura bidimensional um quarto da figura significa um quarto da área da figura. Se ela fosse tridimensional seria um quarto do volume.</WRAP>
+</WRAP>
+
+<WRAP exercicio> Cada uma das figuras abaixo possui uma parte colorida e outra mais clara. Identifique a fração da figura que a parte colorida representa em cada um dos casos sabendo que só pode haver as frações 1/2, 1/3 e 1/5.
+
+<WRAP imagem> {{ :cap1:20160311_064049.jpg?200 |}} </WRAP>
+
+<WRAP resposta> (A)$\frac{1}{2}$,  (B)$\frac{1}{5}$, (C)$\frac{1}{3}$, (D)$\frac{1}{3}$,\\
+(E)$\frac{1}{5}$, (F)$\frac{1}{3}$, (G)$\frac{1}{2}$, (H)$\frac{1}{5}$,\\
+(I)$\frac{1}{3}$, (J)$\frac{1}{2}$, (L)$\frac{1}{5}$, (M)$\frac{1}{3}$</WRAP>
+
+<WRAP professor> Este exercício objetiva que o estudante ganhe fluência para estimar quantidades usando a linguagem de frações em situações diversas. Como consequência espera-se que eles consigam observar que $\frac{1}{5} <\frac{1}{3} <\frac{1}{2}$.</WRAP>
+</WRAP>
+
+
 </WRAP>
 
 Criar aplicativo com o pinguim e frações unitárias.
@@ -124,15 +180,3 @@ A tecnologia pode ajudar a perceber frações unitárias menores, tipo $1/35$ ou
 
 
 ===== Refletindo ===== 
-
-<WRAP professor>
-bla
-<WRAP professor>
-ble
-</WRAP>
-</WRAP>
-
-<WRAP professor>
-ble
-</WRAP>
-

@@ -2,57 +2,33 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 
-\usepackage[framemethod=TikZ]{mdframed}
-\usepackage{lipsum}
+%\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+%\usepackage{lipsum}
 
-\mdfdefinestyle{professor}{%
-    linecolor=blue,
-    outerlinewidth=2pt,
-    roundcorner=20pt,
-    innertopmargin=\baselineskip,
-    innerbottommargin=\baselineskip,
-    innerrightmargin=20pt,
-    innerleftmargin=20pt,
-    backgroundcolor=gray!50!white}
+\usepackage[dvipsnames]{xcolor}
 
-\mdfdefinestyle{introdutorio}{%
-    linecolor=blue,
-    outerlinewidth=2pt,
-    roundcorner=20pt,
-    innertopmargin=\baselineskip,
-    innerbottommargin=\baselineskip,
-    innerrightmargin=20pt,
-    innerleftmargin=20pt,
-    backgroundcolor=gray!50!white}
-
-\mdfdefinestyle{exercicio}{%
-    linecolor=blue,
-    outerlinewidth=2pt,
-    roundcorner=20pt,
-    innertopmargin=\baselineskip,
-    innerbottommargin=\baselineskip,
-    innerrightmargin=20pt,
-    innerleftmargin=20pt,
-    backgroundcolor=gray!50!white}
-
-\mdfdefinestyle{resposta}{%
-    linecolor=blue,
-    outerlinewidth=2pt,
-    roundcorner=20pt,
-    innertopmargin=\baselineskip,
-    innerbottommargin=\baselineskip,
-    innerrightmargin=20pt,
-    innerleftmargin=20pt,
-    backgroundcolor=gray!50!white}
-
-\mdfdefinestyle{imagem}{%
-    linecolor=blue,
-    outerlinewidth=2pt,
-    roundcorner=20pt,
-    innertopmargin=\baselineskip,
-    innerbottommargin=\baselineskip,
-    innerrightmargin=20pt,
-    innerleftmargin=20pt,
-    backgroundcolor=gray!50!white}
+\newtcbtheorem{professor}{Para o Professor}%
+{colback=purple!15,colframe=purple,fonttitle=\bfseries}{th}
+\newtcbtheorem{introdutorio}{Introdutório}%
+{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
+\newtcbtheorem{abstrato}{Modelo abstrato}%
+{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
+\newtcbtheorem{conexoes}{Conexões}%
+{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
+\newtcbtheorem{explorando}{Explorando}%
+{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
+\newtcbtheorem{massa}{Mão na massa}%
+{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
+\newtcbtheorem{exercicio}{Exercício}%
+{colback=gray!15,colframe=gray,fonttitle=\bfseries}{th}
+\newtcbtheorem{resposta}{Resposta}%
+{colback=blue!5,colframe=blue,fonttitle=\bfseries}{th}
+\newtcbtheorem{imagem}{Imagem}%
+{colback=yellow!15,colframe=yellow,fonttitle=\bfseries}{th}
+\newtcbtheorem{figura}{Figura}%
+{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
 
 \begin{document}
+
