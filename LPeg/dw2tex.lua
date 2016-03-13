@@ -70,51 +70,52 @@ local finalsymb = (P('#') / [[\#]]) + (P('$') / [[\$]]) + (P([[%]]) / [[\%%]]) +
 local escaper = Cs( ((finalsymb) + C(known))^1 )
 
 function texprint (tbl, indent)
+  local outstr = ""
   if not indent then indent = 0 end
   for k, v in pairs(tbl) do
     local formatting = string.rep("  ", indent)
     if (v.tag) == "title" then
-       print(formatting .. '\\section{' .. escaper:match(v.value) .. '}')
+       outstr = outstr .. formatting .. '\\section{' .. escaper:match(v.value) .. '}\n'
        --tprint(v, indent + 1)
     elseif (v.tag) == 'bold' then
-       print(formatting .. '{\\bf ' .. escaper:match(v.value) .. '}')
+       outstr = outstr .. formatting .. '{\\bf ' .. escaper:match(v.value) .. '}'
     elseif (v.tag) == 'italic' then
-       print(formatting .. '{\\it ' .. escaper:match(v.value) .. '}')
+       outstr = outstr .. formatting .. '{\\it ' .. escaper:match(v.value) .. '}'
     elseif (v.tag) == 'under' then
-       print(formatting .. '{' .. escaper:match(v.value) .. '}')
+       outstr = outstr .. formatting .. '{' .. escaper:match(v.value) .. '}'
     elseif (v.tag) == 'quote' then
-       print(formatting .. [[``]] .. escaper:match(v.value) .. [['']])
+       outstr = outstr .. formatting .. [[``]] .. escaper:match(v.value) .. [['']]
     elseif (v.tag) == 'newline' then
-       print(formatting .. '\\newline ')
+       outstr = outstr .. formatting .. '\\newline '
     elseif (v.tag) == 'simple' then
-       print(formatting .. escaper:match(v.value))
+       outstr = outstr .. formatting .. escaper:match(v.value)
        --print(formatting .. v.value)
     elseif (v.tag) == 'error' then
-       print(formatting .. 'ERRO:\\{' .. escaper:match(v.value) .. '\\}')
+       outstr = outstr .. formatting .. 'ERRO:\\{' .. escaper:match(v.value) .. '\\}'
     elseif (v.tag) == 'wrap' then
-       print(formatting .. '\\begin{' .. v.type .. '}{}{}')
-       texprint(v.value, indent + 1)
-       print(formatting .. '\\end{' .. v.type .. '}')
+       outstr = outstr .. formatting .. '\\begin{' .. v.type .. '}{}{}'
+       outstr = outstr .. texprint(v.value, indent + 1)
+       outstr = outstr .. formatting .. '\\end{' .. v.type .. '}'
     end
   end
+  return outstr
 end
 
 file = io.open ('header.tex', "r")
-print(file:read("*a"))
+outstring = file:read("*a")
 io.close(file)
 
-texprint(document:match(doc))
---tprint(document:match(doc))
+outstring = outstring .. texprint(document:match(doc)) .. '\\end{document}'
 
-print('\\end{document}')
+--tprint(document:match(doc))
 
 --for k, v in pairs(parsed_elements) do
 --   print(k, inspect(v))
 --   outstring = outstring .. re.match(v, element_parser)
 --end
 
---file = io.open (arg[2], "w")
---file:write(outstring)
---io.close(file)
+file = io.open (arg[2], "w")
+file:write(outstring)
+io.close(file)
 
 
