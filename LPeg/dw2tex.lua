@@ -39,7 +39,8 @@ local known = digit + alpha + symb
 local killunknown = Cs( ( C(known) / '%1' + C(P(1)) / '(símbolo desconhecido)' )^0 )
 doc = killunknown:match(doc)
 
-local special = P('**') + P('__') + P([[//]]) + P("''") + P('====') + P('$') + P('<WRAP') + P('</WRAP')
+local special = P('**') + P('__') + P([[//]]) + P("''") + P('====') + P('$') + P('<WRAP')
+   + P('</WRAP') + P('"') + P([[\\]])
 local harmless = known - special
 
 local simpletext = harmless^1
@@ -47,40 +48,51 @@ local bold = surround('bold', '**', simpletext)
 local under = surround('under', '__', simpletext)
 local italic = surround('italic', [[//]], (harmless - P([[//]]))^1 )
 local mono = surround('mono', "''", simpletext)
+local quote = surround('quote', '"', simpletext)
+local newline = token('newline', [[\\]])
 local simplemath = surround('simplemath', '$', simpletext)
 local title = P('=====') * token('title', simpletext) * P('=====')
-local decotext = bold + under + italic + mono + simplemath + title + token('simple', simpletext)
+local decotext = bold + under + italic + mono + quote + newline + simplemath + title + token('simple', simpletext)
 
 local W = V'W'
-local envname = P('professor') + P('exercicio') + P('resposta') + P('abstrato') + P('conexoes') + P('explorando') + P('imagem') + P('introdutorio') + P('massa') + P('refletindo') + P('figura')
+local envname = P('professor') + P('exercicio') + P('resposta') + P('abstrato') + P('conexoes') + P('explorando') + P('imagem') + P('introdutorio') + P('massa') + P('refletindo') + P('figura') + P('nota')
 local wrap = P{
    W,
    W = Ct( P('<WRAP ') * Cg( C( envname ), 'type') * P('>') * Cg(P('') / 'wrap', 'tag') * Cg( Ct( ( decotext + (V'W') )^1 ), 'value' ) ) * P('</WRAP>')
 }
 
-local document = Ct( ( title + bold + under + italic + mono + simplemath + wrap + token('simple', simpletext) + token('error', known) )^1 )
+local document = Ct( ( title + bold + under + italic + mono + quote + newline + simplemath + wrap + token('simple', simpletext) + token('error', known) )^1 )
 
 --tprint(document:match(doc))
+
+local finalsymb = (P('#') / [[\#]]) + (P('$') / [[\$]]) + (P([[%]]) / [[\%%]]) + (P('&') / [[\&]]) + (P([[\]]) / [[\textbackslash{}]]) + (P('^') / [[\textasciicircum{}]]) + (P('_') / [[\_]]) + (P('{') / [[\{]]) + (P('}') / [[\}]]) + (P('~') / [[\textasciitilde{}]]) + (P('"') / 'QUOTES')
+
+local escaper = Cs( ((finalsymb) + C(known))^1 )
 
 function texprint (tbl, indent)
   if not indent then indent = 0 end
   for k, v in pairs(tbl) do
     local formatting = string.rep("  ", indent)
     if (v.tag) == "title" then
-       print(formatting .. '\\section{' .. v.value .. '}')
+       print(formatting .. '\\section{' .. escaper:match(v.value) .. '}')
        --tprint(v, indent + 1)
     elseif (v.tag) == 'bold' then
-       print(formatting .. '{\\bf ' .. v.value .. '}')
+       print(formatting .. '{\\bf ' .. escaper:match(v.value) .. '}')
     elseif (v.tag) == 'italic' then
-       print(formatting .. '{\\it ' .. v.value .. '}')
+       print(formatting .. '{\\it ' .. escaper:match(v.value) .. '}')
     elseif (v.tag) == 'under' then
-       print(formatting .. '{' .. v.value .. '}')
+       print(formatting .. '{' .. escaper:match(v.value) .. '}')
+    elseif (v.tag) == 'quote' then
+       print(formatting .. [[``]] .. escaper:match(v.value) .. [['']])
+    elseif (v.tag) == 'newline' then
+       print(formatting .. '\\newline ')
     elseif (v.tag) == 'simple' then
-       print(formatting .. v.value)
+       print(formatting .. escaper:match(v.value))
+       --print(formatting .. v.value)
     elseif (v.tag) == 'error' then
-       print(formatting .. 'ERRO:\\{' .. v.value .. '\\}')
+       print(formatting .. 'ERRO:\\{' .. escaper:match(v.value) .. '\\}')
     elseif (v.tag) == 'wrap' then
-       print(formatting .. '\\begin{' .. v.type .. '}')
+       print(formatting .. '\\begin{' .. v.type .. '}{}{}')
        texprint(v.value, indent + 1)
        print(formatting .. '\\end{' .. v.type .. '}')
     end
@@ -92,6 +104,7 @@ print(file:read("*a"))
 io.close(file)
 
 texprint(document:match(doc))
+--tprint(document:match(doc))
 
 print('\\end{document}')
 
