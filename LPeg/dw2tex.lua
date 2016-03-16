@@ -40,7 +40,7 @@ local killunknown = Cs( ( C(known) / '%1' + C(P(1)) / '(símbolo desconhecido)' 
 doc = killunknown:match(doc)
 
 local special = P('**') + P('__') + P([[//]]) + P("''") + P('====') + P('$') + P('<WRAP')
-   + P('</WRAP') + P('"') + P([[\\]])
+   + P('</WRAP') + P('"') + P([[\\]]) + P('{{') + P('}}')
 local harmless = known - special
 
 local simpletext = harmless^1
@@ -52,7 +52,8 @@ local quote = surround('quote', '"', simpletext)
 local newline = token('newline', [[\\]])
 local simplemath = surround('simplemath', '$', simpletext)
 local title = P('=====') * token('title', simpletext) * P('=====')
-local decotext = bold + under + italic + mono + quote + newline + simplemath + title + token('simple', simpletext)
+local image = P('{{') * token('image', simpletext) * P('}}')
+local decotext = bold + under + italic + mono + quote + newline + simplemath + title + image + token('simple', simpletext)
 
 local W = V'W'
 local envname = P('professor') + P('exercicio') + P('resposta') + P('abstrato') + P('conexoes') + P('explorando') + P('imagem') + P('introdutorio') + P('massa') + P('refletindo') + P('figura') + P('nota')
@@ -61,13 +62,15 @@ local wrap = P{
    W = Ct( P('<WRAP ') * Cg( C( envname ), 'type') * P('>') * Cg(P('') / 'wrap', 'tag') * Cg( Ct( ( decotext + (V'W') )^1 ), 'value' ) ) * P('</WRAP>')
 }
 
-local document = Ct( ( title + bold + under + italic + mono + quote + newline + simplemath + wrap + token('simple', simpletext) + token('error', known) )^1 )
+local document = Ct( ( decotext + wrap + token('error', known) )^1 )
 
 --tprint(document:match(doc))
 
 local finalsymb = (P('#') / [[\#]]) + (P('$') / [[\$]]) + (P([[%]]) / [[\%%]]) + (P('&') / [[\&]]) + (P([[\]]) / [[\textbackslash{}]]) + (P('^') / [[\textasciicircum{}]]) + (P('_') / [[\_]]) + (P('{') / [[\{]]) + (P('}') / [[\}]]) + (P('~') / [[\textasciitilde{}]]) + (P('"') / 'QUOTES')
 
-local escaper = Cs( ((finalsymb) + C(known))^1 )
+local formatimage = Cs( ( P('') / '/www/' ) * ( C(alpha + digit + S('-_.'))
+                    + ( P(' ') / '' ) + ( P(':') / '/' ) )^1 * ( simpletext / '' ) )
+local formatsimple = Cs( ((finalsymb) + C(known))^1 )
 
 function texprint (tbl, indent)
   local outstr = ""
@@ -75,23 +78,25 @@ function texprint (tbl, indent)
   for k, v in pairs(tbl) do
     local formatting = string.rep("  ", indent)
     if (v.tag) == "title" then
-       outstr = outstr .. formatting .. '\\section{' .. escaper:match(v.value) .. '}\n'
+       outstr = outstr .. formatting .. '\\section{' .. formatsimple:match(v.value) .. '}\n'
        --tprint(v, indent + 1)
     elseif (v.tag) == 'bold' then
-       outstr = outstr .. formatting .. '{\\bf ' .. escaper:match(v.value) .. '}'
+       outstr = outstr .. formatting .. '{\\bf ' .. formatsimple:match(v.value) .. '}'
     elseif (v.tag) == 'italic' then
-       outstr = outstr .. formatting .. '{\\it ' .. escaper:match(v.value) .. '}'
+       outstr = outstr .. formatting .. '{\\it ' .. formatsimple:match(v.value) .. '}'
     elseif (v.tag) == 'under' then
-       outstr = outstr .. formatting .. '{' .. escaper:match(v.value) .. '}'
+       outstr = outstr .. formatting .. '{' .. formatsimple:match(v.value) .. '}'
     elseif (v.tag) == 'quote' then
-       outstr = outstr .. formatting .. [[``]] .. escaper:match(v.value) .. [['']]
+       outstr = outstr .. formatting .. [[``]] .. formatsimple:match(v.value) .. [['']]
     elseif (v.tag) == 'newline' then
        outstr = outstr .. formatting .. '\\newline '
     elseif (v.tag) == 'simple' then
-       outstr = outstr .. formatting .. escaper:match(v.value)
+       outstr = outstr .. formatting .. formatsimple:match(v.value)
        --print(formatting .. v.value)
+    elseif (v.tag) == 'image' then
+       outstr = outstr .. formatting .. '\\includegraphics{' .. formatimage:match(v.value) .. '}\n'
     elseif (v.tag) == 'error' then
-       outstr = outstr .. formatting .. 'ERRO:\\{' .. escaper:match(v.value) .. '\\}'
+       outstr = outstr .. formatting .. 'ERRO:\\{' .. formatsimple:match(v.value) .. '\\}'
     elseif (v.tag) == 'wrap' then
        outstr = outstr .. formatting .. '\\begin{' .. v.type .. '}{}{}'
        outstr = outstr .. texprint(v.value, indent + 1)
