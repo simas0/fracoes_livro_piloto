@@ -52,8 +52,9 @@ local quote = surround('quote', '"', simpletext)
 local newline = token('newline', [[\\]])
 local simplemath = surround('simplemath', '$', simpletext)
 local title = P('=====') * token('title', simpletext) * P('=====')
+local include = P('{{page>') * token('include', simpletext) * P('}}')
 local image = P('{{') * token('image', simpletext) * P('}}')
-local decotext = bold + under + italic + mono + quote + newline + simplemath + title + image + token('simple', simpletext)
+local decotext = bold + under + italic + mono + quote + newline + simplemath + title + include + image + token('simple', simpletext)
 
 local W = V'W'
 local envname = P('professor') + P('exercicio') + P('resposta') + P('abstrato') + P('conexoes') + P('explorando') + P('imagem') + P('introdutorio') + P('massa') + P('refletindo') + P('figura') + P('nota')
@@ -68,42 +69,53 @@ local document = Ct( ( decotext + wrap + token('error', known) )^1 )
 
 local finalsymb = (P('#') / [[\#]]) + (P('$') / [[\$]]) + (P([[%]]) / [[\%%]]) + (P('&') / [[\&]]) + (P([[\]]) / [[\textbackslash{}]]) + (P('^') / [[\textasciicircum{}]]) + (P('_') / [[\_]]) + (P('{') / [[\{]]) + (P('}') / [[\}]]) + (P('~') / [[\textasciitilde{}]]) + (P('"') / 'QUOTES')
 
-local formatimage = Cs( ( P('') / '/www/' ) * ( C(alpha + digit + S('-_.'))
+local formatimage = Cs( ( P('') / '/var/www/livro/data/gitrepo/media' ) * ( C(alpha + digit + S('-_.'))
                     + ( P(' ') / '' ) + ( P(':') / '/' ) )^1 * ( simpletext / '' ) )
+local formatinclude = Cs( ( P('') / '/var/www/livro/data/gitrepo/pages/' )
+      * ( C(alpha + digit + S('-_.')) + ( P(' ') / '' ) + ( P(':') / '/' ) )^1
+      * ( P('') / '.txt' ) * ( simpletext / '' )^0 )
 local formatsimple = Cs( ((finalsymb) + C(known))^1 )
 
 function texprint (tbl, indent)
   local outstr = ""
   if not indent then indent = 0 end
   for k, v in pairs(tbl) do
-    local formatting = string.rep("  ", indent)
-    if (v.tag) == "title" then
-       outstr = outstr .. formatting .. '\\section{' .. formatsimple:match(v.value) .. '}\n'
-       --tprint(v, indent + 1)
-    elseif (v.tag) == 'bold' then
-       outstr = outstr .. formatting .. '{\\bf ' .. formatsimple:match(v.value) .. '}'
-    elseif (v.tag) == 'italic' then
-       outstr = outstr .. formatting .. '{\\it ' .. formatsimple:match(v.value) .. '}'
-    elseif (v.tag) == 'under' then
-       outstr = outstr .. formatting .. '{' .. formatsimple:match(v.value) .. '}'
-    elseif (v.tag) == 'quote' then
-       outstr = outstr .. formatting .. [[``]] .. formatsimple:match(v.value) .. [['']]
-    elseif (v.tag) == 'newline' then
-       outstr = outstr .. formatting .. '\\newline '
-    elseif (v.tag) == 'simple' then
-       outstr = outstr .. formatting .. formatsimple:match(v.value)
-       --print(formatting .. v.value)
-    elseif (v.tag) == 'image' then
-       outstr = outstr .. formatting .. '\\includegraphics{' .. formatimage:match(v.value) .. '}\n'
-    elseif (v.tag) == 'error' then
-       outstr = outstr .. formatting .. 'ERRO:\\{' .. formatsimple:match(v.value) .. '\\}'
-    elseif (v.tag) == 'wrap' then
-       outstr = outstr .. formatting .. '\\begin{' .. v.type .. '}{}{}'
-       outstr = outstr .. texprint(v.value, indent + 1)
-       outstr = outstr .. formatting .. '\\end{' .. v.type .. '}'
-    end
-  end
-  return outstr
+     local formatting = string.rep("  ", indent)
+     if (v.tag) == "title" then
+        outstr = outstr .. formatting .. '\\section{' .. formatsimple:match(v.value) .. '}\n'
+        --tprint(v, indent + 1)
+     elseif (v.tag) == 'bold' then
+        outstr = outstr .. formatting .. '{\\bf ' .. formatsimple:match(v.value) .. '}'
+     elseif (v.tag) == 'italic' then
+        outstr = outstr .. formatting .. '{\\it ' .. formatsimple:match(v.value) .. '}'
+     elseif (v.tag) == 'under' then
+        outstr = outstr .. formatting .. '{' .. formatsimple:match(v.value) .. '}'
+     elseif (v.tag) == 'quote' then
+        outstr = outstr .. formatting .. [[``]] .. formatsimple:match(v.value) .. [['']]
+     elseif (v.tag) == 'newline' then
+        outstr = outstr .. formatting .. '\\newline '
+     elseif (v.tag) == 'simple' then
+        outstr = outstr .. formatting .. formatsimple:match(v.value)
+        --print(formatting .. v.value)
+     elseif (v.tag) == 'include' then
+        local includefilename = formatinclude:match(v.value)
+        includefile = io.open(includefilename, 'r')
+        if (includefile) then
+           local includestring = includefile:read("*all")
+           includefile.close()
+           outstr = outstr .. formatting .. texprint(document:match(includestring))
+        end
+     elseif (v.tag) == 'image' then
+        outstr = outstr .. formatting .. '\\includegraphics[width=\\textwidth]{' .. formatimage:match(v.value) .. '}\n'
+     elseif (v.tag) == 'error' then
+        outstr = outstr .. formatting .. 'ERRO:\\{' .. formatsimple:match(v.value) .. '\\}'
+     elseif (v.tag) == 'wrap' then
+        outstr = outstr .. formatting .. '\\begin{' .. v.type .. '}{}{}'
+        outstr = outstr .. texprint(v.value, indent + 1)
+        outstr = outstr .. formatting .. '\\end{' .. v.type .. '}'
+     end
+   end
+   return outstr
 end
 
 file = io.open ('header.tex', "r")

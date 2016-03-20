@@ -1,5 +1,7 @@
 ====== Capítulo 1 - Todo, metade, um terço e um quarto ======
 
+{{page>intro}}
+
 <WRAP professor> Este capítulo tem por objetivo introduzir frações unitárias "um quarto de..." e apresentar esta quantidade em diversos modelos visuais "disco, retângulo, hexágono, um lado de um triângulo equilátero, bolinhas". Diversos jogos e atividades. Devemos também estabelecer a ordenação das frações unitárias.
 
 Nosso objetivo na construção dos números é completar a reta (bijeção). Em particular, no caso dos racionais as frações unitárias serão essenciais para alcançar todos os racionais. 
