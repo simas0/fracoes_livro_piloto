@@ -1,6 +1,12 @@
 ====== Capítulo 1 - Todo, metade, um terço e um quarto ======
 
-{{page>intro}}
+
+/*
+Tem que entrar a representação na reta. Sugestão: jogo para estudantes com dislexia. Outro é um jogo com uma fita representando a reta numérica e os estudantes devem marcar as frações $1/2, 1/3 , \cdots, 1/10$.
+
+O caráter abstrato do número. Número não será definido. Mas deixaremos claro que existe um número para cada ponto da "reta numérica" e que para cada ponto da reta numérica há um número. Reconhecemos a dificuldade dessas questões.
+*/
+
 
 <WRAP professor> Este capítulo tem por objetivo introduzir frações unitárias "um quarto de..." e apresentar esta quantidade em diversos modelos visuais "disco, retângulo, hexágono, um lado de um triângulo equilátero, bolinhas". Diversos jogos e atividades. Devemos também estabelecer a ordenação das frações unitárias.
 
@@ -47,7 +53,7 @@ Objetivo específicos: Diferenciar a divisão em três partes da divisão em tr�
 Tente conduzir os estudantes a dizerem que a divisão deve ser em "partes iguais". Você pode observar que no caso de dois irmãos, cada um deve ter receber a "metade" do chocolate. Para representar uma parte da divisão em três partes iguais, precisamos da expressão "um terço" do chocolate ou "a terça parte" do chocolate.
 </WRAP>
 
-(Atividade a ser realizada em grupos: grupos de 3 alunos) 
+/*(Atividade a ser realizada em grupos: grupos de 3 alunos) */
 
 Para o lanche, três irmão vão repartir uma barra de chocolate. Um deles sugere uma divisão como abaixo. O que você acha dessa divisão?
 <WRAP imagem> Barra de chocolate retangular. Mas repartida em três partes com "áreas" diferentes.</WRAP>

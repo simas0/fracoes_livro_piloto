@@ -40,7 +40,7 @@ local killunknown = Cs( ( C(known) / '%1' + C(P(1)) / '(símbolo desconhecido)' 
 doc = killunknown:match(doc)
 
 local special = P('**') + P('__') + P([[//]]) + P("''") + P('====') + P('$') + P('<WRAP')
-   + P('</WRAP') + P('"') + P([[\\]]) + P('{{') + P('}}')
+   + P('</WRAP') + P('"') + P([[\\]]) + P('{{') + P('}}') + P('/*') + P('*/')
 local harmless = known - special
 
 local simpletext = harmless^1
@@ -52,10 +52,13 @@ local quote = surround('quote', '"', simpletext)
 local newline = token('newline', [[\\]])
 local simplemath = surround('simplemath', '$', simpletext)
 local title = P('=====') * token('title', simpletext) * P('=====')
+local titlechapter = P('======') * token('title', simpletext) * P('======')
+local titleless = P('====') * token('title', simpletext) * P('====')
 local include = P('{{page>') * token('include', simpletext) * P('}}')
 local image = P('{{') * token('image', simpletext) * P('}}')
-local decotext = bold + under + italic + mono + quote + newline + simplemath + title + include + image + token('simple', simpletext)
-
+local comment = P('/*') * token('comment', simpletext + bold + under + italic + mono + quote + newline + simplemath + titlechapter + title + titleless)^0 * P('*/')
+local decotext = bold + under + italic + mono + quote + newline + simplemath + titlechapter + title + titleless + include + image
+                 + comment + token('simple', simpletext)
 local W = V'W'
 local envname = P('professor') + P('exercicio') + P('resposta') + P('abstrato') + P('conexoes') + P('explorando') + P('imagem') + P('introdutorio') + P('massa') + P('refletindo') + P('figura') + P('nota')
 local wrap = P{
@@ -83,7 +86,10 @@ function texprint (tbl, indent)
      local formatting = string.rep("  ", indent)
      if (v.tag) == "title" then
         outstr = outstr .. formatting .. '\\section{' .. formatsimple:match(v.value) .. '}\n'
-        --tprint(v, indent + 1)
+     elseif (v.tag) == "titleless" then
+        outstr = outstr .. formatting .. '\\subsection{' .. formatsimple:match(v.value) .. '}\n'
+     elseif (v.tag) == "titlechapter" then
+        outstr = outstr .. formatting .. '\\chapter{' .. formatsimple:match(v.value) .. '}\n'
      elseif (v.tag) == 'bold' then
         outstr = outstr .. formatting .. '{\\bf ' .. formatsimple:match(v.value) .. '}'
      elseif (v.tag) == 'italic' then
@@ -102,11 +108,13 @@ function texprint (tbl, indent)
         includefile = io.open(includefilename, 'r')
         if (includefile) then
            local includestring = includefile:read("*all")
-           includefile.close()
+           includefile:close()
            outstr = outstr .. formatting .. texprint(document:match(includestring))
         end
      elseif (v.tag) == 'image' then
-        outstr = outstr .. formatting .. '\\includegraphics[width=\\textwidth]{' .. formatimage:match(v.value) .. '}\n'
+        outstr = outstr .. formatting .. '\n\n'
+           .. formatting .. '\\includegraphics[width=\\textwidth, height=4cm, keepaspectratio]{'
+           .. formatimage:match(v.value) .. '}\n\n'
      elseif (v.tag) == 'error' then
         outstr = outstr .. formatting .. 'ERRO:\\{' .. formatsimple:match(v.value) .. '\\}'
      elseif (v.tag) == 'wrap' then
