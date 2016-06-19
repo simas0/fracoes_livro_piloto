@@ -1,4 +1,12 @@
-Classificações: [Conceito: identificar/descrever | Nível 1: reconhecer | Observar: identificar/reconhecer] >
+| a | b | c |
+| d | e | f |
+
+|                                                                            |                                 Pedro |  Isabella                             |  Bernardo                              |  Manuela                              |
+| Pinte a fração de pizza consumida                                          |  {{cap2:secoes:pizza-notacao.png?70}} | {{cap2:secoes:pizza-notacao.png?70}}  |  {{cap2:secoes:pizza-notacao.png?70}}  |  {{cap2:secoes:pizza-notacao.png?70}} |
+| Escreva, por extenso, a fração de pizza consumida                          |                                       |                                       |                                        |                                       |
+| Escreva, usando notação simbólica matemática, a fração de pizza consumida  |                                       |                                       |                                        |                                       |
+
+
 
 <WRAP professor>
 Objetivos específicos: Levar o aluno a
@@ -7,6 +15,13 @@ Objetivos específicos: Levar o aluno a
   * Reconhecer a necessidade de apresentar uma expressão verbal que identifique a quantidade correspondente à justaposição (ou à reunião) de duas ou mais partes correspondentes às frações unitárias de mesmo denominador.
   * Compreender e a usar a expressão "//n// terços de" como forma de identicar a quantidade equivalente a //n// partes da equipartição da unidade em três partes (terços) (no caso, dois terços). 
   * Identificar a fração "//n// terços de" em uma situação de equipartição de mais do que uma unidade. 
+
+Here it goes:
+Real size:                        {{wiki:dokuwiki-128.png}}
+Real size:                        {{wiki:dokuwiki-128.png}}
+Resize to given width:            {{wiki:dokuwiki-128.png?50}}
+Resize to given width and height: {{wiki:dokuwiki-128.png?200x50}}
+Real life example:                {{ :cap1:secoes:chocolate_2.jpg?200 |}}  
  
 Observação:
   * A escolha de iniciar o assunto com um problema de divisão partitiva, no lugar do contexto parte-todo, se deve a dois motivos: (1) mantém-se a questão motivadora de equipartição iniciada na lição anterior (agora com múltiplas cópias da unidade) e (2) na divisão partitiva, frações cujo numerador é maior do que o denominador (frações impróprias) fazem sentido e aparecem naturalmente, algo que pode não ocorrer no contexto parte-todo (não parece natural nomear uma parte "maior" do que o todo). 
