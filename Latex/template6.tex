@@ -52,7 +52,7 @@ footskip=.7in
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%%%%Title Definition %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% Chapter Style %%%%%%%%%%%%%%%%%%%%
 \usepackage[explicit]{titlesec}
 \newcommand*\chapterlabel{}
 \titleformat{\chapter}
@@ -63,7 +63,7 @@ footskip=.7in
   \filldraw [x=1mm,y=1mm, green, overlay] (37,0) circle [radius=9]; \filldraw [x=1mm,y=1mm, red, overlay] (58,0) circle [radius=9]; \filldraw [x=1mm,y=1mm, blue, overlay] (79,0) circle [radius=9]; \filldraw [x=1mm,y=1mm, red, overlay] (210,-9) -- (100 ,-9) arc (-90:-270:9) --(100,9) -- (210,9) (115, 0) node{\color{white} {\bf Capítulo \thechapter}};
    \end{tikzpicture}
   }
-\titlespacing*{\chapter}{0pt}{50pt}{-60pt}
+\titlespacing*{\chapter}{0pt}{50pt}{60pt} %\titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
 
 
 % Set up the header and footer %%%%%%%%%%%%%%%%%%%%%%%
@@ -94,8 +94,9 @@ footskip=.7in
           {\tikz[x=1mm,y=1mm]{\filldraw [red, overlay] (20,-3) -- (5 ,-3) arc (-90:-270:3) --(5,3) -- (20,3) (8, 0) node{\color{white} {\bf \thepage}};}}
             }% 
 \fancyfoot[C]{ }
+\fancyhead{}
 
-
+\renewcommand{\headrulewidth}{0pt}% No footer rule
 %Cabeçalho
 % use o GIMP para obter o cógigo HTML da cor e o site a seguir para converter para RGB http://www.yellowpipe.com/yis/tools/hex-to-rgb/color-converter.php
 \definecolor{titleblue}{RGB}{21,101,175}
@@ -116,8 +117,8 @@ footskip=.7in
 
 
 %\pagestyle{empty}
-%\AtBeginShipout{\Header}
-%\AtBeginShipoutFirst{\Header}
+\AtBeginShipout{\Header}
+\AtBeginShipoutFirst{\Header}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -136,7 +137,7 @@ text=blue, rounded corners=3mm] % definição de estilo da caixinha com o nome r
   \begin{tikzpicture}
     \node[mybox](box){%
       \hspace{2mm}%
-      \begin{minipage}{0.72\textwidth}{\bf \BODY }
+      \begin{minipage}{0.72\textwidth}{\bf \BODY}
       \end{minipage}%
       \hfill%
       \begin{minipage}{0.18\textwidth}
@@ -154,6 +155,8 @@ text=blue, rounded corners=3mm] % definição de estilo da caixinha com o nome r
 \begin{document}
 
 \chapter{Primeiras frações}
+
+\section{Organizando tudo}
 
 \begin{refletindo}
   Lista de erros observados nesta maldita caixinha:
