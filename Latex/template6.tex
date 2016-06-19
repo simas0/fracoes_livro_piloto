@@ -1,0 +1,135 @@
+\documentclass[a4paper,10pt]{book}
+%%%% PACOTES %%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+% Pacotes para cabeçalho e rodapé %%%%
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+
+% Pacotes para caixas coloridas e personalizadas do Refletindo %%%%
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usetikzlibrary{calc}
+% The pack­age pro­vides spe­cial PGF/TikZ nodes for the text, margin­par, footer and header area of the cur­rent page.
+\usepackage{tikzpagenodes}
+
+\usepackage{amsmath,amssymb}
+\usepackage{environ} %Permite quebrar o tikz dentro da definição de um novo ambiente - como refletindo veja http://tex.stackexchange.com/questions/5639/defining-a-new-environment-whose-contents-go-in-a-tikz-node para explicação detalhada.
+%\usepackage[dvipsnames]{xcolor}
+\usepackage[hmargin=2cm,bmargin=3cm,tmargin=1.8cm,centering]{geometry}
+\usepackage{lmodern}
+\usepackage{atbegshi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Set up the header and footer %%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+
+% Rodapé
+\fancyfoot[LE]{\small\color{gray} Nome da seção atual, apenas páginas pares}% 
+\fancyfoot[RO]{\small\color{gray} Nome da lição atual, apenas páginas ímpares}%
+\fancyfoot[C]{ }
+\renewcommand{\footrulewidth}{0.6pt}%
+\renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{red}\leaders\hrule height \footrulewidth\hfill}}
+\renewcommand{\headrulewidth}{0pt}% No footer rule
+
+%Cabeçalho
+\definecolor{myblue}{RGB}{204,216,241} % use o GIMP para obter o cógigo HTML da cor e o site a seguir para converter para RGB http://www.yellowpipe.com/yis/tools/hex-to-rgb/color-converter.php
+\newcommand\Header{%
+\begin{tikzpicture}[remember picture,overlay]
+\fill[myblue]
+  (current page.north west) -- (current page.north east) --
+  ([yshift=0.3cm]current page.north east|-current page text area.north east) --
+  ([yshift=0.3cm]current page.north west|-current page text area.north west) -- cycle;
+%\node[font=\sffamily\bfseries\color{white},anchor=east, % Texto dentro do cabeçalho acima
+  xshift=-1.5cm,yshift=-1.3cm] at (current page.north east)
+ % {\fontsize{50}{60}\selectfont  };
+\end{tikzpicture}%
+}
+% \newcommand\Footer{%
+ %\begin{tikzpicture}[remember picture,overlay]
+% \fill[mygreen]
+%\draw (0,0) -- (8,0);
+%(current page.south west) -- (current page.south east) --
+%   ([yshift=-40pt]current page.south east|-current page text area.south east) --
+%   ([yshift=-40pt,xshift=-3cm]current page.south|-current page text area.south) --
+%   ([xshift=-5cm,yshift=-10pt]current page.south|-current page text area.south) --
+%   ([yshift=-10pt]current page.south west|-current page text area.south west) -- cycle;
+% \node[yshift=0.75cm,font=\ttfamily\bfseries\color{white}] at (current page.south) {\fontsize{20}{24}\selectfont www.stackexchange.com};
+ %\end{tikzpicture}%
+%}
+
+%\pagestyle{empty}
+\AtBeginShipout{\Header}
+\AtBeginShipoutFirst{\Header}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+% Estilo das duas caixas do 'Refletindo' %%%%%%%%
+\tikzstyle{mybox} = [draw=blue, fill=white, thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt] % definição de estilo da caixa do refletindo
+\tikzstyle{fancytitle} =[draw=blue, fill=white, text=blue, rounded corners] % definição de estilo da caixinha com o nome relfetindo sobre a caixa do refletindo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Definição do ambiente 'Refletindo' %%%%%%%
+\NewEnviron{refletindo}{%
+   \begin{tikzpicture}
+       \node[mybox](box){%
+          \begin{minipage}{0.8\textwidth}{\bf
+            \BODY }
+            \includegraphics[scale=0.2]{pensador.jpeg}
+          \end{minipage}};
+        \node[fancytitle, right=6pt] at (box.north west) {{\bf REFLETINDO}};
+   \end{tikzpicture}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\begin{document}
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.70\textwidth}
+        To calculate the horizontal position the kinematic differential
+        equations are needed:
+        \begin{align}
+            \dot{n} &= u\cos\psi -v\sin\psi \\
+            \dot{e} &= u\sin\psi + v\cos\psi
+        \end{align}
+        For small angles the following approximation can be used:        
+    \end{minipage}
+};
+\node[fancytitle, right=6pt] at (box.north west) {{\bf REFLETINDO}};
+%\node[fancytitle, rounded corners] at (box.east) {$\clubsuit$};
+\end{tikzpicture}%
+
+\begin{refletindo}
+Lista de erros observados nesta maldita caixinha:
+
+\begin{enumerate}
+ \item Não consigo deixar a figura ao lado. wrapfigure e tabular apresentam conflito com o que já está estabelecido. 
+\end{enumerate}
+\end{refletindo}
+
+
+\begin{refletindo}
+ Opa!
+\end{refletindo}
+
+% 
+%  de separação.
+% \tikzset{inner sep=0pt,outer sep=0pt}
+% %Plano de fundo (background)
+% %posição na página. Figura da largura do papel.
+% \node[anchor=south,inner sep=0] at (current page.south) {\includegraphics[width=\paperwidth]{horizontal.jpg}};
+% \end{tikzpicture}
+
+\end{document}
+
