@@ -1,4 +1,32 @@
-\documentclass[a4paper,10pt]{book}
+\documentclass[a4,12pt]{book}
+
+%\usepackage[dvips=false,pdftex=false,vtex=false]{geometry}
+\usepackage{geometry}
+\geometry{
+textwidth=157mm,
+paperwidth=196mm,
+paperheight=280mm,
+top=1in,
+left=27mm,
+footskip=.7in
+}
+\usepackage[center,height=297mm,width=210mm,cam]{crop}
+
+% Fonte
+\usepackage[sfdefault,thin]{roboto}  %% Option 'sfdefault' only if the base font of the document is to be sans serif
+%\usepackage[light,math,thin]{iwona}
+
+\linespread{1.2}
+\usepackage[T1]{fontenc}
+%\usepackage[T1]{fontenc}
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage[sfdefault]{gillius}
+
+% Temporary library for generating random text
+\usepackage{lipsum}
+
+
 %%%% PACOTES %%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[utf8]{inputenc}
 % Pacotes para cabeçalho e rodapé %%%%
@@ -16,7 +44,7 @@
 \usepackage{amsmath,amssymb}
 \usepackage{environ} %Permite quebrar o tikz dentro da definição de um novo ambiente - como refletindo veja http://tex.stackexchange.com/questions/5639/defining-a-new-environment-whose-contents-go-in-a-tikz-node para explicação detalhada.
 %\usepackage[dvipsnames]{xcolor}
-\usepackage[hmargin=2cm,bmargin=3cm,tmargin=1.8cm,centering]{geometry}
+%\usepackage[hmargin=2cm,bmargin=3cm,tmargin=1.8cm,centering]{geometry}
 \usepackage{lmodern}
 \usepackage{atbegshi}
 
@@ -36,13 +64,17 @@
 \renewcommand{\headrulewidth}{0pt}% No footer rule
 
 %Cabeçalho
-\definecolor{myblue}{RGB}{204,216,241} % use o GIMP para obter o cógigo HTML da cor e o site a seguir para converter para RGB http://www.yellowpipe.com/yis/tools/hex-to-rgb/color-converter.php
+% use o GIMP para obter o cógigo HTML da cor e o site a seguir para converter para RGB http://www.yellowpipe.com/yis/tools/hex-to-rgb/color-converter.php
+\definecolor{titleblue}{RGB}{21,101,175}
+\definecolor{myblue}{RGB}{204,216,241}
 \newcommand\Header{%
 \begin{tikzpicture}[remember picture,overlay]
-\fill[myblue]
-  (current page.north west) -- (current page.north east) --
-  ([yshift=0.3cm]current page.north east|-current page text area.north east) --
-  ([yshift=0.3cm]current page.north west|-current page text area.north west) -- cycle;
+%\fill[myblue]
+%  ([yshift=1mm]current page.north west) -- (current page.north east) --
+%  ([yshift=0.3cm]current page.north east|-current page text area.north east) --
+%  ([yshift=0.3cm]current page.north west|-current page text area.north west) -- cycle;
+\fill[fill=myblue,]
+  ([yshift=2mm,xshift=-2mm]current page.north west) rectangle ([yshift=-5mm,xshift=2mm]current page.north east);
 %\node[font=\sffamily\bfseries\color{white},anchor=east, % Texto dentro do cabeçalho acima
   xshift=-1.5cm,yshift=-1.3cm] at (current page.north east)
  % {\fontsize{50}{60}\selectfont  };
@@ -70,21 +102,26 @@
 
 
 % Estilo das duas caixas do 'Refletindo' %%%%%%%%
-\tikzstyle{mybox} = [draw=blue, fill=white, thick,
-    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt] % definição de estilo da caixa do refletindo
-\tikzstyle{fancytitle} =[draw=blue, fill=white, text=blue, rounded corners] % definição de estilo da caixinha com o nome relfetindo sobre a caixa do refletindo
+\tikzstyle{mybox} = [draw=myblue, fill=white, line width=.7mm, minimum width=.9\textwidth,
+rectangle, rounded corners=4mm, inner sep=10pt, inner ysep=20pt] % definição de estilo da caixa do refletindo
+\tikzstyle{fancytitle} = [draw=myblue, fill=white, line width=.7mm,
+minimum height=7mm,
+text=blue, rounded corners=3mm] % definição de estilo da caixinha com o nome relfetindo sobre a caixa do refletindo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Definição do ambiente 'Refletindo' %%%%%%%
 \NewEnviron{refletindo}{%
-   \begin{tikzpicture}
-       \node[mybox](box){%
-          \begin{minipage}{0.8\textwidth}{\bf
-            \BODY }
-            \includegraphics[scale=0.2]{pensador.jpeg}
-          \end{minipage}};
-        \node[fancytitle, right=6pt] at (box.north west) {{\bf REFLETINDO}};
-   \end{tikzpicture}%
+  \begin{tikzpicture}
+    \node[mybox](box){%
+      \hspace{2mm}%
+      \begin{minipage}{0.72\textwidth}{\bf \BODY }
+      \end{minipage}%
+      \hfill%
+      \begin{minipage}{0.18\textwidth}
+        \begin{center} \includegraphics[scale=0.2]{pensador.jpeg} \end{center}
+      \end{minipage}};
+    \node[fancytitle, right=2mm, yshift=1mm] at (box.north west) {\;\; {\bf \color{titleblue}REFLETINDO} \;\;};
+  \end{tikzpicture}%
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -94,36 +131,41 @@
 
 \begin{document}
 
-\begin{tikzpicture}
-\node [mybox] (box){%
-    \begin{minipage}{0.70\textwidth}
-        To calculate the horizontal position the kinematic differential
-        equations are needed:
-        \begin{align}
-            \dot{n} &= u\cos\psi -v\sin\psi \\
-            \dot{e} &= u\sin\psi + v\cos\psi
-        \end{align}
-        For small angles the following approximation can be used:        
-    \end{minipage}
-};
-\node[fancytitle, right=6pt] at (box.north west) {{\bf REFLETINDO}};
-%\node[fancytitle, rounded corners] at (box.east) {$\clubsuit$};
-\end{tikzpicture}%
-
 \begin{refletindo}
 Lista de erros observados nesta maldita caixinha:
 
 \begin{enumerate}
- \item Não consigo deixar a figura ao lado. wrapfigure e tabular apresentam conflito com o que já está estabelecido. 
+ \item Não consigo deixar a figura ao lado. wrapfigure e tabular apresentam conflito com o que já está estabelecido.
 \end{enumerate}
 \end{refletindo}
 
+E se fossem 10 peças de roupa penduradas, quantos pregadores seriam necessários em
+
+\lipsum[1]
 
 \begin{refletindo}
  Opa!
+ \lipsum[1]
 \end{refletindo}
 
-% 
+\lipsum[2-4]
+
+\begin{refletindo}
+ Opa!
+ \lipsum[5]
+\end{refletindo}
+
+\lipsum
+\begin{refletindo}
+ Opa!
+ \lipsum[1]
+\end{refletindo}
+
+\lipsum[2-4]
+
+
+
+
 %  de separação.
 % \tikzset{inner sep=0pt,outer sep=0pt}
 % %Plano de fundo (background)
