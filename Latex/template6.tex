@@ -13,7 +13,7 @@ footskip=.7in
 \usepackage[center,height=297mm,width=210mm,cam]{crop}
 
 % Fonte
-%\usepackage[sfdefault,thin]{roboto}  %% Option 'sfdefault' only if the base font of the document is to be sans serif
+\usepackage[sfdefault,thin]{roboto}  %% Option 'sfdefault' only if the base font of the document is to be sans serif
 %\usepackage[light,math,thin]{iwona}
 
 \linespread{1.2}
@@ -25,7 +25,7 @@ footskip=.7in
 
 % Temporary library for generating random text
 \usepackage{lipsum}
-
+\usepackage[dvipsnames]{xcolor} % Necessário para colorir o ambiente Atividade
 
 %%%% PACOTES %%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[utf8]{inputenc}
@@ -64,13 +64,12 @@ footskip=.7in
   {\gdef\chapterlabel{\thechapter\ }}{0pt}
   {\begin{tikzpicture}[remember picture,overlay]
   \filldraw [x=1mm,y=1mm, green, overlay] (37,0) circle [radius=9]; \filldraw [x=1mm,y=1mm, red, overlay] (58,0) circle [radius=9]; \filldraw [x=1mm,y=1mm, blue, overlay] (79,0) circle [radius=9]; \filldraw [x=1mm,y=1mm, blue, overlay] (210,-9) -- (100 ,-9) arc (-90:-270:9) --(100,9) -- (210,9) (118, 0) node{\color{white} {\bf Capítulo \thechapter}} (105,-27) node{\color{green} {\bf\Large \leftmark}};%
-   \end{tikzpicture}% falta inserir o nome do capítulo e incluir estilo nele. 
+   \end{tikzpicture}% Os nomes que aparecem são os da seção anterior.
    }
 \titlespacing*{\chapter}{0pt}{50pt}{100pt} %\titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
 
 
 %%%%%%%%%%%%%%% Section Style %%%%%%%%%%%%%%%%%%%%
-
 % As a final remark you should also note that the * forms of the \chapter etc. commands do not call the mark commands. So if you want your preface to set the header info but not be numbered nor be put in the table of contents, you must issue the \markboth command yourself, e.g.\chapter*{Preface\markboth{Preface}{}} (see https://www.ntg.nl/maps/16/29.pdf for more details).
 
 \renewcommand{\sectionmark}[1]{%
@@ -84,7 +83,7 @@ footskip=.7in
   {\gdef\sectionlabel{\thesection\ }}{0pt}
   {\begin{tikzpicture}[remember picture,overlay]
   \filldraw [x=1mm,y=1mm, red, overlay] (\textwidth,-4) -- (0 ,-4) arc (-90:-270:4) --(0,4) -- (\textwidth,4) (17, 0) node{\color{white} \rightmark};
-   \end{tikzpicture}% falta inserir o nome do capítulo e incluir estilo nele.
+   \end{tikzpicture}% Falta inserir o nome da seção nas seções que iniciam na mesma página que o capítulo. Os nomes que aparecem são os da seção anterior.
    }
 \titlespacing*{\section}{0pt}{20pt}{20pt} %\titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
 
@@ -112,7 +111,7 @@ footskip=.7in
           {\tikz[x=1mm,y=1mm]{\filldraw [red, overlay] (20,-3) -- (5 ,-3) arc (-90:-270:3) --(5,3) -- (20,3) (8, 0) node{\color{white} {\bf \thepage}};}}
             }% 
 \fancyfoot[C]{ }
-\fancyhead{}
+\fancyhead{} %clear all header fields
 
 \renewcommand{\headrulewidth}{0pt}% No footer rule
 
@@ -167,7 +166,10 @@ text=blue, rounded corners=3mm] % definição de estilo da caixinha com o nome r
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+% Definição do ambiente Atividade %%%%
+\newcounter{atividade}
+\newenvironment{atividade}[1][]{\refstepcounter{atividade}\par\medskip
+   \noindent \textbf{\textcolor{MidnightBlue}{Atividade~\theatividade #1 \rmfamily \rmfamily}}}{\medskip}
 
 
 
@@ -176,9 +178,16 @@ text=blue, rounded corners=3mm] % definição de estilo da caixinha com o nome r
 
 \chapter{Primeiras frações}
 
-\section{Organizando tudo}
+\section{Explorando o Assunto}\label{explorando}
 
 Texto
+\begin{atividade}
+ Some 1 com 2
+\end{atividade}
+\begin{atividade}
+ Some 1 com 2
+\end{atividade}
+
 
 \begin{refletindo}
   Lista de erros observados nesta maldita caixinha:
@@ -206,9 +215,9 @@ Lista de erros observados nesta maldita caixinha:
 \end{refletindo}
 
 E se fossem 10 peças de roupa penduradas, quantos pregadores seriam necessários em
-
 \lipsum[1]
 
+\section{Teste}
 \begin{refletindo}
  Opa!
  \lipsum[1]
@@ -216,12 +225,20 @@ E se fossem 10 peças de roupa penduradas, quantos pregadores seriam necessário
 
 \lipsum[2-4]
 
-\section{Organizando as Ideias}
+\begin{atividade}
+ Some 1 com 2
+\end{atividade}
+
+
+\section{Organizando as Ideias}\label{organizando}
 \lipsum[1]
 \begin{refletindo}
  Opa!
  \lipsum[5]
 \end{refletindo}
+\begin{atividade}
+ Some 1 com 2
+\end{atividade}
 
 \lipsum
 \begin{refletindo}
