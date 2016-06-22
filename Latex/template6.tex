@@ -17,7 +17,9 @@ footskip=.7in
 \usepackage[center,height=297mm,width=210mm,cam]{crop}
 
 % Choose font
-\usepackage[sfdefault,thin]{roboto}  %% sfdefault if the base font of the document is sans serif
+\usepackage[sfdefault,thin]{roboto}  %% sfdefault is the base font
+\newcommand\titlefont{\fontfamily{helvet}\selectfont}
+\newcommand\thickfont{\fontfamily{cmss}\selectfont}
 
 % Larger spacing between lines
 \linespread{1.2}
@@ -38,7 +40,7 @@ footskip=.7in
 
 % \usepackage{lastpage} % Required to determine the last page for the footer
 
-% Pacotes para caixas coloridas e personalizadas do Refletindo %%%%
+% Pacotes para desenhos
 \usepackage{tikz}
 \usetikzlibrary{shapes}
 \usetikzlibrary{calc}
@@ -50,7 +52,6 @@ footskip=.7in
 \usepackage[explicit]{titlesec} % needed for define chapter and section style.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{titling}
-\newcommand\titlefont{\fontfamily{helvet}\selectfont}
 
 % Chapter
 \titleformat{\chapter} % redefining chapter appearence
@@ -167,7 +168,7 @@ minimum height=7mm, text=blue, rounded corners=3mm]
   \begin{tikzpicture}
     \node[mybox](box){%
       \hspace{2mm}%
-      \begin{minipage}{0.72\textwidth}{\bf \BODY}
+      \begin{minipage}{0.72\textwidth}{\thickfont \BODY}
       \end{minipage}%
       \hfill%
       \begin{minipage}{0.18\textwidth}
@@ -180,7 +181,7 @@ minimum height=7mm, text=blue, rounded corners=3mm]
 % Atividade
 \newcounter{atividade}
 \newenvironment{atividade}[1][]{\refstepcounter{atividade}\par\medskip
-   \noindent \textbf{\textcolor{MidnightBlue}{Atividade~\theatividade #1 \rmfamily \rmfamily}}}{\medskip}
+   \noindent \textbf{\textcolor{titleblue}{Atividade~\theatividade #1 \rmfamily \rmfamily}}}{\medskip}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
