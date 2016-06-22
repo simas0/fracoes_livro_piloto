@@ -1,6 +1,8 @@
 \documentclass[a4,12pt]{book}
+\usepackage{amsmath,amssymb}
+
 \usepackage[utf8]{inputenc}
-%\usepackage[dvips=false,pdftex=false,vtex=false]{geometry}
+
 \usepackage{geometry}
 \geometry{
 textwidth=157mm,
@@ -10,115 +12,121 @@ top=1in,
 left=27mm,
 footskip=.7in
 }
+
+% Place crop marks
 \usepackage[center,height=297mm,width=210mm,cam]{crop}
 
-% Fonte
-\usepackage[sfdefault,thin]{roboto}  %% Option 'sfdefault' only if the base font of the document is to be sans serif
-%\usepackage[light,math,thin]{iwona}
+% Choose font
+\usepackage[sfdefault,thin]{roboto}  %% sfdefault if the base font of the document is sans serif
 
+% Larger spacing between lines
 \linespread{1.2}
-\usepackage[T1]{fontenc}
-%\usepackage[T1]{fontenc}
-%\usepackage{helvet}
-%\renewcommand{\familydefault}{\sfdefault}
-%\usepackage[sfdefault]{gillius}
 
 % Temporary library for generating random text
 \usepackage{lipsum}
-\usepackage[dvipsnames]{xcolor} % Necessário para colorir o ambiente Atividade
 
-%%%% PACOTES %%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[utf8]{inputenc}
-% Pacotes para cabeçalho e rodapé %%%%
-\usepackage{fancyhdr} % Required for custom headers
-%\usepackage{lastpage} % Required to determine the last page for the footer
-\usepackage{extramarks} % Required for headers and footers
+% To define colors
+\usepackage[dvipsnames]{xcolor}
+\definecolor{titleblue}{RGB}{21,101,175}
+\definecolor{myblue}{RGB}{204,216,241}
+\definecolor{myred}{RGB}{210,32,39}
+\definecolor{mygreen}{RGB}{179,220,47}
+
+% use o GIMP para obter o cógigo HTML da cor e o site a seguir para converter para RGB
+% http://www.yellowpipe.com/yis/tools/hex-to-rgb/color-converter.php
+
+
+% \usepackage{lastpage} % Required to determine the last page for the footer
 
 % Pacotes para caixas coloridas e personalizadas do Refletindo %%%%
 \usepackage{tikz}
 \usetikzlibrary{shapes}
 \usetikzlibrary{calc}
-% The pack­age pro­vides spe­cial PGF/TikZ nodes for the text, margin­par, footer and header area of the cur­rent page.
+% This package provides special PGF/TikZ nodes for the text, marginpar, footer and header area of the current page.
 \usepackage{tikzpagenodes}
 \tikzset{x=1mm,y=1mm}
 
-\usepackage{amsmath,amssymb}
-\usepackage{environ} %Permite quebrar o tikz dentro da definição de um novo ambiente - como refletindo veja http://tex.stackexchange.com/questions/5639/defining-a-new-environment-whose-contents-go-in-a-tikz-node para explicação detalhada.
-%\usepackage[dvipsnames]{xcolor}
-%\usepackage[hmargin=2cm,bmargin=3cm,tmargin=1.8cm,centering]{geometry}
-\usepackage{lmodern}
-\usepackage{atbegshi}
+%%%%%%%%%%%%%%%%%%%% Chapter and section titles %%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[explicit]{titlesec} % needed for define chapter and section style.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{titling}
+\newcommand\titlefont{\fontfamily{helvet}\selectfont}
 
+% Chapter
+\titleformat{\chapter} % redefining chapter appearence
+%{} % style
+{\titlefont\Huge\bf} % style
+{} % label
+{0pt} % separation
+{\begin{tikzpicture}[remember picture,overlay]
+    \filldraw [x=1mm,y=1mm, mygreen, overlay] (37,0) circle [radius=9];
+    \filldraw [x=1mm,y=1mm, myred, overlay] (58,0) circle [radius=9];
+    \filldraw [x=1mm,y=1mm, titleblue, overlay] (79,0) circle [radius=9];
+    \filldraw [x=1mm,y=1mm, titleblue, overlay] (210,-9) -- (100 ,-9) arc (-90:-270:9) --(100,9)
+    -- (210,9) (118, 0) node{\color{white} Capítulo \thechapter} (105,-27);
+  \end{tikzpicture}
+} % before title
+[\vspace{3cm} \hfill {\color{mygreen} #1}] % after title
+%\titlespacing*{\chapter}{0pt}{50pt}{100pt} % {<command>}{<left>}{<before-sep>}{<after-sep>}
 
-%%%%%%%%%%%%%%% Chapter Style %%%%%%%%%%%%%%%%%%%%
-\pagestyle{fancy}
-\renewcommand{\chaptermark}[1]{% documentation abaout chaptermark, markboth, etc. https://www.ntg.nl/maps/16/29.pdf
-\markboth{\ #1}{}}
-
-\newcommand*\chapterlabel{}
-\titleformat{\chapter}
-  {\gdef\chapterlabel{}
-   \normalfont\sffamily\Huge\bfseries\scshape}
-  {\gdef\chapterlabel{\thechapter\ }}{0pt}
-  {\begin{tikzpicture}[remember picture,overlay]
-  \filldraw [x=1mm,y=1mm, green, overlay] (37,0) circle [radius=9]; \filldraw [x=1mm,y=1mm, red, overlay] (58,0) circle [radius=9]; \filldraw [x=1mm,y=1mm, blue, overlay] (79,0) circle [radius=9]; \filldraw [x=1mm,y=1mm, blue, overlay] (210,-9) -- (100 ,-9) arc (-90:-270:9) --(100,9) -- (210,9) (118, 0) node{\color{white} {\bf Capítulo \thechapter}} (105,-27) node{\color{green} {\bf\Large \leftmark}};%
-   \end{tikzpicture}% Os nomes que aparecem são os da seção anterior.
-   }
-\titlespacing*{\chapter}{0pt}{50pt}{100pt} %\titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
-
-
-%%%%%%%%%%%%%%% Section Style %%%%%%%%%%%%%%%%%%%%
-% As a final remark you should also note that the * forms of the \chapter etc. commands do not call the mark commands. So if you want your preface to set the header info but not be numbered nor be put in the table of contents, you must issue the \markboth command yourself, e.g.\chapter*{Preface\markboth{Preface}{}} (see https://www.ntg.nl/maps/16/29.pdf for more details).
-
-\renewcommand{\sectionmark}[1]{%
-\markright{%
-\ #1}{}}
-
-\newcommand*\sectionlabel{}
+% Section style %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand*\sectionlabel{}
 \titleformat{\section}
-  {\gdef\sectionlabel{}
-   \normalfont\sffamily\bfseries\scshape}
+  {\titlefont\bf}
   {\gdef\sectionlabel{\thesection\ }}{0pt}
-  {\begin{tikzpicture}[remember picture,overlay]
-  \filldraw [x=1mm,y=1mm, red, overlay] (\textwidth,-4) -- (0 ,-4) arc (-90:-270:4) --(0,4) -- (\textwidth,4) (17, 0) node{\color{white} \rightmark};
-   \end{tikzpicture}% Falta inserir o nome da seção nas seções que iniciam na mesma página que o capítulo. Os nomes que aparecem são os da seção anterior.
-   }
-\titlespacing*{\section}{0pt}{20pt}{20pt} %\titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+  {%
+    \begin{tikzpicture}[remember picture,overlay]
+      \filldraw [x=1mm,y=1mm, myred, overlay] (\textwidth,-4) -- (0 ,-4)
+      arc (-90:-270:4) --(0,4) -- (\textwidth,4)
+      node[anchor=west] at (0, 0) {\color{white} \MakeUppercase{#1}};
+   \end{tikzpicture}
+ }
+\titlespacing*{\section}{0pt}{20pt}{20pt} % {<command>}{<left>}{<before-sep>}{<after-sep>}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Set up the header and footer %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%% Custom headers and footers %%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 
+% Chapter mark
+\renewcommand{\chaptermark}[1]{\markboth{\ #1}{}}
+% documentation abaout chaptermark, markboth, etc. https://www.ntg.nl/maps/16/29.pdf
 
-% Rodapé
+% Section mark
+\renewcommand{\sectionmark}[1]{\markright{\ #1}{}} % Sections not in uppercase, not numbered
 
-%  \renewcommand{\chaptermark}[1]{% documentation abaout chaptermark, markboth, etc. https://www.ntg.nl/maps/16/29.pdf
-%  \markboth{Capítulo - \thechapter\ #1}{}}
+% Footers
 \fancyfoot[C]{%
 \noindent%
 \tikz[baseline]{\draw[color=ref, line width=0.6pt] (-0.5, 0) -- (6, 0);}%
-%\protect\circled{\thepage}%
-%\tikz[baseline]{\draw[color=back, line width=2pt] (8, 0) -- (15, 0);}%
 }
 
+% Left footer
 \fancyfoot[LE]{
-            {\tikz{\draw[color=red, line width=0.6pt] (-1.8, 0) -- (\textwidth, 0);}}\newline
-            {\tikz[x=1mm,y=1mm]{\filldraw [red, overlay] (-20,-3) -- (-5 ,-3) arc (-90:90:3) --(-5,3) -- (-20,3) (-8, 0) node{\color{white} {\bf \thepage}};}}{\small\color{gray} Capítulo \thechapter \, - \, \leftmark} 
-            }% 
+  {\tikz{\draw[color=myred, line width=0.6pt] (-1.8, 0) -- (\textwidth, 0);}}\newline
+  {\tikz[x=1mm,y=1mm]{\filldraw [myred, overlay] (-20,-3) -- (-5 ,-3)
+      arc (-90:90:3) --(-5,3) -- (-20,3) (-8, 0) node{\color{white} {\bf \thepage}};}}
+  {\small\color{gray} Capítulo \thechapter \, - \, \leftmark}
+}
+
+% Right footer
 \fancyfoot[RO]{
-           {\tikz{\draw[color=red, line width=0.6pt] (-1.8, 0) -- (\textwidth, 0);}}\newline
-          {\small\color{gray} \rightmark} 
-          {\tikz[x=1mm,y=1mm]{\filldraw [red, overlay] (20,-3) -- (5 ,-3) arc (-90:-270:3) --(5,3) -- (20,3) (8, 0) node{\color{white} {\bf \thepage}};}}
-            }% 
-\fancyfoot[C]{ }
-\fancyhead{} %clear all header fields
+  {\tikz{\draw[color=myred, line width=0.6pt] (-1.8, 0) -- (\textwidth, 0);}}\newline
+  {\small\color{gray} \rightmark}
+  {\tikz[x=1mm,y=1mm]{\filldraw [myred, overlay] (20,-3) -- (5 ,-3)
+      arc (-90:-270:3) --(5,3) -- (20,3) (8, 0) node{\color{white} {\bf \thepage}};}}
+}%
+\fancyfoot[C]{}
 
-\renewcommand{\headrulewidth}{0pt}% No footer rule
+% Header
+% Clear all header fields
+\fancyhead{}
+% No header rule
+\renewcommand{\headrulewidth}{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%Cabeçalho
-% use o GIMP para obter o cógigo HTML da cor e o site a seguir para converter para RGB http://www.yellowpipe.com/yis/tools/hex-to-rgb/color-converter.php
-\definecolor{titleblue}{RGB}{21,101,175}
-\definecolor{myblue}{RGB}{204,216,241}
+%%%%%%%%%%%%%%%%%%%%%% Cabeçalho %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\Header{%
 \begin{tikzpicture}[remember picture,overlay]
 %\fill[myblue]
@@ -132,25 +140,29 @@ footskip=.7in
  % {\fontsize{50}{60}\selectfont  };
 \end{tikzpicture}%
 }
-
-
-%\pagestyle{empty}
+% This package provides various commands to be executed before a \shipout
+\usepackage{atbegshi}
 \AtBeginShipout{\Header}
 \AtBeginShipoutFirst{\Header}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+%%%%%%%%%%%%%%%%%%%%%% Ambientes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Permite quebrar o tikz dentro da definição de um novo ambiente- como refletindo:
+% http://tex.stackexchange.com/questions/5639 para explicação detalhada.
+\usepackage{environ}
 
-
-% Estilo das duas caixas do 'Refletindo' %%%%%%%%
-\tikzstyle{mybox} = [draw=myblue, fill=white, line width=.7mm, minimum width=.9\textwidth,
-rectangle, rounded corners=4mm, inner sep=10pt, inner ysep=20pt] % definição de estilo da caixa do refletindo
+% Estilo Refletindo
+% box for the body of text
+\tikzstyle{mybox} = [draw=myblue, fill=white, line width=.7mm,
+minimum width=.9\textwidth, rectangle, rounded corners=4mm,
+inner sep=10pt, inner ysep=20pt]
+% box for the title
 \tikzstyle{fancytitle} = [draw=myblue, fill=white, line width=.7mm,
-minimum height=7mm,
-text=blue, rounded corners=3mm] % definição de estilo da caixinha com o nome relfetindo sobre a caixa do refletindo
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+minimum height=7mm, text=blue, rounded corners=3mm]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Definição do ambiente 'Refletindo' %%%%%%%
+% Refletindo
 \NewEnviron{refletindo}{%
   \begin{tikzpicture}
     \node[mybox](box){%
@@ -164,17 +176,57 @@ text=blue, rounded corners=3mm] % definição de estilo da caixinha com o nome r
     \node[fancytitle, right=2mm, yshift=1mm] at (box.north west) {\;\; {\bf \color{titleblue}REFLETINDO} \;\;};
   \end{tikzpicture}%
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Definição do ambiente Atividade %%%%
+% Atividade
 \newcounter{atividade}
 \newenvironment{atividade}[1][]{\refstepcounter{atividade}\par\medskip
    \noindent \textbf{\textcolor{MidnightBlue}{Atividade~\theatividade #1 \rmfamily \rmfamily}}}{\medskip}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
 \chapter{Apresentação}
+
+\section{Blablablabla...}
+
+Texto
+\begin{atividade}
+ Some 1 com 2
+\end{atividade}
+\begin{atividade}
+ Some 1 com 2
+\end{atividade}
+
+
+\begin{refletindo}
+  Lista de erros observados nesta maldita caixinha:
+  \begin{enumerate}
+   \item Não consigo deixar a figura ao lado. wrapfigure e tabular apresentam conflito com o que já está estabelecido.
+  \end{enumerate}
+\end{refletindo}
+
+
+\begin{refletindo}
+ Opa!
+ \begin{enumerate}
+  \item bla
+ \end{enumerate}
+\end{refletindo}
+
+
+
+\begin{refletindo}
+Lista de erros observados nesta maldita caixinha:
+
+\begin{enumerate}
+ \item Não consigo deixar a figura ao lado. wrapfigure e tabular apresentam conflito com o que já está estabelecido.
+\end{enumerate}
+\end{refletindo}
+
+E se fossem 10 peças de roupa penduradas, quantos pregadores seriam necessários em
+\lipsum[1]
+
+
 
 \chapter{Primeiras frações}
 
@@ -192,7 +244,7 @@ Texto
 \begin{refletindo}
   Lista de erros observados nesta maldita caixinha:
   \begin{enumerate}
-   \item Não consigo deixar a figura ao lado. wrapfigure e tabular apresentam conflito com o que já está estabelecido. 
+   \item Não consigo deixar a figura ao lado. wrapfigure e tabular apresentam conflito com o que já está estabelecido.
   \end{enumerate}
 \end{refletindo}
 
@@ -259,4 +311,3 @@ E se fossem 10 peças de roupa penduradas, quantos pregadores seriam necessário
 % \end{tikzpicture}
 
 \end{document}
-
