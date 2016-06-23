@@ -17,9 +17,21 @@ footskip=.7in
 \usepackage[center,height=297mm,width=210mm,cam]{crop}
 
 % Choose font
-\usepackage[sfdefault,thin]{roboto}  %% sfdefault is the base font
-\newcommand\titlefont{\fontfamily{helvet}\selectfont}
-\newcommand\thickfont{\fontfamily{cmss}\selectfont}
+\usepackage{ifxetex}
+\ifxetex
+   \usepackage{fontspec}
+   \setmainfont{Lato Light}
+   \newfontface\titlefont{STIXIntegralsUp}
+   \newfontface\thickfont{Nimbus Sans L}
+   \newfontface\bigtitlefont[Scale=1.3]{Cabin}
+   %\newcommand\titlefont{}
+   %\newcommand\thickfont{}
+\else
+   \usepackage[sfdefault,thin]{roboto}  %% sfdefault is the base font
+   \newcommand\titlefont{\fontfamily{helvet}\selectfont}
+   \newcommand\thickfont{\fontfamily{cmss}\selectfont}
+   \newcommand\bigtitlefont{\fontfamily{cmss}\selectfont}
+\fi
 
 % Larger spacing between lines
 \linespread{1.2}
@@ -31,8 +43,10 @@ footskip=.7in
 \usepackage[dvipsnames]{xcolor}
 \definecolor{titleblue}{RGB}{21,101,175}
 \definecolor{myblue}{RGB}{204,216,241}
+\definecolor{mediumblue}{RGB}{108,153,215}
 \definecolor{myred}{RGB}{210,32,39}
 \definecolor{mygreen}{RGB}{179,220,47}
+
 
 % use o GIMP para obter o cógigo HTML da cor e o site a seguir para converter para RGB
 % http://www.yellowpipe.com/yis/tools/hex-to-rgb/color-converter.php
@@ -63,11 +77,11 @@ footskip=.7in
     \filldraw [x=1mm,y=1mm, mygreen, overlay] (37,0) circle [radius=9];
     \filldraw [x=1mm,y=1mm, myred, overlay] (58,0) circle [radius=9];
     \filldraw [x=1mm,y=1mm, titleblue, overlay] (79,0) circle [radius=9];
-    \filldraw [x=1mm,y=1mm, titleblue, overlay] (210,-9) -- (100 ,-9) arc (-90:-270:9) --(100,9)
+    \filldraw [x=1mm,y=1mm, mediumblue, overlay] (210,-9) -- (100 ,-9) arc (-90:-270:9) --(100,9)
     -- (210,9) (118, 0) node{\color{white} Capítulo \thechapter} (105,-27);
   \end{tikzpicture}
 } % before title
-[\vspace{3cm} \hfill {\color{mygreen} #1}] % after title
+[\vspace{3cm} \hfill {\bf\bigtitlefont \color{mygreen} #1}] % after title
 %\titlespacing*{\chapter}{0pt}{50pt}{100pt} % {<command>}{<left>}{<before-sep>}{<after-sep>}
 
 % Section style %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
