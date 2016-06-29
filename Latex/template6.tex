@@ -1,8 +1,6 @@
 \documentclass[a4,12pt]{book}
 \usepackage{amsmath,amssymb}
 
-\usepackage[utf8]{inputenc}
-
 \usepackage{geometry}
 \geometry{
 textwidth=157mm,
@@ -198,6 +196,23 @@ minimum height=7mm, text=blue, rounded corners=3mm]
    \noindent \textbf{\textcolor{titleblue}{Atividade~\theatividade #1 \rmfamily \rmfamily}}}{\medskip}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage{tcolorbox}
+%\usepackage{varwidth}
+\tcbuselibrary{listings,breakable,most}
+\newtcolorbox{pensando}[2][]{%
+colframe=myblue,
+colbacktitle=white,
+coltitle=titleblue,
+boxed title style={arc=3mm,boxrule=.7mm,height=8mm,valign=center},
+enhanced,colback=white,
+boxrule=.7mm,titlerule=3mm,
+attach boxed title to top left={yshift=-2mm,xshift=3mm},
+arc=4mm,
+breakable,
+fontupper=\thickfont,
+title={\bf REFLETINDO},#1}
+
+
 
 \begin{document}
 \chapter{Apresentação}
@@ -213,12 +228,13 @@ Texto
 \end{atividade}
 
 
-\begin{refletindo}
+\begin{pensando}
   Lista de erros observados nesta maldita caixinha:
   \begin{enumerate}
    \item Não consigo deixar a figura ao lado. wrapfigure e tabular apresentam conflito com o que já está estabelecido.
   \end{enumerate}
-\end{refletindo}
+  \lipsum[1]
+\end{pensando}
 
 
 \begin{refletindo}
