@@ -167,28 +167,28 @@ footskip=.7in
 
 % Estilo Refletindo
 % box for the body of text
-\tikzstyle{mybox} = [draw=myblue, fill=white, line width=.7mm,
-minimum width=.9\textwidth, rectangle, rounded corners=4mm,
-inner sep=10pt, inner ysep=20pt]
+% \tikzstyle{mybox} = [draw=myblue, fill=white, line width=.7mm,
+% minimum width=.9\textwidth, rectangle, rounded corners=4mm,
+% inner sep=10pt, inner ysep=20pt]
 % box for the title
-\tikzstyle{fancytitle} = [draw=myblue, fill=white, line width=.7mm,
-minimum height=7mm, text=blue, rounded corners=3mm]
+% \tikzstyle{fancytitle} = [draw=myblue, fill=white, line width=.7mm,
+% minimum height=7mm, text=blue, rounded corners=3mm]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Refletindo
-\NewEnviron{refletindo}{%
-  \begin{tikzpicture}
-    \node[mybox](box){%
-      \hspace{2mm}%
-      \begin{minipage}{0.72\textwidth}{\thickfont \BODY}
-      \end{minipage}%
-      \hfill%
-      \begin{minipage}{0.18\textwidth}
-        \begin{center} \includegraphics[scale=0.2]{pensador.jpeg} \end{center}
-      \end{minipage}};
-    \node[fancytitle, right=2mm, yshift=1mm] at (box.north west) {\;\; {\bf \color{titleblue}REFLETINDO} \;\;};
-  \end{tikzpicture}%
-}
+% \NewEnviron{refletindo}{%
+%   \begin{tikzpicture}
+%     \node[mybox](box){%
+%       \hspace{2mm}%
+%       \begin{minipage}{0.72\textwidth}{\thickfont \BODY}
+%       \end{minipage}%
+%       \hfill%
+%       \begin{minipage}{0.18\textwidth}
+%         \begin{center} \includegraphics[scale=0.2]{pensador.jpeg} \end{center}
+%       \end{minipage}};
+%     \node[fancytitle, right=2mm, yshift=1mm] at (box.north west) {\;\; {\bf \color{titleblue}REFLETINDO} \;\;};
+%   \end{tikzpicture}%
+% }
 
 % Atividade
 \newcounter{atividade}
@@ -199,7 +199,7 @@ minimum height=7mm, text=blue, rounded corners=3mm]
 \usepackage{tcolorbox}
 %\usepackage{varwidth}
 \tcbuselibrary{listings,breakable,most}
-\newtcolorbox{pensando}[2][]{%
+\newtcolorbox{refletindo}[2][]{%
 colframe=myblue,
 colbacktitle=white,
 coltitle=titleblue,
@@ -228,13 +228,13 @@ Texto
 \end{atividade}
 
 
-\begin{pensando}
+\begin{refletindo}
   Lista de erros observados nesta maldita caixinha:
   \begin{enumerate}
    \item Não consigo deixar a figura ao lado. wrapfigure e tabular apresentam conflito com o que já está estabelecido.
   \end{enumerate}
   \lipsum[1]
-\end{pensando}
+\end{refletindo}
 
 
 \begin{refletindo}
