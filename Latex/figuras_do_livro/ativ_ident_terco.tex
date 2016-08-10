@@ -1,0 +1,94 @@
+\documentclass{standalone}%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[active,pdftex,tightpage]{preview}
+\usepackage{tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+%\usepackage[brazilian]{babel}
+
+\PreviewEnvironment{tikzpicture}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.geometric}
+
+\begin{document}
+%\maketitle
+
+%Enunciado
+%A)
+\begin{tikzpicture}
+      \draw[red] (90:2 cm)  -- (210:2 cm);
+      \draw (210:2 cm)  -- (330:2 cm);
+      \draw[red] (330:2 cm) -- (90:2 cm);
+\end{tikzpicture}
+
+%B)
+\begin{tikzpicture}
+      \draw (0,0) rectangle (4,3);
+      \draw (0.5,0.5) rectangle (3.5,2.5);
+      \fill[gray] (0,0) -- (0.5,0.5) -- (3.5,0.5) -- (3.5,2.5) -- (4,3) -- (4,0)--cycle;
+      \fill[red] (0,0) -- (0.5,0.5) -- (0.5,2.5) -- (3.5,2.5) -- (4,3) -- (0,3)--cycle;
+\end{tikzpicture}
+
+%C)
+\begin{tikzpicture}
+      \draw (0,3) -- (3,0);
+      \draw[red] (3,0) -- (6,3);
+      \draw (6,3) -- (9,0);      
+\end{tikzpicture}
+
+%D)
+\begin{tikzpicture}
+      \draw (90:2 cm)  -- (210:2 cm);
+      \draw[red] (210:2 cm)  -- (330:2 cm);
+      \draw (330:2 cm) -- (90:2 cm);
+\end{tikzpicture}
+
+%E)
+
+%F)
+\begin{tikzpicture}
+\foreach \x in {0,60,...,300}{
+      \draw (\x:2 cm)  -- (\x + 60:2 cm);}
+      \draw (0,0)  -- (60:2 cm);
+      \draw (0,0)  -- (180:2 cm);
+      \fill[red] (0,0) -- (60:2 cm) -- (120:2 cm) -- (180:2 cm) -- (0,0);
+      \fill[gray] (0,0) -- (60:2 cm) -- (0:2 cm) -- (300:2 cm) -- (240:2 cm) -- (180:2 cm) -- (0,0);
+      \draw (0,0)  -- (300:2 cm);
+\end{tikzpicture}
+
+
+%G)
+\begin{tikzpicture}
+      \draw[red] (0,3) -- (3,0);
+      \draw[red] (3,0) -- (6,3);
+      \draw (6,3) -- (9,0);      
+\end{tikzpicture}
+
+%H)
+\begin{tikzpicture}
+    \draw[fill=gray] (0,0) rectangle (3,1);
+    \draw[fill=red] (3,0) rectangle (6,1);
+    \draw[fill=gray] (6,0) rectangle (9,1);
+\end{tikzpicture}
+
+
+%I)
+\begin{tikzpicture}
+    \draw[fill=gray] (0,0) rectangle (2,1);
+    \draw[fill=red] (2,0) rectangle (6,1);
+    \draw[fill=gray] (6,0) rectangle (9,1);
+\end{tikzpicture}
+
+%J)
+\begin{tikzpicture}
+ \fill[red] (162:2 cm) -- (234:2 cm) -- (306: 2 cm) -- (378: 2cm) -- (0,0) -- cycle;
+ \fill[gray] (162:2 cm) -- (0,0) -- (378: 2cm) -- (90: 2cm) -- cycle;
+  \foreach \x in {90,162,...,378}{
+ \draw (\x: 2cm) -- (\x + 72: 2cm);
+ \draw (0,0) -- (\x:2cm);}
+\end{tikzpicture}
+
+
+
+\end{document}

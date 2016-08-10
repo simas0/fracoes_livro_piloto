@@ -1,0 +1,56 @@
+\documentclass{standalone}%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[active,pdftex,tightpage]{preview}
+\usepackage{tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+%\usepackage[brazilian]{babel}
+
+\PreviewEnvironment{tikzpicture}
+\usetikzlibrary{calc}
+
+\definecolor{ttttff}{rgb}{0.2,0.2,1.}
+\definecolor{ffqqtt}{rgb}{1.,0.,0.2}
+\definecolor{qqffqq}{rgb}{0.,1.,0.}
+
+\begin{document}
+%\maketitle
+
+%Enunciado
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw (3.,5.) -- (3.,3.) -- (4.7,2.) -- (6.46,3.) -- (8.2,2.) -- (9.9,3.) -- (9.9,5.) -- (8.2,6.)       -- (6.46,5.) -- (4.73,6.) -- cycle;
+\end{tikzpicture}
+
+
+%Respostas
+%a
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[fill=gray] (3.,5.) -- (3.,3.) -- (4.7,2.) -- (6.46,3.) -- (6.46,5.) -- (4.73,6.) -- cycle;
+\draw (6.46,5.) -- (6.46,3.) -- (8.2,2.) -- (9.9,3.) -- (9.9,5.) -- (8.2,6.) -- cycle;
+\end{tikzpicture}
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\fill[gray] (4.732050807568877,6.) -- (3.,5.) -- (3.,3.) -- (4.732050807568877,2.) -- cycle;
+\fill[gray] (8.2,6.) -- (8.2,2.) -- (9.9,3.) -- (9.9,5.) -- cycle;
+\draw (3.,5.) -- (3.,3.) -- (4.7,2.) -- (6.46,3.) -- (6.46,5.) -- (4.73,6.) -- cycle;
+\draw (6.46,5.) -- (6.46,3.) -- (8.2,2.) -- (9.9,3.) -- (9.9,5.) -- (8.2,6.) -- cycle;
+\end{tikzpicture}
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\fill[gray] (3.,4.) -- (3.,3.) -- (4.732050807568877,2.) -- (6.464101615137757,3.) -- (8.196152422706634,2.) -- (9.928203230275509,3.) -- (9.928203230275509,4.) -- cycle;
+\draw (3.,5.) -- (3.,3.) -- (4.7,2.) -- (6.46,3.) -- (6.46,5.) -- (4.73,6.) -- cycle;
+\draw (6.46,5.) -- (6.46,3.) -- (8.2,2.) -- (9.9,3.) -- (9.9,5.) -- (8.2,6.) -- cycle;
+\end{tikzpicture}
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\fill[gray] (3,5) -- (3.,3.) -- (4.73,2.) -- (6.46,3.) -- (8.2,2.) -- (9.9,3.) -- cycle;
+\draw (3.,5.) -- (3.,3.) -- (4.7,2.) -- (6.46,3.) -- (6.46,5.) -- (4.73,6.) -- cycle;
+\draw (6.46,5.) -- (6.46,3.) -- (8.2,2.) -- (9.9,3.) -- (9.9,5.) -- (8.2,6.) -- cycle;
+\end{tikzpicture}
+
+
+
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass{standalone}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+
+\usepackage[active,pdftex,tightpage]{preview}
+
+
+\PreviewEnvironment{tikzpicture}
+
+\definecolor{ttttff}{rgb}{0.2,0.2,1.}
+\definecolor{ffttcc}{rgb}{1.,0.2,0.8}
+\definecolor{ttffqq}{rgb}{0.2,1.,0.}
+
+\begin{document}
+% bonita, mas incompleta.
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\fill[color=ttttff,fill=ttttff,fill opacity=0.1] (3.,6.) -- (4.5,6.) -- (4.5,3.) -- (3.,3.) -- cycle;
+\draw (3.,6.)-- (6.,6.);
+\draw (3.,6.)-- (3.,3.);
+\draw (3.,3.)-- (6.,3.);
+\draw (6.,3.)-- (6.,6.);
+\draw (4.5,6.)-- (4.5,3.);
+\draw [color=ttttff] (3.,6.)-- (4.5,6.);
+\draw [color=ttttff] (4.5,6.)-- (4.5,3.);
+\draw [color=ttttff] (4.5,3.)-- (3.,3.);
+\draw [color=ttttff] (3.,3.)-- (3.,6.);
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\fill[color=ffttcc,fill=ffttcc,fill opacity=0.1] (3.,6.) -- (4.5,6.) -- (4.5,4.5) -- (3.,4.5) -- cycle;
+\draw (3.,6.)-- (6.,6.);
+\draw (3.,6.)-- (3.,3.);
+\draw (3.,3.)-- (6.,3.);
+\draw (6.,3.)-- (6.,6.);
+\draw (4.5,6.)-- (4.5,3.);
+\draw (3.,4.5)-- (6.,4.5);
+\draw [color=ffttcc] (3.,6.)-- (4.5,6.);
+\draw [color=ffttcc] (4.5,6.)-- (4.5,4.5);
+\draw [color=ffttcc] (4.5,4.5)-- (3.,4.5);
+\draw [color=ffttcc] (3.,4.5)-- (3.,6.);
+\end{tikzpicture}
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\fill[color=ttffqq,fill=ttffqq,fill opacity=0.1] (3.,6.) -- (4.5,6.) -- (4.5,5.26) -- (3.,5.26) -- cycle;
+\draw (3.,6.)-- (6.,6.);
+\draw (3.,6.)-- (3.,3.);
+\draw (3.,3.)-- (6.,3.);
+\draw (6.,3.)-- (6.,6.);
+\draw (4.5,6.)-- (4.5,3.);
+\draw (3.,4.5)-- (6.,4.5);
+\draw (3.,5.26)-- (6.,5.26);
+\draw (3.,3.75)-- (6.,3.75);
+\draw [color=ttffqq] (3.,6.)-- (4.5,6.);
+\draw [color=ttffqq] (4.5,6.)-- (4.5,5.26);
+\draw [color=ttffqq] (4.5,5.26)-- (3.,5.26);
+\draw [color=ttffqq] (3.,5.26)-- (3.,6.);
+\end{tikzpicture}
+
+
+\end{document}
