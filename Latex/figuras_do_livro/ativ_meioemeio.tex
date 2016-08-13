@@ -1,0 +1,111 @@
+\documentclass{standalone}
+
+\usepackage[active,pdftex,tightpage]{preview}
+\usepackage{tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+\PreviewEnvironment{tikzpicture}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.geometric}
+
+\begin{document}
+
+%retângulos
+
+\begin{tikzpicture}
+ \draw[fill=gray] (0,0) rectangle (3,2);
+ \draw (3,0) rectangle (6,2) (3,-0.4) node{Figura 1};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+ \draw (0,0) rectangle (3,2);
+ \draw (1,0) -- (1,2);
+ \draw (1.5,0) -- (1.5,2);
+ \draw (2.2,0) -- (2.2,2);
+ \draw[fill=gray] (3,0) rectangle (6,2) (3,-0.4) node{Figura 2};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+ \draw (0,0) rectangle (3,2);
+ \draw (3,0) rectangle (6,2) (3,-0.4) node{Figura 3};
+ \draw[fill=gray] (0,2) rectangle (6,1.2);
+ \end{tikzpicture}
+
+ % círculos
+
+ \begin{tikzpicture}
+ \draw[fill=gray] (0,-2) arc (-90:90: 2);
+ \draw (0,2) arc (90:270:2) (0,-2.4) node{Figura 4};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+ \draw[fill=gray] (45:2) arc (45:225:2);
+ \draw (225:2) arc (225:405:2) (0,-2.4) node{Figura 5};
+ \draw (0,0) -- (0,-2);
+ \draw (0,0) -- (-30:2);
+ \draw (225:2) -- (45:2);
+ \end{tikzpicture}
+
+ \begin{tikzpicture}
+ \draw (0,0) circle (2);
+ \draw[fill=gray] (0,0) -- (2,0) arc (0:90:2) -- cycle; 
+ \draw[fill=gray] (0,0) -- (-2,0) arc (180:270: 2) -- cycle;
+ \node at (0,-2.4) {Figura 6};
+\end{tikzpicture} 
+
+% hexágonos
+
+\begin{tikzpicture}
+ \foreach \x in {0,60,...,300}{
+ \draw (\x:2) -- (\x +60: 2);}
+ \fill[gray] (2,0) -- (60:2) -- (300:2);
+ \node at (0,-2.4) {Figura 7};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+ \foreach \x in {0,60,...,300}{
+ \draw (\x:2) -- (\x +60: 2);}
+ \fill[gray] (60:2) -- (120:2) -- (180:2) -- (240:2) --cycle;
+ \draw (0,0) -- (2,0);
+ \draw (0,0) -- (300:2) (0,-2.4) node{Figura 8};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+ \foreach \x in {0,60,...,300}{
+ \draw (\x:2) -- (\x +60: 2);}
+ \fill[gray] (0:2) -- (60:2) -- (0:0) --cycle;
+ \fill[gray] (120:2) -- (180:2) -- (0:0) --cycle;
+ \fill[gray] (240:2) -- (300:2) -- (0:0) --cycle;
+ \node at (0,-2.4) {Figura 9};
+\end{tikzpicture}
+
+%círculo
+
+\begin{tikzpicture}
+ \draw[fill=gray] (0:2) arc (0:270:2) -- (0,0) -- cycle;
+ \draw (270:2) arc (270:360:2);
+ \draw (0,0) -- (0,-2);
+ \draw (0,0) -- (2,0)  (0,-2.4) node{Figura 10};
+ \end{tikzpicture}
+
+%hexágonos
+
+\begin{tikzpicture}
+ \foreach \x in {0,60,...,300}{
+ \draw (\x:2) -- (\x +60: 2);}
+\fill[gray] (120:2) -- (180:2) -- (240:2) -- cycle;
+\fill[gray] (240:2) -- (300:2) -- (60:2) -- cycle;
+ \node at (0,-2.4) {Figura 11};
+\end{tikzpicture}
+
+%retângulo
+\begin{tikzpicture}
+ \fill[gray] (1,0) rectangle (4,2);
+ \draw (0,0) rectangle (6,2);
+ \node at (3,-0.4) {Figura 12};
+ \end{tikzpicture}
+
+
+ 
+\end{document}

@@ -12,31 +12,99 @@
 
 \begin{document}
 
-%A)
+
 
 \begin{tikzpicture}[x=1mm,y=1mm]
       \draw[gray,fill] (0,0)
-        -- ({7 * 360/9}:10) arc ({7 * 360/9}:{8 * 360/9}:10) -- (0,0);
+        -- ({7 * 360/9}:20) arc ({7 * 360/9}:{8 * 360/9}:20) -- (0,0);
 	  \foreach \x in {1,...,9}
-    	{ \draw (0,0) -- ++({360 * \x / 9}:10); }
-	  \draw (0,0) circle (10);    
+    	{ \draw (0,0) -- ++({360 * \x / 9}:20); }
+	  \draw (0,0) circle (20);    
+	  \node at (-20,16) {A)};
 \end{tikzpicture}
 
 %B)
 
 \begin{tikzpicture}[x=1mm,y=1mm]
       \draw[gray,fill] (0,0)
-        -- ({3 * 360/8}:10) arc ({3 * 360/8}:{4 * 360/8}:10) -- (0,0);
+        -- ({3 * 360/8}:20) arc ({3 * 360/8}:{4 * 360/8}:20) -- (0,0);
 	  \foreach \x in {1,...,8}
-    	{ \draw (0,0) -- ++({360 * \x / 8}:10); }
-	  \draw (0,0) circle (10);    
+    	{ \draw (0,0) -- ++({360 * \x / 8}:20); }
+	  \draw (0,0) circle (20);
+	  \node at (-20,16) {B)};
 \end{tikzpicture}
 
 
 %C)
 
 \begin{tikzpicture}[x=1mm,y=1mm]
-	  \draw[fill=gray] (0,0) circle (10);    
+	  \draw[fill=gray] (0,0) circle (20);    
+	  \node at (-20,16) {C)};
+\end{tikzpicture}
+
+%D)
+\begin{tikzpicture}[x=1mm,y=1mm]
+      \draw[gray,fill] (0,0)
+        -- ({1.5 * 360/6}:20) arc ({1.5 * 360/6}:{2.5 * 360/6}:20) -- (0,0);
+	  \foreach \x in {1.5,...,6.5}
+    	{ \draw (0,0) -- ++({360 * \x / 6}:20); }
+	  \draw (0,0) circle (20);
+	  \node at (-20,16) {D)};
+\end{tikzpicture}
+
+%E)
+\begin{tikzpicture}[x=1mm,y=1mm]
+      \draw[gray,fill] (0,0)
+        -- (90 :20) arc (90:210:20) -- (0,0);
+	  \foreach \x in {1,...,3}
+    	{ \draw (0,0) -- ++({90 + 360 * \x / 3}:20); }
+	  \draw (0,0) circle (20);
+	  \node at (-20,16) {E)};
+\end{tikzpicture}
+
+%F)
+\begin{tikzpicture}[x=1mm,y=1mm]
+      \draw[gray,fill] (0,0)
+        -- ({10 + 5 * 360/10}:20) arc ({10 + 5 * 360/10}:{10+6 * 360/10}:20) -- (0,0);
+	  \foreach \x in {1,...,10}
+    	{ \draw (0,0) -- ++({10 + 360 * \x / 10}:20); }
+	  \draw (0,0) circle (20);    
+	  \node at (-20,16) {F)};
+\end{tikzpicture}
+
+
+%G)
+\begin{tikzpicture}[x=1mm,y=1mm]
+      \draw[gray,fill] (0,0)-- ({90- 360/5}:20) arc ({90- 360/5}:90:20) -- (0,0);
+	  \foreach \x in {1,...,5}
+    	{ \draw (0,0) -- ++({90 + 360 * \x / 5}:20); }
+	  \draw (0,0) circle (20);    
+	  \node at (-20,16) {G)};
+\end{tikzpicture}
+
+%H)
+\begin{tikzpicture}[x=1mm,y=1mm]
+      \draw[gray,fill] (0,0)-- (90:20) arc (90:-90:20) -- (0,0);
+      \draw (0,0)-- (90:20) arc (90:270:20) -- (0,0);
+      \node at (-20,16) {H)};
+\end{tikzpicture}
+
+%I)
+\begin{tikzpicture}[x=1mm,y=1mm]
+      \draw[gray,fill] (0,0)-- ({- 360/7}:20) arc ({- 360/7}:{-2 * 360/7}:20) -- (0,0);
+	  \foreach \x in {1,...,7}
+    	{ \draw (0,0) -- ++({360 * \x / 7}:20); }
+	  \draw (0,0) circle (20);    
+	  \node at (-20,16) {I)};
+\end{tikzpicture}
+
+%J)
+\begin{tikzpicture}[x=1mm,y=1mm]
+      \draw[gray,fill] (0,0)-- (0:20) arc (0:{- 360/4}:20) -- (0,0);
+	  \foreach \x in {1,...,4}
+    	{ \draw (0,0) -- ++({360 * \x / 4}:20); }
+	  \draw (0,0) circle (20);    
+	  \node at (-20,16) {J)};
 \end{tikzpicture}
 
 \end{document}
