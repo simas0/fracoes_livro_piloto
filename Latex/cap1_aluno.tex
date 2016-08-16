@@ -120,7 +120,7 @@ Por exemplo,
 \subsection{Atividade}
 
 \begin{enumerate} [\quad a)] %s
-  \item     Quais dos retângulos a seguir foram repartidos em     {\it quartos}    ?     \mbox{} \newline      
+  \item     Quais dos retângulos a seguir foram repartidos em {\it quartos}? \mbox{} \newline      
  %\vspace{0.2cm}
  
  \begin{tikzpicture}[scale=5]
@@ -214,44 +214,21 @@ Em cinco das figuras a seguir a parte em vermelho é um terço da figura. Identi
 \begin{tabular}{ccc}
 a)
 \parbox[t][3cm][c]{5cm}{
-\begin{tikzpicture}[scale=0.7]
-      \draw[attention] (90:2 cm)  -- (210:2 cm);
-      \draw (210:2 cm)  -- (330:2 cm);
-      \draw[attention] (330:2 cm) -- (90:2 cm);      
-\end{tikzpicture}
+  \begin{tikzpicture}[scale=0.7]
+    \draw[very thick, attention] (90:2 cm)  -- (210:2 cm);
+    \draw[very thick, attention] (330:2 cm) -- (90:2 cm);      
+    \draw[very thick, common] (210:2 cm)  -- (330:2 cm);
+  \end{tikzpicture}
 }
 & \quad \quad  &
-f)
-\parbox[t][3cm][c]{5cm}{
-\begin{tikzpicture}[scale=0.7]
-\foreach \x in {0,60,...,300}{
-      \draw (\x:2 cm)  -- (\x + 60:2 cm);}
-      \draw (0,0)  -- (60:2 cm);
-      \draw (0,0)  -- (180:2 cm);
-      \fill[attention] (0,0) -- (60:2 cm) -- (120:2 cm) -- (180:2 cm) -- (0,0);
-      \fill[common] (0,0) -- (60:2 cm) -- (0:2 cm) -- (300:2 cm) -- (240:2 cm) -- (180:2 cm) -- (0,0);
-      \draw (0,0)  -- (300:2 cm);
-\end{tikzpicture}
-}
-\\
 
 b)
 \parbox[t][3cm][c]{5cm}{
 \begin{tikzpicture}[scale=6]
-      \draw (0,0) rectangle (4,3);
-      \draw (0.5,0.5) rectangle (3.5,2.5);
-      \fill[common] (0,0) -- (0.5,0.5) -- (3.5,0.5) -- (3.5,2.5) -- (4,3) -- (4,0)--cycle;
-      \fill[attention] (0,0) -- (0.5,0.5) -- (0.5,2.5) -- (3.5,2.5) -- (4,3) -- (0,3)--cycle;
-\end{tikzpicture}
-}
-& &
-
-g)
-\parbox[t][3cm][c]{5cm}{
-\begin{tikzpicture}[scale=4]
-      \draw[attention] (0,3) -- (3,0);
-      \draw[attention] (3,0) -- (6,3);
-      \draw (6,3) -- (9,0);      
+  \filldraw[fill=common, draw=black] (0,0) -- (0.5,0.5) -- (3.5,0.5) -- (3.5,2.5) -- (4,3) -- (4,0)--cycle;
+  \fill[attention] (0,0) -- (0.5,0.5) -- (0.5,2.5) -- (3.5,2.5) -- (4,3) -- (0,3)--cycle;
+  \draw (0,0) rectangle (4,3);
+  \draw (0.5,0.5) rectangle (3.5,2.5);
 \end{tikzpicture}
 }
 \\
@@ -259,41 +236,22 @@ g)
 c)
 \parbox[t][3cm][c]{5cm}{
 \begin{tikzpicture}[scale=4]
-      \draw (0,3) -- (3,0);
-      \draw[attention] (3,0) -- (6,3);
-      \draw (6,3) -- (9,0);      
+  \draw[very thick, common] (0,3) -- (3,0);
+  \draw[very thick, attention] (3,0) -- (6,3);
+  \draw[very thick, common] (6,3) -- (9,0);      
 \end{tikzpicture}
 }
 & &
 
-h)
-\parbox[t][3cm][c]{5cm}{
-\begin{tikzpicture}[scale=4]
-    \draw[fill=common] (0,0) rectangle (3,1);
-    \draw[fill=attention] (3,0) rectangle (6,1);
-    \draw[fill=common] (6,0) rectangle (9,1);
-\end{tikzpicture}
-}
-\\
-
 d)
 \parbox[t][3cm][c]{5cm}{
 \begin{tikzpicture}[scale=0.7]
-      \draw (90:2 cm)  -- (210:2 cm);
-      \draw[attention] (210:2 cm)  -- (330:2 cm);
-      \draw (330:2 cm) -- (90:2 cm);
+  \draw[very thick, common] (90:2 cm)  -- (210:2 cm);
+  \draw[very thick, attention] (210:2 cm)  -- (330:2 cm);
+  \draw[very thick, common] (330:2 cm) -- (90:2 cm);
 \end{tikzpicture}
- }&&
-i)
-\parbox[t][3cm][c]{5cm}{
-\begin{tikzpicture}[scale=4]
-    \draw[fill=common] (0,0) rectangle (2,1);
-    \draw[fill=attention] (2,0) rectangle (6,1);
-    \draw[fill=common] (6,0) rectangle (9,1);
-\end{tikzpicture}
-}
-\\
-
+    }\\
+  
 e)
 \parbox[t][3cm][c]{5cm}{
   \begin{tikzpicture}%[scale=60]
@@ -329,11 +287,53 @@ e)
     \end{tikzpicture}
 }
 &&
+
+f)
+\parbox[t][3cm][c]{5cm}{
+\begin{tikzpicture}[scale=0.7]
+  \fill[attention] (0,0) -- (60:2 cm) -- (120:2 cm) -- (180:2 cm) -- (0,0);
+  \filldraw[fill=common, draw=black] (0,0) -- (60:2 cm) -- (0:2 cm) -- (300:2 cm) -- (240:2 cm) -- (180:2 cm) -- (0,0);
+  \foreach \x in {0,60,...,300}{
+      \draw (\x:2 cm)  -- (\x + 60:2 cm);}
+      \draw (0,0)  -- (60:2 cm);
+      \draw (0,0)  -- (180:2 cm);
+      \draw (0,0)  -- (300:2 cm);
+\end{tikzpicture}
+}
+\\
+
+g)
+\parbox[t][3cm][c]{5cm}{
+  \begin{tikzpicture}[scale=4]
+    \draw[very thick, attention] (0,3) -- (3,0);
+    \draw[very thick, attention] (3,0) -- (6,3);
+    \draw[very thick, common] (6,3) -- (9,0);      
+  \end{tikzpicture}
+}
+&&
+h)
+\parbox[t][3cm][c]{5cm}{
+\begin{tikzpicture}[scale=4]
+    \draw[fill=common] (0,0) rectangle (3,1);
+    \draw[fill=attention] (3,0) rectangle (6,1);
+    \draw[fill=common] (6,0) rectangle (9,1);
+\end{tikzpicture}
+}
+\\
+
+i)
+\parbox[t][3cm][c]{5cm}{
+\begin{tikzpicture}[scale=4]
+    \draw[fill=common] (0,0) rectangle (2,1);
+    \draw[fill=attention] (2,0) rectangle (6,1);
+    \draw[fill=common] (6,0) rectangle (9,1);
+\end{tikzpicture}
+}&&
 j)
 \parbox[t][3cm][c]{5cm}{
 \begin{tikzpicture}[scale=0.7]
  \fill[attention] (162:2 cm) -- (234:2 cm) -- (306: 2 cm) -- (378: 2cm) -- (0,0) -- cycle;
- \fill[common] (162:2 cm) -- (0,0) -- (378: 2cm) -- (90: 2cm) -- cycle;
+ \filldraw[fill=common, draw=black] (162:2 cm) -- (0,0) -- (378: 2cm) -- (90: 2cm) -- cycle;
   \foreach \x in {90,162,...,378}{
  \draw (\x: 2cm) -- (\x + 72: 2cm);
  \draw (0,0) -- (\x:2cm);}
@@ -463,7 +463,7 @@ Parte da unidade &  Fração da unidade  &  Unidade  \\
 
 \subsection{Atividade}
 
-Identique as figuras em que a parte pintada é a metade da figura.
+Identifique as figuras em que a parte pintada é a metade da figura.
 
 \begin{center}
   \begin{tabular}{ccccc} 
@@ -491,19 +491,20 @@ Identique as figuras em que a parte pintada é a metade da figura.
 \begin{tikzpicture}[scale=5]
  \draw (0,0) rectangle (3,2);
  \draw (3,0) rectangle (6,2) (3,-1) node{Figura 3};
- \draw[fill=common] (0,2) rectangle (6,1.2);
+ \filldraw[fill=common, draw=black] (0,2) rectangle (6,1.2);
  \end{tikzpicture}
 \\
  % círculos
 
- \begin{tikzpicture}[scale=5]
- \draw[fill=common] (0,-2) arc (-90:90: 2);
- \draw (0,2) arc (90:270:2) (0,-3) node{Figura 4};
+\begin{tikzpicture}[scale=5]
+  \filldraw[fill=common, draw=black] (0,-2) arc (-90:90: 2);
+  \draw (0, 2) -- (0, -2);
+  \draw (0,2) arc (90:270:2) (0,-3) node{Figura 4};
 \end{tikzpicture}
 && 
 
 \begin{tikzpicture}[scale=5]
- \draw[fill=common] (45:2) arc (45:225:2);
+ \filldraw[fill=common, draw=black] (45:2) arc (45:225:2);
  \draw (225:2) arc (225:405:2) (0,-3) node{Figura 5};
  \draw (0,0) -- (0,-2);
  \draw (0,0) -- (-30:2);
@@ -513,8 +514,8 @@ Identique as figuras em que a parte pintada é a metade da figura.
  &&
  \begin{tikzpicture}[scale=5]
  \draw (0,0) circle (2);
- \draw[fill=common] (0,0) -- (2,0) arc (0:90:2) -- cycle; 
- \draw[fill=common] (0,0) -- (-2,0) arc (180:270: 2) -- cycle;
+ \filldraw[fill=common, draw=black] (0,0) -- (2,0) arc (0:90:2) -- cycle; 
+ \filldraw[fill=common, draw=black] (0,0) -- (-2,0) arc (180:270: 2) -- cycle;
  \node at (0,-3) {Figura 6};
 \end{tikzpicture} 
 \\
@@ -523,27 +524,25 @@ Identique as figuras em que a parte pintada é a metade da figura.
 \begin{tikzpicture}[scale=5]
  \foreach \x in {0,60,...,300}{
  \draw (\x:2) -- (\x +60: 2);}
- \fill[common] (2,0) -- (60:2) -- (300:2);
+ \filldraw[fill=common, draw=black] (2,0) -- (60:2) -- (300:2);
  \node at (0,-3) {Figura 7};
 \end{tikzpicture}
 & &
 
 \begin{tikzpicture}[scale=5]
- \foreach \x in {0,60,...,300}{
- \draw (\x:2) -- (\x +60: 2);}
- \fill[common] (60:2) -- (120:2) -- (180:2) -- (240:2) --cycle;
- \draw (0,0) -- (2,0);
- \draw (0,0) -- (300:2) (0,-3) node{Figura 8};
+  \fill[common] (60:2) -- (120:2) -- (180:2) -- (240:2) --cycle;
+  \draw \foreach \x in {0,60,...,300} {(\x:2) -- (\x +60: 2) --(\x +120:2)};
+  \draw (60:2) -- (0,0) -- (240:2) (0,-3);
+  \draw (2,0) -- (0,0) -- (300:2) (0,-3) node{Figura 8};
 \end{tikzpicture}
 &&
 
 \begin{tikzpicture}[scale=5]
- \foreach \x in {0,60,...,300}{
- \draw (\x:2) -- (\x +60: 2);}
- \fill[common] (0:2) -- (60:2) -- (0:0) --cycle;
- \fill[common] (120:2) -- (180:2) -- (0:0) --cycle;
- \fill[common] (240:2) -- (300:2) -- (0:0) --cycle;
- \node at (0,-3) {Figura 9};
+  \filldraw[fill=common] (0:2) -- (60:2) -- (0:0) --cycle;
+  \filldraw[fill=common] (120:2) -- (180:2) -- (0:0) --cycle;
+  \filldraw[fill=common] (240:2) -- (300:2) -- (0:0) --cycle;
+  \draw \foreach \x in {0,60,...,300}{(\x:2) -- (\x +60: 2)};
+  \node at (0,-3) {Figura 9};
 \end{tikzpicture}
 \\
 %círculo
@@ -558,16 +557,17 @@ Identique as figuras em que a parte pintada é a metade da figura.
 %hexágonos
 
 \begin{tikzpicture}[scale=5]
- \foreach \x in {0,60,...,300}{
- \draw (\x:2) -- (\x +60: 2);}
-\fill[common] (120:2) -- (180:2) -- (240:2) -- cycle;
-\fill[common] (240:2) -- (300:2) -- (60:2) -- cycle;
- \node at (0,-3) {Figura 11};
+  \fill[common] (120:2) -- (180:2) -- (240:2) -- cycle;
+  \fill[common] (240:2) -- (300:2) -- (60:2) -- cycle;
+  \draw (120:2) -- (180:2) (180:2) -- (240:2) (240:2) -- (120:2);
+  \draw (240:2) -- (300:2) (300:2) -- (60:2) (60:2) -- (240:2);
+  \draw \foreach \x in {0,60,...,300}{(\x:2) -- (\x +60: 2) -- (\x +120:2)};
+  \node at (0,-3) {Figura 11};
 \end{tikzpicture}
 &&
 %retângulo
 \begin{tikzpicture}[scale=5]
- \fill[common] (1,-1) rectangle (4,1);
+ \filldraw[fill=common, draw=black] (1,-1) rectangle (4,1);
  \draw (0,-1) rectangle (6,1);
  \node at (3,-2) {Figura 12};
  \end{tikzpicture}
@@ -670,9 +670,10 @@ Nas figuras a seguir, um mesmo círculo aparece diferentemente dividido em parte
 &
 %H)
 \begin{tikzpicture}[x=1mm,y=1mm, scale=0.6]
-      \draw[common,fill] (0,0)-- (90:20) arc (90:-90:20) -- (0,0);
-      \draw (0,0)-- (90:20) arc (90:270:20) -- (0,0);
-      \node at (-20,16) {H)};
+  \draw[common,fill] (0,0)-- (90:20) arc (90:-90:20) -- (0,0);
+  \draw (0,0)-- (90:20) arc (90:-90:20) -- (0,0);
+  \draw (0,0)-- (90:20) arc (90:270:20) -- (0,0);
+  \node at (-20,16) {H)};
 \end{tikzpicture}
 &
 %I)
@@ -710,7 +711,7 @@ Em cada uma das imagens, a parte colorida é uma fração da figura. Essas fraç
 a)
 \begin{tikzpicture}[scale=5]
  \draw (0,0) rectangle (4,2);
- \fill[common] (0,0) -- (4,2) -- (4,0) -- cycle;
+ \filldraw[fill=common, draw=black] (0,0) -- (4,2) -- (4,0) -- cycle;
 \end{tikzpicture}
 
 & \quad \quad \quad &
@@ -719,14 +720,14 @@ b)
  \draw (0,0) rectangle (4,2);
  \foreach \n in {0.4,0.8,1.2,...,3.2,3.6}{
  \draw (\n,0) -- (\n,2);}
- \fill[common] (0.8,0) -- (0.8,2) -- (1.2,2) -- (1.2,0) -- cycle;
+ \filldraw[fill=common, draw=black] (0.8,0) -- (0.8,2) -- (1.2,2) -- (1.2,0) -- cycle;
 \end{tikzpicture}
 & \quad \quad \quad &
 
 c)
 \begin{tikzpicture}[scale=5]
  \draw (0,0) rectangle (4,2);
- \fill[common] (2,1) rectangle (4,2);
+ \filldraw[fill=common, draw=black] (2,1) rectangle (4,2);
  \draw (0,1) -- (4,1);
  \draw (2,0) -- (2,2);
  \end{tikzpicture}
@@ -734,7 +735,7 @@ c)
 
 d)
 \begin{tikzpicture}[scale=5]
- \fill[common] (45:2) arc (45:135:2) -- (0,0) -- cycle;
+ \filldraw[fill=common, draw=black] (45:2) arc (45:135:2) -- (0,0) -- cycle;
  \draw (135:2) arc (135:405:2);
 \end{tikzpicture}
 & & 
@@ -742,7 +743,7 @@ e)
 \begin{tikzpicture}[scale=5]
  \foreach \x in {0,60,...,300}{
  \draw (\x:2) -- (\x +60: 2);}
-\fill[common] (-2,0) -- (0,0) -- (0,1.73) -- (120:2) -- cycle;
+\filldraw[fill=common, draw=black] (-2,0) -- (0,0) -- (0,1.73) -- (120:2) -- cycle;
 \end{tikzpicture}
 & &
 f)
@@ -811,14 +812,14 @@ l)
 &&
 m)
 \begin{tikzpicture}[scale=5]
- \fill[common] (1,0) rectangle (2,1);
- \fill[common] (3,0) rectangle (4,1);
- \fill[common] (0,1) rectangle (1,2);
- \fill[common] (2,1) rectangle (3,2);
- \fill[common] (1,2) rectangle (2,3);
- \fill[common] (3,2) rectangle (4,3);
- \fill[common] (0,3) rectangle (1,4);
- \draw[fill,common] (2,3) rectangle (3,4);
+ \filldraw[fill=common, draw=black] (1,0) rectangle (2,1);
+ \filldraw[fill=common, draw=black] (3,0) rectangle (4,1);
+ \filldraw[fill=common, draw=black] (0,1) rectangle (1,2);
+ \filldraw[fill=common, draw=black] (2,1) rectangle (3,2);
+ \filldraw[fill=common, draw=black] (1,2) rectangle (2,3);
+ \filldraw[fill=common, draw=black] (3,2) rectangle (4,3);
+ \filldraw[fill=common, draw=black] (0,3) rectangle (1,4);
+ \filldraw[fill=common, draw=black] (2,3) rectangle (3,4);
  \draw (0,0) rectangle (4,4);
 \end{tikzpicture}
 
