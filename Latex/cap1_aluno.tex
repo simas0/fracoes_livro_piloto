@@ -122,7 +122,7 @@ Por exemplo,
 \begin{enumerate} [\quad a)] %s
   \item     Quais dos retângulos a seguir foram repartidos em {\it quartos}? \mbox{} \newline      
  %\vspace{0.2cm}
- 
+\begin{center} 
  \begin{tikzpicture}[scale=5]
   \draw (0,0) rectangle (1,6);
   \draw (1,0) rectangle (2,6);
@@ -141,6 +141,7 @@ Por exemplo,
   \draw (15,1.5) -- (19,1.5);
   \draw (15,3) -- (19,6);
 \end{tikzpicture}
+
 \vspace{0.2cm}
 
 \begin{tikzpicture}[scale=5]
@@ -160,7 +161,8 @@ Por exemplo,
   \draw (15,0) -- (19,3);
   \draw (19,3) -- (15,6);
 \end{tikzpicture}
-  
+\end{center}
+
   \item     Desenhe um retângulo e faça uma partição desse retângulo em quatro partes que não sejam todas quartos.
 \end{enumerate}
 
@@ -171,31 +173,26 @@ Por exemplo,
   Em alguns retângulos as partes não têm a mesma forma.  
   Veja alguns exemplos curiosos em que as   ``partes iguais''   podem gerar confusão.  
   
-  \begin{imagem*}[breakable]{}{}     FIGURA ARTÍSTICA    
-    
+  \begin{imagem*}[breakable]{}{}     FIGURA ARTÍSTICA    -   
     {\bf Quadrinho 1:}     Uma menina chega ao balcão de uma loja em que há uma pizza inteira:     
     
     Menina: Bom dia! Metade desta pizza, por favor.     
     
     Vendedor: É pra já, vou cortar para você!    
     
-        \includegraphics[width=120pt, keepaspectratio]{../../livro/media//cap1/secoes/193px-pepperoni_pizza_2_.png}    
+        \includegraphics[width=80pt, keepaspectratio]{../../livro/media//cap1/secoes/193px-pepperoni_pizza_2_.png}    
     ilustração: Pogrebnoj-Alexandroff    
     
     {\bf Quadrinho 2:}     O vendedor entrega a metade da pizza à menina. Mas ao invés de simplesmente cortada ao meio com um segmento de reta, a pizza foi dividida com um S. A menina olhando com ar espantado.     
     
-        \includegraphics[width=120pt, keepaspectratio]{../../livro/media//cap1/secoes/pizza_yinyang.png}    
+        \includegraphics[width=80pt, keepaspectratio]{../../livro/media//cap1/secoes/pizza_yinyang.png}    
   \end{imagem*}  
   
-  \begin{imagem*}[breakable]{}{}     FIGURA ARTÍSTICA    
+  \begin{imagem*}[breakable]{}{}     FIGURA ARTÍSTICA   -     Dois amigos terminam de preparar uma torta na cozinha de sua casa e olhando empolgados para a torta diante deles na mesa.    
     
-    Dois amigos terminam de preparar uma torta na cozinha de sua casa e olhando empolgados para a torta diante deles na mesa.    
+    {\bf Quadrinho 1:}  Menino 1:  Terminamos! Mas agora preciso ir que minha mãe está me esperando. Vou avisá-la que já estou indo.    
     
-    {\bf Quadrinho 1:}         
-    
-    Menino 1:  Terminamos! Mas agora preciso ir que minha mãe está me esperando. Vou avisá-la que já estou indo.    
-    
-        \includegraphics[width=120pt, keepaspectratio]{../../livro/media//cap1/secoes/torta_abacaxi1.jpg}    
+        \includegraphics[width=80pt, keepaspectratio]{../../livro/media//cap1/secoes/torta_abacaxi1.jpg}    
     
     ilustração: Kimberly Vardeman    
     
@@ -350,60 +347,60 @@ Observe a tabela a seguir. Em cada linha, a primeira coluna, mais à esquerda, e
   \begin{tabular}{m{0.3\linewidth}m{0.3\linewidth}m{0.3\linewidth}}
 \centering Parte da unidade & \centering Fração da unidade  & \quad\quad\quad Unidade  \\
 \hline \hline \\ 
-\centering \begin{tikzpicture}[scale=3]
+\centering \begin{tikzpicture}[scale=2]
  \draw [fill=common] (0,0) arc (0:90:3) -- (-3,0) -- cycle;
 \end{tikzpicture}
 &\centering  metade  &  \\
     \hline\\
-\centering\begin{tikzpicture}[scale=3]
+\centering\begin{tikzpicture}[scale=2]
 \draw [fill=common] (0,0) arc (0:90:3) -- (-3,0) -- cycle;
-\end{tikzpicture}        &\centering   um terço  &  \\[3ex]
+\end{tikzpicture}        &\centering   um terço  &  \\
     \hline \\
-\centering \begin{tikzpicture}[scale=3]
+\centering \begin{tikzpicture}[scale=2]
 \draw [fill=common] (0,0) arc (0:90:3) -- (-3,0) -- cycle;
-\end{tikzpicture}        & \centering  um quarto  &  \\[5ex]
+\end{tikzpicture}        & \centering  um quarto  &  \\ 
     \hline \\
-\centering \begin{tikzpicture}[scale=3]
+\centering \begin{tikzpicture}[scale=2]
 \draw [fill=common] (0,0) rectangle (3,3);
 \end{tikzpicture}
   & \centering  metade  &  \\
     \hline \\
-\centering \begin{tikzpicture}[scale=3]
+\centering \begin{tikzpicture}[scale=2]
 \draw [fill=common] (0,0) rectangle (3,3);
 \end{tikzpicture}
-  & \centering  um terço  &  \\[3ex]
+  & \centering  um terço  &  \\ 
     \hline \\
-\centering \begin{tikzpicture}[scale=3]
+\centering \begin{tikzpicture}[scale=2]
 \draw [fill=common] (0,0) rectangle (3,3);
 \end{tikzpicture}
- & \centering  um quarto  &  \\[5ex]
+ & \centering  um quarto  &  \\ 
     \hline \\
-\centering \begin{tikzpicture}[scale=3]
+\centering \begin{tikzpicture}[scale=2]
 \draw  (0,0) -- (3,3);
 \end{tikzpicture}
   & \centering  metade  &  \\
     \hline \\
-\centering \begin{tikzpicture}[scale=3]
+\centering \begin{tikzpicture}[scale=2]
 \draw  (0,0) -- (3,3);
 \end{tikzpicture}
   & \centering  um terço  &  \\
     \hline \\
-\centering \begin{tikzpicture}[scale=3]
+\centering \begin{tikzpicture}[scale=2]
 \draw  (0,0) -- (3,3);
 \end{tikzpicture}
   & \centering  um quarto  &  \\
     \hline \\
-\centering \begin{tikzpicture}[scale=3]
+\centering \begin{tikzpicture}[scale=2]
 \draw [fill=common] (0,0) -- (3,0) -- (-1.5,1.5) -- cycle;
-\end{tikzpicture}  & \centering  metade  &  \\ [3ex]
+\end{tikzpicture}  & \centering  metade  &  \\
     \hline \\
-\centering \begin{tikzpicture}[scale=3]
+\centering \begin{tikzpicture}[scale=2]
 \draw [fill=common] (0,0) -- (3,0) -- (-1.5,1.5) -- cycle;
-\end{tikzpicture}  & \centering  um terço  &  \\[3ex]
+\end{tikzpicture}  & \centering  um terço  &  \\ 
     \hline \\
-\centering \begin{tikzpicture}[scale=3]
+\centering \begin{tikzpicture}[scale=2]
 \draw [fill=common] (0,0) -- (3,0) -- (-1.5,1.5) -- cycle;
-\end{tikzpicture}  & \centering  um quarto  &  \\[5ex]
+\end{tikzpicture}  & \centering  um quarto  &  \\ 
     \hline \\
   \end{tabular}
 \end{center}
