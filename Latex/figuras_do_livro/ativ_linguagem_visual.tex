@@ -38,11 +38,13 @@
 
 \begin{document}
 
+%a)
 \begin{tikzpicture}
  \draw (0,0) rectangle (4,2);
  \fill[gray] (0,0) -- (4,2) -- (4,0) -- cycle;
 \end{tikzpicture}
 
+%b)
 \begin{tikzpicture}
  \draw (0,0) rectangle (4,2);
  \foreach \n in {0.4,0.8,1.2,...,3.2,3.6}{
@@ -50,7 +52,7 @@
  \fill[gray] (0.8,0) -- (0.8,2) -- (1.2,2) -- (1.2,0) -- cycle;
 \end{tikzpicture}
 
-
+%c)
 \begin{tikzpicture}
  \draw (0,0) rectangle (4,2);
  \fill[gray] (2,1) rectangle (4,2);
@@ -58,30 +60,32 @@
  \draw (2,0) -- (2,2);
  \end{tikzpicture}
 
+ %d)
 \begin{tikzpicture}
  \fill[gray] (45:2) arc (45:135:2) -- (0,0) -- cycle;
  \draw (135:2) arc (135:405:2);
 \end{tikzpicture}
  
-
+%e)
 \begin{tikzpicture}[scale=2]
  \foreach \x in {0,60,...,300}{
  \draw (\x:2) -- (\x +60: 2);}
 \fill[gray] (-2,0) -- (0,0) -- (0,1.73) -- (120:2) -- cycle;
 \end{tikzpicture}
 
+%f)
 \begin{tikzpicture}
  \draw (0,0) rectangle (5,1);
  \draw[fill=gray] (0,1) rectangle (5,2);
 \end{tikzpicture}
 
-
+%g)
 \begin{tikzpicture}
  \draw[fill=gray] (0,0) rectangle (2,1);
  \draw (0,1) rectangle (2,3);
 \end{tikzpicture} 
 
-
+%h)
 \begin{tikzpicture}
  \draw[fill=gray] (200:2) arc (200:236:2) -- (0,0) -- cycle;
  \draw (236:2) arc (236:560:2);
