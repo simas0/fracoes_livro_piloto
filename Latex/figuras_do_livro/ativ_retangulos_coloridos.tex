@@ -1,61 +1,85 @@
-\documentclass{standalone}%\documentclass[a4paper,10pt]{scrartcl}
+\documentclass{article}
 
-\usepackage[active,pdftex,tightpage]{preview}
+% \usepackage[active,pdftex,tightpage]{preview}
 \usepackage{tikz}
 
-\PreviewEnvironment{tikzpicture}
+%\PreviewEnvironment{tikzpicture}
 
 \usetikzlibrary{calc}
 
 \begin{document}
-%\maketitle
- \begin{tikzpicture}[scale=5]
-  \draw (0,0) rectangle (1,6);
-  \draw (1,0) rectangle (2,6);
-  \draw (2,0) rectangle (3,6);
-  \draw (3,0) rectangle (4,6);
-  \draw (5,0) rectangle (9,3);
-  \draw (5,0) rectangle (9,6);
-  \draw (5,0) -- (9,3);
-  \draw (5,3) -- (9,6);
-  \draw (10,0) rectangle (14,3);
-  \draw (10,3) rectangle (14,6);
-  \draw (12,0) -- (12,3);
-  \draw (10,4.5) -- (14,4.5);
-  \draw (15,0) rectangle (19,3);
-  \draw (15,3) rectangle (19,6);
-  \draw (15,1.5) -- (19,1.5);
-  \draw (15,3) -- (19,6);
+
+\pagestyle{empty}
+ \begin{tikzpicture}[scale=3]
+  \draw (0,0) rectangle (4,3);
+  \draw (0,3) rectangle (4,6);
+  \draw (0,1.5) -- (4,1.5);
+  \draw (0,3) -- (4,6);
+  \draw (5,3) node{$\Rightarrow$};
+  \draw (6,-0.25) rectangle (10,2.75);
+  \draw (6,3.25) rectangle (10,6.25);
+  \draw (8,-0.75) node{Metade dos ret\^angulos};
+  \draw (11,3) node{$\Rightarrow$};
+  \draw (12,-0.25) rectangle (16,2.75);
+  \draw (12,3.25) rectangle (16,6.25);
+  \draw (12,3.25) -- (16,6.25);
+  \draw (12,1.25) -- (16,1.25);
+  \draw (14,-0.75) node{Cada uma das 4};
+  \draw (14,-1.5) node{partes \'e metade};
+  \draw (14,-2.25) node{da metade ($\frac{1}{4}$)};
 \end{tikzpicture}
 
-\begin{tikzpicture}[scale=5]
-  \draw (0,0) rectangle (4,1.5);
-  \draw (0,1.5) rectangle (4,3);
-  \draw (0,3) rectangle (4,4.5);
-  \draw (0,4.5) rectangle (4,6);
-  \draw (5,0) rectangle (9,3);
-  \draw (5,0) rectangle (9,6);
-  \draw (7,0) -- (7,6);
-  \draw (10,0) rectangle (14,3);
-  \draw (10,3) rectangle (14,6);
-  \draw (12,0) -- (12,3);
-  \draw (10,3) -- (14,6);
-  \draw (15,0) rectangle (19,3);
-  \draw (15,3) rectangle (19,6);
-  \draw (15,0) -- (19,3);
-  \draw (19,3) -- (15,6);
-\end{tikzpicture}
 
+% %\maketitle
+%  \begin{tikzpicture}[scale=5]
+%   \draw (0,0) rectangle (1,6);
+%   \draw (1,0) rectangle (2,6);
+%   \draw (2,0) rectangle (3,6);
+%   \draw (3,0) rectangle (4,6);
+%   \draw (5,0) rectangle (9,3);
+%   \draw (5,0) rectangle (9,6);
+%   \draw (5,0) -- (9,3);
+%   \draw (5,3) -- (9,6);
+%   \draw (10,0) rectangle (14,3);
+%   \draw (10,3) rectangle (14,6);
+%   \draw (12,0) -- (12,3);
+%   \draw (10,4.5) -- (14,4.5);
+%   \draw (15,0) rectangle (19,3);
+%   \draw (15,3) rectangle (19,6);
+%   \draw (15,1.5) -- (19,1.5);
+%   \draw (15,3) -- (19,6);
+% \end{tikzpicture}
+% 
+% \begin{tikzpicture}[scale=5]
+%   \draw (0,0) rectangle (4,1.5);
+%   \draw (0,1.5) rectangle (4,3);
+%   \draw (0,3) rectangle (4,4.5);
+%   \draw (0,4.5) rectangle (4,6);
+%   \draw (5,0) rectangle (9,3);
+%   \draw (5,0) rectangle (9,6);
+%   \draw (7,0) -- (7,6);
+%   \draw (10,0) rectangle (14,3);
+%   \draw (10,3) rectangle (14,6);
+%   \draw (12,0) -- (12,3);
+%   \draw (10,3) -- (14,6);
+%   \draw (15,0) rectangle (19,3);
+%   \draw (15,3) rectangle (19,6);
+%   \draw (15,0) -- (19,3);
+%   \draw (19,3) -- (15,6);
+% \end{tikzpicture}
+% 
 
 % resposta
-\begin{tikzpicture}[scale=5]
+
+\begin{tikzpicture}[scale=3]
  \draw (0,0) rectangle (4,6);
  \draw (0.5,0) -- (0.5,6);
  \draw (1.5,0) -- (1.5,6);
  \draw (3.5,0) -- (3.5,6);
 \end{tikzpicture}
+\vspace{1cm}
 
-\begin{tikzpicture}[scale=5]
+\begin{tikzpicture}[scale=3]
  \draw (0,0) rectangle (4,6);
  \draw (0,0) -- (2,6);
  \draw (1,0) -- (3,6);
