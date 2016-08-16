@@ -706,7 +706,7 @@ Nas figuras a seguir, um mesmo círculo aparece diferentemente dividido em parte
 Em cada uma das imagens, a parte colorida é uma fração da figura. Essas frações podem ser ``um meio'', ``um quarto'' ou ``um décimo'' da figura. Associe cada imagem à fração correspondente.
 
 \begin{center}
-\begin{tabular*}{\textwidth}{ccccc}
+\begin{tabular*}{\textwidth}{lcccc}
 a)
 \begin{tikzpicture}[scale=5]
  \draw (0,0) rectangle (4,2);
@@ -739,7 +739,7 @@ d)
 \end{tikzpicture}
 & & 
 e)
-\begin{tikzpicture}[scale=10]
+\begin{tikzpicture}[scale=5]
  \foreach \x in {0,60,...,300}{
  \draw (\x:2) -- (\x +60: 2);}
 \fill[gray] (-2,0) -- (0,0) -- (0,1.73) -- (120:2) -- cycle;
@@ -771,8 +771,33 @@ i)
 \\
 j)
 \begin{tikzpicture}
-    \pic [fill=gray] at (0,0) {annotated cuboid={width=5, height=10, depth=10}};
-    \pic [fill=white] at (4.5,0) {annotated cuboid={width=45, height=10, depth=10}};
+\tikzset{
+  annotated cuboid/.pic={
+    \tikzset{%
+      every edge quotes/.append style={midway, auto},
+      /cuboid/.cd,
+      #1
+    }
+    \draw [every edge/.append style={pic actions, densely dashed, opacity=0}, pic actions]
+    (0,0,0) coordinate (o) -- ++(-\cubescale*\cubex,0,0) coordinate (a) -- ++(0,-\cubescale*\cubey,0) coordinate (b) edge coordinate [pos=1] (g) ++(0,0,-\cubescale*\cubez)  -- ++(\cubescale*\cubex,0,0) coordinate (c) -- cycle
+    (o) -- ++(0,0,-\cubescale*\cubez) coordinate (d) -- ++(0,-\cubescale*\cubey,0) coordinate (e) edge (g) -- (c) -- cycle
+    (o) -- (a) -- ++(0,0,-\cubescale*\cubez) coordinate (f) edge (g) -- (d) -- cycle;
+ },
+  /cuboid/.search also={/tikz},
+  /cuboid/.cd,
+  width/.store in=\cubex,
+  height/.store in=\cubey,
+  depth/.store in=\cubez,
+  units/.store in=\cubeunits,
+  scale/.store in=\cubescale,
+  width=100,
+  height=100,
+  depth=100,
+  units=cm,
+  scale=.1,
+}
+    \pic [fill=gray] at (0,0) {annotated cuboid={width=25, height=50, depth=8}};
+    \pic [fill=white] at (22.5,0) {annotated cuboid={width=225, height=50, depth=8}};
 \end{tikzpicture}
 &&
 
@@ -784,6 +809,7 @@ l)
  \draw (2,2) rectangle (4,4);
  \end{tikzpicture} 
 &&
+m)
 \begin{tikzpicture}[scale=5]
  \fill[gray] (1,0) rectangle (2,1);
  \fill[gray] (3,0) rectangle (4,1);
