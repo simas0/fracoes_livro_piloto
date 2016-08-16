@@ -144,21 +144,21 @@ Por exemplo,
 \vspace{0.2cm}
 
 \begin{tikzpicture}[scale=5]
-  \draw[orange] (0,0) rectangle (4,1.5);
-  \draw[orange] (0,1.5) rectangle (4,3);
-  \draw[orange] (0,3) rectangle (4,4.5);
-  \draw[orange] (0,4.5) rectangle (4,6);
-  \draw[red] (5,0) rectangle (9,3);
-  \draw[red] (5,0) rectangle (9,6);
-  \draw[red] (7,0) -- (7,6);
-  \draw[blue] (10,0) rectangle (14,3);
-  \draw[blue] (10,3) rectangle (14,6);
-  \draw[blue] (12,0) -- (12,3);
-  \draw[blue] (10,3) -- (14,6);
-  \draw[green] (15,0) rectangle (19,3);
-  \draw[green] (15,3) rectangle (19,6);
-  \draw[green] (15,0) -- (19,3);
-  \draw[green] (19,3) -- (15,6);
+  \draw[attention] (0,0) rectangle (4,1.5);
+  \draw[attention] (0,1.5) rectangle (4,3);
+  \draw[attention] (0,3) rectangle (4,4.5);
+  \draw[attention] (0,4.5) rectangle (4,6);
+  \draw[common] (5,0) rectangle (9,3);
+  \draw[common] (5,0) rectangle (9,6);
+  \draw[common] (7,0) -- (7,6);
+  \draw[special] (10,0) rectangle (14,3);
+  \draw[special] (10,3) rectangle (14,6);
+  \draw[special] (12,0) -- (12,3);
+  \draw[special] (10,3) -- (14,6);
+  \draw[dark] (15,0) rectangle (19,3);
+  \draw[dark] (15,3) rectangle (19,6);
+  \draw[dark] (15,0) -- (19,3);
+  \draw[dark] (19,3) -- (15,6);
 \end{tikzpicture}
   
   \item     Desenhe um retângulo e faça uma partição desse retângulo em quatro partes que não sejam todas quartos.
@@ -215,9 +215,9 @@ Em cinco das figuras a seguir a parte em vermelho é um terço da figura. Identi
 a)
 \parbox[t][3cm][c]{5cm}{
 \begin{tikzpicture}[scale=0.7]
-      \draw[red] (90:2 cm)  -- (210:2 cm);
+      \draw[attention] (90:2 cm)  -- (210:2 cm);
       \draw (210:2 cm)  -- (330:2 cm);
-      \draw[red] (330:2 cm) -- (90:2 cm);      
+      \draw[attention] (330:2 cm) -- (90:2 cm);      
 \end{tikzpicture}
 }
 & \quad \quad  &
@@ -228,8 +228,8 @@ f)
       \draw (\x:2 cm)  -- (\x + 60:2 cm);}
       \draw (0,0)  -- (60:2 cm);
       \draw (0,0)  -- (180:2 cm);
-      \fill[red] (0,0) -- (60:2 cm) -- (120:2 cm) -- (180:2 cm) -- (0,0);
-      \fill[gray] (0,0) -- (60:2 cm) -- (0:2 cm) -- (300:2 cm) -- (240:2 cm) -- (180:2 cm) -- (0,0);
+      \fill[attention] (0,0) -- (60:2 cm) -- (120:2 cm) -- (180:2 cm) -- (0,0);
+      \fill[common] (0,0) -- (60:2 cm) -- (0:2 cm) -- (300:2 cm) -- (240:2 cm) -- (180:2 cm) -- (0,0);
       \draw (0,0)  -- (300:2 cm);
 \end{tikzpicture}
 }
@@ -240,8 +240,8 @@ b)
 \begin{tikzpicture}[scale=6]
       \draw (0,0) rectangle (4,3);
       \draw (0.5,0.5) rectangle (3.5,2.5);
-      \fill[gray] (0,0) -- (0.5,0.5) -- (3.5,0.5) -- (3.5,2.5) -- (4,3) -- (4,0)--cycle;
-      \fill[red] (0,0) -- (0.5,0.5) -- (0.5,2.5) -- (3.5,2.5) -- (4,3) -- (0,3)--cycle;
+      \fill[common] (0,0) -- (0.5,0.5) -- (3.5,0.5) -- (3.5,2.5) -- (4,3) -- (4,0)--cycle;
+      \fill[attention] (0,0) -- (0.5,0.5) -- (0.5,2.5) -- (3.5,2.5) -- (4,3) -- (0,3)--cycle;
 \end{tikzpicture}
 }
 & &
@@ -249,8 +249,8 @@ b)
 g)
 \parbox[t][3cm][c]{5cm}{
 \begin{tikzpicture}[scale=4]
-      \draw[red] (0,3) -- (3,0);
-      \draw[red] (3,0) -- (6,3);
+      \draw[attention] (0,3) -- (3,0);
+      \draw[attention] (3,0) -- (6,3);
       \draw (6,3) -- (9,0);      
 \end{tikzpicture}
 }
@@ -260,7 +260,7 @@ c)
 \parbox[t][3cm][c]{5cm}{
 \begin{tikzpicture}[scale=4]
       \draw (0,3) -- (3,0);
-      \draw[red] (3,0) -- (6,3);
+      \draw[attention] (3,0) -- (6,3);
       \draw (6,3) -- (9,0);      
 \end{tikzpicture}
 }
@@ -269,9 +269,9 @@ c)
 h)
 \parbox[t][3cm][c]{5cm}{
 \begin{tikzpicture}[scale=4]
-    \draw[fill=gray] (0,0) rectangle (3,1);
-    \draw[fill=red] (3,0) rectangle (6,1);
-    \draw[fill=gray] (6,0) rectangle (9,1);
+    \draw[fill=common] (0,0) rectangle (3,1);
+    \draw[fill=attention] (3,0) rectangle (6,1);
+    \draw[fill=common] (6,0) rectangle (9,1);
 \end{tikzpicture}
 }
 \\
@@ -280,16 +280,16 @@ d)
 \parbox[t][3cm][c]{5cm}{
 \begin{tikzpicture}[scale=0.7]
       \draw (90:2 cm)  -- (210:2 cm);
-      \draw[red] (210:2 cm)  -- (330:2 cm);
+      \draw[attention] (210:2 cm)  -- (330:2 cm);
       \draw (330:2 cm) -- (90:2 cm);
 \end{tikzpicture}
  }&&
 i)
 \parbox[t][3cm][c]{5cm}{
 \begin{tikzpicture}[scale=4]
-    \draw[fill=gray] (0,0) rectangle (2,1);
-    \draw[fill=red] (2,0) rectangle (6,1);
-    \draw[fill=gray] (6,0) rectangle (9,1);
+    \draw[fill=common] (0,0) rectangle (2,1);
+    \draw[fill=attention] (2,0) rectangle (6,1);
+    \draw[fill=common] (6,0) rectangle (9,1);
 \end{tikzpicture}
 }
 \\
@@ -323,17 +323,17 @@ e)
   scale=.1,
 }
 
-    \pic [fill=red] at (50,0) {annotated cuboid={width=100, height=100, depth=14}};
-    \pic [fill=gray] at (60,0) {annotated cuboid={width=100, height=100, depth=14}};
-    \pic [fill=gray] at (70,0) {annotated cuboid={width=100, height=100, depth=14}};
+    \pic [fill=attention] at (50,0) {annotated cuboid={width=100, height=100, depth=14}};
+    \pic [fill=common] at (60,0) {annotated cuboid={width=100, height=100, depth=14}};
+    \pic [fill=common] at (70,0) {annotated cuboid={width=100, height=100, depth=14}};
     \end{tikzpicture}
 }
 &&
 j)
 \parbox[t][3cm][c]{5cm}{
 \begin{tikzpicture}[scale=0.7]
- \fill[red] (162:2 cm) -- (234:2 cm) -- (306: 2 cm) -- (378: 2cm) -- (0,0) -- cycle;
- \fill[gray] (162:2 cm) -- (0,0) -- (378: 2cm) -- (90: 2cm) -- cycle;
+ \fill[attention] (162:2 cm) -- (234:2 cm) -- (306: 2 cm) -- (378: 2cm) -- (0,0) -- cycle;
+ \fill[common] (162:2 cm) -- (0,0) -- (378: 2cm) -- (90: 2cm) -- cycle;
   \foreach \x in {90,162,...,378}{
  \draw (\x: 2cm) -- (\x + 72: 2cm);
  \draw (0,0) -- (\x:2cm);}
@@ -351,30 +351,30 @@ Observe a tabela a seguir. Em cada linha, a primeira coluna, mais à esquerda, e
 Parte da unidade &  Fração da unidade  &  Unidade  \\
 \hline \hline \\ 
  \begin{tikzpicture}[scale=3]
-\draw [fill=gray] (0,0) arc (0:90:3) -- (-3,0) -- cycle;
+\draw [fill=common] (0,0) arc (0:90:3) -- (-3,0) -- cycle;
 \end{tikzpicture}
 &  metade  &  \\
     \hline\\
 \begin{tikzpicture}[scale=3]
-\draw [fill=gray] (0,0) arc (0:90:3) -- (-3,0) -- cycle;
+\draw [fill=common] (0,0) arc (0:90:3) -- (-3,0) -- cycle;
 \end{tikzpicture}        &   um terço  &  \\
     \hline \\
 \begin{tikzpicture}[scale=3]
-\draw [fill=gray] (0,0) arc (0:90:3) -- (-3,0) -- cycle;
+\draw [fill=common] (0,0) arc (0:90:3) -- (-3,0) -- cycle;
 \end{tikzpicture}        &   um quarto  &  \\
     \hline \\
 \begin{tikzpicture}[scale=3]
-\draw [fill=gray] (0,0) rectangle (3,3);
+\draw [fill=common] (0,0) rectangle (3,3);
 \end{tikzpicture}
   &   metade  &  \\
     \hline \\
 \begin{tikzpicture}[scale=3]
-\draw [fill=gray] (0,0) rectangle (3,3);
+\draw [fill=common] (0,0) rectangle (3,3);
 \end{tikzpicture}
   &   um terço  &  \\
     \hline \\
 \begin{tikzpicture}[scale=3]
-\draw [fill=gray] (0,0) rectangle (3,3);
+\draw [fill=common] (0,0) rectangle (3,3);
 \end{tikzpicture}
  &   um quarto  &  \\
     \hline \\
@@ -394,15 +394,15 @@ Parte da unidade &  Fração da unidade  &  Unidade  \\
   &   um quarto  &  \\
     \hline \\
 \begin{tikzpicture}[scale=3]
-\draw [fill=gray] (0,0) -- (3,0) -- (-1.5,1.5) -- cycle;
+\draw [fill=common] (0,0) -- (3,0) -- (-1.5,1.5) -- cycle;
 \end{tikzpicture}  &   metade  &  \\
     \hline \\
 \begin{tikzpicture}[scale=3]
-\draw [fill=gray] (0,0) -- (3,0) -- (-1.5,1.5) -- cycle;
+\draw [fill=common] (0,0) -- (3,0) -- (-1.5,1.5) -- cycle;
 \end{tikzpicture}  &   um terço  &  \\
     \hline \\
 \begin{tikzpicture}[scale=3]
-\draw [fill=gray] (0,0) -- (3,0) -- (-1.5,1.5) -- cycle;
+\draw [fill=common] (0,0) -- (3,0) -- (-1.5,1.5) -- cycle;
 \end{tikzpicture}  &   um quarto  &  \\
     \hline \\
   \end{tabular}
@@ -470,7 +470,7 @@ Identique as figuras em que a parte pintada é a metade da figura.
 %retângulos
 
 \begin{tikzpicture}[scale=5]
- \draw[fill=gray] (0,0) rectangle (3,2);
+ \draw[fill=common] (0,0) rectangle (3,2);
  \draw (3,0) rectangle (6,2); 
  \node at (3,-1) {Figura 1};
 \end{tikzpicture}
@@ -482,7 +482,7 @@ Identique as figuras em que a parte pintada é a metade da figura.
  \draw (1,0) -- (1,2);
  \draw (1.5,0) -- (1.5,2);
  \draw (2.2,0) -- (2.2,2);
- \draw[fill=gray] (3,0) rectangle (6,2) (3,-1) node{Figura 2};
+ \draw[fill=common] (3,0) rectangle (6,2) (3,-1) node{Figura 2};
 \end{tikzpicture}
 &
 \quad \quad \quad
@@ -491,19 +491,19 @@ Identique as figuras em que a parte pintada é a metade da figura.
 \begin{tikzpicture}[scale=5]
  \draw (0,0) rectangle (3,2);
  \draw (3,0) rectangle (6,2) (3,-1) node{Figura 3};
- \draw[fill=gray] (0,2) rectangle (6,1.2);
+ \draw[fill=common] (0,2) rectangle (6,1.2);
  \end{tikzpicture}
 \\
  % círculos
 
  \begin{tikzpicture}[scale=5]
- \draw[fill=gray] (0,-2) arc (-90:90: 2);
+ \draw[fill=common] (0,-2) arc (-90:90: 2);
  \draw (0,2) arc (90:270:2) (0,-3) node{Figura 4};
 \end{tikzpicture}
 && 
 
 \begin{tikzpicture}[scale=5]
- \draw[fill=gray] (45:2) arc (45:225:2);
+ \draw[fill=common] (45:2) arc (45:225:2);
  \draw (225:2) arc (225:405:2) (0,-3) node{Figura 5};
  \draw (0,0) -- (0,-2);
  \draw (0,0) -- (-30:2);
@@ -513,8 +513,8 @@ Identique as figuras em que a parte pintada é a metade da figura.
  &&
  \begin{tikzpicture}[scale=5]
  \draw (0,0) circle (2);
- \draw[fill=gray] (0,0) -- (2,0) arc (0:90:2) -- cycle; 
- \draw[fill=gray] (0,0) -- (-2,0) arc (180:270: 2) -- cycle;
+ \draw[fill=common] (0,0) -- (2,0) arc (0:90:2) -- cycle; 
+ \draw[fill=common] (0,0) -- (-2,0) arc (180:270: 2) -- cycle;
  \node at (0,-3) {Figura 6};
 \end{tikzpicture} 
 \\
@@ -523,7 +523,7 @@ Identique as figuras em que a parte pintada é a metade da figura.
 \begin{tikzpicture}[scale=5]
  \foreach \x in {0,60,...,300}{
  \draw (\x:2) -- (\x +60: 2);}
- \fill[gray] (2,0) -- (60:2) -- (300:2);
+ \fill[common] (2,0) -- (60:2) -- (300:2);
  \node at (0,-3) {Figura 7};
 \end{tikzpicture}
 & &
@@ -531,7 +531,7 @@ Identique as figuras em que a parte pintada é a metade da figura.
 \begin{tikzpicture}[scale=5]
  \foreach \x in {0,60,...,300}{
  \draw (\x:2) -- (\x +60: 2);}
- \fill[gray] (60:2) -- (120:2) -- (180:2) -- (240:2) --cycle;
+ \fill[common] (60:2) -- (120:2) -- (180:2) -- (240:2) --cycle;
  \draw (0,0) -- (2,0);
  \draw (0,0) -- (300:2) (0,-3) node{Figura 8};
 \end{tikzpicture}
@@ -540,16 +540,16 @@ Identique as figuras em que a parte pintada é a metade da figura.
 \begin{tikzpicture}[scale=5]
  \foreach \x in {0,60,...,300}{
  \draw (\x:2) -- (\x +60: 2);}
- \fill[gray] (0:2) -- (60:2) -- (0:0) --cycle;
- \fill[gray] (120:2) -- (180:2) -- (0:0) --cycle;
- \fill[gray] (240:2) -- (300:2) -- (0:0) --cycle;
+ \fill[common] (0:2) -- (60:2) -- (0:0) --cycle;
+ \fill[common] (120:2) -- (180:2) -- (0:0) --cycle;
+ \fill[common] (240:2) -- (300:2) -- (0:0) --cycle;
  \node at (0,-3) {Figura 9};
 \end{tikzpicture}
 \\
 %círculo
 
 \begin{tikzpicture}[scale=5]
- \draw[fill=gray] (0:2) arc (0:270:2) -- (0,0) -- cycle;
+ \draw[fill=common] (0:2) arc (0:270:2) -- (0,0) -- cycle;
  \draw (270:2) arc (270:360:2);
  \draw (0,0) -- (0,-2);
  \draw (0,0) -- (2,0)  (0,-3) node{Figura 10};
@@ -560,14 +560,14 @@ Identique as figuras em que a parte pintada é a metade da figura.
 \begin{tikzpicture}[scale=5]
  \foreach \x in {0,60,...,300}{
  \draw (\x:2) -- (\x +60: 2);}
-\fill[gray] (120:2) -- (180:2) -- (240:2) -- cycle;
-\fill[gray] (240:2) -- (300:2) -- (60:2) -- cycle;
+\fill[common] (120:2) -- (180:2) -- (240:2) -- cycle;
+\fill[common] (240:2) -- (300:2) -- (60:2) -- cycle;
  \node at (0,-3) {Figura 11};
 \end{tikzpicture}
 &&
 %retângulo
 \begin{tikzpicture}[scale=5]
- \fill[gray] (1,-1) rectangle (4,1);
+ \fill[common] (1,-1) rectangle (4,1);
  \draw (0,-1) rectangle (6,1);
  \node at (3,-2) {Figura 12};
  \end{tikzpicture}
@@ -600,7 +600,7 @@ Nas figuras a seguir, um mesmo círculo aparece diferentemente dividido em parte
 \hspace{-1cm} \begin{tabular*}{\textwidth}{ccccc}
   
 \begin{tikzpicture}[x=1mm,y=1mm, scale=0.6]
-      \draw[gray,fill] (0,0)
+      \draw[common,fill] (0,0)
         -- ({7 * 360/9}:20) arc ({7 * 360/9}:{8 * 360/9}:20) -- (0,0);
 	  \foreach \x in {1,...,9}
     	{ \draw (0,0) -- ++({360 * \x / 9}:20); }
@@ -611,7 +611,7 @@ Nas figuras a seguir, um mesmo círculo aparece diferentemente dividido em parte
 &
 
 \begin{tikzpicture}[x=1mm,y=1mm, scale=0.6]
-      \draw[gray,fill] (0,0)
+      \draw[common,fill] (0,0)
         -- ({3 * 360/8}:20) arc ({3 * 360/8}:{4 * 360/8}:20) -- (0,0);
 	  \foreach \x in {1,...,8}
     	{ \draw (0,0) -- ++({360 * \x / 8}:20); }
@@ -623,14 +623,14 @@ Nas figuras a seguir, um mesmo círculo aparece diferentemente dividido em parte
 %C)
 
 \begin{tikzpicture}[x=1mm,y=1mm, scale=0.6]
-	  \draw[fill=gray] (0,0) circle (20);    
+	  \draw[fill=common] (0,0) circle (20);    
 	  \node at (-20,16) {C)};
 \end{tikzpicture}
 
 &
 %D)
 \begin{tikzpicture}[x=1mm,y=1mm, scale=0.6]
-      \draw[gray,fill] (0,0)
+      \draw[common,fill] (0,0)
         -- ({1.5 * 360/6}:20) arc ({1.5 * 360/6}:{2.5 * 360/6}:20) -- (0,0);
 	  \foreach \x in {1.5,...,6.5}
     	{ \draw (0,0) -- ++({360 * \x / 6}:20); }
@@ -640,7 +640,7 @@ Nas figuras a seguir, um mesmo círculo aparece diferentemente dividido em parte
 &
 %E)
 \begin{tikzpicture}[x=1mm,y=1mm, scale=0.6]
-      \draw[gray,fill] (0,0)
+      \draw[common,fill] (0,0)
         -- (90 :20) arc (90:210:20) -- (0,0);
 	  \foreach \x in {1,...,3}
     	{ \draw (0,0) -- ++({90 + 360 * \x / 3}:20); }
@@ -650,7 +650,7 @@ Nas figuras a seguir, um mesmo círculo aparece diferentemente dividido em parte
 \\
 %F)
 \begin{tikzpicture}[x=1mm,y=1mm, scale=0.6]
-      \draw[gray,fill] (0,0)
+      \draw[common,fill] (0,0)
         -- ({10 + 5 * 360/10}:20) arc ({10 + 5 * 360/10}:{10+6 * 360/10}:20) -- (0,0);
 	  \foreach \x in {1,...,10}
     	{ \draw (0,0) -- ++({10 + 360 * \x / 10}:20); }
@@ -661,7 +661,7 @@ Nas figuras a seguir, um mesmo círculo aparece diferentemente dividido em parte
 
 %G)
 \begin{tikzpicture}[x=1mm,y=1mm, scale=0.6]
-      \draw[gray,fill] (0,0)-- ({90- 360/5}:20) arc ({90- 360/5}:90:20) -- (0,0);
+      \draw[common,fill] (0,0)-- ({90- 360/5}:20) arc ({90- 360/5}:90:20) -- (0,0);
 	  \foreach \x in {1,...,5}
     	{ \draw (0,0) -- ++({90 + 360 * \x / 5}:20); }
 	  \draw (0,0) circle (20);    
@@ -670,14 +670,14 @@ Nas figuras a seguir, um mesmo círculo aparece diferentemente dividido em parte
 &
 %H)
 \begin{tikzpicture}[x=1mm,y=1mm, scale=0.6]
-      \draw[gray,fill] (0,0)-- (90:20) arc (90:-90:20) -- (0,0);
+      \draw[common,fill] (0,0)-- (90:20) arc (90:-90:20) -- (0,0);
       \draw (0,0)-- (90:20) arc (90:270:20) -- (0,0);
       \node at (-20,16) {H)};
 \end{tikzpicture}
 &
 %I)
 \begin{tikzpicture}[x=1mm,y=1mm, scale=0.6]
-      \draw[gray,fill] (0,0)-- ({- 360/7}:20) arc ({- 360/7}:{-2 * 360/7}:20) -- (0,0);
+      \draw[common,fill] (0,0)-- ({- 360/7}:20) arc ({- 360/7}:{-2 * 360/7}:20) -- (0,0);
 	  \foreach \x in {1,...,7}
     	{ \draw (0,0) -- ++({360 * \x / 7}:20); }
 	  \draw (0,0) circle (20);    
@@ -686,7 +686,7 @@ Nas figuras a seguir, um mesmo círculo aparece diferentemente dividido em parte
 &
 %J)
 \begin{tikzpicture}[x=1mm,y=1mm, scale=0.6]
-      \draw[gray,fill] (0,0)-- (0:20) arc (0:{- 360/4}:20) -- (0,0);
+      \draw[common,fill] (0,0)-- (0:20) arc (0:{- 360/4}:20) -- (0,0);
 	  \foreach \x in {1,...,4}
     	{ \draw (0,0) -- ++({360 * \x / 4}:20); }
 	  \draw (0,0) circle (20);    
@@ -710,7 +710,7 @@ Em cada uma das imagens, a parte colorida é uma fração da figura. Essas fraç
 a)
 \begin{tikzpicture}[scale=5]
  \draw (0,0) rectangle (4,2);
- \fill[gray] (0,0) -- (4,2) -- (4,0) -- cycle;
+ \fill[common] (0,0) -- (4,2) -- (4,0) -- cycle;
 \end{tikzpicture}
 
 & \quad \quad \quad &
@@ -719,14 +719,14 @@ b)
  \draw (0,0) rectangle (4,2);
  \foreach \n in {0.4,0.8,1.2,...,3.2,3.6}{
  \draw (\n,0) -- (\n,2);}
- \fill[gray] (0.8,0) -- (0.8,2) -- (1.2,2) -- (1.2,0) -- cycle;
+ \fill[common] (0.8,0) -- (0.8,2) -- (1.2,2) -- (1.2,0) -- cycle;
 \end{tikzpicture}
 & \quad \quad \quad &
 
 c)
 \begin{tikzpicture}[scale=5]
  \draw (0,0) rectangle (4,2);
- \fill[gray] (2,1) rectangle (4,2);
+ \fill[common] (2,1) rectangle (4,2);
  \draw (0,1) -- (4,1);
  \draw (2,0) -- (2,2);
  \end{tikzpicture}
@@ -734,7 +734,7 @@ c)
 
 d)
 \begin{tikzpicture}[scale=5]
- \fill[gray] (45:2) arc (45:135:2) -- (0,0) -- cycle;
+ \fill[common] (45:2) arc (45:135:2) -- (0,0) -- cycle;
  \draw (135:2) arc (135:405:2);
 \end{tikzpicture}
 & & 
@@ -742,24 +742,24 @@ e)
 \begin{tikzpicture}[scale=5]
  \foreach \x in {0,60,...,300}{
  \draw (\x:2) -- (\x +60: 2);}
-\fill[gray] (-2,0) -- (0,0) -- (0,1.73) -- (120:2) -- cycle;
+\fill[common] (-2,0) -- (0,0) -- (0,1.73) -- (120:2) -- cycle;
 \end{tikzpicture}
 & &
 f)
 \begin{tikzpicture}[scale=5]
  \draw (0,0) rectangle (5,1);
- \draw[fill=gray] (0,1) rectangle (5,2);
+ \draw[fill=common] (0,1) rectangle (5,2);
 \end{tikzpicture}
 \\
 g)
 \begin{tikzpicture}[scale=5]
- \draw[fill=gray] (0,0) rectangle (2,1);
+ \draw[fill=common] (0,0) rectangle (2,1);
  \draw (0,1) rectangle (2,3);
 \end{tikzpicture} 
 & &
 h)
 \begin{tikzpicture}[scale=5]
- \draw[fill=gray] (200:2) arc (200:236:2) -- (0,0) -- cycle;
+ \draw[fill=common] (200:2) arc (200:236:2) -- (0,0) -- cycle;
  \draw (236:2) arc (236:560:2);
 \end{tikzpicture} 
 &&
@@ -796,14 +796,14 @@ j)
   units=cm,
   scale=.1,
 }
-    \pic [fill=gray] at (0,0) {annotated cuboid={width=25, height=50, depth=8}};
+    \pic [fill=common] at (0,0) {annotated cuboid={width=25, height=50, depth=8}};
     \pic [fill=white] at (22.5,0) {annotated cuboid={width=225, height=50, depth=8}};
 \end{tikzpicture}
 &&
 
 l)
 \begin{tikzpicture}[scale=5]
- \draw[fill=gray] (0,2) rectangle (2,4);
+ \draw[fill=common] (0,2) rectangle (2,4);
  \draw (0,0) rectangle (2,2);
  \draw (2,0) rectangle (4,2);
  \draw (2,2) rectangle (4,4);
@@ -811,19 +811,19 @@ l)
 &&
 m)
 \begin{tikzpicture}[scale=5]
- \fill[gray] (1,0) rectangle (2,1);
- \fill[gray] (3,0) rectangle (4,1);
- \fill[gray] (0,1) rectangle (1,2);
- \fill[gray] (2,1) rectangle (3,2);
- \fill[gray] (1,2) rectangle (2,3);
- \fill[gray] (3,2) rectangle (4,3);
- \fill[gray] (0,3) rectangle (1,4);
- \fill[gray] (2,3) rectangle (3,4);
+ \fill[common] (1,0) rectangle (2,1);
+ \fill[common] (3,0) rectangle (4,1);
+ \fill[common] (0,1) rectangle (1,2);
+ \fill[common] (2,1) rectangle (3,2);
+ \fill[common] (1,2) rectangle (2,3);
+ \fill[common] (3,2) rectangle (4,3);
+ \fill[common] (0,3) rectangle (1,4);
+ \draw[fill,common] (2,3) rectangle (3,4);
  \draw (0,0) rectangle (4,4);
 \end{tikzpicture}
 
 \end{tabular*}
 \end{center}
-  
+
 
 \end{document}
