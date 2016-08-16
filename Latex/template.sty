@@ -59,6 +59,12 @@ footskip=.7in
 \definecolor{light}{RGB}{204,252,142}
 \definecolor{attention}{RGB}{220,91,62}
 
+\definecolor{dark}{RGB}     {97,83,117}
+\definecolor{common}{RGB}   {142,178,197}
+\definecolor{special}{RGB}  {229,98,92}
+\definecolor{light}{RGB}    {249,191,118}
+\definecolor{attention}{RGB}{209,49,61}
+
 
 
 
@@ -101,7 +107,7 @@ footskip=.7in
 %\titlespacing*{\chapter}{0pt}{50pt}{100pt} % {<command>}{<left>}{<before-sep>}{<after-sep>}
 
 % Section style ---- EXPLORANDO O ASSUNDO, ORGANIZANDO AS IDEIAS, MÃO NA MASSA, etc.
-\newcommand*\sectionlabel{}
+%\newcommand*\sectionlabel{}
 \titleformat{\section}
   {\titlefont\bf}
   {\gdef\sectionlabel{\thesection\ }}{0pt}
@@ -135,7 +141,10 @@ footskip=.7in
 % documentation abaout chaptermark, markboth, etc. https://www.ntg.nl/maps/16/29.pdf
 
 % Section mark
-\renewcommand{\sectionmark}[1]{\markright{#1}} % Sections not in uppercase, not numbered
+\renewcommand{\sectionmark}[1]{\markright{\ #1}} % Sections not in uppercase, not numbered
+
+\RequirePackage{chngcntr}
+\counterwithout{subsection}{section}
 
 % Footers
 \fancyfoot[C]{%
@@ -148,25 +157,13 @@ footskip=.7in
   {\tikz{\draw[color=attention, line width=0.6pt] (-1.8, 0) -- (\textwidth, 0);}}\newline
   {\tikz[x=1mm,y=1mm]{\filldraw [attention, overlay] (-20,-3) -- (-5 ,-3)
       arc (-90:90:3) --(-5,3) -- (-20,3) (-8, 0) node{\color{white} {\bf \thepage}};}}
-  {\small\color{common} LIÇ\~AO \thechapter \; - \; \leftmark}
-}
-
-\renewcommand\section[1]{%
-  \refstepcounter{section}%
-  \sectionmark{#1}%
-}
-
-\renewcommand{\sectionmark}[1]{%
-  \gdef\currsection{#1}%
-}
-\renewcommand{\subsectionmark}[1]{%
-  \markright{\currsection\ #1}%
+  {\small\color{dark} LIÇ\~AO \thechapter \; - \; \leftmark}
 }
 
 % Right footer
 \fancyfoot[RO]{
   {\tikz{\draw[color=attention, line width=0.6pt] (-1.8, 0) -- (\textwidth, 0);}}\newline
-  {\small\color{common} \rightmark}
+  {\small\color{dark} \rightmark}
   {\tikz[x=1mm,y=1mm]{\filldraw [attention, overlay] (20,-3) -- (5 ,-3)
       arc (-90:-270:3) --(5,3) -- (20,3) (8, 0) node{\color{white} {\bf \thepage}};}}
 }%
@@ -248,7 +245,7 @@ title={\bf REFLETINDO},#1}
 \newtcbtheorem{resposta}{Resposta}%
 {colback=blue!5,colframe=blue,fonttitle=\bfseries}{th}
 \newtcbtheorem{imagem}{Imagem}%
-{colback=special!15,colframe=special,fonttitle=\bfseries}{th}
+{colback=light!15,colframe=light,fonttitle=\bfseries}{th}
 \newtcbtheorem{figura}{Figura}%
 {colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
 \newtcbtheorem{nota}{Nota}%
