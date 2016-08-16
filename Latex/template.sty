@@ -101,7 +101,7 @@ footskip=.7in
 %\titlespacing*{\chapter}{0pt}{50pt}{100pt} % {<command>}{<left>}{<before-sep>}{<after-sep>}
 
 % Section style ---- EXPLORANDO O ASSUNDO, ORGANIZANDO AS IDEIAS, MÃO NA MASSA, etc.
-%\newcommand*\sectionlabel{}
+\newcommand*\sectionlabel{}
 \titleformat{\section}
   {\titlefont\bf}
   {\gdef\sectionlabel{\thesection\ }}{0pt}
@@ -135,7 +135,7 @@ footskip=.7in
 % documentation abaout chaptermark, markboth, etc. https://www.ntg.nl/maps/16/29.pdf
 
 % Section mark
-%\renewcommand{\sectionmark}[1]{\markright{#1}} % Sections not in uppercase, not numbered
+\renewcommand{\sectionmark}[1]{\markright{#1}} % Sections not in uppercase, not numbered
 
 % Footers
 \fancyfoot[C]{%
@@ -149,6 +149,18 @@ footskip=.7in
   {\tikz[x=1mm,y=1mm]{\filldraw [attention, overlay] (-20,-3) -- (-5 ,-3)
       arc (-90:90:3) --(-5,3) -- (-20,3) (-8, 0) node{\color{white} {\bf \thepage}};}}
   {\small\color{common} LIÇ\~AO \thechapter \; - \; \leftmark}
+}
+
+\renewcommand\section[1]{%
+  \refstepcounter{section}%
+  \sectionmark{#1}%
+}
+
+\renewcommand{\sectionmark}[1]{%
+  \gdef\currsection{#1}%
+}
+\renewcommand{\subsectionmark}[1]{%
+  \markright{\currsection\ #1}%
 }
 
 % Right footer
