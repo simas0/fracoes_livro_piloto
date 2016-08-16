@@ -46,12 +46,20 @@ footskip=.7in
 
 % To define colors
 \RequirePackage[dvipsnames]{xcolor}
-\definecolor{titleblue}{RGB}{21,101,175}
-\definecolor{titlegreen}{RGB}{154,195,33}
-\definecolor{myblue}{RGB}{204,216,241}
-\definecolor{mediumblue}{RGB}{108,153,215}
-\definecolor{myred}{RGB}{210,32,39}
-\definecolor{mygreen}{RGB}{179,220,47}
+\definecolor{light}{RGB}{21,101,175}
+\definecolor{special}{RGB}{154,195,33}
+\definecolor{common}{RGB}{204,216,241}
+\definecolor{common}{RGB}{108,153,215}
+\definecolor{attention}{RGB}{210,32,39}
+\definecolor{special}{RGB}{179,220,47}
+
+\definecolor{dark}{RGB}{78,57,93}
+\definecolor{common}{RGB}{130,112,133}
+\definecolor{special}{RGB}{142,190,148}
+\definecolor{light}{RGB}{204,252,142}
+\definecolor{attention}{RGB}{220,91,62}
+
+
 
 
 % use o GIMP para obter o cógigo HTML da cor e o site a seguir para converter para RGB
@@ -82,14 +90,14 @@ footskip=.7in
 {} % label
 {0pt} % separation
 {\begin{tikzpicture}[remember picture,overlay]
-    \filldraw [x=1mm,y=1mm, mygreen, overlay] (37,0) circle [radius=9];
-    \filldraw [x=1mm,y=1mm, myred, overlay] (58,0) circle [radius=9];
-    \filldraw [x=1mm,y=1mm, titleblue, overlay] (79,0) circle [radius=9];
-    \filldraw [x=1mm,y=1mm, mediumblue, overlay] (210,-9) -- (100 ,-9) arc (-90:-270:9) --(100,9)
+    \filldraw [x=1mm,y=1mm, special, overlay] (37,0) circle [radius=9];
+    \filldraw [x=1mm,y=1mm, attention, overlay] (58,0) circle [radius=9];
+    \filldraw [x=1mm,y=1mm, light, overlay] (79,0) circle [radius=9];
+    \filldraw [x=1mm,y=1mm, common, overlay] (210,-9) -- (100 ,-9) arc (-90:-270:9) --(100,9)
     -- (210,9) (118, 0) node{\color{white} Lição \thechapter} (105,-27);
   \end{tikzpicture}
 } % before title
-[\vspace{3cm} \hfill{\bf\bigtitlefont\raggedright\color{titlegreen} #1}] % after title
+[\vspace{3cm} \hfill{\bf\bigtitlefont\raggedright\color{special} #1}] % after title
 %\titlespacing*{\chapter}{0pt}{50pt}{100pt} % {<command>}{<left>}{<before-sep>}{<after-sep>}
 
 % Section style ---- EXPLORANDO O ASSUNDO, ORGANIZANDO AS IDEIAS, MÃO NA MASSA, etc.
@@ -99,7 +107,7 @@ footskip=.7in
   {\gdef\sectionlabel{\thesection\ }}{0pt}
   {%
     \begin{tikzpicture}[remember picture,overlay]
-      \filldraw [x=1mm,y=1mm, myred, overlay] (\textwidth,-4) -- (0 ,-4)
+      \filldraw [x=1mm,y=1mm, attention, overlay] (\textwidth,-4) -- (0 ,-4)
       arc (-90:-270:4) --(0,4) -- (\textwidth,4)
       node[anchor=west] at (0, 0) {\color{white} \MakeUppercase{#1}};
    \end{tikzpicture}
@@ -108,7 +116,7 @@ footskip=.7in
 
 % Subsection style
 \renewcommand{\thesubsection}{\arabic{subsection}}% to define subsection numbering without section number
-\titleformat{\subsection}[block]{\normalfont\normalsize\bfseries\color{titleblue}}
+\titleformat{\subsection}[block]{\normalfont\normalsize\bfseries\color{special}}
 {Atividade \thesubsection}{20pt}{\Huge}
 % 
 % \titleformat*{\subsection} % redefining subsection appearence - Atividade
@@ -137,17 +145,17 @@ footskip=.7in
 
 % Left footer
 \fancyfoot[LE]{
-  {\tikz{\draw[color=myred, line width=0.6pt] (-1.8, 0) -- (\textwidth, 0);}}\newline
-  {\tikz[x=1mm,y=1mm]{\filldraw [myred, overlay] (-20,-3) -- (-5 ,-3)
+  {\tikz{\draw[color=attention, line width=0.6pt] (-1.8, 0) -- (\textwidth, 0);}}\newline
+  {\tikz[x=1mm,y=1mm]{\filldraw [attention, overlay] (-20,-3) -- (-5 ,-3)
       arc (-90:90:3) --(-5,3) -- (-20,3) (-8, 0) node{\color{white} {\bf \thepage}};}}
   {\small\color{gray} LIÇ\~AO \thechapter \; - \; \leftmark}
 }
 
 % Right footer
 \fancyfoot[RO]{
-  {\tikz{\draw[color=myred, line width=0.6pt] (-1.8, 0) -- (\textwidth, 0);}}\newline
+  {\tikz{\draw[color=attention, line width=0.6pt] (-1.8, 0) -- (\textwidth, 0);}}\newline
   {\small\color{gray} \rightmark}
-  {\tikz[x=1mm,y=1mm]{\filldraw [myred, overlay] (20,-3) -- (5 ,-3)
+  {\tikz[x=1mm,y=1mm]{\filldraw [attention, overlay] (20,-3) -- (5 ,-3)
       arc (-90:-270:3) --(5,3) -- (20,3) (8, 0) node{\color{white} {\bf \thepage}};}}
 }%
 \fancyfoot[C]{}
@@ -162,11 +170,11 @@ footskip=.7in
 %%%%%%%%%%%%%%%%%%%%%% Cabeçalho %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\Header{%
 \begin{tikzpicture}[remember picture,overlay]
-%\fill[myblue]
+%\fill[common]
 %  ([yshift=1mm]current page.north west) -- (current page.north east) --
 %  ([yshift=0.3cm]current page.north east|-current page text area.north east) --
 %  ([yshift=0.3cm]current page.north west|-current page text area.north west) -- cycle;
-\fill[fill=myblue]
+\fill[fill=common]
   ([yshift=2mm,xshift=-2mm]current page.north west) rectangle ([yshift=-5mm,xshift=2mm]current page.north east);
 %\node[font=\sffamily\bfseries\color{white},anchor=east, % Texto dentro do cabeçalho acima
   xshift=-1.5cm,yshift=-1.3cm] at (current page.north east)
@@ -188,7 +196,7 @@ footskip=.7in
 % Atividade
 % \newcounter{atividade}
 % \newenvironment{atividade}[1][]{\refstepcounter{atividade}\par\medskip
-%    \noindent \textbf{\textcolor{titleblue}{Atividade~\theatividade #1 \rmfamily \rmfamily}}}{\medskip}
+%    \noindent \textbf{\textcolor{light}{Atividade~\theatividade #1 \rmfamily \rmfamily}}}{\medskip}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Refletindo
@@ -196,9 +204,9 @@ footskip=.7in
 %\RequirePackage{varwidth}
 \tcbuselibrary{listings,breakable,most}
 \newtcolorbox{refletindo*}[2][]{%
-colframe=myblue,
+colframe=common,
 colbacktitle=white,
-coltitle=titleblue,
+coltitle=special,
 boxed title style={arc=3mm,boxrule=.7mm,height=8mm,valign=center},
 enhanced,colback=white,
 boxrule=.7mm,titlerule=3mm,
@@ -226,7 +234,7 @@ title={\bf REFLETINDO},#1}
 \newtcbtheorem{resposta}{Resposta}%
 {colback=blue!5,colframe=blue,fonttitle=\bfseries}{th}
 \newtcbtheorem{imagem}{Imagem}%
-{colback=yellow!15,colframe=yellow,fonttitle=\bfseries}{th}
+{colback=special!15,colframe=special,fonttitle=\bfseries}{th}
 \newtcbtheorem{figura}{Figura}%
 {colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
 \newtcbtheorem{nota}{Nota}%
