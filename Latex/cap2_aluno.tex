@@ -70,12 +70,7 @@
   
 \end{imagem*}
 
-
-
-
-\section*{EXPLORANDO O ASSUNTO }
-
-
+\section{EXPLORANDO O ASSUNTO }
 
 \subsection{Atividade}
 
@@ -150,8 +145,6 @@ Para a sobremesa do almoço de domingo, papai passou em uma confeitaria em que a
 
 Complete as afirmações com uma das frações: ``dois meios'', ``dois terços'', ``dois quintos'', ``três quartos'', ``oito sextos'' e ``nove meios'' para que sejam verdadeiras.
 
-    \includegraphics[width=420pt, keepaspectratio]{../../livro/media//cap2/secoes/preencha-01.png}  
-
 \begin{enumerate}[a)]
  \item A parte pintada de vermelho em \begin{tikzpicture}[scale=0.8]
                            \draw[fill=attention] (0,0) rectangle (20,10);
@@ -203,49 +196,94 @@ Complete as afirmações com uma das frações: ``dois meios'', ``dois terços''
                                        \draw  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (\x-18:4) -- (\y-18:2)--(\x-18 +72:4)};
                                       \end{tikzpicture} \begin{tikzpicture}
                                        \fill[attention]  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (0,0) -- (\x-18:4) -- (\y-18:2)--(\x-18 +72:4) -- (0, 0)};
+                                       \fill[white]  (90:4) -- (-90:2) -- (-56:4) -- (-18:2)-- (18:4) --(56:2) --cycle;
                                        \draw  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (\x-18:4) -- (\y-18:2)--(\x-18 +72:4)};
-                                      \end{tikzpicture} 
-                           
+                                      \end{tikzpicture} é \begin{tikzpicture} \draw (0,0) -- (20,0); \end{tikzpicture} de \begin{tikzpicture}
+                                       \draw  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (\x-18:4) -- (\y-18:2)--(\x-18 +72:4)}; \end{tikzpicture}.
+
+\item A parte pintada de vermelho em \begin{tikzpicture} \fill[attention] (90:4)--(-90:4)--(-30:4)--(30:4)--cycle; \foreach \x in {30,90,...,330}{\draw (0,0) -- (\x:4); \draw (\x:4) -- (\x+60:4);}\end{tikzpicture} \begin{tikzpicture} \fill[attention] (30:4)--(90:4)--(150:4)--(210:4)--(270:4)-- (330:4) -- (0,0) --cycle; \foreach \x in {30,90,...,330}{\draw (0,0) -- (\x:4); \draw (\x:4) -- (\x+60:4);}\end{tikzpicture} é \begin{tikzpicture} \draw (0,0) -- (20,0); \end{tikzpicture} de \begin{tikzpicture} \foreach \x in {30,90,...,330}{\draw (\x:4) -- (\x+60:4);}\end{tikzpicture}.                  
 \end{enumerate}
-    
+
+\section{ORGANIZANDO AS IDEIAS }
+
+Se uma torta está dividida em três partes iguais, a torta fica separada em três terços. Assim, como visto na historinha do início da lição, tanto faz escrever: ``$\frac{1}{3}$ da torta'' ou ``um terço da torta'' para se referir à fatia destacada na figura.
+
+\begin{center}
+\begin{tikzpicture}
+ \fill[attention] (0,0) -- (-90:10) arc (-90:30:10) -- (0,0) -- cycle;
+ \draw (0,0) circle (10);
+ \draw (0,0) -- (-90:10);
+ \draw (0,0) -- (30:10);
+ \draw (0,0) -- (150:10);
+ \node at (0,-14) {$\frac{1}{3}$ da torta};
+\end{tikzpicture}
+\end{center}
 
 
+Duas fatias são ``dois terços da torta'', o que pode ser expresso simplesmente por ``$\frac{2}{3}$ da torta''. Deste modo, é claro que ``três terços da torta'' é uma torta inteira.
 
-
-
-
-\section*{ORGANIZANDO AS IDEIAS }
-
-
-
-
-
-
-
-
-Se uma torta está dividida em três partes iguais, a torta fica separada em três terços. Assim, como visto na historinha do início da lição, tanto faz escrever: ``$\dfrac{1}{3}$ da torta'' ou ``um terço da torta'' para se referir à fatia destacada na figura.
-
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA - incluindo o texto  \mbox{} \newline        \includegraphics[width=180pt, keepaspectratio]{../../livro/media//cap2/secoes/dois_e_tres_tercos_torta.jpg}\end{imagem*}
-
-
-Duas fatias são ``dois terços da torta'', o que pode ser expresso simplesmente por ``$\dfrac{2}{3}$ da torta''. Deste modo, é claro que ``três terços da torta'' é uma torta inteira.
-
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA - incluindo o texto  \mbox{} \newline        \includegraphics[width=300pt, keepaspectratio]{../../livro/media//cap2/secoes/um_terco_torta.jpg}  
-  Incluir abaixo da imagem de   $\frac{3}{3}$   da torta:   $\frac{3}{3}$   da torta = 1 torta.\end{imagem*}
-
+\begin{center}
+\begin{tikzpicture}
+ \fill[attention] (0,0) -- (-210:10) arc (-210:30:10) -- (0,0) -- cycle;
+ \draw (0,0) circle (10);
+ \draw (0,0) -- (-90:10);
+ \draw (0,0) -- (30:10);
+ \draw (0,0) -- (150:10);
+ \node at (0,-14) {$\frac{2}{3}$ da torta};
+\end{tikzpicture}\quad \quad \quad \begin{tikzpicture}
+ \draw[fill=attention] (0,0) circle (10);
+ \draw (0,0) -- (-90:10);
+ \draw (0,0) -- (30:10);
+ \draw (0,0) -- (150:10);
+ \node at (0,-14) {$\frac{3}{3}$ da torta};
+\end{tikzpicture}
+\end{center}
+  
+  
 Também pode-se considerar quatro terços, cinco terços ou seis terços da torta, basta juntar novos terços à torta inteira.
 
-\begin{imagem*}[breakable]{}{}    FIGURA GEOMÉTRICA - incluindo o texto  \mbox{} \newline         \includegraphics[width=420pt, keepaspectratio]{../../livro/media//cap2/secoes/20160419_230500.jpg}  
-  Incluir abaixo dessas imagens, respectivamente:  
-  $\frac{4}{3}$   da torta = 1 torta e   $\frac{1}{3}$   da torta;  
-  $\frac{5}{3}$   da torta = 1 torta e   $\frac{2}{3}$   da torta;  
-  $\frac{6}{3}$   da torta = 2 tortas.  
-\end{imagem*}
+\begin{center}
+\begin{tikzpicture}
+\begin{scope}[shift={(-24,0)}]
+ \draw[fill=attention] (0,0) circle (10);
+ \draw (0,0) -- (-90:10);
+ \draw (0,0) -- (30:10);
+ \draw (0,0) -- (150:10);
+ \end{scope}
+ \draw[fill=attention] (0,0) -- (150:10) arc (150:30:10) -- (0,0) -- cycle;
+ \node at (-12,-14) {$\frac{4}{3}$ da torta = 1 torta e $\frac{1}{3}$ da torta};
+\end{tikzpicture}
+\vspace{0.4cm}
 
+\begin{tikzpicture}
+\begin{scope}[shift={(-24,0)}]
+ \draw[fill=attention] (0,0) circle (10);
+ \draw (0,0) -- (-90:10);
+ \draw (0,0) -- (30:10);
+ \draw (0,0) -- (150:10);
+ \end{scope}
+ \draw[fill=attention] (0,0) -- (150:10) arc (150:-90:10) -- (0,0) -- cycle;
+ \draw (0,0) -- (30:10);
+ \node at (-12,-14) {$\frac{5}{3}$ da torta = 1 torta e $\frac{2}{3}$ da torta};
+\end{tikzpicture}
+\vspace{0.4cm}
 
+\begin{tikzpicture}
+\begin{scope}[shift={(-24,0)}]
+ \draw[fill=attention] (0,0) circle (10);
+ \draw (0,0) -- (-90:10);
+ \draw (0,0) -- (30:10);
+ \draw (0,0) -- (150:10);
+ \end{scope}
+ \draw[fill=attention] (0,0) circle (10);
+ \draw (0,0) -- (-90:10);
+ \draw (0,0) -- (30:10);
+ \draw (0,0) -- (150:10);
+ \node at (-12,-14) {$\frac{6}{3}$ da torta = 2 tortas};
+\end{tikzpicture}
+\end{center}
 
 Se uma torta é repartida em três partes iguais, cada fatia é um terço da torta - ou, simplesmente, $\frac{1}{3}$ da torta. Juntando essas fatias, é possível se ter dois terços ($\frac{2}{3}$) e três terços ($\frac{3}{3}$) da torta. Com mais do que uma torta repartida em três partes iguais, obtem-se quatro terços ($\frac{4}{3}$), cinco terços ($\frac{5}{3}$), seis terços ($\frac{6}{3}$), etc, da torta. Na representação simbólica, as frações que registram essas quantidades têm o número 3 ``abaixo'' do traço de fração, e, por isso, são denominadas terços. O número que informa a parte da unidade que ``dá nome'' à fração é chamado de {\it denominador} da fração. Assim, nas frações $\frac{1}{3}$, $\frac{2}{3}$, $\frac{3}{3}$,  $\frac{4}{3}$ e $\frac{5}{3}$, o 3 é o denominador, identificando ``terços''. 
-
 
 Já o número que aparece ``acima'' do traço de fração informa quantos terços estão sendo considerados. Esse número é chamado de {\it numerador} da fração. Por exemplo, na fração $\frac{1}{3}$ o numerador é 1 e na fração $\frac{4}{3}$ o numerador é 4.
 
@@ -267,87 +305,139 @@ $$\frac{1}{12}\rightarrow \text{  um doze avos;}\quad \frac{1}{13}\rightarrow \t
 Curioso para saber sobre o significado da palavra {\bf avos}? Pergunte ao seu professor. O importante é lembrar que, para denominadores maiores 11, acrescenta-se a expressão ``avos'' ao final da leitura da fração.
 
 Contudo, para frações cujo denominador é uma potência de 10, usa-se outra formar de ler:
-( ERRO:\{\$\} )( ERRO:\{\$\} )\textbackslash{}frac\{1\}\{100\}\textbackslash{}rightarrow \textbackslash{}text\{ um centésimo;\}\textbackslash{}quad \textbackslash{}frac\{13\}\{100\}\textbackslash{}rightarrow \textbackslash{}text\{ treze centésimos;\}\textbackslash{}quad
-\textbackslash{}frac\{33\}\{1000\}\textbackslash{}rightarrow \textbackslash{}text\{ trinta e três milésimos.\}( ERRO:\{\$\} )( ERRO:\{\$\} )
+$$\frac{1}{100}\rightarrow \text{ um centésimo;}\quad \frac{13}{100} \rightarrow \text{treze centésimos;} \quad
+\frac{33}{1000}\rightarrow \text{ trinta e três milésimos.}$$
 
 {\bf Pronto! Agora você já é capaz de ler diversos tipos de frações.}
-
-
-
-
 
 \begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA - fazer imagem da fração como se estivesse escrita a mão por uma criança de 9 anos   \mbox{} \newline        \includegraphics[width=420pt, keepaspectratio]{../../livro/media//cap2/secoes/numerador_denominador.jpg}   \end{imagem*}
 
 
-\section*{MÃO NA MASSA }
-
-
+\section{MÃO NA MASSA }
 
 \subsection{Atividade}
 
-
-
-
-
-
-
-
 Uma pizza gigante foi dividida em doze fatias iguais. 
 Pedro comeu quatro fatias, Isabella cinco fatias, Bernardo duas fatias e Manuela apenas uma fatia.
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA  Também há figuras em Resposta  
-\end{imagem*}
 
 \begin{center}
-  \begin{tabulary}{0.8\textwidth}{*{50}{L}}
-    \hline \hline \\
-                                                                                &                                  Pedro &   Isabella                             &   Bernardo                              &   Manuela                              \\
-    \hline \\
-     Pinte a fração de pizza consumida  por cada pessoa      &   \includegraphics[width=42pt, keepaspectratio]{../../livro/media/cap2/secoes/pizza-notacao.png} &  \includegraphics[width=42pt, keepaspectratio]{../../livro/media/cap2/secoes/pizza-notacao.png}  &   \includegraphics[width=42pt, keepaspectratio]{../../livro/media/cap2/secoes/pizza-notacao.png}  &   \includegraphics[width=42pt, keepaspectratio]{../../livro/media/cap2/secoes/pizza-notacao.png} \\
-    \hline \\
-     Escreva, por extenso, a fração de pizza consumida por cada pessoa                          &                                        &                                        &                                         &                                        \\
-    \hline \\
+  \begin{tabular}{m{0.27\textwidth}|m{0.13\textwidth}|m{0.13\textwidth}|m{0.13\textwidth}|m{0.13\textwidth}}
+& \centering Pedro & \centering  Isabella & \centering  Bernardo &  \quad Manuela  \\
+    \hline  \hline
+   Pinte a fração de pizza consumida  por cada pessoa      & \parbox[c][2cm]{0.13\textwidth}{\centering \begin{tikzpicture}[x=1.0cm,y=1.0cm, scale=0.5]
+\draw (1.76,2.04) circle (1.78cm);
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=0.:0.5235987755982987,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=0.5235987755982987:1.0471975511965974,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=1.0471975511965974:1.5707963267948963,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=1.5707963267948963:2.0943951023931953,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=2.0943951023931953:2.617993877991494,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=2.617993877991494:3.1415926535897927,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=3.1415926535897927:3.6651914291880914,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=3.6651914291880914:4.18879020478639,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=4.18879020478639:4.712388980384689,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=4.712388980384689:5.235987755982988,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=5.235987755982988:5.759586531581286,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=-0.5235987755983:0.,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\end{tikzpicture}}
+  & \parbox[c][2cm]{0.13\textwidth}{\centering \begin{tikzpicture}[x=1.0cm,y=1.0cm, scale=0.5]
+\draw (1.76,2.04) circle (1.78cm);
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=0.:0.5235987755982987,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=0.5235987755982987:1.0471975511965974,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=1.0471975511965974:1.5707963267948963,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=1.5707963267948963:2.0943951023931953,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=2.0943951023931953:2.617993877991494,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=2.617993877991494:3.1415926535897927,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=3.1415926535897927:3.6651914291880914,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=3.6651914291880914:4.18879020478639,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=4.18879020478639:4.712388980384689,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=4.712388980384689:5.235987755982988,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=5.235987755982988:5.759586531581286,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=-0.5235987755983:0.,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\end{tikzpicture}}
+   & \parbox[c][2cm]{0.13\textwidth}{\centering \begin{tikzpicture}[x=1.0cm,y=1.0cm, scale=0.5]
+\draw (1.76,2.04) circle (1.78cm);
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=0.:0.5235987755982987,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=0.5235987755982987:1.0471975511965974,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=1.0471975511965974:1.5707963267948963,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=1.5707963267948963:2.0943951023931953,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=2.0943951023931953:2.617993877991494,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=2.617993877991494:3.1415926535897927,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=3.1415926535897927:3.6651914291880914,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=3.6651914291880914:4.18879020478639,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=4.18879020478639:4.712388980384689,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=4.712388980384689:5.235987755982988,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=5.235987755982988:5.759586531581286,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=-0.5235987755983:0.,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\end{tikzpicture}}
+  & \parbox[c][2cm]{0.13\textwidth}{\centering \begin{tikzpicture}[x=1.0cm,y=1.0cm, scale=0.5]
+\draw (1.76,2.04) circle (1.78cm);
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=0.:0.5235987755982987,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=0.5235987755982987:1.0471975511965974,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=1.0471975511965974:1.5707963267948963,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=1.5707963267948963:2.0943951023931953,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=2.0943951023931953:2.617993877991494,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=2.617993877991494:3.1415926535897927,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=3.1415926535897927:3.6651914291880914,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=3.6651914291880914:4.18879020478639,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=4.18879020478639:4.712388980384689,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=4.712388980384689:5.235987755982988,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=5.235987755982988:5.759586531581286,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\draw [shift={(1.76,2.04)}]  (0,0) --  plot[domain=-0.5235987755983:0.,variable=\t]({1.*1.78*cos(\t r)+0.*1.78*sin(\t r)},{0.*1.78*cos(\t r)+1.*1.78*sin(\t r)}) -- cycle ;
+\end{tikzpicture}}
+  \\
+    \hline
+     Escreva, por extenso, a fração de pizza consumida por cada pessoa&                                        &                                        &                                         &                                        \\
+    \hline
      Escreva, usando notação simbólica matemática, a fração de pizza consumida por cada pessoa &                                        &                                        &                                         &                                        \\
-    \hline \\
-  \end{tabulary}
+    \hline
+  \end{tabular}
 \end{center}
 
-\begin{enumerate} [\quad I)] %d
+\begin{enumerate} [\quad a)] %d
   \item     Na sua opinião, qual representação de fração     ``gasta menos lápis''     para se escrita? Usando notação simbólica matemática, escrevendo por extenso ou pintando?
   \item     Na sua opinião, qual a representação que mais rapidamente ajuda a decidir quem comeu mais e quem comeu menos pizza?
 \end{enumerate} %d
 
-
-
-
-
-
-
 \subsection{Atividade}
-
-
-
-
-
-
 
 Para cada figura a seguir, indique a fração da figura que está pintada de vermelho. Esta fração é maior, menor ou exatamente igual a $\frac{1}{2}$ da figura?
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA - Figuras devem ser feitas individualmente sem os itens.  
-    \includegraphics[width=300pt, keepaspectratio]{../../livro/media//cap2/secoes/comparacao-01.png}  
-\end{imagem*}
 
+\begin{center}
+\begin{tabular}{m{0.3\textwidth}m{0.3\textwidth}m{0.3\textwidth}}
 
+a)
+\parbox[t][1.5cm][c]{5cm}{
+\begin{tikzpicture}
+ \foreach \x in {0,72,...,288}{
+ \fill[attention] (0,0) -- (\x:10) arc (\x:\x+36:10) --cycle;
+ \draw (\x:10) -- (\x:-10);}
+ \draw (0,0) circle (10);
+\end{tikzpicture} }
+&
+b)
+\parbox[t][1.5cm][c]{5cm}{
+\begin{tikzpicture}
+\fill[attention] (0,4) rectangle (7,20);
+\draw (0,0) rectangle (14,20);
+\foreach \y in {4,8,12,16}{
+\draw (0,\y)--(14,\y);}
+\draw (7,0) -- (7,20);
+\end{tikzpicture} }
 
+&
 
-
-
+c)
+\parbox[t][1.5cm][c]{5cm}{
+\begin{tikzpicture}
+\fill[attention] (0,0) rectangle (18,20);
+ \draw (0,0) rectangle (30,20);
+ \foreach \x in {3,6,...,27}{
+ \draw (\x,0)--(\x,20);}
+\end{tikzpicture} }
+\end{tabular}
+\end{center}
 
 \subsection{Atividade}
-
-
-
-
-
-
 
 Um grupo de amigos está dividindo duas pizzas circulares do mesmo tamanho. A primeira pizza foi cortada em 4 fatias de mesmo tamanho. A segunda pizza foi dividida em 8 fatias iguais.
 
@@ -357,38 +447,32 @@ Um grupo de amigos está dividindo duas pizzas circulares do mesmo tamanho. A pr
   \item     Qual fatia tem mais quantidade de pizza: uma fatia da primeira pizza ou uma fatia da segunda? Explique usando um desenho.
 \end{enumerate} %s
 
-
-
-
-
-
-
-
-
 \subsection{Atividade}
-
-
-
-
-
-
 
 Preencha cada lacuna a seguir com uma fração adequada (use notação simbólica matemática). Perceba que uma mesma parte pintada pode ser descrita por frações diferentes com unidades diferentes.
 \begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA - Figuras devem ser feitas individualmente sem os itens ou textos.  
 \end{imagem*}
 \begin{enumerate} [\quad a)] %s
-  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-04.png}     é \_ \_ \_   de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-01-vazio.png}    .
-  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-04.png}     é \_ \_ \_   de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-02-vazio.png}    .
-  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-04.png}     é \_ \_ \_   de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-03-vazio.png}    .
-  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-03.png}     é \_ \_ \_   de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-01-vazio.png}    .
-  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-03.png}     é \_ \_ \_   de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-02-vazio.png}    .
-  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-03.png}     é \_ \_ \_   de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-03-vazio.png}    .
-  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-02.png}     é \_ \_ \_   de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-01-vazio.png}    .
-  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-02.png}     é \_ \_ \_   de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-02-vazio.png}    .
-  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-02.png}     é \_ \_ \_   de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-03-vazio.png}    .
-  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-01.png}     é \_ \_ \_   de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-01-vazio.png}    .
-  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-01.png}     é \_ \_ \_   de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-02-vazio.png}    .
-  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-01.png}     é \_ \_ \_   de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-03-vazio.png}    .
+  \item     A parte pintada em vermelho em  \begin{tikzpicture}
+                                            \draw[fill=attention] (90:4)--(150:4)--(210:4)--(270:4)--cycle;
+                                            \foreach \x in {30,90,...,270}{\draw (\x:4) -- (\x+60:4);}
+                                            \draw[shift={(4*1.72,0)}] (30:4) -- (90:4) -- (150:4);
+                                            \draw[shift={(4*1.72,0)}] (-30:4) -- (-90:4) -- (-150:4);
+                                            \foreach \x in {-150,-90,...,90}{\draw[shift={(8*1.72,0)}] (\x:4) -- (\x+60:4);}
+                                            \end{tikzpicture}  é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}   de  \begin{tikzpicture}
+                                            \foreach \x in {30,90,...,330}{\draw (\x:4) -- (\x+60:4);}
+                                            \end{tikzpicture}
+  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-04.png}     é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-02-vazio.png}    .
+  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-04.png}     é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-03-vazio.png}    .
+  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-03.png}     é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-01-vazio.png}    .
+  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-03.png}     é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-02-vazio.png}    .
+  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-03.png}     é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-03-vazio.png}    .
+  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-02.png}     é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-01-vazio.png}    .
+  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-02.png}     é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-02-vazio.png}    .
+  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-02.png}     é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-03-vazio.png}    .
+  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-01.png}     é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-01-vazio.png}    .
+  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-01.png}     é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-02-vazio.png}    .
+  \item     A parte pintada em vermelho em         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/parte-02-03-preenchido-01.png}     é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de         \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/parte-02-03-vazio.png}    .
 \end{enumerate} %s
 
 
@@ -563,7 +647,7 @@ Os carrinhos de Rafael e Samuel pararam no mesmo lugar? Explique.
 
 
 
-\section*{QUEBRANDO A CUCA }
+\section{QUEBRANDO A CUCA }
 
 
 
