@@ -16,6 +16,9 @@ marginpar=10mm
 
 % Para enumerates customizados
 \RequirePackage{enumerate}
+\RequirePackage[shortlabels]{enumitem}
+\setlist[itemize,1]{label={$\star$},leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
 
 % Para usar tabelas balanceadas
 \RequirePackage{tabulary}
@@ -72,6 +75,41 @@ marginpar=10mm
 \definecolor{attention}{RGB}{209,49,61}
 
 
+%%%%%%%%%%%%%%%%%%%% Chapter and section titles %%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{titlesec} % needed for define chapter and section style.
+\setcounter{chapter}{0}
+%\setcounter{subsection}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Section style ---- EXPLORANDO O ASSUNDO, ORGANIZANDO AS IDEIAS, MÃO NA MASSA, etc.
+%\newcommand*\sectionlabel{}
+%\titleformat{\section}
+%  {\titlefont\bf}
+%  {\gdef\sectionlabel{\thesection\ }}{0pt}
+%  {%
+%    \begin{tikzpicture}[remember picture,overlay]
+%      \filldraw [x=1mm,y=1mm, attention, overlay] (\textwidth,-4) -- (0 ,-4)
+%      arc (-90:-270:4) --(0,4) -- (\textwidth,4)
+%      node[anchor=west] at (0, 0) {\color{white} \MakeUppercase{#1}};
+%   \end{tikzpicture}
+% }
+%\titlespacing*{\section}{0pt}{20pt}{20pt} % %{<command>}{<left>}{<before-sep>}{<after-sep>}
+
+%\titleformat{\subsection}[wrap]
+%{\normalfont\bfseries\color{special}}
+%{}{}{}
+
+
+% Subsection style
+%\renewcommand{\thesubsection}{\arabic{subsection}}% to define subsection numbering without section number
+\titleformat{\subsection}[block]{\normalfont\normalsize\bfseries\color{special}}{}{20pt}{\large}
+% 
+% \titleformat*{\subsection} % redefining subsection appearence - Atividade
+% {\normalsize}
+% {}
+% {0pt}
+% \titlespacing*{\subsection}{0pt}{20pt}{20pt} % {<command>}{<left>}{<before-sep>}{<after-sep>}
+
 
 % use o GIMP para obter o cógigo HTML da cor e o site a seguir para converter para RGB
 % http://www.yellowpipe.com/yis/tools/hex-to-rgb/color-converter.php
@@ -89,6 +127,9 @@ marginpar=10mm
 %\RequirePackage{varwidth}
 \tcbuselibrary{listings,breakable,most}
 
+\RequirePackage{multicol}
+\setlength{\columnsep}{1cm}
+
 \newtcbtheorem{professor}{Para o Professor}%
 {colback=purple!15,colframe=purple,fonttitle=\bfseries}{th}
 \newtcbtheorem{introdutorio}{Introdutório}%
@@ -103,8 +144,10 @@ marginpar=10mm
 {colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
 \newtcbtheorem{exercicio}{Exercício}%
 {colback=gray!15,colframe=gray,fonttitle=\bfseries}{th}
+
 \newtcbtheorem{resposta}{Resposta}%
-{colback=blue!5,colframe=blue,fonttitle=\bfseries}{th}
+{colback=common!5,colframe=common,fonttitle=\bfseries}{th}
+
 \newtcbtheorem{imagem}{Imagem}%
 {colback=light!15,colframe=light,fonttitle=\bfseries}{th}
 \newtcbtheorem{figura}{Figura}%

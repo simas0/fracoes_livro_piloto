@@ -1,0 +1,1 @@
+pdftk B=cap1_aluno.pdf A=cap1_professor.pdf shuffle A B output cap1.pdf
