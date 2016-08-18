@@ -3,6 +3,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{tikz}
+%\usetikzlibrary{calc}
 
 \title{}
 \author{}
@@ -18,27 +19,18 @@
 }
 
 \begin{document}
-\maketitle
 
-\begin{tikzpicture}
-\usetikzlibrary{calc}
-\begin{document}
-\pagestyle{empty}
- \begin{tikzpicture}[scale=0.6]
-  \draw[orange] (0,0) rectangle (1,6);
-  \draw[orange] (1,0) rectangle (2,6);
-  \draw[orange] (2,0) rectangle (3,6);
-  \draw[orange] (3,0) rectangle (4,6);
-  \draw[red] (5,0) rectangle (9,3);
-  \draw[red] (5,0) rectangle (9,6);
-  \draw[red] (5,0) -- (9,3);
-  \draw[red] (5,3) -- (9,6);
-  \draw[blue] (10,0) rectangle (14,3);
-  \draw[blue] (10,3) rectangle (14,6);
-  \draw[blue] (12,0) -- (12,3);
-  \draw[blue] (10,4.5) -- (14,4.5);
-  \draw[green] (15,0) rectangle (19,3);
-  \draw[green] (15,3) rectangle (19,6);
+\def \tripa{ (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) [shift={({4*sqrt(3)},0)}]--  (270:4) -- (330:4) -- (30:4) -- (90:4)--(150:4) [shift={({-4*sqrt(3)},0)}] -- (90:4) -- (150:4)--cycle;}
+
+\begin{tikzpicture}[scale=0.5]
+ \draw \tripa;
+\begin{scope}
+ \clip \tripa;
+\draw[fill=green] (-4,-4) rectangle (20,20);
+\end{scope}
+
+\draw (-4,-4) rectangle (20,20);
+
 \end{tikzpicture}
 
 \end{document}
