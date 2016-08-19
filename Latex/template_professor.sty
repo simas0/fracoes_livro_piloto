@@ -9,7 +9,8 @@ textwidth=157mm,
 paperwidth=196mm,
 paperheight=280mm,
 top=1in,
-left=27mm,
+left=12mm,
+right=20mm,
 footskip=.7in,
 marginpar=10mm
 }
@@ -17,8 +18,8 @@ marginpar=10mm
 % Para enumerates customizados
 \RequirePackage{enumerate}
 \RequirePackage[shortlabels]{enumitem}
-\setlist[itemize,1]{label={$\star$},leftmargin=*}
-\setlist[enumerate]{leftmargin=*}
+\setlist[itemize,1]{label={$\star$},leftmargin=*,topsep=0pt}
+\setlist[enumerate]{leftmargin=*,topsep=0pt}
 
 % Para usar tabelas balanceadas
 \RequirePackage{tabulary}
@@ -128,7 +129,7 @@ marginpar=10mm
 \tcbuselibrary{listings,breakable,most}
 
 \RequirePackage{multicol}
-\setlength{\columnsep}{1cm}
+\setlength{\columnsep}{1.3cm}
 
 \newtcbtheorem{professor}{Para o Professor}%
 {colback=purple!15,colframe=purple,fonttitle=\bfseries}{th}
@@ -145,8 +146,18 @@ marginpar=10mm
 \newtcbtheorem{exercicio}{Exercício}%
 {colback=gray!15,colframe=gray,fonttitle=\bfseries}{th}
 
-\newtcbtheorem{resposta}{Resposta}%
-{colback=common!5,colframe=common,fonttitle=\bfseries}{th}
+\newenvironment{resposta*}[1]
+{ \color{common}
+  %\begin{center}
+  \bigskip \medskip
+    {\large\normalfont\bfseries Resposta da #1}\\ \medskip
+  %\end{center}
+  \color{dark!70!black}
+  \begingroup\thickfont
+}
+{ \color{black}
+  \endgroup
+}
 
 \newtcbtheorem{imagem}{Imagem}%
 {colback=light!15,colframe=light,fonttitle=\bfseries}{th}
