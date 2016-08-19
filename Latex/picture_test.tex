@@ -1,9 +1,9 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,10pt]{book}
 %\documentclass[a4paper,10pt]{scrartcl}
-
-\usepackage[utf8]{inputenc}
+%\usepackage{template}
+%
 \usepackage{tikz}
-%\usetikzlibrary{calc}
+\usetikzlibrary{calc}
 
 \title{}
 \author{}
@@ -19,18 +19,12 @@
 }
 
 \begin{document}
+\begin{tikzpicture}%[scale=0.3]
+\foreach \x in {0,3,6,9}{
+  \draw[-latex,shift={(0,\x cm)},fill=light] (0, 0) ellipse [x radius = 6, y radius = 2, start angle = 30,  end angle = 175];}
+\foreach \x in {12,15,18,21,24}{
+  \draw[-latex,shift={(0,\x cm)}] (0, 0) ellipse [x radius = 6cm, y radius = 2cm, start angle = 30,  end angle = 175];}
+  \end{tikzpicture}
 
-\def \tripa{ (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) [shift={({4*sqrt(3)},0)}]--  (270:4) -- (330:4) -- (30:4) -- (90:4)--(150:4) [shift={({-4*sqrt(3)},0)}] -- (90:4) -- (150:4)--cycle;}
-
-\begin{tikzpicture}[scale=0.5]
- \draw \tripa;
-\begin{scope}
- \clip \tripa;
-\draw[fill=green] (-4,-4) rectangle (20,20);
-\end{scope}
-
-\draw (-4,-4) rectangle (20,20);
-
-\end{tikzpicture}
 
 \end{document}
