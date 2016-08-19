@@ -1,5 +1,8 @@
 \RequirePackage{amsmath,amssymb}
 
+
+\RequirePackage[brazil]{babel}
+
 % varias melhorias de typeset
 \RequirePackage{microtype}
 
@@ -145,6 +148,13 @@ marginpar=10mm
 {colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
 \newtcbtheorem{exercicio}{Exercício}%
 {colback=gray!15,colframe=gray,fonttitle=\bfseries}{th}
+
+
+\newenvironment{absolutelynopagebreak}
+  {\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
 
 \newenvironment{resposta*}[1]
 { \color{common}
