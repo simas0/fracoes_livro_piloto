@@ -140,6 +140,7 @@ Um grupo de cinco amigos (Amarildo, Beto, Carlos, Davi e Edilson) encomendou tr�
  \begin{tikzpicture}[scale=0.6]
   \draw (0,0) rectangle (60,30);
   \draw (70,0) rectangle (130,30);
+  \draw (140,0) rectangle (200,30);
  \end{tikzpicture}
   
 \end{center}
@@ -653,10 +654,11 @@ de
 Na tabela a seguir, pinte cada figura de modo que a parte pintada seja a fração da figura indicada na coluna à esquerda na mesma linha. Indique também, usando notação simbólica matemática, qual fração da figura ficou sem pintar.
 
 \begin{center}
-  \begin{tabular}{|m{0.25\textwidth}|m{0.2\textwidth}|m{0.25\textwidth}|}
+  \begin{longtable}{|m{0.25\textwidth}|m{0.2\textwidth}|m{0.25\textwidth}|}
     \hline
       Fração da figura que deve ser pintada  & \centering  Figura  &   Fração da figura que ficou sem pintar  \\
     \hline \hline 
+    \endhead
      \centering $\dfrac{5}{6}$  & \centering \parbox[c][1.75cm][c]{1.6cm}{\begin{tikzpicture}
                                     \foreach \x in {0,60,...,300}{ \draw (0,0)--(\x:8);\draw (\x:8)--(\x+60:8);}
                                    \end{tikzpicture}}
@@ -694,7 +696,7 @@ Na tabela a seguir, pinte cada figura de modo que a parte pintada seja a fraçã
                                    \end{tikzpicture} }
                                    &  \\
     \hline
-  \end{tabular}
+  \end{longtable}
 \end{center}
 
 \subsection{Atividade}

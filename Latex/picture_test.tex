@@ -1,30 +1,276 @@
-\documentclass[a4paper,10pt]{book}
-%\documentclass[a4paper,10pt]{scrartcl}
-%\usepackage{template}
-%
-\usepackage{tikz}
-\usetikzlibrary{calc}
+\documentclass{book}
+\usepackage{template}
+ 
+ \begin{document}
 
-\title{}
-\author{}
-\date{}
 
-\pdfinfo{%
-  /Title    ()
-  /Author   ()
-  /Creator  ()
-  /Producer ()
-  /Subject  ()
-  /Keywords ()
-}
+\begin{tikzpicture}[x=18mm,y=18mm]
+\draw[very thick, attention] (0,0) -- (1,0); 
+\node[above] at (.5,0) {unidade};
+\draw[->] (-0.5,0) -- (7.5,0) ; %edit here for the axis
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+\foreach \x in {0,1}{ \fill[common] (\x,0) circle (3pt);}
 
-\begin{document}
-\begin{tikzpicture}%[scale=0.3]
-\foreach \x in {0,3,6,9}{
-  \draw[-latex,shift={(0,\x cm)},fill=light] (0, 0) ellipse [x radius = 6, y radius = 2, start angle = 30,  end angle = 175];}
-\foreach \x in {12,15,18,21,24}{
-  \draw[-latex,shift={(0,\x cm)}] (0, 0) ellipse [x radius = 6cm, y radius = 2cm, start angle = 30,  end angle = 175];}
-  \end{tikzpicture}
+\end{tikzpicture}   
+\vspace{1cm}
 
+\begin{tikzpicture}[x=18mm,y=18mm]
+
+\begin{scope}[shift={(0,.6)}]
+\draw[very thick, attention] (0,0) -- (2,0);% segmento superior
+\node[above] at (1,0) {2 unidades};
+\foreach \x in {0,1,2}{ \draw (\x,3pt) -- (\x,-3pt);}% marcas verticais
+\foreach \x in {0,2} \draw[very thick, ->] (\x,-.1) -- (\x,-.5); 
+\end{scope}
+
+\draw[->] (-0.5,0) -- (7.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,2}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+
+\foreach \x in {0,1,2}{ \fill[common] (\x,0) circle (3pt);}
+
+\end{tikzpicture}   
+\vspace{1cm}
+
+
+\begin{tikzpicture}[x=18mm,y=18mm]
+
+\begin{scope}[shift={(0,.6)}]
+\draw[very thick, attention] (0,0) -- (7,0);% segmento superior
+\node[above] at (3.5,0) {7 unidades};
+\foreach \x in {0,1,...,7}{ \draw (\x,3pt) -- (\x,-3pt);}% marcas verticais
+\foreach \x in {0,7} \draw[very thick, ->] (\x,-.1) -- (\x,-.5); 
+\end{scope}
+
+\draw[->] (-0.5,0) -- (7.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,7}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+
+\foreach \x in {0,1,7}{ \fill[common] (\x,0) circle (3pt);}
+
+\end{tikzpicture}   
+\vspace{1cm}
+
+
+\begin{tikzpicture}[x=18mm,y=18mm]
+
+\begin{scope}[shift={(0,.6)}]
+\draw[very thick, attention] (0,0) -- (1/3,0);% segmento superior
+\node[above] at (1/3,0) {$\frac{1}{3}$ da unidade};
+\foreach \x in {0,1/3}{ \draw (\x,3pt) -- (\x,-3pt);}% marcas verticais
+\foreach \x in {0,1/3} \draw[very thick, ->] (\x,-.1) -- (\x,-.5); 
+\end{scope}
+
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+
+\draw (2/3,3pt) -- (2/3,-3pt);
+\node[below] at (1/3,0) {$\dfrac{1}{3}$};
+\foreach \x in {0,1}{ \fill[common] (\x,0) circle (3pt);}
+\fill[common] (1/3,0) circle (2pt);
+\end{tikzpicture}   
+\vspace{1cm}
+
+
+\begin{tikzpicture}[x=18mm,y=18mm]
+
+\begin{scope}[shift={(0,.6)}]
+\draw[very thick, attention] (0,0) -- (2/3,0);% segmento superior
+\node[above] at (1/3,0) {$\frac{2}{3}$ da unidade};
+\foreach \x in {0,1/3, 2/3}{ \draw (\x,3pt) -- (\x,-3pt);}% marcas verticais
+\foreach \x in {0,2/3} \draw[very thick, ->] (\x,-.1) -- (\x,-.5); 
+\end{scope}
+
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+
+\draw (2/3,3pt) -- (2/3,-3pt);
+\node[below] at (1/3,0) {$\dfrac{1}{3}$};
+\node[below] at (2/3,0) {$\dfrac{2}{3}$};
+\foreach \x in {0,1}{ \fill[common] (\x,0) circle (3pt);}
+\fill[common] (1/3,0) circle (2pt);
+\fill[common] (2/3,0) circle (2pt);
+\end{tikzpicture}   
+\vspace{1cm}
+
+
+\begin{tikzpicture}[x=18mm,y=18mm]
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[above] at (\x,3pt) {\x};}
+
+\foreach \x in {0,3,...,9}{ \fill[common] (\x/3,0) circle (3pt);
+\node[below] at (\x/3,0) {$\dfrac{\x}{3}$};}
+
+\foreach \x in {1,2,4,5,7,8,10}{ \fill[common] (\x/3,0) circle (2pt);
+\node[below] at (\x/3,0) {$\dfrac{\x}{3}$};}
+
+\end{tikzpicture}   
+\vspace{1cm}
+
+c)
+\begin{tikzpicture}[x=18mm,y=18mm]
+
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[above] at (\x,3pt) {\x};}
+
+\draw (1/3,3pt) -- (1/3,-3pt);
+\draw (2/3,3pt) -- (2/3,-3pt);
+\node[below] at (1/3,0) {$\dfrac{1}{3}$};
+\node[below] at (2/3,0) {$\dfrac{2}{3}$};
+%\foreach \x in {0,1/3,2/3,1}{ \fill[common] (\x,0) circle (3pt);}
+
+\end{tikzpicture}   
+\vspace{1cm}
+
+d)
+\begin{tikzpicture}[x=18mm,y=18mm]
+
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[above] at (\x,3pt) {\x};}
+
+\draw (1/3,3pt) -- (1/3,-3pt);
+\draw (2/3,3pt) -- (2/3,-3pt);
+% \node[below] at (1/3,0) {$\dfrac{1}{3}$};
+% \node[below] at (2/3,0) {$\dfrac{2}{3}$};
+\node[below] at (3/3,0) {$\dfrac{3}{3}$};
+%\foreach \x in {0,1/3,2/3,1}{ \fill[common] (\x,0) circle (3pt);}
+
+\end{tikzpicture}   
+\vspace{1cm}
+
+c)
+\begin{tikzpicture}[x=18mm,y=18mm]
+
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[above] at (\x,3pt) {\x};}
+
+\foreach \x in {1,...,5}{\draw (\x/3,3pt) -- (\x/3,-3pt);
+\node[below] at (\x/3,0) {$\dfrac{\x}{3}$};}
+
+\end{tikzpicture}   
+\vspace{1cm}
+
+d)
+\begin{tikzpicture}[x=18mm,y=18mm]
+
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[above] at (\x,3pt) {\x};}
+
+\draw (1/3,3pt) -- (1/3,-3pt);
+\draw (2/3,3pt) -- (2/3,-3pt);
+\node[below] at (6/3,0) {$\dfrac{6}{3}$};
+
+
+\end{tikzpicture}   
+\vspace{1cm}
+
+
+\begin{tikzpicture}[x=18mm,y=18mm]
+\draw[->] (-0.5,0) -- (4.75,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,4}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[above] at (\x,3pt) {\x};}
+
+\foreach \x in {0,1,...,18}{ \fill[common] (\x/4,0) circle (2pt);
+\node[below] at (\x/4,0) {$\dfrac{\x}{4}$};}
+
+\foreach \x in {0,4,...,16}{ \fill[common] (\x/4,0) circle (3pt);
+\node[below] at (\x/4,0) {$\dfrac{\x}{4}$};}
+
+
+\end{tikzpicture}   
+\vspace{1cm}
+
+
+\begin{tikzpicture}[x=18mm,y=18mm]
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,20}{ \draw (\x/6,3pt) -- (\x/6,-3pt);}
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+
+\foreach \x in {4,15,20}{ \fill[common] (\x/6,0) circle (3pt);
+\node[below] at (\x/6,-9pt) {$\dfrac{}{6}$};}
+
+\foreach \x in {2,9}{ \node[below] at (\x/6,-3pt) {$\dfrac{\x}{6}$};}
+
+\end{tikzpicture}   
+\vspace{1cm}
+
+
+\begin{tikzpicture}[x=36mm,y=36mm]
+
+\begin{scope}[shift={(0,150pt)}]
+\draw[->] (-0.1,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\foreach \x in {0,1,...,6}{ \draw (\x/2,3pt) -- (\x/2,-3pt);}
+\node[above] at (\x,3pt) {\x};}
+\foreach \x in {1,...,6} \node[below, light] at (\x/2 , 0 pt) {$\frac{\x}{2}$};
+\end{scope}
+
+\begin{scope}[shift={(0,100pt)}]
+\draw[->] (-0.1,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\foreach \x in {0,1,...,17}{ \draw (\x/5,2pt) -- (\x/5,-2pt);}
+\node[above] at (\x,3pt) {\x};}
+\foreach \x in {1,...,17} \node[below, attention] at (\x/5 , 0 pt) {$\frac{\x}{5}$};
+\end{scope}
+
+
+\begin{scope}[shift={(0,50pt)}]
+\draw[->] (-0.1,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\foreach \x in {0,1,...,34}{ \draw (\x/10,1pt) -- (\x/10,-1pt);}
+\node[above] at (\x,3pt) {\x};}
+\foreach \x in {0,...,34} \node[below, dark] at (\x/10,0) {$\frac{\x}{10}$};
+\end{scope}
+
+\draw[->] (-0.1,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[above] at (\x,3pt) {\x};}
+
+\foreach \x in {0,1,...,34}{ \draw (\x/10,1pt) -- (\x/10,-1pt);}
+\foreach \x in {0,1,...,17}{ \draw (\x/5,2pt) -- (\x/5,-2pt);}
+\foreach \x in {0,1,...,6}{ \draw (\x/2,3pt) -- (\x/2,-3pt);}
+
+\foreach \x in {0,...,34} \node[below, dark] at (\x/10,0) {$\frac{\x}{10}$};
+\foreach \x in {1,2,3,4,6,7,8,9,11,12,13,14,16,17} \node[above, attention] at (\x/5 , 3 pt) {$\frac{\x}{5}$};
+\foreach \x in {1,3,5} \node[above, light] at (\x/2 , 3 pt) {\large $\frac{\x}{2}$};
+
+
+
+
+\end{tikzpicture}   
+\vspace{1cm}
+
+\begin{tikzpicture}[x=54mm,y=54mm]
+\draw[->] (-0.5,0) -- (1.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[below] at (\x,0pt) {\x};}
+
+% \node[below] at (1/3,0) {$\dfrac{1}{3}$};
+% \node[below] at (2/3,0) {$\dfrac{2}{3}$};
+%\node[below] at (6/3,0) {$\dfrac{6}{3}$};
+\foreach \x in {3,5}{ \fill[common] (4/\x,0) circle (3pt);
+\node[below] at (4/\x,0) {$\dfrac{4}{\x}$};}
+
+\end{tikzpicture}   
+\vspace{1cm}
 
 \end{document}
