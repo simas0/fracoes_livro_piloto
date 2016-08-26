@@ -16,7 +16,7 @@ Para saber que fração da capacidade da caixa-d'água já está com água, ser�
 
 \begin{imagem*}[breakable]{}{}  Figura Artística  
   
-    \includegraphics[width=120pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/caixa_modelo.png}  
+    \includegraphics[width=120pt, keepaspectratio]{../../livro/media//cap3/secoes/caixa_modelo.png}  
   A figura deve ilustrar quatro quadrinhos, cada um contendo a mesma caixa acima desenhada. A primeira com um quarto da caixa cheia, a seguinte com   $\frac{1}{2}$   do nível máximo, a terceira com três quartos e, por último, a caixa-d'água cheia. Abaixo de cada quadrinho, indicar: momento 1, momento 2, momento 3 e momento 4.  
 \end{imagem*}
 
@@ -25,7 +25,7 @@ Escolha, para cada um dos momentos, a graduação que lhe parece mais adequada p
 
 \begin{imagem*}[breakable]{}{}  Figura Artística  
   
-    \includegraphics[width=120pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/caixa_graduada_modelo.png}  
+    \includegraphics[width=120pt, keepaspectratio]{../../livro/media//cap3/secoes/caixa_graduada_modelo.png}  
   Apresentar a imagem da caixa-d'água acima 4 vezes, cada uma com uma das graduações mostradas abaixo. APESAR DO QUE ESTÁ NA FIGURA, ESTAS CAIXAS GRADUADAS DEVEM ESTAR VAZIAS (sem água).  
   Atenção:       
 \begin{itemize} %s
@@ -33,105 +33,441 @@ Escolha, para cada um dos momentos, a graduação que lhe parece mais adequada p
     \item       os números devem vir bem ao lado da marcação, exceto o       $\frac{1}{2}$       no item a), que está entre duas marcações. Por esse motivo a caixa está sobre uma bancada, para que a graduação possa sobrar embaixo e em cima da caixa.
 \end{itemize} %s
   
-    \includegraphics[width=300pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/graduacoes_da_caixa.jpg}  
+    \includegraphics[width=300pt, keepaspectratio]{../../livro/media//cap3/secoes/graduacoes_da_caixa.jpg}  
 \end{imagem*}
 
 \subsection{Atividade}
 
 Relembrando a representação na reta numérica: Você já conhece a reta numérica com os números naturais destacados.
 
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA - Há figuras geométricas nas respostas também.  
-  
-  ILUSTRAÇÃO DA RETA NUMÉRICA COM OS NÚMEROS NATURAIS DESTACADOS - de 1 a 5  
-\end{imagem*}
 
 \begin{enumerate} [\quad a)] %s
   \item     Marque na reta numérica pontos que representem as quantidades de pizza nas imagens a seguir. 
-\end{enumerate} %s
 
-
-\mbox{} \newline  \begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA   \mbox{} \newline    Ilustrações relativas a 1 pizza, 2 pizzas, 4 pizzas  e a imagem de uma reta numérica com marcações de 0 a 5 e submarcações correspondentes a metades, como na imagem:     \includegraphics[width=180pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta_1_a_5.jpg}  
-  
+\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA 
+Ilustrações relativas a 1 pizza, 2 pizzas, 4 pizzas
 \end{imagem*}
 
+\begin{center}
+\begin{tikzpicture}[x=10mm,y=10mm]
+\draw[->] (-1,0) -- (6,0) ; %edit here for the axis
+\foreach \x in  {0,1,...,5} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) 
+node[below] {$\x$};
 
-\begin{enumerate} [\quad a)] %s
-  \item     E no caso destas imagens, que pontos na reta numérica representam as quantidades de pizza ilustradas?
+\foreach \x in  {0.5,1.5,...,4.5} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,2pt) -- (0pt,-2pt); 
+
+\end{tikzpicture}
+\end{center}
+
+\item     E no caso destas imagens, que pontos na reta numérica representam as quantidades de pizza ilustradas?
 \end{enumerate} %s
 
 
-\mbox{} \newline  \begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA   \mbox{} \newline    Ilustrações relativas a 1/2 pizza,  1/4 pizza, 3/4 pizza, 1 e meia pizzas. OBS: No caso de 1/4 e 3/4 de pizza, as ilustrações têm que deixar clara a partição da pizza em 4, das quais 1 ou 3 partes estão destacadas   
-  
-  Essas imagens são seguidas de uma reta numérca em que estão destacados as marcações do 0, do 1 e do 2 e submarcações que identifiquem quartos, como na imagem:     \includegraphics[width=180pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta_quartos.jpg}   \end{imagem*}
+\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA   \mbox{} \newline    Ilustrações relativas a 1/2 pizza,  1/4 pizza, 3/4 pizza, 1 e meia pizzas. OBS: No caso de 1/4 e 3/4 de pizza, as ilustrações têm que deixar clara a partição da pizza em 4, das quais 1 ou 3 partes estão destacadas.
+  \end{imagem*}
 
+  \begin{center}
+  \begin{tikzpicture}[x=30mm,y=30mm]
+\draw[->] (-1/4,0) -- (2.5,0) ; %edit here for the axis
+\foreach \x in  {0,0.25,...,2} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt); 
+\foreach \x in  {0,1,2}
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+\end{tikzpicture}
+\end{center}
+  
 \subsection{Atividade}
 
 Para cada par ou trio de figuras a seguir, há uma reta numérica. Considerando a região colorida como uma fração da figura, ligue CADA figura ao número, sobre a reta numérica, correspondente à região colorida da mesma.
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA - Em cada par ou trio, as figuras devem ser congruentes entre si: . Podem ser usadas cores diferentes em cada par ou trio. Também há figuras geométricas na Resposta.  
-    \includegraphics[width=240pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/retasgrad1.jpg}     
-    \includegraphics[width=240pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/retasgrad2.jpg}  
-\end{imagem*}
+
+\begin{longtable}{lccc}
+ 
+%retangulos 
+\parbox[b][2.6cm][t]{.3cm}{a)}&
+ 
+\begin{tikzpicture}[x=30mm,y=30mm,scale=.6]
+\draw[ fill=attention] (-1.8,0) rectangle (0,1.2) node[above, shift={(-.7,0)}] {Figura 1};
+\end{tikzpicture}
+&&
+ 
+\begin{tikzpicture}[x=30mm,y=30mm,scale=.6]
+\draw[fill=attention] (0,0) -- (0,1.2) --(1.8,0)--cycle;
+\draw (0,0) rectangle (1.8,1.2) node[above, shift={(-.7,0)}] {Figura 2};
+\end{tikzpicture}
+ 
+\\
+ 
+\multicolumn{4}{c}{
+\parbox[c][.7cm][t]{8cm}{ } }
+ 
+\\
+ 
+&\multicolumn{3}{c}{
+\begin{tikzpicture}[x=45mm,y=45mm]
+\draw[->] (-0.5,0) -- (1.5,0) ; %edit here for the axis
+\foreach \x in  {0,1} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) 
+node[below] {$\x$};
+\draw[shift={(0.5,0)},color=black] (0,3pt) -- (0pt,-3pt) 
+node[below] {$\frac{1}{2}$};
+\end{tikzpicture}   
+}
+ 
+\\ 
+\parbox[b][2.6cm][t]{.3cm}{b)}&
+ 
+%quadrados
+ 
+ 
+ \begin{tikzpicture}[x=30mm,y=30mm]
+\def\scale{.6}
+\draw[fill=attention, scale=\scale] (-1.2,0) rectangle (0,.4);
+\draw[ scale=\scale] (-1.2,0.4) rectangle (0,.8);
+\draw[ fill=attention, scale=\scale] (-1.2,.8) rectangle (0,1.2);
+ 
+\draw[fill=white, scale=\scale] (-0.8,0) rectangle (-.4,.4);
+\draw[ fill=attention, scale=\scale] (-0.8,.4) rectangle (-0.4,.8);
+\draw[fill=white, scale=\scale] (-0.8,.8) rectangle (-.4,1.2);
+\end{tikzpicture}
+&&
+ \begin{tikzpicture}[x=30mm,y=30mm]
+\def\scale{.6}
+\draw[fill=attention, scale=\scale] (0,0) rectangle (1.2,1.2);
+\end{tikzpicture}
+ 
+\\
+ 
+\multicolumn{4}{c}{
+\parbox[c][.7cm][t]{8cm}{ } }
+ 
+\\
+ 
+&\multicolumn{3}{c}{
+\begin{tikzpicture}[x=45mm,y=45mm]
+\draw[->] (-0.5,0) -- (1.5,0) ; %edit here for the axis
+\foreach \x in  {0,0.1111,...,1}{ % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt);} 
+\foreach \x in  {0,1}
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+\foreach \x in  {3,5}
+\draw[shift={(\x/9,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\frac{\x}{9}$};
+\end{tikzpicture}}
+\\ 
+ 
+%hexagonos
+\parbox[b][2.6cm][t]{.3cm}{c)}&
+ 
+\begin{tikzpicture}[x=30mm,y=30mm]
+\def\scale{.6}% to rescale the polygons only.
+ 
+%hexagon on the left
+\fill[shift={(0,0.6)}, fill=attention, scale=\scale] (0,0) -- (90:0.7) -- (150:0.7)-- (210:.7);
+\foreach \x in {30,90,...,330}{
+\draw[shift={(0,0.6)}, scale=\scale] (\x:0.7) -- (\x + 60: 0.7);
+\draw[shift={(0,0.6)}, scale=\scale] (0,0) -- (\x:0.7);}
+\end{tikzpicture}
+&&
+\begin{tikzpicture}[x=30mm,y=30mm] 
+\def\scale{.6}% to rescale the polygons only.
+ 
+%hexagon on the right
+\foreach \x in {30,90,...,330}{
+\draw[shift={(1,0.6)}, fill=attention,attention, scale=\scale] (\x:0.7) -- (\x + 60: 0.7) --(0,0) --cycle;
+\draw[shift={(1,0.6)}, fill=attention, scale=\scale] (\x:0.7) -- (\x + 60: 0.7);}
+\end{tikzpicture}
+ 
+\\
+ 
+\multicolumn{4}{c}{
+\parbox[c][.7cm][t]{8cm}{ } }
+ 
+\\
+&\multicolumn{3}{c}{
+\begin{tikzpicture}[x=68mm,y=68mm]
+\draw[->] (-1/6,0) -- (1+1/6,0) ; %edit here for the axis
+\foreach \x in  {0,0.1667,...,1}{ % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt);} 
+\foreach \x in  {0,1}
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+\foreach \x in  {1,2}
+\draw[shift={(\x/3,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\frac{\x}{3}$};
+\end{tikzpicture} }
+\\ 
+ 
+\parbox[b][2.6cm][t]{.3cm}{d)}&
+ 
+ %triangulos
+\begin{tikzpicture}[x=30mm,y=30mm]
+\def\scale{.6}% to rescale the polygons only.
+ 
+\foreach \x in {90,210,330}{
+\draw[attention,fill=attention, shift={(0,0.6)}, scale=\scale] (\x:0.7) -- (\x + 120: 0.7) -- (0,0)--cycle;
+\draw[shift={(0,0.6)}, scale=\scale] (\x:0.7) -- (\x + 120: 0.7);}
+\draw[shift={(0,0.6)}, scale=\scale] (-90:0.35) -- (30: 0.35) -- (150: 0.35) -- cycle;
+\end{tikzpicture}
+&&
+\begin{tikzpicture}[x=30mm,y=30mm]
+\def\scale{.6}% to rescale the polygons only.
+\foreach \x in {90,210,330}{
+\draw[shift={(1,0.6)}, scale=\scale] (\x:0.7) -- (\x + 120: 0.7);}
+\draw[fill=attention, shift={(1,0.6)}, scale=\scale] (-90:0.35) -- (30: 0.35) -- (150: 0.35) -- cycle;
+\end{tikzpicture}
+ 
+\\
+ 
+\multicolumn{4}{c}{
+\parbox[c][.7cm][t]{8cm}{ } }
+ 
+\\
+&\multicolumn{3}{c}{
+\begin{tikzpicture}[x=60mm,y=60mm]
+\draw[->] (-1/4,0) -- (1+1/4,0) ; %edit here for the axis
+\foreach \x in  {0,0.25,...,1}{ % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt);} 
+\foreach \x in  {0,1}
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+\foreach \x in  {1,3}
+\draw[shift={(\x/4,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\frac{\x}{4}$};
+\end{tikzpicture}}
+\\
+ 
+\parbox[b][2.6cm][t]{.3cm}{e)}&
+ 
+%os baianos e os novos retangulos
+\begin{tikzpicture} [x=30mm,y=30mm]
+\def\scalefig {.6}
+\draw[shift={(-.35*\scalefig,0.3)}, fill=attention, scale=\scalefig] (-1.5,0) rectangle (-0.5,1.2) node[above, shift={(-.25*\scalefig,0)}] {Figura 1};
+\draw[shift={(-.35*\scalefig,0.3)}, scale=\scalefig] (-.5,0) rectangle (0,1.2);
+\draw[shift={(-.35*\scalefig,0.3)}, scale=\scalefig] (-1,0) -- (-1,1.2);
+\end{tikzpicture}
+&
+\begin{tikzpicture} [x=30mm,y=30mm] 
+\def\scalefig {.6}
+\draw[shift={(1.25*\scalefig,0.3)}, fill=attention, scale=\scalefig] (-1.5,0) rectangle (-1,1.2);
+\draw[shift={(1.25*\scalefig,0.3)}, scale=\scalefig] (-1,0) rectangle (0,1.2) node[above, shift={(-.75*\scalefig,0)}] {Figura 2};
+\draw[shift={(1.25*\scalefig,0.3)}, scale=\scalefig] (-.5,0) -- (-.5,1.2);
+\end{tikzpicture}
+&
+\begin{tikzpicture} [x=30mm,y=30mm] 
+\def\scalefig {.6}
+\draw[shift={(1.35*\scalefig,0.3)}, fill=attention, scale=\scalefig] (0,0) rectangle (1.5,1.2) node[above, shift={(-.75*\scalefig,0)}] {Figura 3};
+\draw[shift={(1.35*\scalefig,0.3)}, scale=\scalefig] (.5,0) -- (.5,1.2);
+\draw[shift={(1.35*\scalefig,0.3)}, scale=\scalefig] (1,0) -- (1,1.2);
+\end{tikzpicture}
+ 
+\\
+ 
+\multicolumn{4}{c}{
+\parbox[c][.7cm][t]{8cm}{ } }
+ 
+\\
+&\multicolumn{3}{c}{
+\begin{tikzpicture}[x=55mm,y=55mm]
+ \begin{scope}[shift={(-.3,0)}]
+\draw[->] (-1/3,0) -- (1.33,0) ; %edit here for the axis
+\foreach \x in  {0,1} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) 
+node[below] {$\x$};
+\foreach \x in {1,2}
+\draw[shift={(\x/3,0)},color=black] (0,3pt) -- (0pt,-3pt) 
+node[below] {$\frac{\x}{3}$};
+\end{scope}
+\end{tikzpicture}}
+\\
+\parbox[b][2.6cm][t]{.3cm}{f)}&
+ 
+\begin{tikzpicture}[scale=.48]
+ \fill[attention] (0,33.75) rectangle (33.75,45);
+ \draw[step=11.25, fill=attention] (0,0) grid (45,45); 
+\end{tikzpicture}
+&
+\begin{tikzpicture}[scale=.48]
+\draw[fill=attention] (0,0) rectangle (45,45);
+\end{tikzpicture}
+&
+ 
+\begin{tikzpicture}[scale=.48]
+  \draw[step=11.25, fill=attention] (0,0) rectangle (45,45); 
+  \draw[step=11.25, fill=white] (11.25,0) rectangle (45,11.25);
+  \draw[step=11.25] (0,0) grid (45,45); 
+\end{tikzpicture}
+\\
+ 
+\multicolumn{4}{c}{
+\parbox[c][.7cm][t]{8cm}{ } }
+ 
+\\
+&\multicolumn{3}{c}{
+\begin{tikzpicture}[x=90mm,y=90mm]
+ \draw[->] (-1/16,0) -- (1+1/16,0) ; %edit here for the axis
+ \foreach \x in  {0,0.0625,...,1}{ % edit here for the vertical lines
+ \draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt);} 
+\foreach \x in  {0,1}
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+\foreach \x in  {3,7,10,13}
+\draw[shift={(\x/16,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\frac{\x}{16}$};
+\end{tikzpicture}
+}
+\end{longtable}
 
 \subsection{Atividade}
 
 Para cada uma das figuras a seguir, marque na reta numérica o ponto correspondente à fração da unidade destacada na imagem:
 
 
-( ERRO:\{<WRAP\} ) Imagem> Nas figuras abaixo incluir apenas imagens como as apresentadas (sem a descrição), seguidas, cada uma, de uma reta numérica como descrito:
-( ERRO:\{</WRAP\} )>
-
 \begin{enumerate} [\quad a)] %s
   \item     A unidade é uma pizza. 
-\end{enumerate} %s
-\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA e GEOMÉTRICA   \mbox{} \newline     5/8 de uma pizza   \mbox{} \newline        \includegraphics[width=60pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/cinco_oitavos_de_pizza.png}     \mbox{} \newline    Reta 1: 0, 3/8, 5/8, 1 \end{imagem*}
-\begin{enumerate} [\quad a)] %s
-  \item     A unidade é uma barra de chocolate 
-\end{enumerate} %s
-\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA   \mbox{} \newline    3/8 de uma barra de chocolate;   \mbox{} \newline    Incluir uma imagem de barra de chocoolate destacando oitavos, dos quais três não aparecem e   \mbox{} \newline    Reta 2: 0, 3/8, 5/8, 1 \end{imagem*}
-\begin{enumerate} [\quad a)] %s
-  \item     A unidade é uma maçã. 
-\end{enumerate} %s
-\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA  e GEOMÉTRICA - importante que a visualização da maçã deixe claro que trata-se de meia maçã.   \mbox{} \newline    1/2 de uma maçã     \includegraphics[width=60pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/meia_maca.jpg}     \mbox{} \newline    Reta 3: 0, 1/4, 1/2, 3/4, 1 \end{imagem*}
-\begin{enumerate} [\quad a)] %s
+
+\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA   \mbox{} \newline Nas figuras abaixo incluir apenas imagens como as apresentadas (sem a descrição), seguidas, cada uma, de uma reta numérica como descrito: 5/8 de uma pizza   \mbox{} \newline        \includegraphics[width=60pt, keepaspectratio]{../../livro/media//cap3/secoes/cinco_oitavos_de_pizza.png} \end{imagem*}
+
+\begin{center}
+\begin{tikzpicture}[x=56.25mm,y=56.25mm]
+\draw[->] (-0.3,0) -- (1.3,0) ; %edit here for the axis
+\foreach \x in  {0,1} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) 
+node[below] {$\x$};
+ 
+\foreach \x in {3,5}
+\draw[shift={(\x/8,0)},color=black] (0,3pt) -- (0pt,-3pt) 
+node[below] {$\frac{\x}{8}$};
+\end{tikzpicture}   
+\end{center}
+
+\item     A unidade é uma barra de chocolate 
+
+\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA   \mbox{} \newline    3/8 de uma barra de chocolate;   \mbox{} \newline    Incluir uma imagem de barra de chocoolate destacando oitavos, dos quais três não aparecem \end{imagem*}
+\begin{center}
+\begin{tikzpicture}[x=56.25mm,y=56.25mm]
+\draw[->] (-0.3,0) -- (1.3,0) ; %edit here for the axis
+\foreach \x in  {0,1} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) 
+node[below] {$\x$};
+ 
+\foreach \x in {3,5}
+\draw[shift={(\x/8,0)},color=black] (0,3pt) -- (0pt,-3pt) 
+node[below] {$\frac{\x}{8}$};
+\end{tikzpicture}   
+\end{center}
+
+\item     A unidade é uma maçã. 
+
+\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA - importante que a visualização da maçã deixe claro que trata-se de meia maçã.   \mbox{} \newline    1/2 de uma maçã     \includegraphics[width=60pt, keepaspectratio]{../../livro/media//cap3/secoes/meia_maca.jpg}   \end{imagem*}
+
+\begin{center}
+\begin{tikzpicture}[x=60mm,y=60mm]
+\draw[->] (-1/4,0) -- (1+1/4,0) ; %edit here for the axis
+\foreach \x in  {0,0.25,...,1}{ % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt);} 
+\foreach \x in  {0,1}
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+\foreach \x in  {1,3}
+\draw[shift={(\x/4,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\frac{\x}{4}$};
+\draw[shift={(.5,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\frac{1}{2}$};
+\end{tikzpicture}
+\end{center}
+
   \item     A unidade é um sanduíche de queijo com presunto. 
-\end{enumerate} %s
-\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA  e GEOMÉTRICA   \mbox{} \newline    1/4 de um  sanduiche de queijo com presunto   \mbox{} \newline        \includegraphics[width=120pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/um_quarto_sanduiche.png}     \mbox{} \newline    Reta 4: 0, 1/4, 1/2, 3/4, 1 \end{imagem*}
-\begin{enumerate} [\quad a)] %s
-  \item     A unidade é uma torta. 
-\end{enumerate} %s
-\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA  e GEOMÉTRICA  \mbox{} \newline    Uma  torta inteira (mas fatiada)   \mbox{} \newline        \includegraphics[width=120pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/bolo_fatiado.jpg}     \mbox{} \newline    Reta 5: 0, 1/2, 1, 3/2, 2 e 5/2 \end{imagem*}
-\begin{enumerate} [\quad a)] %s
+
+\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA - 1/4 de um  sanduiche de queijo com presunto   \mbox{} \newline        \includegraphics[width=120pt, keepaspectratio]{../../livro/media//cap3/secoes/um_quarto_sanduiche.png}  \end{imagem*}
+\begin{center}
+\begin{tikzpicture}[x=60mm,y=60mm]
+\draw[->] (-1/4,0) -- (1+1/4,0) ; %edit here for the axis
+\foreach \x in  {0,0.25,...,1}{ % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt);} 
+\foreach \x in  {0,1}
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+\foreach \x in  {1,3}
+\draw[shift={(\x/4,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\frac{\x}{4}$};
+\draw[shift={(.5,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\frac{1}{2}$};
+\end{tikzpicture}
+\end{center}
+
+\item A unidade é uma torta. 
+
+\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA -    Uma  torta inteira (mas fatiada)   \mbox{} \newline        \includegraphics[width=120pt, keepaspectratio]{../../livro/media//cap3/secoes/bolo_fatiado.jpg} \end{imagem*}
+\begin{center}
+ \begin{tikzpicture}[x=25.71mm,y=25.71mm]
+\draw[->] (-.5,0) -- (3,0) ; %edit here for the axis
+\foreach \x in  {0,0.5,...,2.5}{ % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt);} 
+\foreach \x in  {0,1,2}
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+\foreach \x in  {1,3,5}
+\draw[shift={(\x/2,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\frac{\x}{2}$};
+\end{tikzpicture}
+\end{center}
+
   \item     A unidade é um biscoito. 
-\end{enumerate} %s
-\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA  e GEOMÉTRICA   \mbox{} \newline    Dois biscoitos e meio   \mbox{} \newline        \includegraphics[width=60pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/dois_biscoitos_e_meio.png}     \mbox{} \newline    Reta 6: 0, 1/2, 1, 3/2, 2 e 5/2 \end{imagem*}
-\begin{enumerate} [\quad a)] %s
+
+\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA -   Dois biscoitos e meio   \mbox{} \newline        \includegraphics[width=60pt, keepaspectratio]{../../livro/media//cap3/secoes/dois_biscoitos_e_meio.png} \end{imagem*}
+\begin{center}
+ \begin{tikzpicture}[x=25.71mm,y=25.71mm]
+\draw[->] (-.5,0) -- (3,0) ; %edit here for the axis
+\foreach \x in  {0,0.5,...,2.5}{ % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt);} 
+\foreach \x in  {0,1,2}
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+\foreach \x in  {1,3,5}
+\draw[shift={(\x/2,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\frac{\x}{2}$};
+\end{tikzpicture}
+\end{center}
+
   \item     A unidade é um copo cheio. 
 \end{enumerate} %s
-\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA e GEOMÉTRICA  \mbox{} \newline     copo vazio   \mbox{} \newline        \includegraphics[width=60pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/copo.jpg}     \mbox{} \newline    Reta 7: 0, 1/2, 1, 3/2, 2 e 5/2 \end{imagem*}
+\begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA -  copo vazio   \mbox{} \newline        \includegraphics[width=60pt, keepaspectratio]{../../livro/media//cap3/secoes/copo.jpg}     \end{imagem*}
+\begin{center}
+ \begin{tikzpicture}[x=25.71mm,y=25.71mm]
+\draw[->] (-.5,0) -- (3,0) ; %edit here for the axis
+\foreach \x in  {0,0.5,...,2.5}{ % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt);} 
+\foreach \x in  {0,1,2}
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+\foreach \x in  {1,3,5}
+\draw[shift={(\x/2,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\frac{\x}{2}$};
+\end{tikzpicture}
+\end{center}
 
 \subsection{Atividade}
 
 A faixa a seguir está dividida em 5 partes iguais. 
-\begin{imagem*}[breakable]{}{}   FIGURAS GEOMÉTRICAS - Há figuas na resposta também.  
-    \includegraphics[width=180pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//undefined/unidade_em_quintos.png}  
-\end{imagem*}
+
+\begin{center}
+ \begin{tikzpicture}[x=56.25mm,y=56.25mm]
+\foreach \x in {1,2,...,5}{
+\draw (0,0) rectangle (\x/5,.1);
+\draw[step=.2] (0,0) grid (1,.1);
+\draw (0,.1)-- (1,.1);}
+ \end{tikzpicture}
+\end{center}
+
 
 \begin{enumerate} [\quad a)] %s
   \item     Considerando a faixa como unidade, escreva na reta numérica a fração correspondente a cada uma das regiões coloridas.
-\end{enumerate} %s
 
-\includegraphics[width=180pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/quintos.png} \mbox{} \newline  
 
-\begin{enumerate} [\quad a)] %s
+\begin{center}
+\begin{tikzpicture}[x=56.25mm,y=56.25mm]
+\foreach \x in {1,2,...,5}{
+\draw[fill=attention, shift={(0,-\x*.15)}] (0,0) rectangle (\x/5,.1);
+\draw[step=.2, shift={(0,-\x*.15)}] (0,0) grid (1,.1);
+\draw[shift={(0,-\x*.15)}] (0,.1)-- (1,.1);}
+ 
+\begin{scope}[shift={(0,-.9)}]
+\draw[->] (-0.1,0) -- (1.1,0) ; %edit here for the axis
+\foreach \x in  {0,1} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+ 
+\foreach \x in  {.2,.4,.6,.8} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {{\Large $\frac{\square}{\square}$}};
+\end{scope}
+
+\end{tikzpicture}   
+ \end{center}
+ 
   \item     Escreva, em linguagem simbólica, a fração correspondente à faixa inteira. De que outra maneira é possível indicar essa quantidade? 
-\end{enumerate} %s
 
-\begin{enumerate} [\quad a)] %s
-  \item         \mbox{} \newline      
-\end{enumerate} %s
-( ERRO:\{<WRAP\} ) IMAGEM> FIGURAS GEOMÉTRICAS - Incluir imagem da reta que aparece na figura \includegraphics[width=180pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/quintos.png} completa com as indicações das frações $\frac{1}{5}$, $\frac{2}{5}$, $\frac{3}{5}$ e $\frac{4}{5}$ ( ERRO:\{</WRAP\} )>
-\begin{enumerate} [\quad a)] %s
-  \item     A faixa inteira é igual a cinco quintos. Esta fração pode ser representada simbolicamente como     $\frac{5}{5}$    . A fração     $\frac{5}{5}$     da barra é igual a uma barra inteira, isto é,     $\frac{5}{5}=1$    . 
 \end{enumerate} %s
 
 
@@ -139,19 +475,34 @@ A faixa a seguir está dividida em 5 partes iguais.
 
 A professora Julia pediu que os seus alunos, Pedro e Miguel, marcassem $\frac{1}{2}$ na reta numérica traçada em uma fita, como esta que vocês também receberam:
 
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA - Há figura no   ``Para o professor''   também.  
-    \includegraphics[width=240pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/fita_1_rodrigo.jpg}  
-\end{imagem*}
+\begin{center}
+ \begin{tikzpicture}[x=56.25mm,y=56.25mm]
+\draw[fill=common] (0,-.15) rectangle (1.2,.15);
+\draw (0,0) -- (1.2,0) ; %edit here for the axis
+\draw (1,3pt) -- (1,-3pt) node[below] {1};
+\node at (.03,-.05) {0};
+\end{tikzpicture} 
+\end{center}
 
-Pedro trouxe a seguinte marcação 
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA - Há figura no   ``Para o professor''   também.  
-    \includegraphics[width=240pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/fita_3.jpg}  
-\end{imagem*}
+Pedro trouxe a seguinte marcação: 
+ \begin{tikzpicture}[x=56.25mm,y=56.25mm]
+\draw[fill=common] (0,-.15) rectangle (1.2,.15);
+\draw (0,0) -- (1.2,0) ; %edit here for the axis
+\draw[dashed] (0.6,-.15) -- (.6,.15);
+\draw (1,3pt) -- (1,-3pt) node[below] {1};
+\node at (.03,-.05) {0};
+\node at (.63,-.05) {$\frac{1}{2}$};
+\end{tikzpicture}
 
-Miguel trouxe esta
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA - Há figura no   ``Para o professor''   também.  
-    \includegraphics[width=240pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/fita_2.jpg}  
-\end{imagem*}
+Miguel trouxe esta:
+ \begin{tikzpicture}[x=56.25mm,y=56.25mm]
+\draw[fill=common] (0,-.15) rectangle (1.2,.15);
+\draw (0,0) -- (1.2,0) ; %edit here for the axis
+\draw[dashed] (0.5,-.15) -- (.5,.15);
+\draw (1,3pt) -- (1,-3pt) node[below] {1};
+\node at (.03,-.05) {0};
+\node at (.53,-.05) {$\frac{1}{2}$};
+\end{tikzpicture} 
 
 \begin{enumerate} [\quad a)] %s
   \item     É possível ambos estarem corretos? Justifique sua resposta. 
@@ -164,9 +515,18 @@ Miguel trouxe esta
 
 Um caçador de tesouros encontrou o mapa a seguir. Leia as instruções para a localização do tesouro e decida em que local ele deve cavar:
 
-( ERRO:\{<WRAP\} ) Imagem> FIGURA ARTÍSTICA -
+\begin{imagem*}[breakable]{}{}  FIGURA ARTÍSTICA - Incluir imagem de um mapa de tesouro que ocupe cerca de meia folha tamanho A4 – amarelado e com o contorno escurecido e irregular, como um pergaminho - que tenha em destaque uma imagem semelhante à ilustrada. Incluir as instruções logo abaixo. É importante que o caminho seja um segmento de reta com 16 cm e que a faixa avermelhada tenha 6cm de comprimento, ainda que essas medidas não estejam explícitas na imagem.  
 
-Incluir imagem de um mapa de tesouro que ocupe cerca de meia folha tamanho A4 
+\includegraphics[width=\textwidth, keepaspectratio]{../../livro/media//cap3/secoes/mapa_tesouro.jpg}  
+
+\includegraphics[width=\textwidth, keepaspectratio]{../../livro/media//cap3/secoes/instrucoes.png}  
+
+\end{imagem*}
+
+\begin{enumerate}[a)]
+ \item Marque, no mapa, as localizações dos baús 1 e 2.
+ \item Qual o baú com o tesouro? Explique como chegou à sua conclusão. 
+\end{enumerate}
 
 \subsection{Atividade}
 
@@ -178,10 +538,13 @@ Três amigos foram a uma pizzaria e cada um pediu uma pizza média, de três sab
   \item     Marque na reta numérica a seguir as frações correspondentes às porções de pizza que cada amigo comeu, e confirme na reta numérica sua resposta em c.
 \end{enumerate} %s
 
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA  
-  
-  Desenhar uma reta numérica onde estão marcados o 0 e o 1. O tamanho pode ser 12 cm, com 0 e 1 próximos às extremidades.  
-\end{imagem*}
+\begin{center}
+ \begin{tikzpicture}[x=56.25mm,y=56.25mm]
+\draw[->] (-0.2,0) -- (1.2,0) ; %edit here for the axis
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+\end{tikzpicture}  
+\end{center}
+
 
 \subsection{Atividade}
 
@@ -202,7 +565,7 @@ A imagem a seguir ilustra uma tartaruga percorrendo um caminho em linha reta, do
 
 \begin{imagem*}[breakable]{}{}   FIGURAS ARTÍSTICAS - O percurso deve estar dividido em 24 partes iguais, como ilustra a imagem. A tartaruga deve estar na 11a marcação. Atenção: também há figuras em   ``Resposta''  .  
   
-    \includegraphics[width=\textwidth,height=4cm, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/tartaruga.jpg}  
+    \includegraphics[width=\textwidth,height=4cm, keepaspectratio]{../../livro/media//cap3/secoes/tartaruga.jpg}  
 \end{imagem*}
 
 \subsection{Atividade}
@@ -212,105 +575,373 @@ Na figura, há várias retas paralelas igualmente espaçadas e outra reta, desta
 \begin{enumerate} [\quad a)] %s
   \item     Marque, usando os pontos destacados na reta numérica, a fração     $\frac{1}{2}$    . 
   \item     Associe frações a cada um dos pontos destacados na reta numérica. Explique a sua resposta.    \mbox{} \newline      
-\end{enumerate} %s
-( ERRO:\{<WRAP\} ) Imagem> FIGURA GEOMÉTRICA -  A linha transversal ao feixe de paralelas (igualmente espaçadas) deve estar colorida em vermelho. Devem estar destacados nessa reta, além do 0 e do 1, 9 pontos, como ilustra a figura. Uma segunda imagem, semelhante a esta, precisa ser inserida no espaço de resposta. Ver orientações. \mbox{} \newline  \includegraphics[width=180pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/parelas.jpg} ( ERRO:\{</WRAP\} )>\mbox{} \newline  \mbox{} \newline  Como na figura anterior, há várias retas paralelas igualmente espaçadas e outra reta, destacada em azul, não paralela às anteriores. Observe que as retas paralelas marcam na reta destacada em azul pontos também igualmente espaçados. Dois desses pontos correspondem às frações $\frac{1}{2}$ e $\frac{3}{2}$, como ilustra a figura. 
-\begin{enumerate} [\quad a)] %s
+\begin{center}
+ \begin{tikzpicture}[x=56.25mm,y=56.25mm]
+ 
+\begin{scope}
+\clip (-.2,-.2) rectangle (.85,.85); 
+ 
+\begin{scope}[ rotate=45]
+\foreach \x in {-1.1,-1,...,1.6}{
+\draw[common] (\x,0) --+ (45:1); 
+\draw[common] (\x,0) --+ (45:-1);}
+ 
+\draw[attention] (-0.2,0) -- (1.2,0) ; %edit here for the axis
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+\foreach \x in {0.1,.2,...,.9}{ \draw (\x,3pt) -- (\x,-3pt);}
+\end{scope}
+\end{scope}
+ 
+\end{tikzpicture}  
+\end{center}
+
   \item     Marque, usando os pontos destacados na reta numérica, os pontos correspondentes ao 0 e ao 1
   \item     Marque, nesta mesma reta numérica, as frações     $\frac{3}{4}$     e     $\frac{5}{4}$    .
-\end{enumerate} %s
-
-
-( ERRO:\{<WRAP\} ) Imagem> FIGURA GEOMÉTRICA -  A linha transversal ao feixe de paralelas (igualmente espaçadas) deve estar colorida em vermelho. Devem estar destacados nessa reta, além das frações $\frac{1}{2}$ e $\frac{3}{2}$, outros 8 pontos, como ilustra a figura.
-
-Uma segunda imagem, semelhante a esta, precisa ser inserida no espaço de resposta. Ver orientações.
-
-\includegraphics[width=180pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta_meios.jpg}
-
-( ERRO:\{</WRAP\} )>
+\begin{center}
+  \begin{tikzpicture}[x=56.25mm,y=56.25mm]
+ 
+\begin{scope}
+\clip (-.2,-.2) rectangle (.85,.85); 
+ 
+\begin{scope}[ rotate=45]
+\foreach \x in {-1.1,-1,...,1.6}{
+\draw[common] (\x,0) --+ (135:1); 
+\draw[common] (\x,0) --+ (135:-1);}
+ 
+\draw[blue] (-0.2,0) -- (1.2,0) ; %edit here for the axis
+\foreach \x in {0,0.1,.2,...,.9}{ \draw (\x,3pt) -- (\x,-3pt);}
+\fill[common] (.2,0) circle (3pt) node[below, black] {$\frac{1}{2}$};
+\fill[common] (.6,0) circle (3pt) node[below, black] {$\frac{3}{2}$};
+\end{scope}
+\end{scope}
+ 
+\end{tikzpicture}
+\end{center}
+  
+  \end{enumerate} %s
 
 
 
 \section{ORGANIZANDO AS IDEIAS }
 
 
-Frações na reta numérica \mbox{} \newline 
-
+Frações na reta numérica
 
 Já é conhecido que os números naturais podem ser representados por pontos em uma reta. 
 Para isso, é preciso começar escolhendo dois pontos que vão corresponder ao 0 e ao 1 e, a partir deles, são marcados os pontos que corresponderão aos demais números naturais.
 
-\begin{imagem*}[breakable]{}{}   FIGURAS GEOMÉTRICAS -   {\bf As imagens das retas têm que ser congruentes, os segmentos 0-1 em todas elas tê que ser congruentes. Não podem ter dimensões diferentes como nas imagens ilustrativas. }     \mbox{} \newline   
-  A determinação dos pontos correspondentes ao  2, 3, 4, 5, e assim por diante, devem ser ilustradas pelo uso do compasso, sustentando a justaposição de segmentos congruentes, como nas imagens.   
-    \includegraphics[width=240pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta_numerica_unidade.png}    \end{imagem*}
-\begin{imagem*}[breakable]{}{}       \includegraphics[width=300pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta012.png}    \end{imagem*}
-\begin{imagem*}[breakable]{}{}       \includegraphics[width=510pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta0127.png}   \end{imagem*}
+\begin{center}
+ \begin{tikzpicture}[x=18mm,y=18mm]
+\draw[very thick, attention] (0,0) -- (1,0); 
+\node[above] at (.5,0) {unidade};
+\draw[->] (-0.5,0) -- (7.5,0) ; %edit here for the axis
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+\foreach \x in {0,1}{ \fill[common] (\x,0) circle (3pt);}
+ 
+\end{tikzpicture}   
+\end{center}
+\vspace{.2cm}
+
+\begin{center}
+\begin{tikzpicture}[x=18mm,y=18mm]
+ 
+\begin{scope}[shift={(0,.6)}]
+\draw[very thick, attention] (0,0) -- (2,0);% segmento superior
+\node[above] at (1,0) {2 unidades};
+\foreach \x in {0,1,2}{ \draw (\x,3pt) -- (\x,-3pt);}% marcas verticais
+\foreach \x in {0,2} \draw[very thick, ->] (\x,-.1) -- (\x,-.5); 
+\end{scope}
+ 
+\draw[->] (-0.5,0) -- (7.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,2}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+ 
+\foreach \x in {0,1,2}{ \fill[common] (\x,0) circle (3pt);}
+ 
+\end{tikzpicture}   
+ \end{center}
+\vspace{.2cm}
+
+\begin{center} 
+\begin{tikzpicture}[x=18mm,y=18mm]
+ 
+\begin{scope}[shift={(0,.6)}]
+\draw[very thick, attention] (0,0) -- (7,0);% segmento superior
+\node[above] at (3.5,0) {7 unidades};
+\foreach \x in {0,1,...,7}{ \draw (\x,3pt) -- (\x,-3pt);}% marcas verticais
+\foreach \x in {0,7} \draw[very thick, ->] (\x,-.1) -- (\x,-.5); 
+\end{scope}
+ 
+\draw[->] (-0.5,0) -- (7.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,7}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+ 
+\foreach \x in {0,1,7}{ \fill[common] (\x,0) circle (3pt);}
+ 
+\end{tikzpicture}   
+\end{center}
 
 As frações também podem ser associadas a pontos na reta numérica. Para isso, é preciso identificar o segmento unitário, aquele cujos extremos são os pontos correspondentes ao 0 e ao 1. Esse segmento representa a unidade.
-
-\begin{imagem*}[breakable]{}{}   MESMA IMAGEM DAS RETAS ANTERIORES, MAS APENAS COM O SEGMENTO UNITÁRIO (DE EXTREMIDADES 0 E 1) EM DESTAQUE  \end{imagem*}
+\begin{center}
+\begin{tikzpicture}[x=18mm,y=18mm]
+\draw[->] (-0.5,0) -- (7.5,0) ; %edit here for the axis
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+\draw[very thick, attention] (0,0) -- (1,0);
+\foreach \x in {0,1}{ \fill[common] (\x,0) circle (3pt);}
+\end{tikzpicture}   
+\end{center}
 
 Dividindo a unidade em partes iguais,  cada uma das partes identifica uma fração da unidade na reta numérica.
 Por exemplo, a divisão da unidade em 3 partes iguais identifica terços. O ponto correspondente a $\frac{1}{3}$  é a extremidade do segmento que, a partir do 0, identifica o primeiro terço da unidade. 
 
-\begin{imagem*}[breakable]{}{}       \includegraphics[width=240pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta_numerica_umterco.png}   \end{imagem*}
+\begin{center}
+\begin{tikzpicture}[x=18mm,y=18mm]
+ 
+\begin{scope}[shift={(0,.6)}]
+\draw[very thick, attention] (0,0) -- (1/3,0);% segmento superior
+\node[above] at (1/3,0) {$\frac{1}{3}$ da unidade};
+\foreach \x in {0,1/3}{ \draw (\x,3pt) -- (\x,-3pt);}% marcas verticais
+\foreach \x in {0,1/3} \draw[very thick, ->] (\x,-.1) -- (\x,-.5); 
+\end{scope}
+ 
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+ 
+\draw (2/3,3pt) -- (2/3,-3pt);
+\node[below] at (1/3,0) {$\dfrac{1}{3}$};
+\foreach \x in {0,1}{ \fill[common] (\x,0) circle (3pt);}
+\fill[common] (1/3,0) circle (2pt);
+\end{tikzpicture}
+\end{center}
+
 
 A partir dele, por justaposições desse segmento, são identificados na reta numérica os pontos correspondentes a $\frac{2}{3}$,$\frac{3}{3}$,$\frac{4}{3}$, e assim por diante. 
 
-\begin{imagem*}[breakable]{}{}       \includegraphics[width=240pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta_numerica_doistercos.png}    \end{imagem*}
-\begin{imagem*}[breakable]{}{}       \includegraphics[width=360pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta_numerica_tercos.png}   \end{imagem*}
+
+
+\begin{center}
+\begin{tikzpicture}[x=18mm,y=18mm]
+ 
+\begin{scope}[shift={(0,.6)}]
+\draw[very thick, attention] (0,0) -- (2/3,0);% segmento superior
+\node[above] at (1/3,0) {$\frac{2}{3}$ da unidade};
+\foreach \x in {0,1/3, 2/3}{ \draw (\x,3pt) -- (\x,-3pt);}% marcas verticais
+\foreach \x in {0,2/3} \draw[very thick, ->] (\x,-.1) -- (\x,-.5); 
+\end{scope}
+ 
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+ 
+\draw (2/3,3pt) -- (2/3,-3pt);
+\node[below] at (1/3,0) {$\dfrac{1}{3}$};
+\node[below] at (2/3,0) {$\dfrac{2}{3}$};
+\foreach \x in {0,1}{ \fill[common] (\x,0) circle (3pt);}
+\fill[common] (1/3,0) circle (2pt);
+\fill[common] (2/3,0) circle (2pt);
+\end{tikzpicture}   
+\vspace{.2cm}
+
+\begin{tikzpicture}[x=18mm,y=18mm]
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[above] at (\x,3pt) {\x};}
+ 
+\foreach \x in {0,3,...,9}{ \fill[common] (\x/3,0) circle (3pt);
+\node[below] at (\x/3,0) {$\dfrac{\x}{3}$};}
+ 
+\foreach \x in {1,2,4,5,7,8,10}{ \fill[common] (\x/3,0) circle (2pt);
+\node[below] at (\x/3,0) {$\dfrac{\x}{3}$};}
+ 
+\end{tikzpicture}   
+\end{center}
 
 A representação dos números na reta numérica ajuda a perceber que os pontos correspondentes a algumas frações  são os mesmos que os correspondentes a alguns números naturais. Por exemplo, $\frac{3}{3}$ é igual a 1. 
 
-\begin{imagem*}[breakable]{}{}   FIGURAS ARTÍSTICAS (2) E GEOMÉTRICAS (2), as duas primeiras lado a lado, a reta abaixo e a igualdade abaixo da reta:  
+\begin{imagem*}[breakable]{}{}   FIGURAS ARTÍSTICAS (2) as duas lado a lado, as retas abaixo e a igualdade abaixo da reta:  
   
 \begin{enumerate} [\quad a)] %s
     \item       UMA PIZZA PARTIDA EM 3/3, 
     \item       UMA BARRA DE CHOCOLATE PARTIDA EM 3/3,
-    \item       RETA NUMÉRICA DESTACANDO A JUSTAPOSICAO DE TRÊS SEGMENTOS CORRESPONDENTES A 1/3 DA UNIDADE
-    \item             $\frac{3}{3}=1$        
 \end{enumerate} %s
-  
 \end{imagem*}
+
+\begin{center}
+\begin{tikzpicture}[x=18mm,y=18mm]
+ 
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[above] at (\x,3pt) {\x};}
+ 
+\draw (1/3,3pt) -- (1/3,-3pt);
+\draw (2/3,3pt) -- (2/3,-3pt);
+\node[below] at (1/3,0) {$\dfrac{1}{3}$};
+\node[below] at (2/3,0) {$\dfrac{2}{3}$};
+%\foreach \x in {0,1/3,2/3,1}{ \fill[common] (\x,0) circle (3pt);}
+ 
+\end{tikzpicture}   
+\vspace{.2cm}
+
+\begin{tikzpicture}[x=18mm,y=18mm]
+ 
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[above] at (\x,3pt) {\x};}
+ 
+\draw (1/3,3pt) -- (1/3,-3pt);
+\draw (2/3,3pt) -- (2/3,-3pt);
+% \node[below] at (1/3,0) {$\dfrac{1}{3}$};
+% \node[below] at (2/3,0) {$\dfrac{2}{3}$};
+\node[below] at (3/3,0) {$\dfrac{3}{3}$};
+%\foreach \x in {0,1/3,2/3,1}{ \fill[common] (\x,0) circle (3pt);}
+ 
+\end{tikzpicture}   
+\end{center}
 
 Já $\frac{6}{3}$ é igual a 2. 
 
-\begin{imagem*}[breakable]{}{}   FIGURAS ARTÍSTICAS (2) E GEOMÉTRICAS (2), as duas primeiras lado a lado, a reta abaixo e a igualdade abaixo da reta:  
+\begin{imagem*}[breakable]{}{}   FIGURAS ARTÍSTICAS (2) as duas lado a lado, a reta abaixo e a igualdade abaixo da reta:  
 \begin{enumerate} [\quad a)] %s
     \item       DUAS PIZZA PARTIDAS EM TERÇOS,
     \item       DUAS BARRAS DE CHOCOLATE PARTIDAS EM TERÇOS,
-    \item       RETA NUMÉRICA DESTACANDO A JUSTAPOSICAO DE SEIS SEGMENTOS CORRESPONDENTES A 1/3 DA UNIDADE
-    \item             $\frac{6}{3}=2$        
 \end{enumerate} %s
-  
 \end{imagem*}
 
-E $\frac{12}{3}$, é igual a que número natural? $\frac{12}{3}=$ ( ERRO:\{\_\_\} )( ERRO:\{\_\_\} )( ERRO:\{\_\_\} )( ERRO:\{\_\_\} ) \mbox{} \newline 
+\begin{center}
+\begin{tikzpicture}[x=18mm,y=18mm]
+ 
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[above] at (\x,3pt) {\x};}
+ 
+\foreach \x in {1,...,5}{\draw (\x/3,3pt) -- (\x/3,-3pt);
+\node[below] at (\x/3,0) {$\dfrac{\x}{3}$};}
+ 
+\end{tikzpicture}     
+\vspace{.2cm} 
+ 
+\begin{tikzpicture}[x=18mm,y=18mm]
+ 
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[above] at (\x,3pt) {\x};}
+ 
+\draw (1/3,3pt) -- (1/3,-3pt);
+\draw (2/3,3pt) -- (2/3,-3pt);
+\node[below] at (6/3,0) {$\dfrac{6}{3}$};
+\end{tikzpicture}    
+\end{center}
+
+
+E $\frac{12}{3}$, é igual a que número natural? $\frac{12}{3}=$
 
 Para identificar na reta numérica os pontos correspondentes às frações $\frac{1}{4}$, $\frac{2}{4}$, $\frac{3}{4}$, $\frac{4}{4}$,$\frac{5}{4}$, $\frac{6}{4}$, e assim por diante, o processo é o mesmo:
 
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA  
-  
-    \includegraphics[width=360pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta_numerica_quartos.png}   \end{imagem*}
+\begin{center}
+ \begin{tikzpicture}[x=18mm,y=18mm]
+\draw[->] (-0.5,0) -- (4.75,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,4}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[above] at (\x,3pt) {\x};}
+ 
+\foreach \x in {0,1,...,18}{ \fill[common] (\x/4,0) circle (2pt);
+\node[below] at (\x/4,0) {$\dfrac{\x}{4}$};}
+ 
+\foreach \x in {0,4,...,16}{ \fill[common] (\x/4,0) circle (3pt);
+\node[below] at (\x/4,0) {$\dfrac{\x}{4}$};}
+\end{tikzpicture}   
+\end{center}
 
 Na reta numérica a seguir estão destacados alguns pontos e as frações correspondentes a eles. Observe e complete as frações em destaque.
 
-\begin{imagem*}[breakable]{}{}    FIGURA GEOMÉTRICA - IMAGEM DA RETA NUMERICA COM SEXTOS DESTACADOS:  
-  
-    \includegraphics[width=120pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta_sextos.jpg}  
-  
-\end{imagem*}
+\begin{center}
+ \begin{tikzpicture}[x=18mm,y=18mm]
+\draw[->] (-0.5,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,20}{ \draw (\x/6,3pt) -- (\x/6,-3pt);}
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt) node[below] {\x};}
+ 
+\foreach \x in {4,15,20}{ \fill[common] (\x/6,0) circle (3pt);
+\node[below] at (\x/6,-9pt) {$\dfrac{}{6}$};}
+ 
+\foreach \x in {2,9}{ \node[below] at (\x/6,-3pt) {$\dfrac{\x}{6}$};}
+ 
+\end{tikzpicture}  
+\end{center}
 
-A ordem na reta numérica\mbox{} \newline 
+A ordem na reta numérica
 
 Na reta numérica, os números são organizados em ordem crescente, a partir do zero no sentido do 1. Assim, o que vale para o 0, o 1, o 2, o, 3, etc. também valerá para as frações: 
 
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA - INCLUIR RETA COM metades, quintos e décimos destacados \end{imagem*}
+\begin{center}
+\begin{tikzpicture}[x=36mm,y=36mm]
+ 
+\begin{scope}[shift={(0,150pt)}]
+\draw[->] (-0.1,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\foreach \x in {0,1,...,6}{ \draw (\x/2,3pt) -- (\x/2,-3pt);}
+\node[above] at (\x,3pt) {\x};}
+\foreach \x in {1,...,6} \node[below, light] at (\x/2 , 0 pt) {$\frac{\x}{2}$};
+\end{scope}
+ 
+\begin{scope}[shift={(0,100pt)}]
+\draw[->] (-0.1,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\foreach \x in {0,1,...,17}{ \draw (\x/5,2pt) -- (\x/5,-2pt);}
+\node[above] at (\x,3pt) {\x};}
+\foreach \x in {1,...,17} \node[below, attention] at (\x/5 , 0 pt) {$\frac{\x}{5}$};
+\end{scope}
+ 
+\begin{scope}[shift={(0,50pt)}]
+\draw[->] (-0.1,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\foreach \x in {0,1,...,34}{ \draw (\x/10,1pt) -- (\x/10,-1pt);}
+\node[above] at (\x,3pt) {\x};}
+\foreach \x in {0,...,34} \node[below, dark] at (\x/10,0) {$\frac{\x}{10}$};
+\end{scope}
+ 
+\draw[->] (-0.1,0) -- (3.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1,...,3}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[above] at (\x,3pt) {\x};}
+ 
+\foreach \x in {0,1,...,34}{ \draw (\x/10,1pt) -- (\x/10,-1pt);}
+\foreach \x in {0,1,...,17}{ \draw (\x/5,2pt) -- (\x/5,-2pt);}
+\foreach \x in {0,1,...,6}{ \draw (\x/2,3pt) -- (\x/2,-3pt);}
+ 
+\foreach \x in {0,...,34} \node[below, dark] at (\x/10,0) {$\frac{\x}{10}$};
+\foreach \x in {1,2,3,4,6,7,8,9,11,12,13,14,16,17} \node[above, attention] at (\x/5 , 3 pt) {$\frac{\x}{5}$};
+\foreach \x in {1,3,5} \node[above, light] at (\x/2 , 3 pt) {\large $\frac{\x}{2}$};
+ 
+\end{tikzpicture}   
+\end{center}
+
 
 Na reta numérica, quanto mais distante do 0 estiver o ponto correspondente ao número, maior será o número. 
-
-\begin{imagem*}[breakable]{}{}    FIGURA GEOMÉTRICA - IMAGEM DA RETA NUMÉRICA destacando os pontos correspondentes ao 4/5 e 4/3:  
-  
-\end{imagem*}
+\begin{center}
+\begin{tikzpicture}[x=54mm,y=54mm]
+\draw[->] (-0.5,0) -- (1.5,0) ; %reta anterior
+\draw[very thick, attention] (0,0) -- (1,0); 
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);
+\node[below] at (\x,0pt) {\x};}
+ 
+% \node[below] at (1/3,0) {$\dfrac{1}{3}$};
+% \node[below] at (2/3,0) {$\dfrac{2}{3}$};
+%\node[below] at (6/3,0) {$\dfrac{6}{3}$};
+\foreach \x in {3,5}{ \fill[common] (4/\x,0) circle (3pt);
+\node[below] at (4/\x,0) {$\dfrac{4}{\x}$};}
+ 
+\end{tikzpicture}
+\end{center}
 
 $\frac{4}{3}$ é maior do que $\frac{4}{5}$. Ou ainda, $\frac{4}{5}$ é menor do que $\frac{4}{3}$.
 
@@ -323,17 +954,207 @@ Do mesmo modo, o símbolo $>$ é usado para significar ``maior do que'', portant
 
 \begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA  
   
-    \includegraphics[width=300pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/simbolos_maior_que_igual.jpg}   \end{imagem*}
+    \includegraphics[width=300pt, keepaspectratio]{../../livro/media//cap3/secoes/simbolos_maior_que_igual.jpg}   \end{imagem*}
 
 \section{MÃO NA MASSA }
 
 \subsection{Atividade}
 
-Na reta numérica já estão marcados o 0, o 1 e a fração $\frac{1}{2}$. Marque $\frac{3}{2}$, $\frac{3}{4}$, $\frac{5}{4}$, $\frac{8}{4}$, $\frac{10}{4}$, $\frac{1}{8}$, $\frac{7}{8}$, $\frac{10}{8}$ e 2.
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA  
-  
-    \includegraphics[width=240pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta.png}  
+{\bf Jogo: varal dos números}
+
+O varal de números está disposto na sala de aula, nele já estão posicionados os números $0$ (zero) e $1$ (um), como na figura. Nos cartões preparados para a atividade estão os números: \\
+$0$, $1$, $2$, $3$, $\frac{1}{2}$, $\frac{2}{2}$, $\frac{3}{2}$, $\frac{4}{2}$, $\frac{5}{2}$, $\frac{6}{2}$,
+$\frac{1}{3}$, $\frac{2}{3}$, $\frac{3}{3}$, $\frac{4}{3}$, $\frac{7}{3}$, $\frac{9}{3}$,
+$\frac{1}{4}$, $\frac{2}{4}$, $\frac{3}{4}$, $\frac{4}{4}$, $\frac{5}{4}$, $\frac{6}{4}$, $\frac{8}{4}$, $\frac{10}{4}$, $\frac{11}{4}$, $\frac{12}{4}$,
+$\frac{1}{5}$, $\frac{3}{5}$, $\frac{4}{5}$, $\frac{6}{5}$, $\frac{7}{5}$, $\frac{10}{5}$,
+$\frac{1}{10}$.
+
+\begin{imagem*} [breakable]{}{}
+
+FIGURA ARTÍSTICA
+\begin{center}
+    \includegraphics[width=300pt, keepaspectratio]{../../livro/media//cap3/secoes/varal01.jpg}
+\end{center}
 \end{imagem*}
+
+O jogo consiste em fixar cartões numerados em varal, reproduzindo uma reta numérica. As regras serão apresentadas pelo seu professor ou professora. Discuta com seus colegas a posição correta de fixação de cada um dos cartões numerados no varal. 
+
+Ao final do jogo, reproduza a forma como os cartões foram posicionados no varal na reta numérica a seguir. Aproveite as marcações já existentes.
+
+\begin{center}
+\begin{tikzpicture}[x=34mm,y=34mm]
+\draw[->] (-0.1,0) -- (4,0) ; %reta anterior
+\foreach \x in {0,.1,...,3.9}{ \draw (\x,3pt) -- (\x,-3pt);}
+\end{tikzpicture}
+\end{center}
+
+\subsection{Atividade}
+
+Na reta numérica já estão marcados o 0, o 1 e a fração $\frac{1}{2}$. Marque $\frac{3}{2}$, $\frac{3}{4}$, $\frac{5}{4}$, $\frac{8}{4}$, $\frac{10}{4}$, $\frac{1}{8}$, $\frac{7}{8}$, $\frac{10}{8}$ e 2.
+
+\begin{center}
+ \begin{tikzpicture}[x=5mm,y=5mm]
+	\draw[->]  (-0.5,0) -- (26,0);
+	\draw  (0,-3pt) -- (0,3pt);
+	\draw  (1.25,-3pt) -- (1.25,3pt);
+	\draw  (2.5,-3pt) -- (2.5,3pt);
+	\draw  (3.75,-3pt) -- (3.75,3pt);
+	\draw  (5,-3pt) -- (5,3pt);
+	\draw  (6.25,-3pt) -- (6.25,3pt);
+	\draw  (7.5,-3pt) -- (7.5,3pt);
+	\draw  (8.75,-3pt) -- (8.75,3pt);
+	\draw  (10,-3pt) -- (10,3pt);
+	\draw  (11.25,-3pt) -- (11.25,3pt);
+	\draw  (12.5,-3pt) -- (12.5,3pt);
+	\draw  (13.75,-3pt) -- (13.75,3pt);
+	\draw  (15,-3pt) -- (15,3pt);
+	\draw  (16.25,-3pt) -- (16.25,3pt);
+	\draw  (17.5,-3pt) -- (17.5,3pt);
+	\draw  (18.75,-3pt) -- (18.75,3pt);
+	\draw  (20,-3pt) -- (20,3pt);
+	\draw  (21.25,-3pt) -- (21.25,3pt);
+	\draw  (22.5,-3pt) -- (22.5,3pt);
+	\draw  (23.75,-3pt) -- (23.75,3pt);
+	\draw  (25,-3pt) -- (25,3pt);
+
+	\node[below] at (0,0) {0};
+	\node[below] at (5,0) {$\frac{1}{2}$};
+	\node[below] at (10,0)  {1};
+
+\end{tikzpicture}
+\end{center}
+
+\subsection{Atividade}
+
+
+Associe, como no exemplo, cada uma das frações à sua representação na reta numérica.   
+
+\noindent\begin{tabular}{m{.09\textwidth}m{.08\textwidth}m{.08\textwidth}m{.08\textwidth}m{.08\textwidth}m{.08\textwidth}m{0.08\textwidth}m{.08\textwidth}m{0.08\textwidth}}
+(A) $\frac{1}{2}$ & (B) $\frac{1}{3}$ &  (C) $\frac{1}{4}$  & (D) $\frac{1}{5}$ & (E) $\frac{1}{6}$  & (F) $\frac{1}{7}$  & (G) $\frac{1}{8}$  & (H) $\frac{1}{9}$  & (I) $\frac{1}{19}$
+\end{tabular}
+
+\begin{center}
+\begin{longtable}{|m{.2\textwidth}|m{.5\textwidth}|}
+\hline
+& 
+\parbox[t][1cm][c]{8cm}{\begin{tikzpicture}[x=50mm,y=50mm]
+\draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
+\foreach \x in {0,.1,1}{ \draw (\x,3pt) -- (\x,-3pt);}
+ \node[below] at (0,0) {0}; 
+ \node[below] at (1,0) {1};
+ \fill[common] (.1,0) circle (3pt);
+\end{tikzpicture}}
+ \\
+ \hline
+\centering (A)& 
+\parbox[t][1cm][c]{8cm}{
+\begin{tikzpicture}[x=50mm,y=50mm]
+\draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
+\foreach \x in {0,.1,1}{ \draw (\x,3pt) -- (\x,-3pt);}
+ \node[below] at (0,0) {0}; 
+ \node[below] at (1,0) {1};
+ \fill[common] (.1,0) circle (3pt);
+\end{tikzpicture}}
+\\
+ \hline
+ & 
+\begin{center}
+\begin{tikzpicture}[x=50mm,y=50mm]
+\draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
+ \node[below] at (0,0) {0}; 
+ \node[below] at (1,0) {1};
+ \fill[common] (.5,0) circle (3pt);
+\end{tikzpicture}
+\end{center}\\
+ \hline
+  & 
+\begin{center}
+\begin{tikzpicture}[x=50mm,y=50mm]
+\draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
+ \node[below] at (0,0) {0}; 
+ \node[below] at (1,0) {1};
+ \fill[common] (1/3,0) circle (3pt);
+\end{tikzpicture}
+\end{center}\\
+  \hline
+ & 
+\begin{center}
+\begin{tikzpicture}[x=50mm,y=50mm]
+\draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
+ \node[below] at (0,0) {0}; 
+ \node[below] at (1,0) {1};
+ \fill[common] (1/9,0) circle (3pt);
+\end{tikzpicture}
+\end{center}\\
+ \hline
+ & 
+\begin{center}
+\begin{tikzpicture}[x=50mm,y=50mm]
+\draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
+ \node[below] at (0,0) {0}; 
+ \node[below] at (1,0) {1};
+ \fill[common] (1/7,0) circle (3pt);
+\end{tikzpicture}
+\end{center}\\
+ \hline
+ & 
+\begin{center}
+\begin{tikzpicture}[x=50mm,y=50mm]
+\draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
+ \node[below] at (0,0) {0}; 
+ \node[below] at (1,0) {1};
+ \fill[common] (.25,0) circle (3pt);
+\end{tikzpicture}
+\end{center}\\
+ \hline
+ & 
+\begin{center}
+\begin{tikzpicture}[x=50mm,y=50mm]
+\draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
+ \node[below] at (0,0) {0}; 
+ \node[below] at (1,0) {1};
+ \fill[common] (1/6,0) circle (3pt);
+\end{tikzpicture}
+\end{center}\\
+ \hline
+& 
+\begin{center}
+\begin{tikzpicture}[x=50mm,y=50mm]
+\draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
+ \node[below] at (0,0) {0}; 
+ \node[below] at (1,0) {1};
+ \fill[common] (1/5,0) circle (3pt);
+\end{tikzpicture}
+\end{center}\\
+ \hline
+& 
+\begin{center}
+\begin{tikzpicture}[x=50mm,y=50mm]
+\draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
+\foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
+ \node[below] at (0,0) {0}; 
+ \node[below] at (1,0) {1};
+ \fill[common] (1/8,0) circle (3pt);
+\end{tikzpicture}
+\end{center}\\
+ \hline
+\end{longtable}
+\end{center}
+
+% <WRAP IMAGEM>
+% INCLUIR imagens de retas como na sequência a seguir, uma em cada linha da tabela. Os pontos em destaque correspondem às seguintes fraçoões, nesta ordem: 1/10, 1/2, 1/3, 1/9, 1/7, 1/4, 1/6, 1/5 e 1/8. DIFERENCIAR POR COR O PONTO EM DESTAQUE em cada uma das imagens. 
+% {{ :cap3:secoes:unitarias_na_reta.jpg?300 |}}
+% </WRAP>
+
+
+
 
 \subsection{Atividade}
 
@@ -341,7 +1162,7 @@ Na reta numérica a seguir estão destacados os pontos correspondentes ao 0, ao 
 
 ( ERRO:\{<WRAP\} ) Imagem> FIGURAS GEOMÉTRICAS - Há figura na resposta também.
 Os pontos em destaque na reta numérica desta atividade têm que corresponder corretamente aas frações da unidade em destaque.
-\includegraphics[width=360pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta_e_fracoes.png}
+\includegraphics[width=360pt, keepaspectratio]{../../livro/media//cap3/secoes/reta_e_fracoes.png}
 ( ERRO:\{</WRAP\} )>
 
 \section{QUEBRANDO A CUCA }
@@ -360,7 +1181,7 @@ Observe as faixas pintadas na atividade anterior.
 
 \begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA  
   
-    \includegraphics[width=180pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta.jpg}  .  
+    \includegraphics[width=180pt, keepaspectratio]{../../livro/media//cap3/secoes/reta.jpg}  .  
   
 \end{imagem*}
 
@@ -380,7 +1201,7 @@ Na reta numérica a seguir:
 
 
 \begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA  
-    \includegraphics[width=240pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/reta_4_partes_a.jpg}  
+    \includegraphics[width=240pt, keepaspectratio]{../../livro/media//cap3/secoes/reta_4_partes_a.jpg}  
 \end{imagem*}
 
 Observando a reta numérica com as marcações feitas, compare: 
@@ -398,7 +1219,7 @@ Frações: a melhor escolha para dividir uma unidade
 Na figura abaixo temos faixas divididas em 3, 4 e 5 partes. 
 
 \begin{imagem*}[breakable]{}{}   FIGURAS GEOMÉTRICAS  
-    \includegraphics[width=\textwidth,height=4cm, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/figura_iniciaal.jpg}  
+    \includegraphics[width=\textwidth,height=4cm, keepaspectratio]{../../livro/media//cap3/secoes/figura_iniciaal.jpg}  
 \end{imagem*}
 
 Compare cada uma delas com a parte que sobrou na atividade anterior.  
@@ -407,14 +1228,14 @@ Explique com suas palavras a sua escolha.
 
 Observe as faixas abaixo e em cada caso dê uma representação fracionária relacionada a cada uma das faixas, observando a subdivisão proposta.
 
-\includegraphics[width=\textwidth,height=4cm, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/faixas_ate_2.png}
+\includegraphics[width=\textwidth,height=4cm, keepaspectratio]{../../livro/media//cap3/secoes/faixas_ate_2.png}
 
 \subsection{Atividade}
 
 Frações: comparando frações unitárias
 
 Na figura abaixo temos partes pintadas de três faixas:
-\includegraphics[width=180pt, keepaspectratio]{/var/www/livro/data/gitrepo/media//cap3/secoes/3_faixas.png}
+\includegraphics[width=180pt, keepaspectratio]{../../livro/media//cap3/secoes/3_faixas.png}
 
 Para cada uma encontre as frações correspondentes e construa uma reta numérica e exiba uma localização aproximada para cada uma das frações.
 
