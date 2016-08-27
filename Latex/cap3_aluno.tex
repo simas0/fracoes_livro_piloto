@@ -1030,23 +1030,16 @@ Na reta numérica já estão marcados o 0, o 1 e a fração $\frac{1}{2}$. Marqu
 Associe, como no exemplo, cada uma das frações à sua representação na reta numérica.   
 
 \noindent\begin{tabular}{m{.09\textwidth}m{.08\textwidth}m{.08\textwidth}m{.08\textwidth}m{.08\textwidth}m{.08\textwidth}m{0.08\textwidth}m{.08\textwidth}m{0.08\textwidth}}
-(A) $\frac{1}{2}$ & (B) $\frac{1}{3}$ &  (C) $\frac{1}{4}$  & (D) $\frac{1}{5}$ & (E) $\frac{1}{6}$  & (F) $\frac{1}{7}$  & (G) $\frac{1}{8}$  & (H) $\frac{1}{9}$  & (I) $\frac{1}{19}$
+(A) $\frac{1}{2}$ & (B) $\frac{1}{3}$ &  (C) $\frac{1}{4}$  & (D) $\frac{1}{5}$ & (E) $\frac{1}{6}$  & (F) $\frac{1}{7}$  & (G) $\frac{1}{8}$  & (H) $\frac{1}{9}$  & (I) $\frac{1}{10}$
 \end{tabular}
 
 \begin{center}
-\begin{longtable}{|m{.2\textwidth}|m{.5\textwidth}|}
-\hline
-& 
-\parbox[t][1cm][c]{8cm}{\begin{tikzpicture}[x=50mm,y=50mm]
-\draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
-\foreach \x in {0,.1,1}{ \draw (\x,3pt) -- (\x,-3pt);}
- \node[below] at (0,0) {0}; 
- \node[below] at (1,0) {1};
- \fill[common] (.1,0) circle (3pt);
-\end{tikzpicture}}
- \\
- \hline
-\centering (A)& 
+\begin{longtable}{m{.2\textwidth}m{.5\textwidth}}
+
+\centering \begin{tikzpicture}
+ \draw (0,0) -- (20,0);
+\end{tikzpicture}
+ & 
 \parbox[t][1cm][c]{8cm}{
 \begin{tikzpicture}[x=50mm,y=50mm]
 \draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
@@ -1056,9 +1049,13 @@ Associe, como no exemplo, cada uma das frações à sua representação na reta 
  \fill[common] (.1,0) circle (3pt);
 \end{tikzpicture}}
 \\
- \hline
+ 
+ \centering \begin{tikzpicture}
+ \draw (0,0) -- (20,0);
+ \node[above] at (10,0){(A)};
+\end{tikzpicture}
  & 
-\begin{center}
+\parbox[t][1cm][c]{8cm}{
 \begin{tikzpicture}[x=50mm,y=50mm]
 \draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
 \foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
@@ -1066,10 +1063,13 @@ Associe, como no exemplo, cada uma das frações à sua representação na reta 
  \node[below] at (1,0) {1};
  \fill[common] (.5,0) circle (3pt);
 \end{tikzpicture}
-\end{center}\\
- \hline
+}\\
+ 
+\centering \begin{tikzpicture}
+ \draw (0,0) -- (20,0);
+\end{tikzpicture}
   & 
-\begin{center}
+\parbox[t][1cm][c]{8cm}{
 \begin{tikzpicture}[x=50mm,y=50mm]
 \draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
 \foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
@@ -1077,10 +1077,13 @@ Associe, como no exemplo, cada uma das frações à sua representação na reta 
  \node[below] at (1,0) {1};
  \fill[common] (1/3,0) circle (3pt);
 \end{tikzpicture}
-\end{center}\\
-  \hline
+}\\
+  
+\centering \begin{tikzpicture}
+ \draw (0,0) -- (20,0);
+\end{tikzpicture}
  & 
-\begin{center}
+\parbox[t][1cm][c]{8cm}{
 \begin{tikzpicture}[x=50mm,y=50mm]
 \draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
 \foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
@@ -1088,10 +1091,13 @@ Associe, como no exemplo, cada uma das frações à sua representação na reta 
  \node[below] at (1,0) {1};
  \fill[common] (1/9,0) circle (3pt);
 \end{tikzpicture}
-\end{center}\\
- \hline
+}\\
+ 
+\centering \begin{tikzpicture}
+ \draw (0,0) -- (20,0);
+\end{tikzpicture}
  & 
-\begin{center}
+\parbox[t][1cm][c]{8cm}{
 \begin{tikzpicture}[x=50mm,y=50mm]
 \draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
 \foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
@@ -1099,10 +1105,13 @@ Associe, como no exemplo, cada uma das frações à sua representação na reta 
  \node[below] at (1,0) {1};
  \fill[common] (1/7,0) circle (3pt);
 \end{tikzpicture}
-\end{center}\\
- \hline
+}\\
+ 
+\centering \begin{tikzpicture}
+ \draw (0,0) -- (20,0);
+\end{tikzpicture}
  & 
-\begin{center}
+\parbox[t][1cm][c]{8cm}{
 \begin{tikzpicture}[x=50mm,y=50mm]
 \draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
 \foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
@@ -1110,10 +1119,13 @@ Associe, como no exemplo, cada uma das frações à sua representação na reta 
  \node[below] at (1,0) {1};
  \fill[common] (.25,0) circle (3pt);
 \end{tikzpicture}
-\end{center}\\
- \hline
+}\\
+ 
+\centering \begin{tikzpicture}
+ \draw (0,0) -- (20,0);
+\end{tikzpicture}
  & 
-\begin{center}
+\parbox[t][1cm][c]{8cm}{
 \begin{tikzpicture}[x=50mm,y=50mm]
 \draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
 \foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
@@ -1121,10 +1133,13 @@ Associe, como no exemplo, cada uma das frações à sua representação na reta 
  \node[below] at (1,0) {1};
  \fill[common] (1/6,0) circle (3pt);
 \end{tikzpicture}
-\end{center}\\
- \hline
+}\\
+ 
+\centering \begin{tikzpicture}
+ \draw (0,0) -- (20,0);
+\end{tikzpicture}
 & 
-\begin{center}
+\parbox[t][1cm][c]{8cm}{
 \begin{tikzpicture}[x=50mm,y=50mm]
 \draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
 \foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
@@ -1132,10 +1147,13 @@ Associe, como no exemplo, cada uma das frações à sua representação na reta 
  \node[below] at (1,0) {1};
  \fill[common] (1/5,0) circle (3pt);
 \end{tikzpicture}
-\end{center}\\
- \hline
+}\\
+ 
+\centering \begin{tikzpicture}
+ \draw (0,0) -- (20,0);
+\end{tikzpicture}
 & 
-\begin{center}
+\parbox[t][1cm][c]{8cm}{
 \begin{tikzpicture}[x=50mm,y=50mm]
 \draw[->] (-0.3,0) -- (1.3,0) ; %reta anterior
 \foreach \x in {0,1}{ \draw (\x,3pt) -- (\x,-3pt);}
@@ -1143,28 +1161,77 @@ Associe, como no exemplo, cada uma das frações à sua representação na reta 
  \node[below] at (1,0) {1};
  \fill[common] (1/8,0) circle (3pt);
 \end{tikzpicture}
-\end{center}\\
- \hline
+}\\
+ 
 \end{longtable}
 \end{center}
 
-% <WRAP IMAGEM>
-% INCLUIR imagens de retas como na sequência a seguir, uma em cada linha da tabela. Os pontos em destaque correspondem às seguintes fraçoões, nesta ordem: 1/10, 1/2, 1/3, 1/9, 1/7, 1/4, 1/6, 1/5 e 1/8. DIFERENCIAR POR COR O PONTO EM DESTAQUE em cada uma das imagens. 
-% {{ :cap3:secoes:unitarias_na_reta.jpg?300 |}}
-% </WRAP>
+\subsection{Atividade}
 
-
+Observando a atividade anterior (Atividade 13), complete as sentenças a seguir com os sinais $>$ (maior) ou $<$ (menor) de modo a torná-las verdadeiras.
+\begin{center}
+\begin{tabular}{ccccccccc}
+ a)  &   $\dfrac{1}{2}$    & \parbox[t][.6cm]{2cm}{ }\quad\quad\quad      &  $\dfrac{1}{5}$ & \quad\quad\quad\quad\quad\quad\quad   &e)  &  $\dfrac{1}{35}$   & \quad\quad\quad      &  $\dfrac{1}{43}$\\
+ b)  &  $\dfrac{1}{4}$    & \parbox[t][.6cm]{2cm}{ }      &  $\dfrac{1}{3}$   & & f)  &  $\dfrac{1}{99}$   &       &  $\dfrac{1}{100}$  \\
+ c)  &  $\dfrac{1}{10}$   &  \parbox[t][.6cm]{2cm}{ }     &  $\dfrac{1}{20}$  & & g)  &  $\dfrac{1}{5}$    &       &  $\dfrac{1}{50}$  \\
+ d)  &  $\dfrac{1}{12}$   & \parbox[t][.6cm]{2cm}{ }      &  $\dfrac{1}{2}$   & & h)  &  $\dfrac{1}{100}$  &       &  $\dfrac{1}{10}$  \\ 
+ \end{tabular}
+ \end{center}
 
 
 \subsection{Atividade}
 
 Na reta numérica a seguir estão destacados os pontos correspondentes ao 0, ao 1 e a $\frac{1}{2}$. Os demais pontos correspondem às frações apresentadas a seguir. Associe cada fração ao ponto correspondente.  
 
-( ERRO:\{<WRAP\} ) Imagem> FIGURAS GEOMÉTRICAS - Há figura na resposta também.
-Os pontos em destaque na reta numérica desta atividade têm que corresponder corretamente aas frações da unidade em destaque.
-\includegraphics[width=360pt, keepaspectratio]{../../livro/media//cap3/secoes/reta_e_fracoes.png}
-( ERRO:\{</WRAP\} )>
+\begin{center}
+\begin{tikzpicture}[x=.3cm,y=.3cm,]
+	\draw[->] (-2,0) -- (47,0);
+		
+	\fill[common] (0,0) circle (3 pt);		%0
+	\fill[common] (10,0) circle (3 pt);
+	\fill[common] (15,0) circle (3 pt);
+	\fill[common] (20,0) circle (3 pt);
+	\fill[common] (25,0) circle (3 pt);
+	\fill[common] (30,0) circle (3 pt);
+	\fill[common] (32,0) circle (3 pt);
+	\fill[common] (36,0) circle (3 pt);
+	\fill[common] (40,0) circle (3 pt);
+	\fill[common] (44,0) circle (3 pt);
+	\fill[common] (45,0) circle (3 pt);
 
+		\node[below]  at (0,-1) {0};			%0
+		\node[below]  at (20,-1) {$\frac{1}{2}$};	%1/2
+		\node[below]  at (40,-1) {1};			%1
+
+	 	     \tikzstyle{gray_block} = [draw,outer sep=3,inner sep=3,minimum size=1,line width=1, very thick, draw=black!55, top color=white,bottom color=black!20]
+	\node [gray_block] at (10.5,5) {$\frac{1}{4}$};   
+  	\node [gray_block] at (14.5,5) {$\frac{3}{4}$};
+	\node [gray_block] at (18.5,5) {$\frac{4}{5}$};
+	\node [gray_block] at (22.5,5) {$\frac{3}{8}$};
+	\node [gray_block] at (26.5,5) {$\frac{5}{8}$};
+	\node [gray_block] at (30.5,5) {$\frac{9}{8}$};
+	\node [gray_block] at (35,5) {$\frac{9}{10}$};
+	\node [gray_block] at (40,5) {$\frac{11}{10}$};
+\end{tikzpicture}
+\end{center}
+
+\subsection{Atividade}
+
+
+Complete as sentenças a seguir com os sinais $>$ (maior), $<$ (menor) ou $=$ (igual) de modo a torná-las verdadeiras. 
+
+\begin{center}
+\begin{tabular}{lccccccccccccc}
+ a)  &  $\dfrac{3}{6}$     &   &  $\dfrac{5}{6}$   & \parbox[t][.6cm]{2cm}{ } \quad \quad\quad  & f)  &  $\dfrac{1}{2}$     &   &  $\dfrac{1}{3}$    & \quad \quad\quad  & m)  &  $\dfrac{3}{2}$     &   &  $\dfrac{2}{5}$    \\
+ b)  &  $\dfrac{5}{9}$     &   &  $\dfrac{4}{9}$   & \parbox[t][.6cm]{2cm}{ }    & g)  &  $\dfrac{1}{7}$     &   &  $\dfrac{1}{6}$    &   & n)  &  $\dfrac{3}{4}$     &   &  $\dfrac{6}{5}$    \\
+ c)  &  $\dfrac{7}{10}$    &   &  $\dfrac{9}{10}$   & \parbox[t][.6cm]{2cm}{ }   & h)  &  $\dfrac{2}{5}$     &   &  $\dfrac{2}{7}$    &   & o)  &  $\dfrac{7}{8}$     &   &  $\dfrac{10}{9}$   \\
+ d)  &  $\dfrac{3}{12}$    &   &  $\dfrac{9}{12}$   & \parbox[t][.6cm]{2cm}{ }   & i)  &  $\dfrac{4}{5}$     &   &  $\dfrac{4}{3}$    &   & p)  &  $\dfrac{6}{5}$     &   &  $\dfrac{12}{9}$   \\
+ e)  &  $\dfrac{39}{100}$  &   &  $\dfrac{25}{100}$ & \parbox[t][.6cm]{2cm}{ }   & j)  &  $\dfrac{12}{15}$   &   &  $\dfrac{12}{7}$   &   & q)  &  $\dfrac{4}{5}$     &   &  $\dfrac{5}{4}$    \\
+     &&                     &    &                  \parbox[t][.6cm]{2cm}{ }    &  l)  &  $\dfrac{22}{80}$   &   &  $\dfrac{22}{90}$  &   & r)  &  $\dfrac{35}{40}$   &   &  $\dfrac{30}{25}$  \\
+     &&                      &    &                    &      &  \parbox[t][.6cm]{2cm}{ }                    &   &                   &   &  s)  &  $\dfrac{99}{100}$  &   &  $\dfrac{3}{2}$    \\
+\end{tabular} 
+ \end{center}
+ 
 \section{QUEBRANDO A CUCA }
 
 
@@ -1173,17 +1240,20 @@ Os pontos em destaque na reta numérica desta atividade têm que corresponder co
 Observe as faixas pintadas na atividade anterior. 
 
 \begin{enumerate} [\quad a)] %s
-  \item     Corte uma das 3 partes da faixa verde. Que fração representa? Marque esta fração na reta numerica abaixo.
+  \item     Corte uma das 3 partes da faixa verde. Que fração representa? Marque esta fração na reta numérica abaixo.
   \item     Corte agora 2 partes da faixa dividida em 6 partes e que foi pintada de rosa claro. Que fração da unidade estas duas partes cortadas representam? Marque esta fração na mesma reta numerica abaixo.
   \item     Corte agora 3 partes da faixa dividida em 9 partes e que foi pintada de vermelho. Que fração da unidade estas três partes cortadas representam? Marque esta fração na mesma reta numérica
 \end{enumerate} %s
 
-
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA  
   
-    \includegraphics[width=180pt, keepaspectratio]{../../livro/media//cap3/secoes/reta.jpg}  .  
-  
-\end{imagem*}
+\begin{center}
+\begin{tikzpicture}[x=100mm,y=100mm]
+\draw[->] (0,0) -- (1.1,0) ; %reta anterior
+\foreach \x in {0,.06125,...,1}{ \draw (\x,3pt) -- (\x,-3pt);}
+\node[below] at (0,0) {0};
+\node[below] at (1,0) {1};
+\end{tikzpicture}
+\end{center}
 
 Como ficou a marcação? O que podemos inferir do resultado obtido nos itens a), b) e c)?
 
@@ -1197,46 +1267,25 @@ Na reta numérica a seguir:
 \begin{enumerate} [\quad a)] %s
   \item     Marque     $\frac{1}{2}$    . Justifique sua resposta.
   \item     Marque     $\frac{1}{4}$    ,     $\frac{3}{4}$     e     $\frac{5}{4}$    . Explique como raciocinou para fazer essas marcações. 
-\end{enumerate} %s
-
-
-\begin{imagem*}[breakable]{}{}   FIGURA GEOMÉTRICA  
-    \includegraphics[width=240pt, keepaspectratio]{../../livro/media//cap3/secoes/reta_4_partes_a.jpg}  
-\end{imagem*}
+  
+\begin{center}
+\begin{tikzpicture}[x=34mm,y=34mm]
+\draw[->] (-0.5,0) -- (3,0) ; %reta anterior
+\foreach \x in {0,1,2}{ \draw (\x,3pt) -- (\x,-3pt);}
+\node[below] at (0,0) {0};
+\node[below] at (2,0) {2};
+\end{tikzpicture}
+\end{center}
 
 Observando a reta numérica com as marcações feitas, compare: 
-\begin{enumerate} [\quad a)] %s
-  \item         $\frac{1}{4}$     é maior ou menor do que     $\frac{1}{2}$    ? E     $\frac{3}{4}$    , é maior ou menor do que      $\frac{1}{2}$    ?
-  \item     Ao marcar o     $\frac{5}{4}$     o que podemos afirmar sobre a comparação com a unidade 1?
-  \item     Escreva em ordem crescente as frações dadas. Será que podemos inferir alguma regra especial para ordenar frações?
+
+  \item $\frac{1}{4}$     é maior ou menor do que     $\frac{1}{2}$    ? 
+  \item $\frac{3}{4}$ é maior ou menor do que $\frac{1}{2}$    ?
+  \item $\frac{5}{4}$  é menor do que 1?
+  \item Escreva as frações marcadas na reta em ordem crescente, completando os espaços a seguir:
+
+$$0 < \frac{\square}{\square} < \frac{\square}{\square}< \frac{\square}{\square} < 1 < \frac{\square}{\square}$$
+
 \end{enumerate} %s
-
-
-\subsection{Atividade}
-
-Frações: a melhor escolha para dividir uma unidade
-
-Na figura abaixo temos faixas divididas em 3, 4 e 5 partes. 
-
-\begin{imagem*}[breakable]{}{}   FIGURAS GEOMÉTRICAS  
-    \includegraphics[width=\textwidth,height=4cm, keepaspectratio]{../../livro/media//cap3/secoes/figura_iniciaal.jpg}  
-\end{imagem*}
-
-Compare cada uma delas com a parte que sobrou na atividade anterior.  
-Qual a melhor subdivisão nesse caso?
-Explique com suas palavras a sua escolha.
-
-Observe as faixas abaixo e em cada caso dê uma representação fracionária relacionada a cada uma das faixas, observando a subdivisão proposta.
-
-\includegraphics[width=\textwidth,height=4cm, keepaspectratio]{../../livro/media//cap3/secoes/faixas_ate_2.png}
-
-\subsection{Atividade}
-
-Frações: comparando frações unitárias
-
-Na figura abaixo temos partes pintadas de três faixas:
-\includegraphics[width=180pt, keepaspectratio]{../../livro/media//cap3/secoes/3_faixas.png}
-
-Para cada uma encontre as frações correspondentes e construa uma reta numérica e exiba uma localização aproximada para cada uma das frações.
 
 \end{document}
