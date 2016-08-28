@@ -197,6 +197,196 @@ Atividade mesma subunidade
 
 \end{tikzpicture}
 
+Atividade reta mais
+
+\begin{center}
+ \begin{tikzpicture}[x=17mm,y=17mm]
+  \draw[->] (0,-.25) -- (0,3.25);
+  \foreach \x in {0,...,3}{
+  \draw (-3pt,\x)--(3pt,\x);
+  \node at (-7pt,\x) {\x};}
+ \foreach \x in {2+1/3,2+2/3}\draw (-2pt,\x)--(2pt,\x); 
+ \draw[|-|] (9pt,2) -- (9pt,2+1/3);
+ \node at (20pt,2+1/6) {$\dfrac{1}{3}$};
+ \draw[->] (-35pt,2+1/3) -- (-9pt,2+1/3);
+ \node at (-1.1,2+1/3) {$2 + \dfrac{1}{3}$};
+ \fill[common] (0,2+1/3) circle (3pt);
+ \end{tikzpicture}
+
+\end{center}
+
+
+\begin{center}
+ \begin{tikzpicture}[x=17mm,y=17mm]
+  \draw[->] (0,-.25) -- (0,3.25);
+  \foreach \x in {0,...,3}{
+  \draw (-3pt,\x)--(3pt,\x);
+  \node at (-7pt,\x) {\x};}
+ \foreach \x in {2+1/3,2+2/3}\draw (-2pt,\x)--(2pt,\x); 
+ \draw[|-|] (9pt,2) -- (9pt,2+1/3);
+ \node at (20pt,2+1/6) {$\dfrac{1}{3}$};
+ \draw[->] (-35pt,2+1/3) -- (-9pt,2+1/3);
+ \node at (-1.1,2+1/3) {$2 + \dfrac{1}{3}$};
+ \fill[common] (0,2+1/3) circle (3pt);
+ \draw[dotted] (9 pt, 2+1/3) -- (1.9, 2+1/3);
+
+ \begin{scope}[shift={(2,0)}]
+ %reta numerica vertical
+ \draw[->] (0,-.25) -- (0,3.25);
+  \foreach \x in {0,...,3}{
+  \draw (-3pt,\x)--(3pt,\x);
+  \node at (-7pt,\x) {\x};}
+\foreach \x in {0,.3333,...,2.6666}\draw (-2pt,\x)--(2pt,\x); 
+  \fill[common] (0,2+1/3) circle (3pt);
+
+% segmentos de 1/3 ao lado da reta
+
+\foreach \x in {1,...,6}{ 
+\draw[|-|] (9pt,\x/3+.01) -- (9pt,\x/3+1/3-.01);
+\node at (20pt,\x/3+1/6) {{\small $\frac{1}{3}$}};}
+\draw[|-|] (9pt,0) -- (9pt,1/3-.01);
+\node at (20pt,1/6) {{\small $\frac{1}{3}$}};
+
+%flecha e texto.
+\draw[<-]  (30 pt, 2+1/6) -- (56pt, 2+1/6);
+\node at (90pt, 2+1/6) {1 fração de $\dfrac{1}{3}$};
+\node at (90pt, 1.6) {$+$};
+\node at (90pt, 1) {6 frações de $\dfrac{1}{3}$};
+%linhas tracejadas e chave
+\foreach \x in {0,2} \draw[dotted] (25pt,\x) -- (45pt,\x);
+\draw [thick, decoration={brace,mirror,raise=5}, decorate] (45pt,0) -- (45pt,2); 
+ \end{scope}
+ \end{tikzpicture}
+\end{center}
+ 
+
+\begin{center} 
+\begin{tabular}{m{.3\textwidth}m{.3\textwidth}m{.3\textwidth}}
+ a) & b) & c)\\
+  
+ \begin{tikzpicture}[x=17mm,y=17mm]
+  \draw[->] (0,-.5) -- (0,4.5);
+  \foreach \x in {0,...,4}{
+  \draw (-3pt,\x)--(3pt,\x);
+  \node at (-7pt,\x) {\x};}
+ \foreach \x in {3.25,3.5,3.75}\draw (-2pt,\x)--(2pt,\x); 
+ \fill[common] (0,3.25) circle (3pt);
+ 
+ % setinha e texto
+ \draw[->] (-35pt,3.25) -- (-9pt,3.25);
+ \node at (-1.1,3.25) {$3 + \dfrac{1}{4}$};
+ 
+ \end{tikzpicture}
+& 
+
+  
+ \begin{tikzpicture}[x=17mm,y=17mm]
+  \draw[->] (0,-.5) -- (0,5.5);
+  \foreach \x in {0,...,5}{
+  \draw (-3pt,\x)--(3pt,\x);
+  \node at (-7pt,\x) {\x};}
+ \draw (-2pt,4.5)--(2pt,4.5); 
+ \fill[common] (0,4.5) circle (3pt);
+ 
+ % setinha e texto
+ \draw[->] (-35pt,4.5) -- (-9pt,4.5);
+ \node at (-1.1,4.5) {$4 + \dfrac{1}{2}$};
+  \end{tikzpicture}
+
+ &
+
+
+
+ \begin{tikzpicture}[x=17mm,y=17mm]
+  \draw[->] (0,-.5) -- (0,3.5);
+  \foreach \x in {0,...,3}{
+  \draw (-3pt,\x)--(3pt,\x);
+  \node at (-7pt,\x) {\x};}
+ \draw (-2pt,2.6)--(2pt,2.6); 
+ \foreach \x in {2.2,2.4,...,2.8}\draw (-2pt,\x)--(2pt,\x); 
+ \fill[common] (0,2.6) circle (3pt);
+ 
+ % setinha e texto
+ \draw[->] (-35pt,2.6) -- (-9pt,2.6);
+ \node at (-1.1,2.6) {$2 + \dfrac{3}{5}$};
+ 
+ \end{tikzpicture}
+\end{tabular}
+\end{center}
+
+Respostas
+
+
+
+\noindent \begin{tabular}{m{.3\textwidth}m{.3\textwidth}m{.3\textwidth}}
+ a) & b) & c)\\
+  
+ \begin{tikzpicture}[x=17mm,y=17mm]
+  \draw[->] (0,-.5) -- (0,4.5);
+  \foreach \x in {0,...,4}{
+  \draw (-3pt,\x)--(3pt,\x);
+  \node at (-7pt,\x) {\x};}
+ \foreach \x in {0.25,0.5,...,3.25}\draw (-2pt,\x)--(2pt,\x); 
+ \fill[common] (0,3.25) circle (3pt);
+ 
+ % setinha e texto
+ \draw[->] (-20pt,3.25) -- (-9pt,3.25);
+ \node at (-.8,3.25) {$3 + \dfrac{1}{4}$};
+ 
+ 
+ 
+ 
+\foreach \x in {0,3} \draw[dotted] (10pt,\x) -- (20pt,\x);
+\draw [thick, decoration={brace,mirror,raise=5}, decorate] (25pt,0) -- (25pt,3);
+\node at (70pt,1.5) {12 frações de $\frac{1}{4}$};
+ 
+ \end{tikzpicture}
+& 
+  
+ \begin{tikzpicture}[x=17mm,y=17mm]
+  \draw[->] (0,-.5) -- (0,5.5);
+  \foreach \x in {0,...,5}{
+  \draw (-3pt,\x)--(3pt,\x);
+  \node at (-7pt,\x) {\x};}
+ \foreach \x in {0.5,...,4.5}\draw (-2pt,\x)--(2pt,\x); 
+ \fill[common] (0,4.5) circle (3pt);
+
+ 
+\foreach \x in {0,4} \draw[dotted] (10pt,\x) -- (20pt,\x);
+\draw [thick, decoration={brace,mirror,raise=5}, decorate] (25pt,0) -- (25pt,4);
+\node at (70pt,2) {8 frações de $\frac{1}{2}$};
+
+
+ % setinha e texto
+ \draw[->] (-20pt,4.5) -- (-9pt,4.5);
+ \node at (-.8,4.5) {$4 + \dfrac{1}{2}$};
+ 
+
+ \end{tikzpicture}
+
+ &
+ \begin{tikzpicture}[x=17mm,y=17mm]
+  \draw[->] (0,-.5) -- (0,3.5);
+  \foreach \x in {0,...,3}{
+  \draw (-3pt,\x)--(3pt,\x);
+  \node at (-7pt,\x) {\x};}
+ \foreach \x in {0.2,.4,...,2.6} \draw (-2pt,\x)--(2pt,\x); 
+ \fill[common] (0,2.6) circle (3pt);
+  
+\foreach \x in {0,2} \draw[dotted] (10pt,\x) -- (20pt,\x);
+\draw [thick, decoration={brace,mirror,raise=5}, decorate] (25pt,0) -- (25pt,2);
+\node at (70pt,1) {10 frações de $\frac{1}{5}$};
+
+
+ % setinha e texto
+ \draw[->] (-20pt,2.6) -- (-9pt,2.6);
+ \node at (-.8,2.6) {$2 + \dfrac{3}{5}$};
+ 
+
+ \end{tikzpicture}
+\end{tabular}
+
+
 
 Atividade reta menos
 \begin{center}
