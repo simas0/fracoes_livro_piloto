@@ -8,30 +8,52 @@
 
 \usetikzlibrary{calc}
 
-
-
+%cor para fundo do Para o professor no html ffccff
+\definecolor{professor}{RGB}{250,204,255}
+%cor para fundo da resposta no html ddffff
+\definecolor{resposta}{RGB}{221, 255, 255}
 
 \begin{document}
 %\maketitle
+% 
+% \pagestyle{empty}
+%  \begin{tikzpicture}[scale=0.6]
+%  \fill[professor] (-1,-3) rectangle (17,7);
+%  \draw (0,0) rectangle (4,3);
+%   \draw (0,3) rectangle (4,6);
+%   \draw (0,1.5) -- (4,1.5);
+%   \draw (0,3) -- (4,6);
+%   \draw (5,3) node{$\Rightarrow$};
+%   \draw (6,-0.25) rectangle (10,2.75);
+%   \draw (6,3.25) rectangle (10,6.25);
+%   \draw (8,-0.75) node{Metade dos ret\^angulos};
+%   \draw (11,3) node{$\Rightarrow$};
+%   \draw (12,-0.25) rectangle (16,2.75);
+%   \draw (12,3.25) rectangle (16,6.25);
+%   \draw (12,3.25) -- (16,6.25);
+%   \draw (12,1.25) -- (16,1.25);
+%   \draw (14,-0.75) node{Cada uma das 4};
+%   \draw (14,-1.5) node{partes \'e metade};
+%   \draw (14,-2.25) node{da metade ($\frac{1}{4}$)};
+% \end{tikzpicture}
 
-\pagestyle{empty}
- \begin{tikzpicture}[scale=0.6]
-  \draw (0,0) rectangle (4,3);
-  \draw (0,3) rectangle (4,6);
-  \draw (0,1.5) -- (4,1.5);
-  \draw (0,3) -- (4,6);
-  \draw (5,3) node{$\Rightarrow$};
-  \draw (6,-0.25) rectangle (10,2.75);
-  \draw (6,3.25) rectangle (10,6.25);
-  \draw (8,-0.75) node{Metade dos ret\^angulos};
-  \draw (11,3) node{$\Rightarrow$};
-  \draw (12,-0.25) rectangle (16,2.75);
-  \draw (12,3.25) rectangle (16,6.25);
-  \draw (12,3.25) -- (16,6.25);
-  \draw (12,1.25) -- (16,1.25);
-  \draw (14,-0.75) node{Cada uma das 4};
-  \draw (14,-1.5) node{partes \'e metade};
-  \draw (14,-2.25) node{da metade ($\frac{1}{4}$)};
+
+\begin{tikzpicture}[scale=1]
+ \fill[resposta] (-1,-1) rectangle (5,7);
+ \draw (0,0) rectangle (4,6);
+ \draw (0.5,0) -- (0.5,6);
+ \draw (1.5,0) -- (1.5,6);
+ \draw (3.5,0) -- (3.5,6);
 \end{tikzpicture}
+
+
+\begin{tikzpicture}[scale=1]
+ \fill[resposta] (-1,-1) rectangle (5,7);
+ \draw (0,0) rectangle (4,6);
+ \draw (0,0) -- (2,6);
+ \draw (1,0) -- (3,6);
+ \draw (3.5,0) -- (3.5,6);
+\end{tikzpicture}
+
 
 \end{document}

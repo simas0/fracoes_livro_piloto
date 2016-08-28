@@ -908,8 +908,8 @@ m)
 \end{center}
 
 
-\chapter{Multiplicando a fração da unidade }
-
+\chapter{Juntando frações da unidade}
+\setcounter{subsection}{0}
 
 \begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA  
   HISTÓRIA EM QUADRINHOS  
@@ -954,7 +954,7 @@ m)
   
   Miguel: Isso mesmo! Minha mãe falou que um terço é   $\frac{1}{3}$  , que um quarto é   $\frac{1}{4}$  , um quinto é   $\frac{1}{5}$  .  
   
-  Alice: Esse negócio não parece estar certo. Os números ficam um ao lado do outro, 10, 11, 12,   $\cdots$   e não um embaixo do outro como você mostrou aí!  
+  Alice: Esse negócio não parece estar certo. Os números ficam um ao lado do outro, 12, 13, 14,   $\cdots$   e não um embaixo do outro como você mostrou aí!  
   
   {\bf Quadrinho 4}  
   A professora aparece no quadro  
@@ -968,7 +968,7 @@ m)
   
   Alice: Mas a professora não falou disso...  
   
-  Professora: Crianças, não briguem, os dois estão certos. Vamos falar disso na lição de hoje.  
+  Professora: Crianças, acalmem os ânimos, pois os dois estão certos. Vamos falar disso na lição de hoje.
   
 \end{imagem*}
 
@@ -1076,7 +1076,7 @@ Para a sobremesa do almoço de domingo, papai passou em uma confeitaria em que a
   \item     Que fração de uma torta é uma fatia? Explique.
   \item     Domingo papai comprou 4 fatias, quantos oitavos de uma torta havia para a sobremesa?
   \item     Na pergunta anterior, apresente outra fração que represente a quantidade de torta que papai comprou. Explique sua resposta.
-  \item     Hoje papai comprou 10 fatias de torta. Como podemos representar essa quantidade de torta em termos de frações de     {\bf uma torta}    ? Lembre-se que oito fatias formam uma torta inteira.
+  \item     Hoje papai comprou 10 fatias de torta. Como podemos representar essa quantidade de torta em termos de frações de {\bf uma torta}? Lembre-se que oito fatias formam uma torta inteira.
 \end{enumerate} %s
 
 \subsection{Atividade}
@@ -1652,6 +1652,8 @@ Na tabela a seguir, pinte cada figura de modo que a parte pintada seja a fraçã
 
 \subsection{Atividade}
 
+Em cada linha na tabela a seguir, a coluna da esquerda indica uma fração da unidade e a coluna do meio apresenta uma figura que corresponde a esta fração da unidade. Você deve desenhar, na coluna da direita, uma unidade. 
+
 \begin{center}
   \begin{longtable}{|m{0.2\textwidth}|m{0.2\textwidth}|m{0.5\textwidth}|}
     \hline 
@@ -1897,7 +1899,7 @@ Sabendo que nessa pizzaria cada pizza é equiparticionada em 8 partes, pergunta-
 
 
 \chapter{Frações e a reta numérica }
-
+\setcounter{subsection}{0}
 \section{EXPLORANDO O ASSUNTO }
 
 \subsection{Atividade}
@@ -3130,27 +3132,82 @@ Complete as sentenças a seguir com os sinais $>$ (maior), $<$ (menor) ou $=$ (i
 
 \subsection{Atividade}
 
-Observe as faixas pintadas na atividade anterior. 
+Você recebeu uma folha com retângulos que têm o mesmo tamanho mas que são coloridos de maneira diferente. Em cada um deles há marcações que representam uma equipartição.  
 
-\begin{enumerate} [\quad a)] %s
-  \item     Corte uma das 3 partes da faixa verde. Que fração representa? Marque esta fração na reta numérica abaixo.
-  \item     Corte agora 2 partes da faixa dividida em 6 partes e que foi pintada de rosa claro. Que fração da unidade estas duas partes cortadas representam? Marque esta fração na mesma reta numerica abaixo.
-  \item     Corte agora 3 partes da faixa dividida em 9 partes e que foi pintada de vermelho. Que fração da unidade estas três partes cortadas representam? Marque esta fração na mesma reta numérica
-\end{enumerate} %s
-
-  
+\begin{enumerate}[a)]
+\item Complete os retângulos, ecrevendo em cada um deles a fração representada por cada parte da equipartição, como no exemplo
 \begin{center}
-\begin{tikzpicture}[x=100mm,y=100mm]
-\draw[->] (0,0) -- (1.1,0) ; %reta anterior
-\foreach \x in {0,.06125,...,1}{ \draw (\x,3pt) -- (\x,-3pt);}
-\node[below] at (0,0) {0};
-\node[below] at (1,0) {1};
+\begin{tikzpicture}[scale=.5]
+\draw[fill=gray] (0,0) rectangle (60,12);
+    \end{tikzpicture}
+
+\begin{tikzpicture}[scale=.5]
+\draw[fill=light] (0,0) rectangle (60,12);
+\draw (30,0) -- (30,12);
+\node at (15,6) {{\small $\frac{1}{2}$}};
+\node at (45,6) {{\small $\frac{1}{2}$}};
+\end{tikzpicture}
+    
+   \begin{tikzpicture}[scale=.5]
+\draw[fill=pink] (0,0) rectangle (60,12);
+\foreach \x in {1,2} \draw (\x*60/3,0) -- (\x*60/3,12);
+    \end{tikzpicture}        
+    
+      \begin{tikzpicture}[scale=.5]
+\draw[fill=special] (0,0) rectangle (60,12);
+\foreach \x in {1,2,3} \draw (\x*60/4,0) -- (\x*60/4,12);
+    \end{tikzpicture}        
+    
+   \begin{tikzpicture}[scale=.5]
+\draw[fill=attention] (0,0) rectangle (60,12);
+\foreach \x in {1,...,4} \draw (\x*60/5,0) -- (\x*60/5,12);
+    \end{tikzpicture}        
+    
+   \begin{tikzpicture}[scale=.5]
+\draw[fill=common] (0,0) rectangle (60,12);
+\foreach \x in {1,...,5} \draw (\x*60/6,0) -- (\x*60/6,12);
+    \end{tikzpicture}        
+    
+    \begin{tikzpicture}[scale=.5]
+\draw[fill=CornflowerBlue] (0,0) rectangle (60,12);
+\foreach \x in {1,...,6} \draw (\x*60/7,0) -- (\x*60/7,12);
+    \end{tikzpicture}        
+    
+   \begin{tikzpicture}[scale=.5]
+\draw[fill=dark] (0,0) rectangle (60,12);
+\foreach \x in {1,...,7} \draw (\x*60/8,0) -- (\x*60/8,12);
+    \end{tikzpicture}        
+    
+   \begin{tikzpicture}[scale=.5]
+\draw[fill=Fuchsia] (0,0) rectangle (60,12);'
+\foreach \x in {1,...,8} \draw (\x*60/9,0) -- (\x*60/9,12);
+    \end{tikzpicture}        
+    
+ \begin{tikzpicture}[scale=.5]   
+ \draw[fill=NavyBlue] (0,0) rectangle (60,12);
+ \foreach \x in {1,...,9} \draw (\x*60/10,0) -- (\x*60/10,12);
+     \end{tikzpicture}        
+    
+\begin{tikzpicture}[scale=.5]   
+    \draw[fill=BlueViolet] (0,0) rectangle (60,12);
+\foreach \x in {1,...,15} \draw (\x*60/16,0) -- (\x*60/16,12);
+    \end{tikzpicture}        
+ \end{center}
+\item  Recorte os retângulos coloridos da folha que você recebeu e use-os para representar na reta numérica os seguintes números: 
+
+$0$, $1$, $\frac{1}{2}$, $\frac{1}{3}$, $\frac{1}{4}$, $\frac{3}{4}$, $\frac{3}{5}$, $\frac{5}{6}$, $\frac{7}{6}$, $\frac{6}{7}$,  $\frac{10}{7}$,  $\frac{12}{7}$,  $\frac{10}{8}$,  $\frac{12}{8}$, $\frac{10}{9}$, $\frac{12}{9}$, $\frac{10}{10}$, $\frac{20}{16}$
+
+\begin{center}
+ \begin{tikzpicture}[scale=.5]
+\draw[->] (-10,0) -- (150,0);
+\foreach \x in {0,60} \draw (\x,-6pt) -- (\x,6 pt);
+\node at (0,-20pt) {0};
+\node at (60,-20pt) {1};
 \end{tikzpicture}
 \end{center}
 
-Como ficou a marcação? O que podemos inferir do resultado obtido nos itens a), b) e c)?
 
-Identifique na figura com as faixas da atividade anterior outras frações que podem ser marcadas no mesmo local na reta.
+\end{enumerate}
 
 
 \subsection{Atividade}
@@ -3162,9 +3219,9 @@ Na reta numérica a seguir:
   \item     Marque     $\frac{1}{4}$    ,     $\frac{3}{4}$     e     $\frac{5}{4}$    . Explique como raciocinou para fazer essas marcações. 
   
 \begin{center}
-\begin{tikzpicture}[x=34mm,y=34mm]
-\draw[->] (-0.5,0) -- (3,0) ; %reta anterior
-\foreach \x in {0,1,2}{ \draw (\x,3pt) -- (\x,-3pt);}
+\begin{tikzpicture}[x=15mm,y=15mm]
+\draw[->] (-0.5,0) -- (5.5,0) ; %reta anterior
+\foreach \x in {0,2}{ \draw (\x,3pt) -- (\x,-3pt);}
 \node[below] at (0,0) {0};
 \node[below] at (2,0) {2};
 \end{tikzpicture}
@@ -3190,6 +3247,7 @@ Volte à reta e marque outras três frações que atendam às seguintes condiç�
 
 
 \chapter{Frações Equivalentes e Comparação de Frações }
+\setcounter{subsection}{0}
 
 \begin{imagem*}[breakable]{}{}   FIGURA ARTÍSTICA -  
   HISTÓRIA EM QUADRINHOS  
@@ -3324,9 +3382,9 @@ onde 3 é o número de partes em que você dobrou a folha.
 
 Do mesmo modo, ao dobrar a folha em quatro, seis ou oito partes iguais, você obteve outras representações equivalentes para a fração $\frac{3}{10}$:
 \begin{itemize} %d
-  \item     ao dobrar em     {\bf quatro}     partes iguais:     $\frac{3}{10} = \frac{12}{40} = \frac{4 \times 3}{4 \times 10}$    ; em que 4 é o numero de partes em que você dobrou a folha;
-  \item     ao dobrar em     {\bf seis}     partes iguais:     $\frac{3}{10} = \frac{18}{60} = \frac{6 \times 3}{6 \times 10}$    ; em que 6 é o numero de partes em que você dobrou a folha;
-  \item     ao dobrar em     {\bf oito}     partes iguais:     $\frac{3}{10} = \frac{24}{80} = \frac{8 \times 3}{8 \times 10}$    ; em que 8 é o numero de partes em que você dobrou a folha.
+  \item     ao dobrar em     {\bf quatro}     partes iguais:     $\frac{3}{10} = \frac{12}{40} = \frac{4 \times 3}{4 \times 10}$; em que 4 é o numero de partes em que você dobrou a folha;
+  \item     ao dobrar em     {\bf seis}     partes iguais:     $\frac{3}{10} = \frac{18}{60} = \frac{6 \times 3}{6 \times 10}$; em que 6 é o numero de partes em que você dobrou a folha;
+  \item     ao dobrar em     {\bf oito}     partes iguais:     $\frac{3}{10} = \frac{24}{80} = \frac{8 \times 3}{8 \times 10}$; em que 8 é o numero de partes em que você dobrou a folha.
 \end{itemize} %d
 
 
@@ -3847,10 +3905,10 @@ Para isto, responda às perguntas na tabela a seguir com frações adequadas. Se
   Na verdade, para qualquer subdivisão da fração   $\frac{1}{2}$    em   $p$   partes iguais, deve-se considerar   $p$   dessas novas partes para obter uma fração igual a anterior. Matematicamente falando, isto significa que:  
   $$\dfrac{1}{2}= \dfrac{p \times 1}{p \times 2}$$     
   qualquer que seja   $p$   um número natural maior que zero.  
-  De modo geral, para qualquer fração    $\frac{n}{d}$  ,  temos que  
+  De modo geral, para qualquer fração    $\frac{n}{d}$,  temos que  
   $$\dfrac{n}{d}=\dfrac{1 \times n}{1 \times d}= \dfrac{2 \times n}{2 \times d} = \dfrac{3 \times n}{3 \times d} = \dfrac{4 \times n}{4 \times d} = \dfrac{5 \times n}{5 \times d}=\cdots =  \dfrac{p \times n}{p \times d}= \cdots$$  
-  qualquer que seja o número natural   $p > 0$  .  
-  Com isso, você aprendeu uma técnica para obter frações iguais a uma fração dada: basta multiplicar o numerador e o denominador da fração dada por um mesmo número natural   $p > 0$  .   
+  qualquer que seja o número natural   $p > 0$.  
+  Com isso, você aprendeu uma técnica para obter frações iguais a uma fração dada: basta multiplicar o numerador e o denominador da fração dada por um mesmo número natural   $p > 0$.   
   
   Isto será muito útil para a realização de outras atividades com frações.  
 \end{refletindo*}
@@ -4573,11 +4631,11 @@ Seu grupo também receberá peões que identificarão as posições dos jogadore
 O dado pode ser usado para decidir a ordem de jogada. As regras do jogo são as seguintes:
 
 
-(1º) No desenvolvimento do jogo, cada jogador lança o dado duas vezes. Esses lançamentos determinam a fração que correspondente ao movimento que o jogador fará: o primeiro lançamento registra o denominador da fração e o segundo o numerador. Assim, por exemplo, se o primeiro lançamento do dado resulta no número 12 e o segundo lançamento resulta no número 10, a fração correspondente é $\frac{10}{12}$. Outro exemplo: se o número do primeiro lançamento do dado é $6$ e o número do segundo lançamento é $3$, a fração correspondente é $\frac{3}{6}$. Mais um exemplo: se o número do primeiro lançamento do dado é $5$ e o número do segundo lançamento é $7$, a fração correspondente é $\frac{7}{5}$.
+$1^{\textrm{\underline{o}}}$ No desenvolvimento do jogo, cada jogador lança o dado duas vezes. Esses lançamentos determinam a fração que correspondente ao movimento que o jogador fará: o primeiro lançamento registra o denominador da fração e o segundo o numerador. Assim, por exemplo, se o primeiro lançamento do dado resulta no número 12 e o segundo lançamento resulta no número 10, a fração correspondente é $\frac{10}{12}$. Outro exemplo: se o número do primeiro lançamento do dado é $6$ e o número do segundo lançamento é $3$, a fração correspondente é $\frac{3}{6}$. Mais um exemplo: se o número do primeiro lançamento do dado é $5$ e o número do segundo lançamento é $7$, a fração correspondente é $\frac{7}{5}$.
 
-(2º) Se a fração obtida com o lançamento dos dados for equivalente a uma fraçào de denominador 12, ou seja, a certa quantidade de doze avos, o peão “caminha” essa quantidade de passos. Caso contrário, ele não sai do lugar que está e passa a vez para o próximo jogador. Assim, por exemplo: se a fração obtida for $\frac{10}{12}$, seu peão andará 10 casas. Se a fração obtida for $\frac{3}{6}$, seu peão andará $6$ casas, pois $\frac{3}{6} = \frac{6}{12}$. Se a fração obtida for $\frac{7}{5}$, seu peão permanecerá na casa em que está e você passará a vez.
+$2^{\textrm{\underline{o}}}$ Se a fração obtida com o lançamento dos dados for equivalente a uma fraçào de denominador 12, ou seja, a certa quantidade de doze avos, o peão ``caminha'' essa quantidade de passos. Caso contrário, ele não sai do lugar que está e passa a vez para o próximo jogador. Assim, por exemplo: se a fração obtida for $\frac{10}{12}$, seu peão andará 10 casas. Se a fração obtida for $\frac{3}{6}$, seu peão andará $6$ casas, pois $\frac{3}{6} = \frac{6}{12}$. Se a fração obtida for $\frac{7}{5}$, seu peão permanecerá na casa em que está e você passará a vez.
 
-(3º) Vence o jogo aquele jogador que, em primeiro lugar, atingir o ponto de chegada. 
+$3^{\textrm{\underline{o}}}$ Vence o jogo aquele jogador que, em primeiro lugar, atingir o ponto de chegada. 
 
 Depois de jogar algumas vezes responda às questões a seguir. 
 
@@ -4633,13 +4691,13 @@ Diga se cada uma das sentenças a seguir é verdadeira ou falsa. Explique a sua 
 
 \subsection{Atividade}
 \begin{enumerate}[a)]
- \item Escreva uma fração que seja menor do que $1$ e maior do que $0$.
- \item Existe uma fração menor do que a fração que você escreveu no Item a)? Em caso afirmativo, escreva uma tal fração.
+ \item Escreva uma fração que seja menor do que 1 e maior do que 0.
+ \item Existe uma fração maior do que 0 e menor do que a fração que você escreveu no Item a)? Em caso afirmativo, escreva uma tal fração.
  \item Existe uma fração menor do que a fração que você escreveu no Item b)? Em caso afirmativo, escreva uma tal fração.
- \item É possível generalizar este processo, isto é, dada uma fração menor do que $1$ e maior do que $0$, é sempre possível determinar uma outra fração menor ainda? Em caso afirmativo, explique como tal fração pode ser obtida.
+ \item É possível generalizar este processo, isto é, dada uma fração menor do que 1 e maior do que 0, é sempre possível determinar uma outra fração menor ainda? Em caso afirmativo, explique como tal fração pode ser obtida.
  \item Existe uma fração menor do que 1 e que seja maior do que a fração que você escreveu no Item a)? Em caso afirmativo, escreva uma tal fração.
  \item Existe uma fração menor do que 1 e que seja maior do que a fração que você escreveu no Item e)? Em caso afirmativo, escreva uma tal fração.
- \item É possível generalizar este processo, isto é, dada uma fração menor do que $1$, é sempre possível determinar uma outra fração menor do que $1$ e que seja maior do que a fração dada? Em caso afirmativo, explique como tal fração pode ser obtida.
+ \item É possível generalizar este processo, isto é, dada uma fração menor do que 1, é sempre possível determinar uma outra fração menor do que 1 e que seja maior do que a fração dada? Em caso afirmativo, explique como tal fração pode ser obtida.
 \end{enumerate}
 
 \subsection{Atividade}
@@ -4724,6 +4782,7 @@ Fabrício acredita que não existem frações entre $\frac{3}{5}$ e $\frac{4}{5}
   
 \end{refletindo*}
 
-
+\chapter{Soma e subtração de frações}
+\setcounter{subsection}{0}
 
 \end{document}
