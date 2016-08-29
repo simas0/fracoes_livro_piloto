@@ -1,0 +1,55 @@
+\documentclass[a4paper,10pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage{anyfontsize}
+
+\definecolor{dark}{RGB}     {97,83,117}
+\definecolor{common}{RGB}   {142,178,197}
+\definecolor{special}{RGB}  {229,98,92}
+\definecolor{light}{RGB}    {249,191,118}
+\definecolor{attention}{RGB}{209,49,61}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\fill[light]  ([yshift=2mm,xshift=-2mm]current page.north west) rectangle ([yshift=-5mm,xshift=2mm]current page.south east);
+  [xshift=-1.5cm,yshift=-1.3cm] at (current page.south east)
+  \node[xshift=-8cm,yshift=-2cm] at (current page.north east) {\normalsize INSTITUTO NACIONAL DE MATEMÁTICA PURA E APLICADA};
+ \node[xshift=7cm,yshift=-6cm] at  (current page.north west) { \fontsize{50pt}{10pt} \selectfont {\bf FRAÇÕES}}; 
+ \node[xshift=12cm,yshift=-7.5cm] at  (current page.north west) { \fontsize{20pt}{10pt} \selectfont  no Ensino Fundamental - Volume 1};
+ %\fill[white, xshift=2cm,yshift=-5cm]  (current page.north west) (0,0) rectangle (10,-10);
+ 
+ 
+ 
+ 
+
+\def \tripa{ (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) [shift={({4*sqrt(3)},0)}]--  (270:4) -- (330:4) -- (30:4) -- (90:4)--(150:4) [shift={({-4*sqrt(3)},0)}] -- (90:4) -- (150:4)--cycle;}
+
+\def \tripamagra{ (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) -- (30:4) -- (90:4)--(150:4) --cycle;}
+ 
+ \begin{scope}[anchor=center, scale=.7, shift={([yshift=6cm]current page.center)}]
+\def \opct{.4}
+\fill[common, opacity=\opct]  (30:4) -- (90:4) -- (150:4) -- (210:4) -- (270:4) -- (330:4) -- cycle;
+\fill[special, opacity=\opct] (0,0) -- (210:4) -- (270:4) -- (330:4) -- cycle;
+
+\begin{scope}[shift={({-2*sqrt(3)},-8)}] 
+ \fill[common, opacity=\opct] \tripamagra;
+ \fill[special, opacity=\opct] (-90:4) -- (0,0) -- (30:8) -- ({4*sqrt(3)},0) --cycle;
+\end{scope}
+ 
+\begin{scope}[shift={({-4*sqrt(3)},-16)}]  
+\fill[common, opacity=\opct] \tripa;
+\fill[special, opacity=\opct] (0,0) -- (30:8) -- ({8*sqrt(3)},0) -- ({6*sqrt(3)},-2) -- ({4*sqrt(3)},0) -- (-30:4) --cycle;
+\end{scope} 
+  \end{scope}
+  
+\node[text width=9cm]  at ([xshift=-6cm , yshift=6cm] current page.south east) { \fontsize{20pt}{30pt} \selectfont \bf Cydara Cavedon Ripoll \\ Fabio Simas \\ Humberto Bortolossi \\ Letícia Rangel \\ Victor Giraldo  \\  Wanderley Rezende \vspace{.5cm} \\  Wellerson Quintaneiro};
+  
+  
+\end{tikzpicture}%
+
+\end{document}
