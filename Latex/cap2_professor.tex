@@ -407,7 +407,7 @@
        \begin{tikzpicture}[x=1mm,y=1mm, scale=.7]
         \draw[fill=common, fill opacity=.3] (0,0) circle (10);
         \fill[attention] (180:10) arc (180:270:10) -- (0,0) -- cycle;
-        \foreach \x in {0,45,90}\draw (\x:10) -- (\x:-10);        
+        \foreach \x in {0,45,90, 135}\draw (\x:10) -- (\x:-10);        
        \end{tikzpicture} 
 \end{center}
 \end{resposta*}
@@ -581,17 +581,11 @@
 
 \subsection{Atividade 11}
 
-
-
-
-
   Objetivos específicos: Levar o aluno a
 \begin{itemize} %d
     \item       Recompor a unidade a partir de uma fração dada em modelo contínuo, incluindo o caso de frações impróprias.
     \item       Relacionar a fração correspondente à parte apresentada à quantidade necessária dessas partes para compor a unidade. Assim, por exemplo, para compor a unidade a partir de       $\frac{2}{3}$       da unidade, basta repartir esta fração em 2 partes iguais (para recuperar a fração unitária       $\frac{1}{3}$      ) e, então, justapor 3 cópias de uma destas partes.
 \end{itemize} %d
-
-
 
   Recomendações e sugestões para o desenvolvimento da atividade:
 \begin{itemize} %d
@@ -601,7 +595,6 @@
     \item       Caso seja necessário fazer alguma partição, não se espera nem se recomenda que os alunos usem alguma medida. Uma partição feita de forma livre e coerente será suficiente.
 \end{itemize} %d
 
-
   Classificações
 \begin{itemize} %s
     \item       Heid et al.: Produto: gerar
@@ -609,52 +602,102 @@
     \item       UERJ: Interpretar: compor e decompor
 \end{itemize} %s
 
-
-
-
 \begin{resposta*}{Atividade 11}
 
 
 
 \begin{center}
-    \begin{tabulary}{0.8\textwidth}{*{50}{L}}
-      \hline \hline \\
-        Fração  &    &   \\
-      \hline \\
-        $\frac{1}{2}$  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-retangulo.png}  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-retangulo-resposta-um-meio.png}  \\
-      \hline \\
-        $\frac{4}{2}$  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-retangulo.png}  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-retangulo-resposta-quatro-meios.png}  \\
-      \hline \\
-        $\frac{3}{2}$  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-retangulo.png}  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-retangulo-resposta-tres-meios.png}  \\
-      \hline \\
-        $\frac{2}{3}$  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-retangulo.png}  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-retangulo-resposta-dois-tercos.png}  \\
-      \hline \\
-        $\frac{1}{2}$  &   \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-disco.png}  &   \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-disco-resposta-um-meio.png}  \\
-      \hline \\
-        $\frac{4}{2}$  &   \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-disco.png}  &   \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-disco-resposta-quatro-meios.png}  \\
-      \hline \\
-        $\frac{3}{2}$  &   \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-disco.png}  &   \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-disco-resposta-tres-meios.png}  \\
-      \hline \\
-        $\frac{2}{3}$  &   \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-disco.png}  &   \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-disco-resposta-dois-tercos.png}  \\
-      \hline \\
-        $\frac{1}{2}$  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-segmento.png}  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-segmento-resposta-um-meio.png}  \\
-      \hline \\
-        $\frac{4}{2}$  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-segmento.png}  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-segmento-resposta-quatro-meios.png}  \\
-      \hline \\
-        $\frac{3}{2}$  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-segmento.png}  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-segmento-resposta-tres-meios.png}  \\
-      \hline \\
-        $\frac{2}{3}$  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-segmento.png}  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-segmento-resposta-dois-tercos.png}  \\
-      \hline \\
-        $\frac{1}{2}$  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-hexagono.png}  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-hexagono-resposta-um-meio.png}  \\
-      \hline \\
-        $\frac{4}{2}$  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-hexagono.png}  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-hexagono-resposta-quatro-meios.png}  \\
-      \hline \\
-        $\frac{3}{2}$  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-hexagono.png}  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-hexagono-resposta-tres-meios.png}  \\
-      \hline \\
-        $\frac{2}{3}$  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-hexagono.png}  &   \includegraphics[height=18pt, keepaspectratio]{../../livro/media/cap2/secoes/complete-hexagono-resposta-dois-tercos.png}  \\
-      \hline \\
-    \end{tabulary}
-  \end{center}
+  \begin{tabular}{|m{0.05\textwidth}|m{0.1\textwidth}|m{0.25\textwidth}|}
+    \hline 
+     \centering Fração  & \centering  Figura da fração  & \quad \quad \quad Uma unidade possível  \\
+    \hline \hline 
+     \centering $\dfrac{1}{2}$  &\centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) rectangle (12,6);
+                                   \end{tikzpicture}}
+				& \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention, very thick] (0,0) rectangle (12,6);
+                                    \draw[fill=attention] (12,0) rectangle (24,6);
+                                   \end{tikzpicture} \\
+    \hline
+     \centering $\dfrac{4}{2}$  &   \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) rectangle (12,6);
+                                   \end{tikzpicture}}
+                                   & \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) rectangle (6,6);
+                                    \draw[fill=common, fill opacity=.3] (6,0) rectangle (12,6);
+                                    \draw[very thick] (0,0) rectangle (12,6);
+                                   \end{tikzpicture}} \\
+    \hline
+     \centering $\dfrac{3}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) rectangle (12,6);
+                                   \end{tikzpicture}}
+                                   & \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) rectangle (4,6);
+                                    \draw[fill=attention] (4,0) rectangle (8,6);
+                                    \draw[fill=common, fill opacity=.3] (8,0) rectangle (12,6);
+                                    \draw[very thick] (0,0) rectangle (12,6);
+                                   \end{tikzpicture}}  \\
+    \hline
+     \centering $\dfrac{2}{3}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) rectangle (12,6);
+                                   \end{tikzpicture}}
+                                   & \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) rectangle (6,6);
+                                    \draw[fill=attention] (6,0) rectangle (12,6);
+                                    \draw[fill=attention] (12,0) rectangle (18,6);
+                                    \draw[very thick] (0,0) rectangle (12,6);
+                                   \end{tikzpicture} \\
+    \hline
+     \centering $\dfrac{1}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) arc (0:180:6) -- cycle;
+                                   \end{tikzpicture}}  &  \\
+    \hline
+      \centering $\dfrac{4}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) arc (0:180:6) -- cycle;
+                                   \end{tikzpicture}} &  \\
+    \hline
+      \centering $\dfrac{3}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) arc (0:180:6) -- cycle;
+                                   \end{tikzpicture}}  &  \\
+    \hline
+      \centering $\dfrac{2}{3}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) arc (0:180:6) -- cycle;
+                                   \end{tikzpicture}} &  \\
+    \hline
+      \centering $\dfrac{1}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) rectangle (12,1);
+                                   \end{tikzpicture}}  &  \\
+    \hline
+      \centering $\dfrac{4}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) rectangle (12,1);
+                                   \end{tikzpicture}}  &  \\
+    \hline
+      \centering $\dfrac{3}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) rectangle (12,1);
+                                   \end{tikzpicture}}  &  \\
+    \hline
+      \centering $\dfrac{2}{3}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) rectangle (12,1);
+                                   \end{tikzpicture}}   &  \\
+    \hline
+        \centering $\dfrac{1}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{ \begin{tikzpicture}[x=1mm,y=1mm]
+                                      \draw[fill=attention] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+                                     \end{tikzpicture} } &  \\
+     \hline
+     \centering $\dfrac{4}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{ \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+                                   \end{tikzpicture} } &  \\
+     \hline
+       \centering $\dfrac{3}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{ \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+                                   \end{tikzpicture} } &  \\
+    \hline
+      \centering $\dfrac{2}{3}$  &  \centering \parbox[c][1.1cm]{1.5cm}{ \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+                                   \end{tikzpicture} } &  \\
+    \hline
+  \end{tabular}
+\end{center}
 \end{resposta*}
 
 
