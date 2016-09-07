@@ -1822,13 +1822,15 @@ A figura a seguir tem 3 partes pintadas de vermelho e 4 partes pintadas de branc
 
 \subsection{Atividade}
 
+\def \tripinha{ (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) -- (30:4) -- (90:4)--(150:4)--cycle;}
+
 \begin{enumerate} [\quad a)] %s
   \item     A parte em vermelho na figura a seguir representa $\frac{1}{2}$ ou $\frac{1}{4}$? 
 \begin{center}
 \begin{tikzpicture}[scale=1.5]
- \draw \tripa;
+ \draw \tripinha;
 \begin{scope}
- \clip \tripa;
+ \clip \tripinha;
 \draw[fill=attention] (-4,-4) rectangle (0,4);
 \end{scope}
 \end{tikzpicture} 

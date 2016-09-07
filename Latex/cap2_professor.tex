@@ -195,7 +195,7 @@
 \begin{enumerate} [\quad a)] %s
     \item       Cada fatia é um oitavo de torta, pois cada torta está dividida em oito partes iguais.
     \item       Havia para a sobremesa quatro oitavos de torta.
-    \item       Meia torta, pois quatro fatias de torta têm exatamente a mesma quantidade de torta que meia torta.      \mbox{} \newline
+    \item       Meia torta, pois quatro fatias de torta têm exatamente a mesma quantidade de torta que meia torta.
 \end{enumerate} %s
   \begin{imagem*}[breakable]{}{}     FIGURA ARTÍSTICA         \includegraphics[width=60pt, keepaspectratio]{../../livro/media//cap2/secoes/tortas-circulares-01.png}  \end{imagem*}
 \begin{enumerate} [\quad a)] %s
@@ -295,9 +295,7 @@
 \begin{resposta*}{Atividade 5}
 
 
-
-\begin{center}
-    \begin{tabular}{m{.085\textwidth}m{.085\textwidth}m{.08\textwidth}m{.08\textwidth}}
+    \begin{tabular}{m{.08\textwidth}m{.08\textwidth}m{.08\textwidth}m{.08\textwidth}}
       
         \small Pedro & \small Isabella  &   \small Bernardo  &   \small Manuela  \\
       \hline
@@ -326,7 +324,6 @@
       \hline
        \centering $\frac{4}{12}$  & \centering  $\frac{5}{12}$  & \centering  $\frac{2}{12}$   & \centering  $\frac{1}{12}$ 
     \end{tabular}
-  \end{center}
 
 \begin{enumerate} [\quad a)] %s
     \item       A que usa a notação simbólica matemática.
@@ -508,12 +505,12 @@
                                    \end{tikzpicture}
                                    & $$\dfrac{1}{4}$$  \\
     \hline 
-     \centering $\dfrac{2}{5}$  &   \centering \parbox[c][1.75cm][c]{2.4cm}{
-                                    \begin{tikzpicture}[x=1mm,y=1mm]
+     \centering $\dfrac{2}{5}$  &   \centering 
+                                    \begin{tikzpicture}[x=1mm,y=1mm,scale=.8]
                                     \draw[fill=common, fill opacity=.3] (0,0) rectangle (25,16);
                                     \fill[attention] (0,0) rectangle (10,16);
                                     \foreach \x in {5,10,15,20}{\draw (\x,0)--(\x,16);}
-                                   \end{tikzpicture} }
+                                   \end{tikzpicture}
                                    & $$\dfrac{3}{5}$$ \\
     \hline
      \centering $\dfrac{2}{3}$  &  \centering \begin{tikzpicture}[x=1mm,y=1mm] 
@@ -529,7 +526,7 @@
                                     \foreach \x in {0,45,90,135} \draw (\x:8)--(\x:-8);                                    
                                    \end{tikzpicture} & $$\dfrac{5}{8}$$ \\
     \hline
-     \centering $\dfrac{9}{10}$  & \centering \begin{tikzpicture}[x=1mm,y=1mm]
+     \centering $\dfrac{9}{10}$  & \centering \begin{tikzpicture}[x=1mm,y=1mm,scale=.8]
                                     \draw[fill=common, fill opacity=.3] (20,8) rectangle (25,16);
                                     \fill[attention] (0,0) rectangle (20,16);
                                     \fill[attention] (20,0) rectangle (25,8);
@@ -607,9 +604,9 @@
 
 
 \begin{center}
-  \begin{tabular}{|m{0.05\textwidth}|m{0.1\textwidth}|m{0.25\textwidth}|}
+  \begin{tabular}{|m{0.05\textwidth}|m{0.1\textwidth}|m{0.15\textwidth}|}
     \hline 
-     \centering Fração  & \centering  Figura da fração  & \quad \quad \quad Uma unidade possível  \\
+     \centering Fração  & \centering  Figura da fração  &  Uma unidade possível  \\
     \hline \hline 
      \centering $\dfrac{1}{2}$  &\centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
                                     \draw[fill=attention] (0,0) rectangle (12,6);
@@ -648,53 +645,109 @@
                                     \draw[very thick] (0,0) rectangle (12,6);
                                    \end{tikzpicture} \\
     \hline
-     \centering $\dfrac{1}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+     \centering $\dfrac{1}{2}$  &  \centering \parbox[c][1.1cm][c]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
                                     \draw[fill=attention] (0,0) arc (0:180:6) -- cycle;
-                                   \end{tikzpicture}}  &  \\
+                                   \end{tikzpicture}}  & \parbox[t][1.1cm][b]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                   \draw[fill=attention] (0,0) circle (6);
+                                   \draw[very thick] (6,0) arc (0:180:6) -- cycle;
+                                   \end{tikzpicture}}
+                                   
+                                   \\
     \hline
       \centering $\dfrac{4}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
                                     \draw[fill=attention] (0,0) arc (0:180:6) -- cycle;
-                                   \end{tikzpicture}} &  \\
+                                   \end{tikzpicture}} & \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (-6,6) arc (90:180:6) -- (-6,0)-- cycle;
+                                    \draw[fill=common, fill opacity=.3] (0,0) arc (0:90:6) -- (-6,0) -- cycle;
+                                    \draw[very thick] (0,0) arc (0:180:6) -- cycle;
+                                   \end{tikzpicture}}
+                                   \\
     \hline
       \centering $\dfrac{3}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
                                     \draw[fill=attention] (0,0) arc (0:180:6) -- cycle;
-                                   \end{tikzpicture}}  &  \\
+                                    \end{tikzpicture}}  & \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=common, fill opacity=.3] (0:6) arc (0:60:6) -- (0,0)-- cycle;
+                                    \draw[fill=attention] (60:6) arc (60:180:6) -- (0,0) -- cycle;
+                                    \draw (0,0) -- (120:6);
+                                    \draw[very thick] (0:6) arc (0:180:6) -- cycle;
+                                    \end{tikzpicture} \\
     \hline
       \centering $\dfrac{2}{3}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
                                     \draw[fill=attention] (0,0) arc (0:180:6) -- cycle;
-                                   \end{tikzpicture}} &  \\
+                                   \end{tikzpicture}} & \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0:6) arc (0:270:6) -- (0,0) -- cycle;
+                                    \draw (0,0) -- (90:6);	
+                                    \draw[very thick] (0:6) arc (0:180:6) -- cycle;
+                                   \end{tikzpicture} \\
     \hline
       \centering $\dfrac{1}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
                                     \draw[fill=attention] (0,0) rectangle (12,1);
-                                   \end{tikzpicture}}  &  \\
+                                   \end{tikzpicture}}  & \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) rectangle (12,1);
+                                    \draw[fill=attention] (12,1) rectangle (24,0);
+                                   \end{tikzpicture} \\
     \hline
       \centering $\dfrac{4}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
                                     \draw[fill=attention] (0,0) rectangle (12,1);
-                                   \end{tikzpicture}}  &  \\
+                                   \end{tikzpicture}}  & \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) rectangle (6,1);
+                                    \draw[fill=common, fill opacity=.3] (6,1) rectangle (12,0);
+                                   \end{tikzpicture} \\
     \hline
       \centering $\dfrac{3}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
                                     \draw[fill=attention] (0,0) rectangle (12,1);
-                                   \end{tikzpicture}}  &  \\
+                                   \end{tikzpicture}}  & \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0,0) rectangle (8,1);
+                                    \draw[fill=common, fill opacity=.3] (8,1) rectangle (12,0);
+                                    \draw (4,0) -- (4,1);
+                                   \end{tikzpicture} \\
     \hline
       \centering $\dfrac{2}{3}$  &  \centering \parbox[c][1.1cm]{1.5cm}{\begin{tikzpicture}[x=1mm,y=1mm]
                                     \draw[fill=attention] (0,0) rectangle (12,1);
-                                   \end{tikzpicture}}   &  \\
+                                   \end{tikzpicture}}   & \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention, very thick] (0,0) rectangle (12,1);
+                                    \draw[fill=common, fill opacity=.3] (12,1) rectangle (18,0);
+                                    \draw (6,0) -- (6,1);
+                                   \end{tikzpicture}  \\
     \hline
         \centering $\dfrac{1}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{ \begin{tikzpicture}[x=1mm,y=1mm]
                                       \draw[fill=attention] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
-                                     \end{tikzpicture} } &  \\
+                                     \end{tikzpicture} } &  \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+                                    \draw[fill=attention, shift={(-6,{2*sqrt(3)})}] (180:4) -- (0:4) -- (300:4) -- (240:4)--cycle; 
+                                    \draw[fill=attention, shift={(-6,{-2*sqrt(3)})}] (180:4) -- (0:4) -- (60:4) -- (120:4)--cycle; 
+                                    \draw[very thick] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle; 
+                                    \end{tikzpicture}\\
+                                    
+%                                      ou \begin{tikzpicture}[x=1mm,y=1mm]
+%                                     \draw[fill=attention] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+%                                     \draw[fill=attention, shift={(8,0)} ] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle; 
+%                                     \end{tikzpicture}
      \hline
      \centering $\dfrac{4}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{ \begin{tikzpicture}[x=1mm,y=1mm]
                                     \draw[fill=attention] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
-                                   \end{tikzpicture} } &  \\
+                                   \end{tikzpicture} } & \begin{tikzpicture}[x=1mm,y=1mm]
+                                   \draw[fill=attention] (180:4) -- (0:4) -- (60:4) -- (120:4)--cycle; 
+                                   \draw[fill=common, fill opacity=.3] (180:4) -- (0:4) -- (300:4) -- (240:4)--cycle; 
+                                   \draw[very thick] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+                                   \end{tikzpicture}  \\
      \hline
        \centering $\dfrac{3}{2}$  &  \centering \parbox[c][1.1cm]{1.5cm}{ \begin{tikzpicture}[x=1mm,y=1mm]
                                     \draw[fill=attention] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
-                                   \end{tikzpicture} } &  \\
+                                   \end{tikzpicture} } & \begin{tikzpicture}[x=1mm,y=1mm]
+                                   \draw[fill=attention] (0,0) -- (0:4) -- (60:4) -- (120:4)-- (180:4) -- (240:4) -- cycle; 
+                                   \draw[fill=common, fill opacity=.3] (240:4)  -- (300:4)-- (0:4)-- (0,0) --cycle; 
+                                   \draw[very thick] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+                                   \draw (0,0) -- (120:4);
+                                    \end{tikzpicture} \\
     \hline
       \centering $\dfrac{2}{3}$  &  \centering \parbox[c][1.1cm]{1.5cm}{ \begin{tikzpicture}[x=1mm,y=1mm]
                                     \draw[fill=attention] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
-                                   \end{tikzpicture} } &  \\
+                                   \end{tikzpicture} } &  \begin{tikzpicture}[x=1mm,y=1mm]
+                                    \draw[fill=attention] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;
+                                    \draw[fill=attention, shift={(-6,{-2*sqrt(3)})}] (180:4) -- (0:4) -- (60:4) -- (120:4)--cycle; 
+                                    \draw[very thick] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle; 
+                                    \end{tikzpicture}  \\
     \hline
   \end{tabular}
 \end{center}
@@ -721,13 +774,9 @@
     \item       Não se espera nem se recomenda que as marcações feitas pelos alunos na pista sejam amparadas pela medida mas, sim, que sejam feitas de forma livre e coerente. Contudo, é preciso ficar atento para que as marcações dos carrinhos de Heitor e de Lorenzo coincidam (pois       $\frac{3}{2} = \frac{6}{4}$      ). A mesma observação se aplica aos carrinhos de Rafael e Samuel (pois       $\frac{4}{2} = \frac{6}{3}$      ).
     \item       Aqui, a definição de frações não unitárias como justaposições de frações unitárias pode ser usada para justificar o porquê, por exemplo, de os carrinhos de Rafael e de Samuel terem parado na mesma posição.
     \item       Assim, espera-se que a distância percorrida pelo carrinho de Matheus (item a) seja associada à metade do segmento que identifica a distância percorrida pelo carrinho de Lucas, que corresponde à unidade e está destacado em vermelho na imagem. Já a distância percorrida pelo carrinho de Heitor (item b) deve ser associada à justaposição de       $3$       segmentos correspondentes à distância percorrida pelo carrinho de Matheus. Espera-se que as demais distâncias sejam obtidas de forma semelhante. Cabe destacar, no entanto, que para determinar as distâncias percorridas pelos carrinhos de Lorenzo e de Samuel, será necessário deteminar       $\frac{1}{4}$       e       $\frac{1}{3}$       da unidade, respectivamente.
-    \item       De forma geral, se       $d$       é a distância percorrida pelo carrinho de Lucas, então a partição em       $2$       partes iguais de um segmento       $u$       cujo comprimento é       $d$       obtém dois segmentos congruentes       $s$       e       $s'$       que correspondem à       $\frac{1}{2}$       de       $u$       e cujos comprimentos são, portanto, iguais a       $\frac{1}{2}$       de       $d$      . A justaposição de       $2$       cópias de       $s$       (      $\frac{2}{2}$       de       $u$      ) tem comprimento       $d$       e, sendo assim, a justaposição de       $4$       cópias de       $s$       (      $\frac{4}{2}$       de       $u$      ) tem comprimento       $2d$      . Do mesmo modo, se       $t$       é um segmento que corresponde à       $\frac{1}{3}$       de       $u$      , então a justaposição de       $3$       cópias de       $t$       (      $\frac{3}{3}$       de       $u$      ) tem comprimento       $d$       e, em consequência, a justaposição de       $6$       cópias de       $6$       (      $\frac{6}{2}$       de       $u$      ) tem comprimento       $2d$      . Assim, os carrinhos de Rafael e de Samuel percorreram a mesma distância (      $2d$      ) e, como eles sairam do mesmo ponto de largada, suas posições finais são iguais.
+    \item       De forma geral, se       $d$       é a distância percorrida pelo carrinho de Lucas, então a partição em       $2$       partes iguais de um segmento       $u$       cujo comprimento é       $d$       obtém dois segmentos congruentes       $s$       e       $s'$       que correspondem à       $\frac{1}{2}$       de       $u$       e cujos comprimentos são, portanto, iguais a       $\frac{1}{2}$       de       $d$. A justaposição de       $2$       cópias de       $s$       ($\frac{2}{2}$       de       $u$) tem comprimento       $d$       e, sendo assim, a justaposição de       $4$       cópias de       $s$       ($\frac{4}{2}$ de $u$) tem comprimento       $2d$      . Do mesmo modo, se       $t$       é um segmento que corresponde à       $\frac{1}{3}$       de       $u$, então a justaposição de       $3$       cópias de       $t$       ($\frac{3}{3}$       de       $u$) tem comprimento       $d$       e, em consequência, a justaposição de       $6$       cópias de       $6$       ($\frac{6}{2}$       de       $u$) tem comprimento       $2d$      . Assim, os carrinhos de Rafael e de Samuel percorreram a mesma distância ($2d$) e, como eles sairam do mesmo ponto de largada, suas posições finais são iguais.
 \end{itemize} %s
 
-
-  \textbackslash{}*
-  De fato: suponha, por um momento, que a distância   $d$   percorrida pelo carrinho do Lucas seja igual a   $12$   metros. Assim,   $\frac{1}{2}$   de   $d$   corresponde a   $6$   metros e, consequentemente,   $\frac{4}{2}$   de   $d$   corresponde a   $4$   justaposições de   $\frac{1}{2}$   de   $d$  , isto é,   $4 \times 6 = 24$   metros, que é o quanto percorreu o carrinho de Rafael. Do mesmo modo,   $\frac{1}{3}$   de   $d$   corresponde a   $4$   metros e, consequentemente,   $\frac{6}{3}$   de   $d$   corresponde a   $6$   justaposições de   $\frac{1}{3}$   de   $d$  , isto é,   $6 \times 4 = 24$   metros, que é o quanto percorreu o carrinho de Samuel. Assim, os carrinhos de Rafael e de Samuel percorreram a mesma distância (  $24$   metros) e, como eles sairam do mesmo ponto de largada, suas posições finais são iguais.
-  *\textbackslash{}
 
   Classificações
 \begin{itemize} %s
@@ -746,7 +795,12 @@
 
 
 \begin{resposta*}{Atividade 12}
-    \includegraphics[width=100mm, keepaspectratio]{../../livro/media//cap2/secoes/corrida-resposta-01.png}
+
+\begin{imagem*} [breakable]{}{}   Figura Artística
+    \includegraphics[width=60mm, keepaspectratio]{../../livro/media//cap2/secoes/corrida-resposta-01.png}
+\end{imagem*}
+
+ 
 
   Observe que os carrinhos de Rafael e Samuel pararam no mesmo lugar!
 \end{resposta*}
@@ -761,7 +815,7 @@
 
   Objetivo específico: Levar o aluno a:
 \begin{itemize} %s
-    \item       Perceber que uma mesma fração (no caso,       $\frac{1}{2}$      ) de unidades diferentes pode resultar em quantidades diferentes.
+    \item       Perceber que uma mesma fração (no caso, $\frac{1}{2}$) de unidades diferentes pode resultar em quantidades diferentes.
 \end{itemize} %s
 
 
@@ -782,10 +836,23 @@
 
 \begin{resposta*}{Atividade 13}
   José está certo se a pizza da qual comeu metade for maior do que a pizza da qual Ella comeu metade, como ilustra a figura a seguir.
-  \begin{imagem*}[breakable]{}{}     FIGURA GEOMÉTRICA
-        \includegraphics[width=60mm, keepaspectratio]{../../livro/media//cap2/secoes/naep-resposta-01.png}
-  \end{imagem*}
-\end{resposta*}
+  \begin{center}
+   \begin{tikzpicture}[x=1mm,y=1mm]
+    \draw (0,0) circle (4);
+    \draw[fill=attention] (90:4) arc (90:270:4) --  cycle;
+    \draw[fill=common, fill opacity=.3] (90:4) arc (90:-90:4) --  cycle;
+    \node at (0,8) {Pizza de Ella};
+    \begin{scope}[shift={(20,0)}]
+    \draw (0,0) circle (8);
+    \draw[fill=attention] (90:8) arc (90:270:8) --  cycle;
+    \draw[fill=common, fill opacity=.3] (90:8) arc (90:-90:8) --  cycle;
+    \node at (0,12) {Pizza de José};
+    \end{scope}
+   \end{tikzpicture}
+
+  \end{center}
+
+  \end{resposta*}
 
 
 
@@ -869,7 +936,7 @@
 \begin{itemize} %s
     \item       Esta é uma atividade que o aluno pode fazer individualmente, mas é essencial que seja discutida com toda a turma.
     \item       Recomenda-se que os itens da atividade sejam feitos e corrigidos um a um, de forma a permitir que um aluno que tenha errado um item possa acertar o seguinte.
-    \item       O fato de a unidade não estar clara, torna ambígua a questão. É importante que os alunos percebam que, por exemplo, no item (a), se a unidade considerada for um dos hexágonos, a fração correspondente a região em vermelho é 1/2. No entanto, se forem os dois hexágonos, é 1/4.
+    \item       O fato de a unidade não estar clara, torna ambígua a questão. É importante que os alunos percebam que, por exemplo, no item (a), se a unidade considerada for um dos hexágonos, a fração correspondente a região em vermelho é $\frac{1}{2}$. No entanto, se forem os dois hexágonos, é $\frac{1}{4}$.
     \item       No final de cada item da atividade, é importante enfatizar para seus alunos a propriedade matemática que esta atividade quer destacar, ou seja, que uma mesma quantidade pode ser expressa por frações diferentes dependendo da unidade escolhida. Observe para eles que, no contexto       ``frações de''      , é fundamental saber a que o       ``de''       se refere, isto é, qual é a unidade que está sendo considerada. Neste sentido, esta atividade está fortemente relacionada com as Atividades 8 e 13. Ela também é uma preparação para a Atividade 17, onde a mesma questão é posta, mas agora com um modelo mais comumente usado e, portanto, mais resistente à reflexão que se deseja estabelecer.
 \end{itemize} %s
 
@@ -881,24 +948,74 @@
     \item       UERJ: Avaliar: julgar
 \end{itemize} %s
 
+\def \tripinha{ (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) -- (30:4) -- (90:4)--(150:4)--cycle;}
+
+
+\def \tripa{ (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) [shift={({4*sqrt(3)},0)}]--  (270:4) -- (330:4) -- (30:4) -- (90:4)--(150:4) [shift={({-4*sqrt(3)},0)}] -- (90:4) -- (150:4)--cycle;}
+
+\def \tripalonga{ (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4)[shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) [shift={({4*sqrt(3)},0)}]--  (270:4) -- (330:4) -- (30:4) -- (90:4)--(150:4) [shift={({-4*sqrt(3)},0)}] -- (90:4) -- (150:4)[shift={({-4*sqrt(3)},0)}] -- (90:4) -- (150:4) [shift={({-4*sqrt(3)},0)}] -- (90:4) -- (150:4)--cycle;}
 
 \begin{resposta*}{Atividade 16}
+
 \begin{enumerate} [\quad a)] %s
     \item       A parte em vermelho pode representar       $\frac{1}{2}$       ou       $\frac{1}{4}$       dependendo da unidade, que não foi explicitada no enunciado. Se, por exemplo, a unidade for
+    \begin{tikzpicture}[x=1mm,y=1mm]
+     \draw[fill=common, fill opacity=.3] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;     
+    \end{tikzpicture}
+ então a parte pintada de vermelho em  \begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3] \tripinha;
+\begin{scope}
+ \clip \tripinha;
+\draw[fill=attention] (-4,-4) rectangle (0,4);
+\end{scope}
+\end{tikzpicture} 
+é   $\frac{1}{2}$   desta unidade. Por outro lado,  se a unidade for   \begin{tikzpicture}[x=1mm,y=1mm]
+                                                                        \draw[fill=common, fill opacity=.3] \tripinha
+                                                                       \end{tikzpicture}
+   então a parte pintada de vermelho em  \begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3] \tripinha;
+\begin{scope}
+ \clip \tripinha;
+\draw[fill=attention] (-4,-4) rectangle (0,4);
+\end{scope}
+\end{tikzpicture}    é   $\frac{1}{4}$   desta unidade.
+
+    \item       A parte em vermelho pode representar       $\frac{1}{2}$       ou       $\frac{3}{2}$       dependendo da unidade, que não foi explicitada no enunciado. Se, por exemplo, a unidade for \begin{tikzpicture}[x=1mm,y=1mm] \draw[fill=common, fill opacity=.3] \tripa  \end{tikzpicture} então a parte pintada de vermelho em \begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3] \tripa;
+\begin{scope}
+ \clip \tripa;
+\draw[fill=attention] (-4,-4) rectangle ({4*sqrt(3)},4);
+\end{scope}
+\end{tikzpicture} 
+   é   $\frac{1}{2}$   desta unidade. Por outro lado,  se a unidade for  \begin{tikzpicture}[x=1mm,y=1mm]
+     \draw[fill=common, fill opacity=.3] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;     
+    \end{tikzpicture}  então a parte pintada de vermelho em   
+    \begin{tikzpicture}[x=1mm,y=1mm]
+    \draw[fill=common, fill opacity=.3] \tripa;
+    \begin{scope}
+    \clip \tripa;
+    \draw[fill=attention] (-4,-4) rectangle ({4*sqrt(3)},4);
+    \end{scope}
+    \end{tikzpicture}    é   $\frac{3}{2}$   desta unidade.
+
+    \item       A parte em vermelho pode representar       $\frac{3}{5}$       ou       $3$       dependendo da unidade, que não foi explicitada no enunciado. Se, por exemplo, a unidade for \begin{tikzpicture}[x=1mm,y=1mm] \draw[fill=common, fill opacity=.3] \tripalonga  \end{tikzpicture} então a parte pintada de vermelho em \begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3] \tripalonga;
+\begin{scope}
+ \clip \tripalonga;
+  \draw[fill=attention] (-4,-4) rectangle ({10*sqrt(3)},4);
+\end{scope}
+\end{tikzpicture} 
+  é   $\frac{3}{5}$   desta unidade. Por outro lado,  se a unidade for \begin{tikzpicture}[x=1mm,y=1mm]
+     \draw[fill=common, fill opacity=.3] (0:4) -- (60:4)--(120:4)-- (180:4)--(240:4)--(300:4)--cycle;     
+    \end{tikzpicture} então a parte pintada de vermelho em \begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3] \tripalonga;
+\begin{scope}
+ \clip \tripalonga;
+  \draw[fill=attention] (-4,-4) rectangle ({10*sqrt(3)},4);
+\end{scope}
+\end{tikzpicture} é   $3$   desta unidade.
 \end{enumerate} %s
-  \begin{imagem*}[breakable]{}{}             \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/hexagonos-unidade-04.png}  \end{imagem*}   então a parte pintada de vermelho em   \begin{imagem*}[breakable]{}{}             \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/hexagonos-unidade-01.png}  \end{imagem*}   é   $\frac{1}{2}$   desta unidade. Por outro lado,  se a unidade for   \begin{imagem*}[breakable]{}{}        \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/hexagonos-unidade-05.png}  \end{imagem*}   então a parte pintada de vermelho em   \begin{imagem*}[breakable]{}{}        \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/hexagonos-unidade-01.png}  \end{imagem*}   é   $\frac{1}{4}$   desta unidade.
-\begin{enumerate} [\quad a)] %s
-    \item       A parte em vermelho pode representar       $\frac{1}{2}$       ou       $\frac{3}{2}$       dependendo da unidade, que não foi explicitada no enunciado. Se, por exemplo, a unidade for
-\end{enumerate} %s
-  \begin{imagem*}[breakable]{}{}             \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/hexagonos-unidade-06.png}  \end{imagem*}   então a parte pintada de vermelho em   \begin{imagem*}[breakable]{}{}             \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/hexagonos-unidade-02.png}  \end{imagem*}   é   $\frac{1}{2}$   desta unidade. Por outro lado,  se a unidade for   \begin{imagem*}[breakable]{}{}        \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/hexagonos-unidade-04.png}  \end{imagem*}   então a parte pintada de vermelho em   \begin{imagem*}[breakable]{}{}        \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/hexagonos-unidade-02.png}  \end{imagem*}   é   $\frac{3}{2}$   desta unidade.
-\begin{enumerate} [\quad a)] %s
-    \item       A parte em vermelho pode representar       $\frac{3}{5}$       ou       $3$       dependendo da unidade, que não foi explicitada no enunciado. Se, por exemplo, a unidade for
-\end{enumerate} %s
-  \begin{imagem*}[breakable]{}{}             \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/hexagonos-unidade-07.png}  \end{imagem*}   então a parte pintada de vermelho em   \begin{imagem*}[breakable]{}{}             \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/hexagonos-unidade-03.png}  \end{imagem*}   é   $\frac{3}{5}$   desta unidade. Por outro lado,  se a unidade for   \begin{imagem*}[breakable]{}{}        \includegraphics[height=30pt, keepaspectratio]{../../livro/media/cap2/secoes/hexagonos-unidade-04.png}  \end{imagem*}   então a parte pintada de vermelho em   \begin{imagem*}[breakable]{}{}        \includegraphics[height=30pt, keepaspectratio]{../../livro/media/undefined/hexagonos-unidade-03.png}  \end{imagem*}   é   $3$   desta unidade.
 \end{resposta*}
-
-
-
 
 \subsection{Atividade 17}
 
@@ -928,38 +1045,51 @@
 
 \begin{resposta*}{Atividade 17}
   As afirmações de Júlia, David e Laura estão incompletas, pois ao especificarem as frações   $\frac{3}{5}$  ,   $\frac{3}{2}$   e   $\frac{3}{1}$  , eles não informaram a   {\bf unidade}   a qual estas frações se referem. Desta maneira, não é possível decidir quem está certo. De fato, dependendo da escolha da unidade, cada um deles pode estar certo e os demais errados. Por exemplo, se a unidade for
-
-    \includegraphics[width=80pt, keepaspectratio]{../../livro/media/cap2/secoes/tres-quintos-ou-cinco-tercos-resposta-01.png}
-
-  então a parte pintada de vermelho em
-
-    \includegraphics[width=80pt, keepaspectratio]{../../livro/media/cap2/secoes/tres-quintos-ou-cinco-tercos.png}
-
-  de fato corresponde a   $\frac{3}{5}$   desta unidade, de modo que, nesta situação, Júlia está certa e David e Laura estão errados. Contudo, se a unidade for
-
-    \includegraphics[width=80pt, keepaspectratio]{../../livro/media/cap2/secoes/tres-quintos-ou-cinco-tercos-resposta-02.png}
-
-  então a parte pintada de vermelho em
-
-    \includegraphics[width=80pt, keepaspectratio]{../../livro/media/cap2/secoes/tres-quintos-ou-cinco-tercos.png}
-
+\begin{center}
+  \begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3, scale=4] (0,0) rectangle (5,3);
+\end{tikzpicture}
+\end{center}
+então a parte pintada de vermelho em 
+\begin{center}
+\begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=attention, scale=4] (0,0) rectangle (3,3);
+ \draw[fill=common, fill opacity=.3, scale=4] (3,0) rectangle (5,3);
+ \foreach \x in {1,2,4} \draw[scale=4] (\x,0) -- (\x,3); 
+\end{tikzpicture}
+\end{center}
+de fato corresponde a   $\frac{3}{5}$   desta unidade, de modo que, nesta situação, Júlia está certa e David e Laura estão errados. Contudo, se a unidade for
+\begin{center}
+\begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3, scale=4] (0,0) rectangle (2,3);
+\end{tikzpicture}
+\end{center}
+então a parte pintada de vermelho em
+\begin{center}
+\begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=attention, scale=4] (0,0) rectangle (3,3);
+ \draw[fill=common, fill opacity=.3, scale=4] (3,0) rectangle (5,3);
+ \foreach \x in {1,2,4} \draw[scale=4] (\x,0) -- (\x,3); 
+\end{tikzpicture}
+\end{center}
   corresponde a   $\frac{3}{2}$   desta unidade,  de modo que, nesta situação, David está certo e Júlia e Laura estão errados. Finalmente, se a unidade for
-
-    \includegraphics[width=80pt, keepaspectratio]{../../livro/media/cap2/secoes/tres-quintos-ou-cinco-tercos-resposta-03.png}
-
-  então a parte pintada de vermelho em
-
-    \includegraphics[width=80pt, keepaspectratio]{../../livro/media/cap2/secoes/tres-quintos-ou-cinco-tercos.png}
-
+\begin{center}
+\begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=common, fill opacity=.3, scale=4] (0,0) rectangle (1,3);
+\end{tikzpicture}
+\end{center}
+então a parte pintada de vermelho em
+\begin{center}
+\begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=attention, scale=4] (0,0) rectangle (3,3);
+ \draw[fill=common, fill opacity=.3, scale=4] (3,0) rectangle (5,3);
+ \foreach \x in {1,2,4} \draw[scale=4] (\x,0) -- (\x,3); 
+\end{tikzpicture}
+\end{center}
   corresponde a   $3$   desta unidade e, neste caso, Laura está certa e David e Júlia estão errados.
 \end{resposta*}
 
-
-
-
 \subsection{Atividade 18}
-
-
 
   Objetivos da Atividade:
 
@@ -968,9 +1098,7 @@
     \item       Selecionar, dentro de uma situação plausível do dia a dia, dados relevantes para resolver um problema.
 \end{itemize} %s
 
-
-
-  Observações para o professor:
+Observações para o professor:
 
 \begin{itemize} %s
     \item       A atividade deve ser conduzida de forma a chegar-se na divisão euclidiana. Ou seja, o aluno pode começar montando as pizzas (tanto na proposta digital como com material concreto). Se não for possível oferecer a atividade na forma digital, recomenda-se que os alunos tenham à mão o material concreto: fatias de pizza cortadas em papel ou em E.V.A..
@@ -984,14 +1112,11 @@
 
 
 \begin{resposta*}{Atividade 18}
-
 \begin{enumerate} [\quad a)] %s
     \item       A solução corresponde ao quociente da divisão euclidiana de 38 por 8: 4
     \item       Compreendendo que cada fatia é       $\frac{1}{8}$        de uma pizza: 4 pizzas e       $\frac{6}{8}$       ou       $\frac{38}{8}$      .
     \item       A divisão euclidiana de 38 por 7 fornece um resto diferente de zero, o que indica que não é possível que todos os amigos tenham comido o mesmo número de fatias de pizza, ou, a mesma quantidade de pizza.
 \end{enumerate} %s
-
-
 \end{resposta*}
 
 

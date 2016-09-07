@@ -487,6 +487,8 @@ Um grupo de amigos está dividindo duas pizzas circulares do mesmo tamanho. A pr
 
 Preencha cada lacuna a seguir com uma fração adequada (use notação simbólica matemática). Perceba que uma mesma parte pintada pode ser descrita por frações diferentes com unidades diferentes.
 
+%definição da região limitada pelos 2 hexágonos encaixados.
+\def \tripinha{ (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) -- (30:4) -- (90:4)--(150:4)--cycle;}
 %definição da região limitada pelos 3 hexágonos encaixados.
 \def \tripa{ (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) [shift={({4*sqrt(3)},0)}]--  (270:4) -- (330:4) -- (30:4) -- (90:4)--(150:4) [shift={({-4*sqrt(3)},0)}] -- (90:4) -- (150:4)--cycle;}
 
@@ -920,9 +922,9 @@ A figura a seguir tem 3 partes pintadas de vermelho e 4 partes pintadas de branc
   \item     A parte em vermelho na figura a seguir representa $\frac{1}{2}$ ou $\frac{1}{4}$? 
 \begin{center}
 \begin{tikzpicture}[scale=1.5]
- \draw \tripa;
+ \draw \tripinha;
 \begin{scope}
- \clip \tripa;
+ \clip \tripinha;
 \draw[fill=attention] (-4,-4) rectangle (0,4);
 \end{scope}
 \end{tikzpicture} 
