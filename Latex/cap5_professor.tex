@@ -1,0 +1,597 @@
+\documentclass[oneside]{book}
+%\usepackage[margin=.5in]{geometry}
+
+\usepackage{template_professor}
+
+
+\begin{document}
+
+
+\chapter{Adição e subtração de frações }
+
+  
+  As operações de adição e de subtração de frações estão associadas a diversos contextos, nos quais podem ser identificadas as mesmas interpretações já associadas à adição e à subtração de números naturais.   
+  Dentre essas interpretações, podem-se destacar:  
+  
+{\bf Adição:}  
+\begin{itemize} %s
+    \item       Juntar. Exemplo: Alice tem 15 figurinhas e Miguel tem 12. Quantas figurinhas os dois têm juntos?
+    \item       Acrescentar. Exemplo: Alice tinha 15 figurinhas e ganhou mais 12. Com quantas figurinhas Alice ficou?
+\end{itemize} %s
+  
+  
+{\bf Subtração}  
+\begin{itemize} %s
+    \item       Retirar. Exemplo: Miguel tinha 15 figurinhas e deu 12 a Alice. Com quantas figurinhas Miguel ficou?
+    \item       Completar. Exemplo: Alice tem 12 figurinhas. Quantas figurinhas faltam para ela completar um total de 15?
+    \item       Comparar. Exemplo: Alice tem 15 figurinhas e Miguel tem 12. Quantas figurinha Alice tem a mais que Miguel?
+\end{itemize} %s
+  
+  
+  No caso da adição e da subtração de frações, essas mesmas interpretações estão associadas a situações envolvendo grandezas não inteiras, como veremos em diversos exemplos ao longo desta lição.  
+  
+  Em muitos casos, a adição e a subtração de frações são abordadas na educação básica simplesmente a partir da apresentação (frequentemente sem justificativa) de um procedimento de cálculo, em que se determina um denominador comum (em geral, obtido pelo mínimo múltiplo comum entre os denominadores originais) e se operam os numeradores. Para que os alunos construam significado para as operações de adição e de subtração de frações, é importante que fique claro que   {\bf determinar um denominador comum corresponde a determinar uma subdivisão comum da unidade}   entre as quantidades que se deseja operar (no caso, somar ou subtrair).  
+  
+  Neste sentido, para somar, por exemplo   $\frac{3}{4} + \frac{2}{3}$  , deve-se observar que:  
+  
+\begin{enumerate} [\quad a)] %s
+    \item       A fração       $\frac{3}{4}$       expressa a adição por justaposição de 3 frações de       $\frac{1}{4}$       da unidade. Da mesma forma, a fração       $\frac{2}{3}$        expressa a adição por justaposição de 2 frações de       $\frac{1}{3}$       da unidade. Assim, as frações       $\frac{3}{4}$       e       $\frac{2}{3}$       estão associadas a diferentes       {\bf subdivisões da unidade}, no caso, respectivamente, em 4 partes iguais e em 3 partes iguais, o que determina       ``quartos''       e       ``terços''       como frações da unidade.
+    \item       Para expressar o resultado desta soma como uma fração, é preciso expressar as duas parcelas a partir de       {\bf uma mesma subdivisão da unidade}, no caso, por exemplo, em 12 partes iguais, isto é, no caso em       ``doze avos''      . Assim, a adição por justaposição de 3 frações de       $\frac{1}{4}$       da unidade, que resulta na fração       $\frac{3}{4}$, é equivalente à adição por justaposição de 9 frações de       $\frac{1}{12}$       da unidade, que resulta na fração       $\frac{9}{12}$. Da mesma forma, a adição por justaposição de 2 frações de       $\frac{1}{3}$       da unidade, que resulta na fração       $\frac{2}{3}$, é       {\bf equivalente}       à adição por justaposição de 8 frações de       $\frac{1}{12}$       da unidade, que resulta na fração       $\frac{8}{12}$.
+    \item       Portanto, o resultado da soma       $\frac{3}{4} + \frac{2}{3}$       pode ser expresso pela justaposição de 9 frações mais 8 frações de       $\frac{1}{12}$       da unidade, que resulta em       $\frac{17}{12}$, isto é,       $\frac{3}{4} + \frac{2}{3} = \frac{9}{12}+\frac{8}{12}=\frac{17}{12}$. A reescrita de uma fração a partir de determinada subdivisão da unidade implicará na escrita de uma fração equivalente.
+\end{enumerate} %s
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tikzpicture}[x=1.0cm,y=1.0cm,scale=.3]
+\fill[light] (0,0) rectangle (9,5);
+\fill[common, opacity=.3] (9,0) rectangle (12,5);
+\draw (0,0) rectangle (12,5);
+\foreach \x in {1,...,12} \draw (\x,0) -- (\x,5);
+
+\begin{scope}[yshift=6cm]
+\fill[light] (0,0) rectangle (9,5);
+\fill[common, opacity=.3] (9,0) rectangle (12,5);
+\draw (0,0) rectangle (12,5);
+\foreach \x in {3,6,9} \draw (\x,0) -- (\x,5);
+\end{scope}
+\end{tikzpicture}
+
+& \quad \quad&
+
+\begin{tikzpicture}[x=1.0cm,y=1.0cm,scale=.3]
+\fill[attention] (0,0) rectangle (8,5);% parte colorida
+\fill[common, opacity=.3] (8,0) rectangle (12,5); %parte não colorida 
+\draw (0,0) rectangle (12,5);
+\foreach \x in {1,...,12} \draw (\x,0) -- (\x,5);
+
+\begin{scope}[yshift=6cm]% retangulo de cima
+\fill[attention] (0,0) rectangle (8,5);
+\fill[common, opacity=.3] (8,0) rectangle (12,5);
+\draw (0,0) rectangle (12,5);
+\foreach \x in {4,8} \draw (\x,0) -- (\x,5);
+\end{scope}
+\end{tikzpicture}
+
+\end{tabular}
+\end{center}
+  
+  Uma construção análoga pode ser feita para a subtração. É importante que essas construções sejam feitas com os alunos a partir de diversos exemplos, associados às diferentes interpretações para a adição e para a subtração, e ilustrados por representações geométricas.   
+  
+  Desta forma, para a compreensão de processos de cálculo da adição e da subtração de frações, é fundamental o entendimento da fração   $\frac{a}{b}$   como uma expressão da justaposição de   $a$   frações de   $\frac{1}{b}$   da unidade.  
+  
+  Um dos objetivos desta lição é construir esses procedimentos de soma e de subtração de frações, a partir da    {\bf  determinação de subdivisões da unidade que sejam comuns entre as parcelas, isto é, de denominadores comuns}.   
+  Cabe destacar que essa unidade comum não precisa ser a maior possível.   
+  No caso do exemplo apresentado acima, a subdivisão comum encontrada foi   $\frac{1}{12}$  , porém em uma situação real de sala de aula, os alunos também poderiam ter empregado   $\frac{1}{24}$  ,   $\frac{1}{36}$  , etc. - e essas estratégias devem ser igualmente valorizadas.   
+  Isto é, a ênfase da abordagem deve estar na ideia conceitual de expressar frações equivalentes a partir da determinação de subdivisões comuns da unidade, e não na memorização de procedimentos com base no cálculo do mínimo múltiplo comum.   
+  De fato, você observará que o conceito de MMC não é nem mesmo mencionado nesta lição.  
+  
+  Também é objetivo desta lição construir as ideias de soma e de diferença de frações com base em situações contextualizadas nas mesmas interpretações anteriormente associadas às operações com números naturais -   {\it juntar e acrescentar}, no caso da adição;    {\it retirar, comparar e completar}   para a subtração. Desta forma, procura-se construir a adição e a subtração de frações como extensões naturais dessas operações com números naturais. Não é objetivo desta lição tratar formalmente as propriedades da adição e da subtração. Porém, serão ressaltados aspectos substanciais que fundamentam essas propriedades, em especial, a mesma natureza das parcelas.  
+  Finalmente, é importante destacar que as estratégias pessoais dos alunos não devem ser desconsideradas em detrimento da apresentação de um procedimento   ``padronizado''  . Ao contrário, a construção de estratégias pessoais deve ser encorajada e valorizada. Isso não apenas contribui para o fortalecimento da segurança dos alunos individualmente, como também pode enriquecer a compreensão coletiva da turma, por meio do compartilhamento de diversas estratégias.  
+ 
+  \begin{multicols}{2}
+
+\subsection{Atividade 1}
+
+ \noindent{\bf Objetivos específicos: Levar o aluno a}
+\vspace{.15cm}
+
+\begin{itemize} %s
+  \item     perceber o papel de uma unidade comum para comparar, somar ou subtrair duas quantidades;
+  \item     resgatar as interpretações de juntar para a operação de adição, e de retirar e de comparar para a operação de subtração, anteriormente associadas às operações com números naturais;
+  \item     entender as operações de adição e de subtração com frações como extensões das respectivas operações com números naturais a partir do resgate dessas interpretações, isto é, como operações que dão conta de situações associadas às mesmas interpretações.
+\end{itemize} %s
+
+
+\noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}
+\begin{itemize} %s
+  \item     Embora não se trabalhe diretamente com frações, a atividade enfoca processos de contagem a partir de uma unidade de referência, o que será fundamental para as operações de adição e de subtração com frações. Por exemplo, no caso da situação apresentada nesta atividade, a unidade comum empregada 
+\end{itemize} %s
+
+
+
+\subsection{Atividade 2}
+
+  \noindent{\bf Objetivos específicos: Levar o aluno a}\newline \vspace{.15cm}
+  
+\begin{itemize} %s
+    \item       entender o processo de determinação de um denominador comum entre duas frações com base na ideia de subdivisão da unidade da qual ambas sejam múltiplas inteiras, obtida a partir de um processo geométrico;
+    \item       determinar a soma de duas frações a partir dessa subdivisão da unidade.
+\end{itemize} %s
+  
+  
+  \noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}  
+  
+\begin{itemize} %s
+    \item       Uma vez estabelecida uma       {\bf unidade}       (no caso, o tamanho da fita), a determinação de uma subdivisão dá origem a um processo de medida por meio de uma       {\bf dupla contagem}, em que estão envolvidas:       {\bf a unidade}, associada ao número~1, com base na qual são contadas quantidades inteiras;       {\bf subdivisões da unidade em partes iguais}       (no caso, os pedaços coloridos das fitas), cuja contagem permite medir quantidades menores que a unidade.
+    \item       A atividade envolve a subdivisão de fitas coloridas em pedaços de mesmo tamanho. É recomendável que o professor desenvolva a atividade em sala de aula utilizando materiais concretos. As fitas coloridas podem ser feitas com papel e cartolina, e os alunos podem recortá-las e juntar os pedaços de acordo com o que é pedido nos itens da atividade. Nesta etapa de familiarização inicial com as operações com frações, a manipulação concreta é importante para a construção de significado.
+    \item       O item a) visa ao reconhecimento pelo aluno das frações envolvidas na situação apresentada. Assim, espera-se que o aluno responda,       $\frac{1}{3}$,       $\frac{1}{2}$       e~$\frac{1}{4}$.
+    \item       Em seguida, é apresentada uma situação simples em que uma subdivisão comum, no caso o pedaço de fita amarelo, permite a determinação da soma:
+\end{itemize} %s
+  
+  $$ \frac{1}{2} + \frac{2}{4} = \frac{1}{2} + \frac{1}{2} = 1.$$  
+\begin{itemize} %s
+    \item       O item b), embora seja bem parecido com o exemplo dado, demanda que o estudante determine uma subdivisão diferente da usada no item anterior. Nesse caso o estudante deve observar que é necessário utilizar a subdivisão       $\frac{1}{4}$       para medir essas partes que foram juntadas.
+\end{itemize} %s
+  
+
+\begin{resposta*}{Atividade 2}  
+\begin{enumerate} [\quad a)] %d
+    \item       Um pedaço vermelho recortado, corresponde a       $\frac{1}{3}$       da fita.       \mbox{} \newline        Um pedaço azul recortado, corresponde a       $\frac{1}{2}$       da fita.       \mbox{} \newline        Um pedaço amarelo recortado, corresponde a       $\frac{1}{4}$       da fita. 
+    \item       Um pedaço amarelo mais um pedaço azul corresponde a       $\frac{1}{4} +\frac{1}{2}$       da fita. Como       $\frac{1}{2} =\frac{2}{4}$, temos que a junção dos dois pedaços de fita será       $\frac{1}{4} +\frac{1}{2} = \frac{3}{4}$       da tamanho da fita original.  
+\end{enumerate} %d
+  
+  
+\end{resposta*}
+
+\subsection{Atividade 3}
+
+
+\noindent{\bf Objetivos específicos: Levar o aluno a}\newline \vspace{.15cm}
+
+\begin{itemize} %s
+  \item     entender o processo de determinação de um denominador comum entre duas frações com base na ideia de subdivisão da unidade da qual ambas sejam múltiplas inteiras, obtida a partir de um processo geométrico;
+  \item     determinar a soma e a diferença de duas frações a partir dessa subdivisão da unidade.
+\end{itemize} %s
+
+
+\noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}
+
+\begin{itemize} %s
+  \item      Diferentemente da atividade anterior, nesta atividade a subdivisão da unidade já é dada, e sua determinação não é pedida ao aluno, o que voltará a ser objetivo das próximas atividades.
+  \item      O item a) visa especificamente à identificação geométrica de subdivisão da unidade que será empregada para efetuar as operações. Espera-se     $\frac{1}{16}$     como resposta.
+  \item     No item b), procurar resgate das atividades sobre frações equivalentes realizadas na lição 4. Observe que aqui há um processo de recontagem a partir da subdivisão ``pedaço de chocolate''. Aqui a fração equivalente indica a recontagem da fração $\frac{1}{2}$ a partir da subdivisão $\frac{1}{16}$.
+  \item  No item c), procure destacar a interpretação de adição como ``juntar''. Pretende-se que o professor tenha a possibilidade de sistematizar a adição, tendo como apoio a resposta dos alunos dadas a partir de observações visuais. Isto é, o estudante pode dizer que juntos Alice e Miguel comeram 11 pedaços e depois identifica-los como $\frac{11}{16}$ da barra de chocolate. A discussão deve ser encaminhada a partir da determinação de frações equivalentes desenvolvida no item anterior (e {\bf sem} o uso do conceito de MMC). O objetivo é que o professor aproveite as soluções intuitivas dos alunos para apresentar, de forma mais sistematizada, a adição por uso de fração equivalentes, obtidas na busca de uma subdivisão comum:
+$$\frac{1}{2} + \frac{3}{16} = \frac{8}{16} + \frac{3}{16} = \frac{11}{16}.$$
+  \item  O item d) deve ser encaminhado de forma análoga ao anterior. Especificamente, deve-se retomar a ideia de que $1 = \frac{n}{n}$, discutida na lição anterior, daí apresentar $$1 - \frac{11}{16} =  \frac{16}{16} - \frac{11}{16} = \frac{5}{16}.$$ 
+\end{itemize} %s
+
+  \begin{resposta*}{Atividade 3}
+    \begin{enumerate}[a)]
+     \item $\frac{1}{16}$.
+     \item $\frac{1}{2}=\frac{8}{16}$, pois a fração equivalente a $\frac{1}{2}$ com denominador 16 é $\frac{8}{16}$. 
+     \item Observando as quantidades comidas por Alice e Miguel, a partir de um mesmo denominador, temos $\frac{1}{2}+\frac{3}{16} = \frac{8}{16} + \frac{3}{16} = \frac{11}{16}$. 
+     \item Recordemos que a barra de chocolate é nossa unidade de medida, então esse quantidade será entendida como 1 inteiro. Assim a quantidade restante será dada por $\frac{5}{16}$, pois $1 - \frac{11}{16} = \frac{16}{16} - \frac{11}{16} = \frac{5}{16}$.
+    \end{enumerate}
+  \end{resposta*}
+
+\subsection{Atividade 4}
+
+\noindent{\bf Objetivos específicos: Levar o aluno a}\newline \vspace{.15cm}
+
+\begin{itemize} %s
+  \item      entender o processo de determinação de um denominador comum entre duas frações com base na ideia de subdivisão da unidade da qual ambas sejam múltiplas inteiras, obtida a partir de um processo geométrico;  
+  \item      determinar a soma e a diferença de duas frações a partir dessa subdivisão da unidade.
+\end{itemize} %s
+
+
+\noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}
+
+\begin{itemize} %s
+  \item      Esta atividade pode ser mais aproveitada pelos alunos se for realizada com apoio de materiais concretos. Sugerimos, caso seja possível, que os estudantes desenvolvam o material. Caso não seja possível, disponibilizamos uma página para reprodução no final dessa lição. Neste caso, o professor poderá disponibilizar aos alunos discos divididos em 12 partes, e pedir que eles marquem as frações     $\frac{1}{6}$,     $\frac{3}{4}$     e     $\frac{2}{3}$     colorindo esses discos.
+
+
+   \item  A atividade tem início com a comparação de frações, o que já foi abordado na lição anterior. Procurar retomada a discussão conduzida naquela lição.
+   \item  É importante chamar atenção para o fato de que escrever as frações a partir de um mesmo denominador corresponde a expressar as quantidades que elas representam como múltiplos inteiros de uma subdivisão comum da unidade. Portando, toma-se como estratégia, para operar a adição e a subtração de frações, escrevê-las em relação a um mesmo denominador, determinado a partir de uma subdivisão comum da unidade. O item a) visa especificamente ao reconhecimento concreto da fração unitária associada a esse denominador comum.
+   \item  No item b), o professor deverá explorar e evidenciar as articulações entre as diferentes estratégias dos alunos, sendo as principais:
+   \begin{enumerate}[a)]
+   \item  Multiplicar o numerador e o denominador por um mesmo número (algoritmo discutido na lição anterior).
+   \item  Observar a quantidade de fatias nas imagens acima que apresentam as frações consumidas.
+   \end{enumerate} 
+   \item  Os itens d) a g) exploraram diferentes interpretações da adição da subtração, a saber: \newline
+d) subtração – completar;\newline
+e) adição – juntar;\newline
+f) subtração – retirar;\newline
+g) subtração – comparar.\newline
+Em cada um dos itens acima, após as resoluções dos estudantes, recomendamos que o professor arme a conta e indique o resultado. Por exemplo, no item d), tem-se: 
+$$\frac{3}{4} - \frac{2}{3} = \frac{9}{12} - \frac{8}{12}=\frac{1}{12}$$
+  \item   É interessante que o professor encoraje e traga para a discussão com a turma as diferentes estratégias que tiverem sido propostas pelos alunos, inclusive aquelas que não estiverem inteiramente corretas. O objetivo não é destacar soluções ``mais eficientes'' ou separar as "certas" das ``erradas'', e sim evidenciar como diferentes estratégias permitem obter os resultados pedidos nesta atividade a partir da determinação de uma subdivisão comum. Por exemplo, no caso do item d), um aluno pode sobrepor o desenho das fatias comidas por Bruna no desenho das comidas por Caio, e contar quantas fatias faltam para atingir a quantidade consumida por Caio.
+  \item  É importante que o professor apresente o registro das operações em notação de fração, com o objetivo de articular esse registro com as estratégias geométricas, baseadas na contagem direta das subdivisões comuns.
+
+Esta atividade possui folhas para reprodução no final do livro.
+\end{itemize} %s
+
+\begin{resposta*}{Atividade 4}
+  \begin{enumerate}[a)]
+   \item $\frac{1}{12}$ é a fração unitária de pizza comum, pois todas as quantidades consumidas podem ser indicadas as partir de múltiplos dessa fração de pizza. 
+   \item Para cada quantidade é possível simplesmente contar a quantidade de fatias observando as imagens acima, uuma vez que cada fatia corresponde a $\frac{1}{12}$ de uma pizza. Assim, obtemos como resposta as frações $\frac{2}{12}$, $\frac{9}{12}$ e $\frac{8}{12}$, que são iguais a $\frac{1}{6}$, $\frac{3}{4}$ e $\frac{2}{3}$, respectivamente. 
+   \item  Observando as quantidades indicadas no item anterior quem consumiu mais foi Bruno, $\frac{9}{12}$ de pizza. Quem consumiu menos foi Amanda, $\frac{2}{12}$ da pizza. 
+   \item  $\frac{9}{12} -  \frac{8}{12} = \frac{1}{12}$.
+   \item  $\frac{2}{12} +  \frac{9}{12} = \frac{11}{12}$.
+   \item  $\frac{8}{12} -  \frac{2}{12} = \frac{6}{12}$.
+   \item  $\frac{9}{12} -  \frac{2}{12} = \frac{7}{12}$
+  \end{enumerate}
+ 
+\end{resposta*}
+
+\subsection{Atividade 5}
+
+  \noindent{\bf Objetivos específicos: Levar o aluno a}\newline \vspace{.15cm}  
+
+  \begin{itemize} %s
+    \item       encontrar uma subdivisão comum entre as quantidades que permita efetuar as operações;
+    \item       perceber a não unicidade da subdivisão comum.
+\end{itemize} %s
+  
+  \noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}  
+
+  \begin{itemize} %s
+    \item       Como nas atividades anteriores e nas próximas desta lição, o uso obrigatório do MMC não é recomendado. Ao contrário, objetiva-se justamente provocar explicitamente a percepção de que       {\bf essa subdivisão não é única}      . Assim, devem ser apresentadas diversas frações equivalentes às frações dadas na atividade, como por exemplo, as seguintes:
+  
+  $$\frac{6}{10} \,{\rm e} \, \frac{7}{10}$$  
+  $$\frac{12}{20} \,{\rm e} \, \frac{14}{20}$$  
+  $$\frac{24}{40} \,{\rm e} \, \frac{28}{40}$$  
+  
+    \item       A partir dessas diferentes frações equivalentes, o professor deve procurar       {\bf articular com os estudantes a relação entre diferentes subdivisões com a sistematização de frações equivalentes.}       Deve-se retomar a reflexão iniciada na sessão       {\bf Organizando as Ideias}       de que escrever quantidades em relação a uma subdivisão comum corresponde a determinar frações equivalentes com um denominador comum.
+\end{itemize} %s
+
+\begin{resposta*}{Atividade 5}  
+\begin{enumerate} [\quad a)] %s
+    \item       Uma possível subdivisão comum é em 10 partes, portanto, igual a fração       $\frac{1}{10}$. Com essa subdivisão ambas as quantidades podem ser expressas por frações de denominador 10. ma forma de observar tal fato é determinar, na primeira imagem, um segmento horizontal, de modo a dividir cada parte da partição já existente em duas partes iguais.  
+
+    \begin{center}    
+\begin{tikzpicture}[x=1mm,y=1mm,scale=2]
+\fill[special] (0,0) rectangle (6,5);
+\draw (0,0) rectangle (10,5);
+\foreach \x in {2,4,...,8} \draw (\x,0) -- (\x, 5);
+\draw (0,2.5) -- (10,2.5);
+
+\begin{scope}[shift={(14,0)}]
+\fill[light, opacity = .8] (0,0) rectangle (6,5);
+\fill[light, opacity = .8] (6,2.5) rectangle (8,5);
+\draw (0,0) rectangle (10,5);
+\foreach \x in {2,4,...,8} \draw (\x,0) -- (\x, 5);
+\draw (0,2.5) -- (10, 2.5);
+\end{scope}
+
+\end{tikzpicture}
+\end{center}
+
+    \item             $\frac{3}{5} = \frac{6}{10}$. A fração       $\frac{7}{10}$       já está escrita a partir de décimos.
+    \item       Sim, existem várias. Por exemplo,       $\frac{1}{10}$,       $\frac{1}{20}$       ou~$\frac{1}{70}$. 
+    \item       Como       $\frac{3}{5}+\frac{7}{10} = \frac{6}{10} + \frac{7}{10} = \frac{13}{10} > 1$, juntas, as regiões destacadas em vermelho e em bege determinam um região total maior do que a do retângulo dado.
+\end{enumerate} %s
+  
+  
+\end{resposta*}
+
+\subsection{Atividade 6}
+
+\noindent{\bf Objetivos específicos: Levar o aluno a}\newline \vspace{.15cm}
+
+\begin{itemize} %s
+ \item  entender o processo de determinação de um denominador comum entre duas frações com base na ideia de subdivisão da unidade da qual ambas sejam múltiplas inteiras, obtida a partir de um processo geométrico;
+  \item      determinar a soma e a diferença de duas frações a partir dessa subdivisão da unidade.
+\end{itemize} %s
+
+
+\noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}
+
+\begin{itemize} %s
+  \item     Esta atividade é continuação da atividade 2. Busca-se aplicar a sistematização das ideias para retomar reflexões ensejadas naquela atividade. Buscar com o estudante a generalização por situações que não são tão imediatas, em que trabalhamos com pedaços de fita que não são múltiplos inteiros de outros pedaços (dobro, como no caso dos pedaços azul e amarelo, presente na atividade 2).
+
+
+   \item  No item a), em primeiro lugar, os alunos devem perceber que a nova fita vermelha e azul formada é {\it menor} que a fita original. Para chegar a essa conclusão, diferentes estratégias podem ser empregadas - e a exploração dessas estratégias deve ser estimulada pelo professor. Por exemplo, os alunos podem observar concretamente que como cada pedaço vermelho (correspondente à fração $\frac{1}{3}$) é menor que cada pedaço azul (correspondente à fração $\frac{1}{2}$), então a nova fita vermelha e azul é menor que a fita original.
+  \item  A partir dessas explorações iniciais, explore com os alunos a discussão sobre diversas formas de saber qual fita tem o maior tamanho, e que, além disso, é possível determinar o tamanho da nova fita vermelha e azul em relação à original, somando-se as medidas dos dois pedaços (vermelho e azul) que a compõe. Para isso, algumas observações são fundamentais:
+  \begin{enumerate}[a)]
+    \item O tamanho da fita original será uma {\bf unidade}, associada ao número 1, em relação a qual os tamanhos das demais grandezas serão determinadas, e expressas como frações.
+    \item Como os pedaços vermelho e azul correspondem a subdivisões de tamanhos diferentes da unidade (tamanho da fita original), para determinar sua soma será preciso expressá-los como múltiplos inteiros de uma {\bf subdivisão comum}, que pode ser obtida dividindo-se o pedaço vermelho em duas partes iguais e o pedaço azul em três partes iguais.
+ \end{enumerate}
+
+ 
+\begin{center}
+\begin{tikzpicture}[x=1.0cm,y=1.0cm, scale=.5]
+\draw[fill=attention] (0.,1) rectangle (4,3.); 
+\foreach \x in {4,8} \draw[dashed] (\x,1) -- (\x,3);
+\draw (2,1) -- (2,3);
+\draw[dashed] (4,1) rectangle (12,3);
+
+\draw[fill=common] (0.,-2) rectangle (6.,0.);
+\draw[dashed] (6,-2) -- (6,0);
+\draw (2,-2) -- (2,0);
+\draw (4,-2) -- (4,0);
+\draw[dashed](6,-2) rectangle (12,0);
+\end{tikzpicture}
+\end{center}
+
+
+Desta forma, cada pedaço de fita vermelha equivale a 2 pedaços iguais a $\frac{1}{6}$ da unidade, e cada pedaço de fita azul equivale a 3 pedaços iguais a $\frac{1}{6}$ da unidade, totalizando $\dfrac{5}{6}$ da unidade:
+$$\dfrac{1}{3} + \dfrac{1}{2} = \dfrac{2}{6} + \dfrac{3}{6} = \dfrac{5}{6}.$$
+
+\begin{center}
+\begin{tikzpicture}[x=1.0cm,y=1.0cm, scale=.5]
+\draw[fill=attention] (0,0) rectangle (4,2); 
+\draw[fill=common] (4,0) rectangle (10,2);
+\draw[dashed] (10,0) rectangle (12,2);
+\foreach \x in {2,6,8} \draw (\x,0) -- (\x,2);
+\end{tikzpicture}
+\end{center}
+
+
+Essa subdivisão comum permite ainda determinar a diferença entre os tamanhos da fita original e da nova fita vermelha e azul, associando-se a unidade a 6 pedaços iguais a $\frac{1}{6}$ de uma fita original:
+
+$$ 1 - \dfrac{5}{6}=\dfrac{6}{6} - \dfrac{5}{6} = \dfrac{1}{6}.$$
+
+\begin{center}
+\begin{tikzpicture}[x=1.0cm,y=1.0cm, scale=.5]
+
+% vermelho de cima  
+\draw[fill=attention] (0,3) rectangle (12,5);
+\foreach \x in {2,4,...,10} \draw (\x,3) -- (\x,5);
+  
+% azul e vermelho (debaixo)  
+\draw[fill=attention] (0,0) rectangle (4,2); 
+\draw[fill=common] (4,0) rectangle (10,2);
+\draw[dashed] (10,0) rectangle (12,2);
+\foreach \x in {2,6,8} \draw (\x,0) -- (\x,2);
+\end{tikzpicture}
+\end{center}
+  \item Como observado anteriormente, essas construções podem ser feitas por meio de corte e colagem de materiais concretos.
+  \item O item b) deve ser desenvolvido de forma análoga ao item a).
+\end{itemize} %s
+
+\begin{resposta*}{Atividade 6}
+\begin{enumerate}[a)]
+   \item Um pedaço vermelho mais um pedaço azul corresponde a $\frac{1}{3} + \frac{1}{2} = \frac{2}{6}+ \frac{3}{6} = \frac{5}{6}$ de uma fita original. Daí, a nova fita formada é menor do que uma fita original, pois $\frac{5}{6}<\frac{6}{6}=1$. A diferença de tamanho será dada por $1- \frac{5}{6} = \frac{6}{6} - \frac{5}{6} = \frac{1}{6}$.
+   \item A nova fita vermelha e amarela é maior do que uma fita original, uma vez que equivale a $\frac{17}{12}>1$ da fita original.
+$\frac{1}{3}+\frac{1}{3}+\frac{1}{4}+\frac{1}{4}+\frac{1}{4} = \frac{4}{12}+\frac{4}{12}+\frac{3}{12}+\frac{3}{12}+\frac{3}{12} = \frac{17}{12}$.
+  \end{enumerate}
+\end{resposta*}
+
+\subsection{Atividade 7}
+
+  \noindent{\bf Objetivos específicos: Levar o aluno a}\newline \vspace{.15cm}  
+
+  \begin{itemize} %s
+    \item       aplicar a ideia de obter um denominador comum entre duas frações dadas, com base no processo geométrico de subdivisão da unidade, em exercícios sem uma situação contextualizada.
+ \end{itemize} %s
+  
+  
+  \noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}  
+
+  \begin{itemize} %s
+    \item       Embora não sejam dadas situações contextualizadas, procure conduzir esta atividade com base em representações geométricas para as frações dadas e na determinação de uma subdivisão comum a partir dessas representações, como nas atividades 2 a 6. O objeto é justamente aplicar as ideias construídas a partir daquelas atividades em exercícios sem situações contextualizadas.
+    \item  Nos casos que envolvem o número 1, deve-se relembrar   $1 = \frac{n}{n}$.  
+  \end{itemize} %s
+
+\begin{resposta*}{Atividade 7}  
+  São respostas possíveis:   
+\begin{enumerate} [\quad a)] %s
+    \item             $\frac{3}{9}$       e       $\frac{2}{9}$. 	Subdivisão escolhida:       $\frac{1}{9}$       da unidade.		
+    \item             $\frac{3}{10}$       e       $\frac{8}{10}$.	Subdivisão escolhida:       $\frac{1}{10}$       da unidade.
+    \item             $\frac{7}{7}$       e       $\frac{3}{7}$. 	Subdivisão escolhida:       $\frac{1}{7}$       da unidade.		
+    \item             $\frac{9}{15}$       e       $\frac{40}{15}$.   Subdivisão escolhida:       $\frac{1}{15}$       da unidade.
+    \item             $\frac{21}{24}$       e       $\frac{26}{24}$.	Subdivisão escolhida:       $\frac{1}{24}$       da unidade.	
+    \item             $\frac{7}{4}$       e       $\frac{20}{4}$. 	Subdivisão escolhida:       $\frac{1}{24}$       da unidade.
+\end{enumerate} %s
+  
+  
+  Observação: Todos esses itens admitem outras respostas, uma vez que é possível escolher diferentes subdivisões da unidade, ou seja, outras fraçoes unitárias. Por exemplo, no item (e) temos como outra solução possível:   $\frac{42}{48}$   e   $\frac{52}{48}$. Subdivisão escolhida:   $\frac{1}{48}$   da unidade..  
+\end{resposta*}
+
+
+
+\subsection{Atividade 8}
+
+  \noindent{\bf Objetivos específicos: Levar o aluno a}\newline \vspace{.15cm}  
+
+  \begin{itemize} %s
+    \item       aplicar as ideias de obter um denominador comum entre duas frações dadas e de usar esse denominador para determinar adições e subtrações, com base no processo geométrico de subdivisão da unidade, em exercícios sem uma situação contextualizada.
+  \end{itemize} %s
+  
+  
+  \noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}  
+
+  \begin{itemize} %s
+    \item       Como na atividade anterior, embora não sejam dadas situações contextualizadas, procure conduzir esta atividade com base em representações geométricas para as frações dadas e na determinação de uma subdivisão comum a partir dessas representações, como nas atividades 2 a~6.
+    \item  Nos casos que envolvem o número 1, deve-se relembrar   $1 = \frac{n}{n}$.  
+  \end{itemize} %s
+
+\begin{resposta*}{Atividade 8}  
+  
+\begin{enumerate} [\quad a)] %s
+    \item             $\frac{1}{3} - \frac{2}{9} = \frac{3}{9} - \frac{2}{9} = \frac{1}{9}$.
+    \item             $\frac{3}{10}+\frac{4}{5} = \frac{3}{10}+\frac{8}{10} =\frac{11}{10}$.
+    \item             $1 - \frac{3}{7} = \frac{7}{7} - \frac{3}{7} = \frac{4}{7}$.
+\end{enumerate} %s
+  
+  
+\end{resposta*}
+
+
+
+
+\subsection{Atividade 9}
+
+\noindent{\bf Objetivos específicos: Levar o aluno a}\newline \vspace{.15cm}
+
+\begin{itemize} %s
+  \item     relacionar a adição de frações com a sua representação como pontos na reta.
+\end{itemize} %s
+
+
+\noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}
+
+\begin{itemize} %s
+  \item     Esta atividade, assim como as duas que se seguem (10 e 11),   usam a ideia de que     $1 = \frac{n}{n}$, ou de forma mais geral, de que, se     $a$     é um número natural, então     $a = \frac{an}{n}$, para     $n$     diferente de 0.  
+  \item Essas atividades envolvem os chamados 
+\end{itemize} %s
+
+\subsection{Atividade 10}
+
+\noindent{\bf Objetivos específicos: Levar o aluno a}\newline \vspace{.15cm}
+
+\begin{itemize} %s
+  \item     determinar uma subtração de frações com a interpretação de completar.
+\end{itemize} %s
+
+
+\noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}
+
+\begin{itemize} %s
+  \item     Explorar o fato de que não é incomum que o uso da palavra 
+\end{itemize} %s
+
+\subsection{Atividade 11}
+
+  \noindent{\bf Objetivos específicos: Levar o aluno a}\newline \vspace{.15cm}  
+\begin{itemize} %s
+    \item       determinar uma subtração de frações com a interpretação de completar;
+    \item       explorar a articulação entre número misto e subtração de frações.
+\end{itemize} %s
+  
+\noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}  
+\begin{itemize} %s
+    \item       Como na atividade anterior, observar que a visualização da representação na reta pode ajudar a destacar o fato de que se deve determinar       ``quanto falta''       de       $\frac{19}{7}$       para chegar a 2.
+\end{itemize} %s
+
+\begin{resposta*}{Atividade 12}
+$\frac{19}{7} > \frac{14}{7} = 2$. Portanto, $\frac{19}{7}$ é maior e $\frac{19}{7}$ 
+\end{resposta*}
+
+\subsection{Atividade 12}
+
+  \noindent{\bf Objetivos específicos: Levar o aluno a}\newline \vspace{.15cm}  
+
+  \begin{itemize} %s
+    \item       aprofundar a familiaridade dos alunos com a representação na reta;
+    \item       explorar a propriedade de densidade dos pontos que representam frações na reta numérica.
+  \end{itemize} %s
+  
+  
+  \noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}  
+
+  \begin{itemize} %s
+    \item       Caso os alunos tenham dificuldades em pensar sobre as soluções das tarefas propostas, o professor pode propor e explorar tarefas análogas com números naturais, empregando, por exemplo, a primeira figura.
+    \item O item b) visa especificamente dar continuidade à discussão sobre densidade dos números racionais na reta, que foi introduzida na lição 4. A partir da escrita de frações como $\frac{15}{12}$ e $\frac{22}{12}$       pode não ser difícil para os alunos observar os seis números       $\frac{16}{12}$,       $\frac{17}{12}$,       $\frac{18}{12}$,       $\frac{19}{12}$, $\frac{20}{12}$ e $\frac{21}{12}$. Uma estratégia para encontrar mais números é escrever, por exemplo,       $A$       e       $B$       como       $\frac{30}{24}$       e       $\frac{44}{24}$ e tomar       $\frac{n}{24}$, com       $n$       variando entre 30 e 44 está entre       $A$       e       $B$. A ideia é discutir com a turma que, como sempre podemos repetir esse processo, sempre poderemos encontrar mais números entre       $A$       e       $B$. Daí, pode-se retomar a discussão sobre frações equivalentes e sobre densidade, que foi ensejada nos últimos 3 exercícios da lição 4.
+  \end{itemize} %s
+  
+\begin{resposta*}{Atividade 12}
+\begin{enumerate} [\quad a)] %s
+  \item         $C=\frac{15}{12}$     e     $D=\frac{22}{12}$
+  \item         $\frac{16}{12}$,     $\frac{17}{12}$,     $\frac{18}{12}$,     $\frac{19}{12}$,     $\frac{20}{12}$     e     $\frac{21}{12}$    .
+  \item     Se escrevermos as frações     $C$     e     $D $     com outro denominador comum pode ser mais fácil de observar mais que 6 frações. Por exemplo,     $C=\frac{30}{24}$     e     $D=\frac{44}{24}$     as frações a seguir estão entre     $C$     e     $D$ $$\frac{31}{24}, \frac{32}{24}, \frac{33}{24}, \frac{34}{24}, \frac{35}{24}, \frac{36}{24}, \frac{37}{24},$$ 
+  $$\frac{38}{24}, \frac{39}{24}, \frac{40}{24}, \frac{41}{24}, \frac{42}{24}\; {\rm e }\; \frac{43}{24}.$$     
+  Note que conseguimos agora 13 frações entre     $C$     e     $D$    . No entanto, se escrevermos     $C$     e     $D$     com o denominador 48 ainda podemos determinar mais valores. Note também que sempre podemos escolher um denominador maior de modo que encontremos mais valores. 
+  \item     O tamanho do segmento     $CD$     é dado por 
+\end{enumerate} %s
+\end{resposta*}
+
+
+\subsection{Atividade 13}
+
+  \noindent{\bf Objetivos específicos: Levar o aluno a}\newline \vspace{.15cm}  
+
+  \begin{itemize} %s
+    \item       comparar, somar e subtrair frações a partir da determinação de um denominador comum com base no processo geométrica de subdivisão da unidade;
+    \item       explorar as interpretações de juntar para a adição e de comparar para a subtração.
+\end{itemize} %s
+  
+  
+  \noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}  
+
+  \begin{itemize} %s
+    \item       Esta atividade retoma a noção de fração como parte de uma unidade em situações concretas, como nas atividades 2 a 6. Como naquelas atividades, a representação geométrica das frações deve servir como base para a determinação do denominador comum e para a realização da comparação e das operações de adição e de subtração. O próprio desenho do canteiro pode servir como representação geométrica para a determinação do denominador comum.
+\end{itemize} %s
+  
+\begin{resposta*}{Atividade 13}
+\begin{enumerate} [\quad a)] %s
+  \item     Utilizando o mesmo denominador para fins de comparação temos que as quantidades     $\frac{2}{3}$     e     $\frac{1}{2}$     são iguais a     $\frac{4}{6}$     e     $\frac{3}{6}$, respectivamente. Portanto a fração do canteiro solicitada pelo pai,     $\frac{2}{3}$, é maior. 
+  \item     Juntando as espaços solicitados temos     $\frac{2}{3} + \frac{1}{2} = \frac{4}{6} + \frac{3}{6} = \frac{7}{6}$    . Mas     $\frac{7}{6}>\frac{6}{6}=1$    . O espaço reservado inicialmente para o canteiro não atende as solicitações do pai e da mãe de Miguel. 
+  \item     O espaço inicialmente reservado não é suficiente. 
+  \item     Deve-se observar quanto excede um canteiro  $\frac{7}{6} – 1 = \frac{7}{6} - \frac{6}{6} = \frac{1}{6}$. É necessário aumentar $\frac{1}{6}$ do espaço inicialmente reservado para o canteiro. 
+
+O denominador comum empregado foi 6. Cada retângulo com 6 divisões indica a fração de canteiro que tinha sido reservada inicialmente. 
+
+\begin{center}
+\begin{tikzpicture}[x=1mm,y=1mm, scale=.6]
+ \draw[fill=pink] (0,0) rectangle (20,30);
+ \draw[fill=green] (20,0) rectangle (30,30);
+ \draw (0,15) -- (30,15); 
+ \draw (10,0) -- (10,30);
+
+ \begin{scope}[xshift=40mm]
+\draw[fill=common, fill opacity=.3] (0,0) rectangle (30,30);
+\draw[fill=green] (0,15) rectangle (10,30);
+\draw (0,15) -- (30,15); 
+\draw (10,0) -- (10,30);
+\draw (20,0) -- (20,30);
+\end{scope}
+\end{tikzpicture}
+\end{center}
+
+
+\end{enumerate} %s
+
+\end{resposta*}
+
+\subsection{Atividade 14}
+
+  \noindent{\bf Objetivos específicos: Levar o aluno a}\newline \vspace{.15cm}  
+
+  \begin{itemize} %s
+    \item       comparar, somar e subtrair frações a partir da determinação de um denominador comum com base no processo geométrica de subdivisão da unidade;
+    \item       explorar as interpretações de juntar para a adição e de comparar para a subtração.
+\end{itemize} %s
+  
+  \noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}  
+
+  \begin{itemize} %s
+    \item       Considere que como na atividade anterior, é explorada aqui a noção de fração como parte de uma unidade em uma situação contextualizada, com as interpretações de juntar para a adição e de comparar para a subtração, agora com três parcelas e com uma situação envolvendo volume.
+\end{itemize} %s
+  
+\begin{resposta*}{Atividade 14}  
+  Somando a quantidade de água presente nas três garrafas temos:   $\frac{2}{3}+\frac{1}{2}+\frac{5}{8} = \frac{16}{24}+\frac{12}{24}+\frac{15}{24} = \frac{43}{24}$. Concluímos que é possível, pois   $\frac{43}{24}<\frac{48}{24}=2$.    
+\end{resposta*}
+
+
+\subsection{Atividade 15}
+  
+  \noindent{\bf Objetivos específicos: Levar o aluno a}\newline \vspace{.15cm}  
+
+  \begin{itemize} %s
+    \item       explorar a formulação de conjecturas envolvendo a estrutura algébrica dos conjuntos numéricos, visamos atingir não só reflexões a respeito de números racionais, mas também estimular a habilidade de argumentação em Matemática.
+\end{itemize} %s
+  
+  
+  \noindent {\bf Recomendações e sugestões para o desenvolvimento da atividade:} \vspace{.15cm}  
+
+  \begin{itemize} %s
+    \item       Neste momento, não se espera ainda que os alunos justifiquem com rigor formal suas afirmações, mas sim que busquem ilustrar suas conjecturas a partir de exemplos.
+    \item       Recomenda-se que o professor discuta cada item a partir das soluções dos alunos, destacando as respostas corretas com base nos exemplos propostos pelos estudantes.
+\end{itemize} %s
+  
+
+\begin{resposta*}{Atividade 15}  
+  
+\begin{enumerate} [a)] %d
+    \item       Verdadeiro. Exemplo:       $3 + \frac{2}{5} = \frac{15}{5}+\frac{2}{5} = \frac{17}{5}$.  Há outras possibilidades de respostas.
+    \item       Verdadeiro. Exemplo:       $7 - \frac{3}{4} = \frac{25}{4}$.
+    \item       Falso. Exemplo:       $\frac{11}{6} + \frac{7}{6} = \frac{18}{6} = 3$.
+    \item       Verdadeiro       $\frac{9}{8} + \frac{6}{10} = \frac{45}{40}+ \frac{24}{40} = \frac{69}{40}$.
+\end{enumerate} %d
+  
+  
+\end{resposta*}
+
+\end{multicols}
+\end{document}
