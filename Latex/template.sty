@@ -12,7 +12,10 @@ top=1in,
 left=27mm,
 footskip=.7in
 }
-
+% Para hiperreferências - é utilizado na segunda página
+\usepackage{hyperref}
+% Para utilizar tamanho de fonte qualquer.
+\usepackage{anyfontsize}
 % Para enumerates customizados
 \RequirePackage{enumerate}
 %\RequirePackage[shortlabels]{enumitem} allow resume enumerate, but conflicts with enumerate package
@@ -84,7 +87,8 @@ footskip=.7in
 \RequirePackage{tikz}
 \usetikzlibrary{shapes}
 \usetikzlibrary{calc}
-\usetikzlibrary{arrow}
+\usetikzlibrary{quotes, arrows, meta}
+\usetikzlibrary{positioning}
 \usetikzlibrary{decorations.pathreplacing}%to use braces in pictures
 % This package provides special PGF/TikZ nodes for the text, marginpar, footer and header area of the current page.
 \RequirePackage{tikzpagenodes}
@@ -121,8 +125,8 @@ footskip=.7in
   {\gdef\sectionlabel{\thesection\ }}{0pt}
   {%
     \begin{tikzpicture}[remember picture,overlay]
-      \filldraw [x=1mm,y=1mm, attention, overlay] (\textwidth,-4) -- (0 ,-4)
-      arc (-90:-270:4) --(0,4) -- (\textwidth,4)
+      \filldraw [x=1mm,y=1mm, attention, overlay] (1.2\textwidth,-4) -- (0 ,-4)
+      arc (-90:-270:4) --(0,4) -- (1.2\textwidth,4)
       node[anchor=west] at (0, 0) {\color{white} \MakeUppercase{#1}};
    \end{tikzpicture}
  }

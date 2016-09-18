@@ -1,56 +1,7 @@
-\documentclass[a4paper,10pt]{article}
-%\documentclass[a4paper,10pt]{scrartcl}
-
-
-\usepackage{geometry}
-\geometry{
-textwidth=157mm,
-paperwidth=196mm,
-paperheight=280mm,
-top=1in,
-left=27mm,
-footskip=.7in
-}
-
-% Choose font
-\RequirePackage{ifxetex}
-\ifxetex
-   \RequirePackage{fontspec}
-   \setmainfont[Ligatures=TeX]{Lato Light}
-   \newfontface\titlefont{STIXIntegralsUp}
-   \newfontface\thickfont[Ligatures=TeX]{Nimbus Sans L}
-   \newfontface\bigtitlefont[Scale=1.3]{Cabin}
-   %\newcommand\titlefont{}
-   %\newcommand\thickfont{}
-\else
-   \RequirePackage[utf8]{inputenc}
-%   \RequirePackage[sfdefault,thin]{roboto}  %% sfdefault is the base font
-   \RequirePackage{helvet}
-   \newcommand\titlefont{\fontfamily{helvet}\selectfont}
-   \newcommand\thickfont{\fontfamily{cmss}\selectfont}
-   \newcommand\bigtitlefont{\fontfamily{cmss}\selectfont}
-\fi
-
-
-\usepackage[center,a4]{crop}
-
-\usepackage[utf8]{inputenc}
-\usepackage{tikz}
-\usetikzlibrary{positioning}
-
-\usepackage{anyfontsize}
-
-\definecolor{dark}{RGB}     {97,83,117}
-\definecolor{common}{RGB}   {142,178,197}
-\definecolor{special}{RGB}  {229,98,92}
-\definecolor{light}{RGB}    {249,191,118}
-\definecolor{attention}{RGB}{209,49,61}
-
-\begin{document}
 \thispagestyle{empty}
 a
 \crop
-\begin{tikzpicture}[remember picture,overlay]
+\begin{tikzpicture}[remember picture,overlay, x=1cm,y=1cm]
 \fill[light]  ([yshift=2mm,xshift=-2mm]current page.north west) rectangle ([yshift=-5mm,xshift=2mm]current page.south east);
   [xshift=-1.5cm,yshift=-1.3cm] at (current page.south east)
   \node[xshift=-8cm,yshift=-2cm] at (current page.north east) {\normalsize INSTITUTO NACIONAL DE MATEMÁTICA PURA E APLICADA};
@@ -92,4 +43,4 @@ a
 
 \end{tikzpicture}%
 
-\end{document}
+\pagebreak
