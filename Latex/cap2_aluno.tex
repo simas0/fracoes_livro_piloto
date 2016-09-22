@@ -1,5 +1,6 @@
 
 \setcounter{chapter}{1}
+\setcounter{subsection}{0}
 \chapter{Multiplicando a fração da unidade }
 
 
@@ -178,13 +179,13 @@ Complete as afirmações com uma das frações: ``dois meios'', ``dois terços''
 \begin{enumerate}[a)]
  \item A parte pintada de vermelho em \begin{tikzpicture}[scale=0.8]
                            \draw[fill=attention] (0,0) rectangle (20,10);
-                           \draw (20,0) rectangle (30,10);
+                           \draw[fill=common, fill opacity=.3] (20,0) rectangle (30,10);
                           \end{tikzpicture} 
                           é \begin{tikzpicture}
                              \draw (0,0) -- (20,0);
                             \end{tikzpicture}
                             de \begin{tikzpicture}[scale=0.8]
-                                 \draw (0,0) rectangle (30,10);
+                                 \draw[fill=common, fill opacity=.3] (0,0) rectangle (30,10);
                                \end{tikzpicture}.
 
  \item A parte pintada de vermelho em \begin{tikzpicture}
@@ -195,13 +196,13 @@ Complete as afirmações com uma das frações: ``dois meios'', ``dois terços''
                              \draw (0,0) -- (20,0);
                             \end{tikzpicture}
                             de \begin{tikzpicture}
-                            \draw (0,0) rectangle (8,8);                           
+                            \draw[fill=common, fill opacity=.3] (0,0) rectangle (8,8);                           
                            \end{tikzpicture}. 
 
 
  \item A parte pintada de vermelho em \begin{tikzpicture}
+                           \draw[fill=common, fill opacity=.3] (0,0) circle (4);
                            \fill[attention] (0,0) -- (72:4) arc (72:-72:4) --cycle;
-                           \draw (0,0) circle (4);
                            \foreach \x in {0,72,...,288}{
                            \draw (0,0) -- (\x:4);}                           
                           \end{tikzpicture} 
@@ -209,7 +210,7 @@ Complete as afirmações com uma das frações: ``dois meios'', ``dois terços''
                              \draw (0,0) -- (20,0);
                             \end{tikzpicture}
                             de \begin{tikzpicture}
-                            \draw (0,0) circle (4);                           
+                            \draw[fill=common, fill opacity=.3] (0,0) circle (4);                           
                            \end{tikzpicture}.            
 
  \item A parte pintada de vermelho em \begin{tikzpicture}
@@ -227,11 +228,14 @@ Complete as afirmações com uma das frações: ``dois meios'', ``dois terços''
                                       \end{tikzpicture} \begin{tikzpicture}
                                        \fill[attention]  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (0,0) -- (\x-18:4) -- (\y-18:2)--(\x-18 +72:4) -- (0, 0)};
                                        \fill[white]  (90:4) -- (-90:2) -- (-56:4) -- (-18:2)-- (18:4) --(56:2) --cycle;
+                                       \fill[common, opacity=.3]  (90:4) -- (-90:2) -- (-56:4) -- (-18:2)-- (18:4) --(56:2) --cycle;
                                        \draw  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (\x-18:4) -- (\y-18:2)--(\x-18 +72:4)};
                                       \end{tikzpicture} é \begin{tikzpicture} \draw (0,0) -- (20,0); \end{tikzpicture} de \begin{tikzpicture}
-                                       \draw  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (\x-18:4) -- (\y-18:2)--(\x-18 +72:4)}; \end{tikzpicture}.
+                                       \fill[common, opacity=.3]  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (0,0) -- (\x-18:4) -- (\y-18:2)--(\x-18 +72:4) -- (0, 0)};
+                                       \draw  \foreach \x/\y in {36/72,108/144,180/212, 252/284, 324/360}{ (\x-18:4) -- (\y-18:2)--(\x-18 +72:4)};
+                                      \end{tikzpicture}.
 
-\item A parte pintada de vermelho em \begin{tikzpicture} \fill[attention] (90:4)--(-90:4)--(-30:4)--(30:4)--cycle; \foreach \x in {30,90,...,330}{\draw (0,0) -- (\x:4); \draw (\x:4) -- (\x+60:4);}\end{tikzpicture} \begin{tikzpicture} \fill[attention] (30:4)--(90:4)--(150:4)--(210:4)--(270:4)-- (330:4) -- (0,0) --cycle; \foreach \x in {30,90,...,330}{\draw (0,0) -- (\x:4); \draw (\x:4) -- (\x+60:4);}\end{tikzpicture} é \begin{tikzpicture} \draw (0,0) -- (20,0); \end{tikzpicture} de \begin{tikzpicture} \foreach \x in {30,90,...,330}{\draw (\x:4) -- (\x+60:4);}\end{tikzpicture}.                  
+\item A parte pintada de vermelho em \begin{tikzpicture} \draw[fill=attention] (90:4)--(-90:4)--(-30:4)--(30:4)--cycle; \foreach \x in {30,90,...,330}{\draw (0,0) -- (\x:4);} \draw[fill=common, fill opacity=.3] (90:4) -- (150:4) -- (210:4) -- (270:4) -- cycle;\end{tikzpicture} \begin{tikzpicture} \fill[attention] (30:4)--(90:4)--(150:4)--(210:4)--(270:4)-- (330:4) -- (0,0) --cycle; \foreach \x in {30,90,...,330}{\draw (0,0) -- (\x:4); \draw (\x:4) -- (\x+60:4);} \fill[common, fill opacity=.3] (0,0) -- (30:4) -- (-30:4) -- cycle;\end{tikzpicture} é \begin{tikzpicture} \draw (0,0) -- (20,0); \end{tikzpicture} de \begin{tikzpicture} \draw[fill=common, fill opacity=.3] (30:4) --(90:4)--(150:4)--(210:4)--(270:4)-- (330:4) -- cycle;\end{tikzpicture}.                  
 \end{enumerate}
 
 \section{ORGANIZANDO AS IDEIAS }
@@ -240,8 +244,8 @@ Se uma torta está dividida em três partes iguais, a torta fica separada em tr�
 
 \begin{center}
 \begin{tikzpicture}
- \fill[attention] (0,0) -- (-90:10) arc (-90:30:10) -- (0,0) -- cycle;
- \draw (0,0) circle (10);
+ \draw[fill=common, fill opacity=.3] (0,0) circle (10);
+ \draw[fill=attention] (0,0) -- (-90:10) arc (-90:30:10) -- (0,0) -- cycle;
  \draw (0,0) -- (-90:10);
  \draw (0,0) -- (30:10);
  \draw (0,0) -- (150:10);
@@ -254,7 +258,8 @@ Duas fatias são ``dois terços da torta'', o que pode ser expresso simplesmente
 
 \begin{center}
 \begin{tikzpicture}
- \fill[attention] (0,0) -- (-210:10) arc (-210:30:10) -- (0,0) -- cycle;
+ \draw[fill=common, fill opacity=.3] (0,0) circle (10);
+ \draw[fill=attention] (0,0) -- (-210:10) arc (-210:30:10) -- (0,0) -- cycle;
  \draw (0,0) circle (10);
  \draw (0,0) -- (-90:10);
  \draw (0,0) -- (30:10);
@@ -439,17 +444,17 @@ Para cada figura a seguir, indique a fração da figura que está pintada de ver
 a)
 \parbox[t][1.5cm][c]{5cm}{
 \begin{tikzpicture}
+\draw[fill=common, fill opacity=.3] (0,0) circle (10);
  \foreach \x in {0,72,...,288}{
- \fill[attention] (0,0) -- (\x:10) arc (\x:\x+36:10) --cycle;
+ \draw[fill=attention] (0,0) -- (\x:10) arc (\x:\x+36:10) --cycle;
  \draw (\x:10) -- (\x:-10);}
- \draw (0,0) circle (10);
 \end{tikzpicture} }
 &
 b)
 \parbox[t][1.5cm][c]{5cm}{
 \begin{tikzpicture}
-\fill[attention] (0,4) rectangle (7,20);
-\draw (0,0) rectangle (14,20);
+\draw[fill=common, fill opacity=.3] (0,0) rectangle (14,20);
+\draw[fill=attention] (0,4) rectangle (7,20);
 \foreach \y in {4,8,12,16}{
 \draw (0,\y)--(14,\y);}
 \draw (7,0) -- (7,20);
@@ -460,8 +465,8 @@ b)
 c)
 \parbox[t][1.5cm][c]{5cm}{
 \begin{tikzpicture}
+\draw[fill=common, fill opacity=.3] (0,0) rectangle (30,20);
 \fill[attention] (0,0) rectangle (18,20);
- \draw (0,0) rectangle (30,20);
  \foreach \x in {3,6,...,27}{
  \draw (\x,0)--(\x,20);}
 \end{tikzpicture} }
@@ -496,40 +501,44 @@ Preencha cada lacuna a seguir com uma fração adequada (use notação simbólic
 \begin{scope}
  \clip \tripa;
 \draw[fill=attention] (-4,-4) rectangle (0,4);
+\draw[fill=common, fill opacity=.3] (0,-4) rectangle (20,4);
 \end{scope}
 \end{tikzpicture} 
 é 
 \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}   
 de  
 \begin{tikzpicture}[scale=1.3]
-\foreach \x in {30,90,...,330}{\draw (\x:4) -- (\x+60:4);}
+\draw[fill=common, fill opacity=.3] (30:4) -- (90:4) -- (150:4) -- (210:4) -- (270:4) -- (330:4)--cycle;
 \end{tikzpicture}.
  %b 
 \item     A parte pintada em vermelho em 
 \begin{tikzpicture}[scale=1.3]
-\draw[fill=attention] (90:4)--(150:4)--(210:4)--(270:4)--cycle;
-\foreach \x in {30,90,...,270}{\draw (\x:4) -- (\x+60:4);}
-\draw[shift={(4*1.72,0)}] (30:4) -- (90:4) -- (150:4);
-\draw[shift={(4*1.72,0)}] (-30:4) -- (-90:4) -- (-150:4);
-\foreach \x in {-150,-90,...,90}{\draw[shift={(8*1.72,0)}] (\x:4) -- (\x+60:4);}
-\end{tikzpicture}
+ \draw \tripa;
+\begin{scope}
+ \clip \tripa;
+\draw[fill=attention] (-4,-4) rectangle (0,4);
+\draw[fill=common, fill opacity=.3] (0,-4) rectangle (20,4);
+\end{scope}
+\end{tikzpicture} 
 é 
 \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}
 de
 \begin{tikzpicture}[scale=1.3]
- \draw (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) --(30:4) -- (90:4) -- (150:4)--cycle;
+ \draw[fill=common, fill opacity=.3] (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) --(30:4) -- (90:4) -- (150:4)--cycle;
 \end{tikzpicture}.
 
 %c
 \item     A parte pintada em vermelho em \begin{tikzpicture}[scale=1.3]
-                                            \draw[fill=attention] (90:4)--(150:4)--(210:4)--(270:4)--cycle;
-                                            \foreach \x in {30,90,...,270}{\draw (\x:4) -- (\x+60:4);}
-                                            \draw[shift={(4*1.72,0)}] (30:4) -- (90:4) -- (150:4);
-                                            \draw[shift={(4*1.72,0)}] (-30:4) -- (-90:4) -- (-150:4);
-                                            \foreach \x in {-150,-90,...,90}{\draw[shift={(8*1.72,0)}] (\x:4) -- (\x+60:4);}
-                                            \end{tikzpicture}     é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de  
+ \draw \tripa;
+\begin{scope}
+ \clip \tripa;
+\draw[fill=attention] (-4,-4) rectangle (0,4);
+\draw[fill=common, fill opacity=.3] (0,-4) rectangle (20,4);
+\end{scope}
+\end{tikzpicture} 
+     é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de  
 \begin{tikzpicture}[scale=1.3]
-\draw \tripa;
+\draw[fill=common, fill opacity=.3] \tripa;
 \end{tikzpicture}.
 
 %d                                            
@@ -538,10 +547,11 @@ de
 \begin{scope}
  \clip \tripa;
 \draw[fill=attention] (-4,-4) rectangle ({4*sqrt(3)},4);
+\draw[fill=common, fill opacity=.3] ({4*sqrt(3)},-4) rectangle ({10*sqrt(3)},4);
 \end{scope}
 \end{tikzpicture}  é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de
 \begin{tikzpicture}[scale=1.3]
-\foreach \x in {30,90,...,330}{\draw (\x:4) -- (\x+60:4);}
+\draw[fill=common, fill opacity=.3] (30:4) -- (90:4) -- (150:4) -- (210:4) -- (270:4) -- (330:4)--cycle;
 \end{tikzpicture}.
 %e
 \item     A parte pintada em vermelho em   \begin{tikzpicture}[scale=1.3]
@@ -549,10 +559,11 @@ de
 \begin{scope}
  \clip \tripa;
 \draw[fill=attention] (-4,-4) rectangle ({4*sqrt(3)},4);
+\draw[fill=common, fill opacity=.3] ({4*sqrt(3)},-4) rectangle ({10*sqrt(3)},4);
 \end{scope}
 \end{tikzpicture}    é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de 
 \begin{tikzpicture}[scale=1.3]
- \draw (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) --(30:4) -- (90:4) -- (150:4)--cycle;
+ \draw[fill=common, fill opacity=.3] (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) --(30:4) -- (90:4) -- (150:4)--cycle;
 \end{tikzpicture}.
 
 %f
@@ -561,10 +572,11 @@ de
 \begin{scope}
  \clip \tripa;
 \draw[fill=attention] (-4,-4) rectangle ({4*sqrt(3)},4);
+\draw[fill=common, fill opacity=.3] ({4*sqrt(3)},-4) rectangle ({10*sqrt(3)},4);
 \end{scope}
 \end{tikzpicture}   é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de 
 \begin{tikzpicture}[scale=1.3]
-\draw \tripa;
+\draw[fill=common, fill opacity=.3] \tripa;
 \end{tikzpicture}.
 
 %g
@@ -574,22 +586,24 @@ de
 \begin{scope}
  \clip \tripa;
 \draw[fill=attention] (-4,-4) rectangle ({8*sqrt(3)},4);
+\draw[fill=common, fill opacity=.3] ({8*sqrt(3)},-4) rectangle ({10*sqrt(3)},4);
 \end{scope}
 \end{tikzpicture}  
 é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de 
 \begin{tikzpicture}[scale=1.3]
-                                            \foreach \x in {30,90,...,330}{\draw (\x:4) -- (\x+60:4);}
-                                            \end{tikzpicture}.
+\draw[fill=common, fill opacity=.3] (30:4) -- (90:4) -- (150:4) -- (210:4) -- (270:4) -- (330:4)--cycle;
+\end{tikzpicture}.
 %h
 \item     A parte pintada em vermelho em  \begin{tikzpicture}[scale=1.3]
  \draw \tripa;
 \begin{scope}
  \clip \tripa;
 \draw[fill=attention] (-4,-4) rectangle ({8*sqrt(3)},4);
+\draw[fill=common, fill opacity=.3] ({8*sqrt(3)},-4) rectangle ({10*sqrt(3)},4);
 \end{scope}
 \end{tikzpicture} é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de
 \begin{tikzpicture}[scale=1.3]
- \draw (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) --(30:4) -- (90:4) -- (150:4)--cycle;
+ \draw[fill=common, fill opacity=.3] (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) --(30:4) -- (90:4) -- (150:4)--cycle;
 \end{tikzpicture}.
 
 %i
@@ -599,11 +613,12 @@ de
 \begin{scope}
  \clip \tripa;
 \draw[fill=attention] (-4,-4) rectangle ({8*sqrt(3)},4);
+\draw[fill=common, fill opacity=.3] ({8*sqrt(3)},-4) rectangle ({10*sqrt(3)},4);
 \end{scope}
 \end{tikzpicture}
 é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de 
 \begin{tikzpicture}[scale=1.3]
-\draw \tripa;
+\draw[fill=common, fill opacity=.3] \tripa;
 \end{tikzpicture}.
 %j
 \item     A parte pintada em vermelho em 
@@ -616,9 +631,9 @@ de
 \end{tikzpicture}
 é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de 
 \begin{tikzpicture}[scale=1.3]
-\foreach \x in {30,90,...,330}{\draw (\x:4) -- (\x+60:4);}
+\draw[fill=common, fill opacity=.3] (30:4) -- (90:4) -- (150:4) -- (210:4) -- (270:4) -- (330:4)--cycle;
 \end{tikzpicture}.
-%l
+%k
 \item     A parte pintada em vermelho em
 \begin{tikzpicture}[scale=1.3]
  \draw \tripa;
@@ -629,10 +644,10 @@ de
 \end{tikzpicture}
 é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de 
 \begin{tikzpicture}[scale=1.3]
- \draw (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) --(30:4) -- (90:4) -- (150:4)--cycle;
+ \draw[fill=common, fill opacity=.3] (30:4) -- (90:4) -- (150:4)--(210:4)--(270:4)--(330:4) [shift={({4*sqrt(3)},0)}] --(270:4) -- (330:4) --(30:4) -- (90:4) -- (150:4)--cycle;
 \end{tikzpicture}.
 
-%m
+%l
 \item     A parte pintada em vermelho em  
   \begin{tikzpicture}[scale=1.3]
  \draw \tripa;
@@ -641,9 +656,11 @@ de
 \draw[fill=attention] (-4,-4) rectangle ({12*sqrt(3)},4);
 \end{scope}
 \end{tikzpicture}
-é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de \begin{tikzpicture}[scale=1.3]
-                                                                   \draw \tripa;
-                                                                  \end{tikzpicture}
+é \begin{tikzpicture} \draw (0,0)--(20,0);\end{tikzpicture}    de 
+\begin{tikzpicture}[scale=1.3]
+\draw[fill=common, fill opacity=.3] \tripa;
+\end{tikzpicture}.
+
 
 \end{enumerate} %s
 
