@@ -196,11 +196,14 @@ Tendo como unidade um mesmo retângulo, as representações das frações $\frac
 
 \begin{center}
 \begin{tikzpicture}[scale=4]
+\fill[fill=common, fill opacity=.3] (0,0) rectangle (10,5);
 \fill[special] (0,0) rectangle (6,5);
 \draw (0,0) rectangle (10,5);
 \foreach \x in {2,4,...,8} \draw (\x,0) -- (\x, 5);
 
 \begin{scope}[shift={(14,0)}]
+\fill[fill=common, fill opacity=.3] (8,2.5) rectangle (10,5);
+\fill[fill=common, fill opacity=.3] (6,0) rectangle (10,2.5);
 \fill[light, opacity = .8] (0,0) rectangle (6,5);
 \fill[light, opacity = .8] (6,2.5) rectangle (8,5);
 \draw (0,0) rectangle (10,5);

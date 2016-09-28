@@ -88,8 +88,9 @@ Para cada par ou trio de figuras a seguir, há uma reta numérica. Considerando 
 &&
  
 \begin{tikzpicture}[x=30mm,y=30mm,scale=.6]
+\draw[fill=common, fill opacity=.3] (0,0) rectangle (1.8,1.2);
+\node[above] at (.9,1.2) {Figura 2};
 \draw[fill=attention] (0,0) -- (0,1.2) --(1.8,0)--cycle;
-\draw (0,0) rectangle (1.8,1.2) node[above, shift={(-.7,0)}] {Figura 2};
 \end{tikzpicture}
  
 \\
@@ -118,13 +119,19 @@ node[below] {$\frac{1}{2}$};
  
  \begin{tikzpicture}[x=30mm,y=30mm]
 \def\scale{.6}
-\draw[fill=attention, scale=\scale] (-1.2,0) rectangle (0,.4);
-\draw[ scale=\scale] (-1.2,0.4) rectangle (0,.8);
-\draw[ fill=attention, scale=\scale] (-1.2,.8) rectangle (0,1.2);
+%
+\draw[fill=common, fill opacity=.3, scale=\scale] (-1.2,0) rectangle (0,1.2);
+\draw[fill=attention, scale=\scale] (-1.2,0) rectangle (-0.8,.4);
+\draw[fill=attention, scale=\scale] (-.4,0) rectangle (0,.4);
+\draw[fill=attention, scale=\scale] (-1.2,0.8) rectangle (-0.8,1.2);
+\draw[fill=attention, scale=\scale] (-.4,0.8) rectangle (0,1.2);
+\draw[fill=attention, scale=\scale] (-.8,0.4) rectangle (-0.4,.8);
+
+% \draw[ fill=attention, scale=\scale] (-1.2,.8) rectangle (0,1.2);
  
-\draw[fill=white, scale=\scale] (-0.8,0) rectangle (-.4,.4);
-\draw[ fill=attention, scale=\scale] (-0.8,.4) rectangle (-0.4,.8);
-\draw[fill=white, scale=\scale] (-0.8,.8) rectangle (-.4,1.2);
+% \draw[fill=common, fill opacity=.3, scale=\scale] (-0.8,0) rectangle (-.4,.4);
+% \draw[ fill=attention, scale=\scale] (-0.8,.4) rectangle (-0.4,.8);
+% \draw[fill=common, fill opacity=.3, scale=\scale] (-0.8,.8) rectangle (-.4,1.2);
 \end{tikzpicture}
 &&
  \begin{tikzpicture}[x=30mm,y=30mm]
@@ -159,6 +166,7 @@ node[below] {$\frac{1}{2}$};
  
 %hexagon on the left
 \fill[shift={(0,0.6)}, fill=attention, scale=\scale] (0,0) -- (90:0.7) -- (150:0.7)-- (210:.7);
+\fill[shift={(0,0.6)}, fill=common, fill opacity=.3, scale=\scale] (0,0) -- (90:0.7) -- (30:0.7)-- (-30:.7) -- (-90:.7) -- (-150:.7)--cycle;
 \foreach \x in {30,90,...,330}{
 \draw[shift={(0,0.6)}, scale=\scale] (\x:0.7) -- (\x + 60: 0.7);
 \draw[shift={(0,0.6)}, scale=\scale] (0,0) -- (\x:0.7);}
@@ -205,6 +213,7 @@ node[below] {$\frac{1}{2}$};
 &&
 \begin{tikzpicture}[x=30mm,y=30mm]
 \def\scale{.6}% to rescale the polygons only.
+\fill[shift={(1,0.6)}, scale=\scale, common, fill opacity=.3] (90:0.7) -- (210: 0.7)--(330:.7)--cycle;
 \foreach \x in {90,210,330}{
 \draw[shift={(1,0.6)}, scale=\scale] (\x:0.7) -- (\x + 120: 0.7);}
 \draw[fill=attention, shift={(1,0.6)}, scale=\scale] (-90:0.35) -- (30: 0.35) -- (150: 0.35) -- cycle;
@@ -234,14 +243,14 @@ node[below] {$\frac{1}{2}$};
 \begin{tikzpicture} [x=30mm,y=30mm]
 \def\scalefig {.6}
 \draw[shift={(-.35*\scalefig,0.3)}, fill=attention, scale=\scalefig] (-1.5,0) rectangle (-0.5,1.2) node[above, shift={(-.25*\scalefig,0)}] {Figura 1};
-\draw[shift={(-.35*\scalefig,0.3)}, scale=\scalefig] (-.5,0) rectangle (0,1.2);
+\draw[shift={(-.35*\scalefig,0.3)}, scale=\scalefig, fill=common, fill opacity=.3] (-.5,0) rectangle (0,1.2);
 \draw[shift={(-.35*\scalefig,0.3)}, scale=\scalefig] (-1,0) -- (-1,1.2);
 \end{tikzpicture}
 &
 \begin{tikzpicture} [x=30mm,y=30mm] 
 \def\scalefig {.6}
 \draw[shift={(1.25*\scalefig,0.3)}, fill=attention, scale=\scalefig] (-1.5,0) rectangle (-1,1.2);
-\draw[shift={(1.25*\scalefig,0.3)}, scale=\scalefig] (-1,0) rectangle (0,1.2) node[above, shift={(-.75*\scalefig,0)}] {Figura 2};
+\draw[shift={(1.25*\scalefig,0.3)}, scale=\scalefig, fill=common, fill opacity=.3] (-1,0) rectangle (0,1.2) node[black, above, shift={(-.75*\scalefig,0)}] {Figura 2};
 \draw[shift={(1.25*\scalefig,0.3)}, scale=\scalefig] (-.5,0) -- (-.5,1.2);
 \end{tikzpicture}
 &
@@ -274,6 +283,7 @@ node[below] {$\frac{\x}{3}$};
 \parbox[b][2.6cm][t]{.3cm}{f)}&
  
 \begin{tikzpicture}[scale=.48]
+\fill[common, fill opacity=.3] (0,0) rectangle (45,45); 
  \fill[attention] (0,33.75) rectangle (33.75,45);
  \draw[step=11.25, fill=attention] (0,0) grid (45,45); 
 \end{tikzpicture}
@@ -286,6 +296,7 @@ node[below] {$\frac{\x}{3}$};
 \begin{tikzpicture}[scale=.48]
   \draw[step=11.25, fill=attention] (0,0) rectangle (45,45); 
   \draw[step=11.25, fill=white] (11.25,0) rectangle (45,11.25);
+  \draw[step=11.25, fill=common, fill opacity=.3] (11.25,0) rectangle (45,11.25);
   \draw[step=11.25] (0,0) grid (45,45); 
 \end{tikzpicture}
 \\
@@ -430,8 +441,8 @@ A faixa a seguir está dividida em 5 partes iguais.
 
 \begin{center}
  \begin{tikzpicture}[x=56.25mm,y=56.25mm]
-\foreach \x in {1,2,...,5}{
-\draw (0,0) rectangle (\x/5,.1);
+\foreach \x in {0,1,2,...,4}{
+\draw[fill=common, fill opacity=.3] (\x/5,0) rectangle (\x/5 + 1/5,.1);
 \draw[step=.2] (0,0) grid (1,.1);
 \draw (0,.1)-- (1,.1);}
  \end{tikzpicture}
@@ -445,6 +456,7 @@ A faixa a seguir está dividida em 5 partes iguais.
 \begin{center}
 \begin{tikzpicture}[x=56.25mm,y=56.25mm]
 \foreach \x in {1,2,...,5}{
+\fill[fill=common, fill opacity=.3, shift={(0,-\x*.15)}] (\x/5,0) rectangle (1,.1);
 \draw[fill=attention, shift={(0,-\x*.15)}] (0,0) rectangle (\x/5,.1);
 \draw[step=.2, shift={(0,-\x*.15)}] (0,0) grid (1,.1);
 \draw[shift={(0,-\x*.15)}] (0,.1)-- (1,.1);}
@@ -472,7 +484,7 @@ A professora Julia pediu que os seus alunos, Pedro e Miguel, marcassem $\frac{1}
 
 \begin{center}
  \begin{tikzpicture}[x=56.25mm,y=56.25mm]
-\draw[fill=common] (0,-.15) rectangle (1.2,.15);
+\draw[fill=common, fill opacity=.3] (0,-.15) rectangle (1.2,.15);
 \draw (0,0) -- (1.2,0) ; %edit here for the axis
 \draw (1,3pt) -- (1,-3pt) node[below] {1};
 \node at (.03,-.05) {0};
@@ -481,7 +493,7 @@ A professora Julia pediu que os seus alunos, Pedro e Miguel, marcassem $\frac{1}
 
 Pedro trouxe a seguinte marcação: 
  \begin{tikzpicture}[x=56.25mm,y=56.25mm]
-\draw[fill=common] (0,-.15) rectangle (1.2,.15);
+\draw[fill=common, fill opacity=.3] (0,-.15) rectangle (1.2,.15);
 \draw (0,0) -- (1.2,0) ; %edit here for the axis
 \draw[dashed] (0.6,-.15) -- (.6,.15);
 \draw (1,3pt) -- (1,-3pt) node[below] {1};
@@ -491,7 +503,7 @@ Pedro trouxe a seguinte marcação:
 
 Miguel trouxe esta:
  \begin{tikzpicture}[x=56.25mm,y=56.25mm]
-\draw[fill=common] (0,-.15) rectangle (1.2,.15);
+\draw[fill=common, fill opacity=.3] (0,-.15) rectangle (1.2,.15);
 \draw (0,0) -- (1.2,0) ; %edit here for the axis
 \draw[dashed] (0.5,-.15) -- (.5,.15);
 \draw (1,3pt) -- (1,-3pt) node[below] {1};
@@ -505,7 +517,7 @@ Miguel trouxe esta:
   \item     Onde deve ser feita a marcação correspondente a     $\frac{4}{4}$    ?
   \item     E a marcação de     $\frac{5}{4}$    ? 
 \end{enumerate} %s
-
+  
 \subsection{Atividade}
 
 Um caçador de tesouros encontrou o mapa a seguir. Leia as instruções para a localização do tesouro e decida em que local ele deve cavar:
