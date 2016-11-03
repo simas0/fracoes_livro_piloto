@@ -60,14 +60,15 @@ O aluno deve ser capaz de:
     \item       Esta atividade pode ser adaptada para alunos com deficiência de visão. Para isso, sugere-se confeccionar os modelos da barra de chocolate  inteira e repartida, que estão disponíveis para reprodução no final do livro, em três materiais diferentes. Por exemplo, papel comum e papéis com texturas diferentes, tecido ou material emborrachado.
 \end{itemize} %s
 
-\vfill
+%\vfill
 
 \begin{resposta*}{Atividade 1}
   \begin{enumerate}[a),wide,labelindent=0pt] %s
     \item       Este item não possui resposta correta, apenas respostas coerentes com a explicação do aluno. Por exemplo, um estudante pode dizer que sim e explicar que o irmão mais velho deve ficar com uma parte maior porque precisa de mais energia. Mas a resposta esperada é que a divisão não é justa porque as quantidades de chocolate são diferentes. Discuta com os alunos para que entendam a divisão correspondente à resposta esperada.
     \item       Não, eles receberão quantidades diferentes de chocolate, embora cada um receba um único pedaço do chocolate.
     \item       Respostas possíveis:
-  \begin{imagem*}[breakable]{}{} - FIGURA ARTÍSTICA - \mbox{} \newline \includegraphics[width=\textwidth, keepaspectratio]{../../livro/media/cap1/secoes/licao1_atv1.png}    \mbox{} \newline      ilustração: Cambrainha   \end{imagem*}
+  
+  \noindent\includegraphics[width=.45\textwidth, keepaspectratio]{../../livro/media/cap1/secoes/licao1_atv1.png}
     \item       Cada parte é ``um terço'' da barra ou a ``terça parte'' da barra.
 \end{enumerate} %s
 \end{resposta*}
@@ -130,9 +131,9 @@ O aluno deve ser capaz de:
 \begin{resposta*}{Atividade 3}
 
 Uma maneira de se cortar o barbante é dobrar ao meio e depois dobrar novamente ao meio, obtendo quatro partes iguais, como ilustrado na figura a seguir.
-  \begin{imagem*}[breakable]{}{}     - FIGURA ARTÍSTICA - Sequência de duas imagens que ilustrem um barbante sendo dobrado sobre ele mesmo duas vezes sucessivas, até que se obtenha quartos. Por exemplo, como a imagem a seguir:
-        \includegraphics[width=\textwidth, keepaspectratio]{../../livro/media/cap1/secoes/barbante_dobras.jpg}
-  \end{imagem*}
+  \begin{center}
+  \includegraphics[width=250px, keepaspectratio]{../../livro/media/cap1/secoes/pngs_licao_01/ativ3_fig03.png}
+  \end{center}
 \end{resposta*}
 
 
@@ -256,61 +257,62 @@ A parte em vermelho representa um terço da figura nos itens c), d), e), f) e h)
 Algumas possibilidades de respostas para cada linha da tabela do enunciado estão nas respectivas linhas abaixo.
 
 % arcos de círculos 
+ \def \sc {0.18}
  \noindent\begin{tabular}{ccc}
  
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) arc (0:180:3) -- (0,0) -- cycle;
 \draw (-3,0) -- (-3,3);
 \end{tikzpicture}
 & 
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) arc (0:90:3) -- (-3,0) -- cycle;
 \draw [fill=common, fill opacity=.3] (-3,0) arc (270:180:3) -- (-3,3) -- cycle;
 \end{tikzpicture}
 
 &
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) arc (0:90:3) -- (-3,0) -- cycle;
 \draw [fill=common, fill opacity=.3] (3.7,0) arc (0:90:3) -- (0.7,0) -- cycle;
 \end{tikzpicture}
 
 \\
 
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) arc (0:270:3) -- (-3,0) -- cycle;
 \draw (-3,0) -- (-6,0);
 \draw (-3,0) -- (-3,3);
 \end{tikzpicture}
 & 
  
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) arc (0:90:3) -- (-3,0) -- cycle;
 \draw [fill=common, fill opacity=.3] (-3,0) arc (270:180:3) -- (-3,3) -- cycle;
 \draw [fill=common, fill opacity=.3] (-3,0) arc (180:270:3) -- (0,0) -- cycle;
 \end{tikzpicture}
  &
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) arc (0:90:3) -- (-3,0) -- cycle;
 \draw [fill=common, fill opacity=.3] (3.7,0) arc (0:90:3) -- (0.7,0) -- cycle;
 \draw [fill=common, fill opacity=.3] (7.4,0) arc (0:90:3) -- (4.4,0) -- cycle;
 \end{tikzpicture}
 \\
 
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) arc (0:360:3) -- (-3,0) -- cycle;
 \draw (-3,0) -- (-6,0);
 \draw (-3,0) -- (-3,3);
 \draw (-3,0) -- (-3,-3);
 \end{tikzpicture}
  &
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,3) arc (90:270:3) -- (0,3) -- cycle;
  \draw [fill=common, fill opacity=.3] (3,3) arc (0:-90:3) -- (0,3) -- cycle;
  \draw [fill=common, fill opacity=.3] (0,0) arc (90:0:3) -- (0,-3) -- cycle;
  \draw  (0,0) -- (-3,0);
 \end{tikzpicture}
  &
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) arc (0:90:3) -- (-3,0) -- cycle;
 \draw [fill=common, fill opacity=.3] (3.7,0) arc (0:90:3) -- (0.7,0) -- cycle;
 \draw [fill=common, fill opacity=.3] (7.4,0) arc (0:90:3) -- (4.4,0) -- cycle;
@@ -318,59 +320,59 @@ Algumas possibilidades de respostas para cada linha da tabela do enunciado estã
 \end{tikzpicture}
  \\
  
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) rectangle (3,3);
 \draw [fill=common, fill opacity=.3] (3,0) rectangle (6,3);
 \end{tikzpicture}
  &
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) rectangle (3,3);
 \draw [fill=common, fill opacity=.3] (0,3) rectangle (3,6);
 \end{tikzpicture}
 
 &
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) rectangle (3,3);
 \draw [fill=common, fill opacity=.3] (3.7,0) rectangle (6.7,3);
 \end{tikzpicture}
 
 \\
 
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) rectangle (3,3);
 \draw [fill=common, fill opacity=.3] (3,0) rectangle (6,3);
 \draw [fill=common, fill opacity=.3] (6,0) rectangle (9,3);
 \end{tikzpicture}
  &
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) rectangle (3,3);
 \draw [fill=common, fill opacity=.3] (0,3) rectangle (3,6);
 \draw [fill=common, fill opacity=.3] (3,0) rectangle (6,3);
 \end{tikzpicture}
  &
  
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) rectangle (3,3);
 \draw [fill=common, fill opacity=.3] (3,3) rectangle (6,6);
 \draw [fill=common, fill opacity=.3] (6,0) rectangle (9,3);
 \end{tikzpicture}
 \\
  
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) rectangle (3,3);
 \draw [fill=common, fill opacity=.3] (3,0) rectangle (6,3);
 \draw [fill=common, fill opacity=.3] (6,0) rectangle (9,3);
 \draw [fill=common, fill opacity=.3] (9,0) rectangle (12,3);
 \end{tikzpicture}
 &
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,0) rectangle (3,3);
 \draw [fill=common, fill opacity=.3] (0,3) rectangle (3,6);
 \draw [fill=common, fill opacity=.3] (3,0) rectangle (6,3);
 \draw [fill=common, fill opacity=.3] (3,3) rectangle (6,6);
 \end{tikzpicture}
 &
-\begin{tikzpicture}[scale=.1]
+\begin{tikzpicture}[scale=\sc]
 \draw [fill=common, fill opacity=.3] (0,3) rectangle (3,6);
 \draw [fill=common, fill opacity=.3] (0,0) rectangle (3,3);
 \draw [fill=common, fill opacity=.3] (3,0) rectangle (6,3);
