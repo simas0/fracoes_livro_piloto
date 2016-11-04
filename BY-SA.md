@@ -1,4 +1,4 @@
-# Vantagens da licença BY-SA
+# Vantagens da licença BY-SA, sem NC.
 
   - podemos usar o nome do IMPA
   - mais colaboradores (já que o IMPA não ganha)
@@ -10,7 +10,7 @@
     - não temos que ser uma editora
     - não temos pesadelos jurídicos
   - ajuda a reduzir o preço do livro didático
-    (nem nós, nem nossos parceiros tem lucro como objetivo)
+    (nem nossos parceiros nem nós temos lucro como objetivo)
   - facilita obter doações
     - o IMPA não está ganhando e faz tudo pela educação
     - o doador estaria ajudando a diminuir o preço
