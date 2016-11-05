@@ -1,8 +1,80 @@
-\documentclass[oneside]{book}
 
-\usepackage{template_professor}
 
-\begin{document}
+\noindent {\color{special}{\Large \bf Para o professor}}
+\vspace{.5cm}
+
+Esta lição tem por objetivo: 
+\begin{itemize}
+ \item Retomar a representação de números na reta numérica, enfatizando a associação do número 1 à unidade;
+ \item Introduzir a representação de frações na reta numérica, admitindo assim a representação, na reta numérica, também de quantidades não inteiras.
+ \item Comparar frações de mesmo denominador.
+ \item Comparar frações a partir de uma fração de referência.
+\end{itemize}
+
+Visando aos objetivos apresentados, as atividades aqui propostas exploram as frações em modelos visuais contínuos, a partir da justaposição de partes correspondentes às frações unitárias. Essa abordagem será a base para a representação das frações na reta numérica e para a associação da unidade ao número 1.  (A expressão reta numérica refere-se ao modelo de organização dos números na reta). 
+
+A construção da reta numérica será amparada pelo conhecimento anterior dos alunos da representação dos números naturais (0, 1, 2, 3, 4, ...) nessa reta e pela exploração de modelos contínuos. O segmento unitário, de extremos 0 e 1, será a unidade e as frações unitárias $\frac{1}{d}$, $d$ natural não nulo, representadas por uma das partes da equipartição desse segmento em $d$ partes ($d\neq0$). As demais frações serão associadas a pontos na reta pela justaposição, a partir do zero, de segmentos correspondentes às frações unitárias. Assim, por exemplo, a fração $\frac{1}{2}$ será associada à metade do segmento unitário, portanto, ao ponto médio do segmento de extremos 0 e 1. Já a fração $\frac{5}{2}$ será associada ao ponto correspondente à justaposição, a partir do zero, de 5 segmentos equivalentes ao segmento cujos extremos correspondem ao zero e ao $\frac{1}{2}$, como ilustra a figura a seguir:
+
+\begin{center}
+\begin{tikzpicture}[x=1mm,y=1mm]
+ \draw[fill=attention] (0,0) rectangle (15,10);
+ \draw[fill=common, fill opacity=.3] (15,0) rectangle (30,10);
+ \draw [thick, decoration={brace,raise=5}, decorate] (0,9) -- (15,9); 
+\node[above] at (7.5,11) {$\frac{1}{2}$}; 
+
+\begin{scope}[yshift=-.5cm]
+\draw[->] (-15,0) -- (120,0) ; %edit here for the axis
+\foreach \x in  {0,1} % edit here for the vertical lines
+\draw[shift={(\x*30,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+\draw[shift={(15,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\frac{1}{2}$}; 
+\end{scope}
+
+ 
+ \begin{scope}[yshift=-3cm]
+  \draw[fill=attention] (0,0) rectangle (75,10);
+  \foreach \x in {15,30,45,60,75}{ \draw (\x,0) -- (\x,10);
+  \draw [thick, decoration={brace,raise=5}, decorate] (\x-15,9) -- (\x,9); 
+  \node[above] at (\x-7.5,11) {$\frac{1}{2}$};}
+
+  \begin{scope}[yshift=-.5cm]
+\draw[->] (-15,0) -- (120,0) ; %edit here for the axis
+\foreach \x in  {0,1,2,3} % edit here for the vertical lines
+\draw[shift={(\x*30,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\x$};
+\foreach \x in  {1,3,5} % edit here for the vertical lines
+\draw[shift={({\x*15},0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {$\frac{\x}{2}$};
+
+\end{scope}
+ \end{scope}
+
+\end{tikzpicture}
+
+\end{center}
+
+Nesta etapa, espera-se que os alunos compreendam a reta numérica como uma representação organizada para as quantidades registradas por frações e que compreendam também o papel e a evidência da ordem nessa representação. 
+
+De maneira geral, as atividades visam a: (i) a associação entre as frações e a reta numérica, em que já estão identificados os pontos correspondentes aos números naturais e (ii) a comparação entre frações, amparada pela representação das frações na reta numérica. 
+Alguns textos, na abordagem inicial dos números naturais, usam a expressão {\it reta numerada} para se referir à representação dos números naturais na reta; neste texto, será usado o termo {\it reta numérica}. 
+
+A comparação de frações, já discutida informalmente em atividades nas lições anteriores, pode agora ser também observada a partir da reta numérica, embora seja sistematizada na Lição 4. Inicialmente compara-se frações com mesmo denominador. Assim, espera-se que o aluno reconheça que, por exemplo, a fração $\frac{3}{4}$ é menor do que a fração $\frac{7}{4}$ uma vez que a primera fração corresponde à justaposição de 3 segmentos equivalentes a $\frac{1}{4}$ da unidade e a segunda à justaposição de 7 desses segmentos. Dessa forma, na reta numérica, a fração $\frac{3}{4}$ está associada a um ponto entre 0 e 1 e $\frac{7}{4}$ a um ponto entre 1 e 2. Espera-se também que a comparação entre frações que têm o mesmo numerador seja observada na reta numérica. Assim, por exemplo, $\frac{5}{7}$ é menor do que $\frac{5}{3}$ porque nos dois casos considera-se a justaposição de 5 segmentos, no entanto, no primero caso, são 5 segmentos equivalente a $\frac{1}{7}$ da unidade e, no segundo, equivalentes a $\frac{1}{3}$ da unidade. Como $\frac{1}{7}$ da unidade é menor do que $\frac{1}{5}$ da unidade, tem-se que $\frac{5}{7}$ é menor do que $\frac{5}{3}$.
+É importante observar que essas comparações não devem ser tratadas exclusivamente na reta numérica, mas também nesse modelo representativo. 
+
+Observando a reta numérica, espera-se também que os alunos sejam capazes de comparar frações a partir de um referencial. Por exemplo, espera-se que os alunos reconheçam que, a fração $\frac{7}{8}$ é menor do que a fração $\frac{8}{9}$ porque o ponto correspondente à fração $\frac{7}{8}$ está mais distante do 1 do que o corresponente à fração $\frac{8}{9}$ (já que a fração $\frac{1}{8}$ é maior do que a fração $\frac{1}{9}$ - conteúdo tratado na Lição 2) 
+
+A participação do aluno, criando representações próprias e fazendo o uso da linguagem verbal para explicar o seu raciocínio diante da realização das atividades, é fundamental também na condução desta seção.
+\vspace{.15cm}
+
+\noindent OBJETIVOS ESPECÍFICOS DA LIÇÃO 3:
+\vspace{.15cm}
+
+\noindent O aluno deve ser capaz de:
+  \begin{itemize}
+   \item Representar e identificar a representação de uma fração na reta numérica;
+   \item Reconhecer a organização, segundo a ordem, das frações na reta numérica; 
+   \item Comparar frações com mesmo numerador;
+   \item Amparado pela representação na reta numérica, comparar frações a partir de um referencial adequado.
+  \end{itemize}
+ 
+
 \begin{multicols}{2}
 
 \subsection{Atividade 1}
@@ -382,7 +454,7 @@ g)
 \noindent a)
 \begin{center}
  \begin{tikzpicture}[x=56.25mm,y=56.25mm]
-\draw (-0.1,0) -- (1.1,0) ; %edit here for the axis
+\draw[->] (-0.1,0) -- (1.1,0) ; %edit here for the axis
  
 \draw[shift={(0,0)},color=black] (0,3pt) -- (0pt,-3pt) node[below] {0};
  
@@ -496,7 +568,19 @@ g)
 
 \begin{resposta*}{Atividade 7}
  \begin{enumerate}[a)]
- \item  \begin{imagem*}[breakable]{}{} FIGURA ARTÍSTICA - Imagem do mapa com os pontos correspondentes aos baús 1 e 2 marcados.\end{imagem*}
+ \item  
+ \begin{tikzpicture}[scale=.3]
+  \draw[dashed] (0,0) -- (16,0);
+  \fill[common] (0,0) circle (.3);
+  \node[above] at (0,0) {Palmeira};
+  \fill[common] (16,0) circle (.3);
+  \node[above] at (16,0) {Pedra};
+  \fill[light] (5,0) circle (.3);
+  \node[below] at (5,0) {Baú 1};
+  \fill[attention] (10,0) circle (.3);
+  \node[below] at (10,0) {Baú 2};
+ \end{tikzpicture}
+
   \item  O baú 2. A justificativa se dá pelo fato de que  $\frac{5}{6} > \frac{5}{8}$. O que pode ser observado pela marcação dos pontos correspondentes aos locais dos dois baús no mapa, representando uma reta numérica.
 \end{enumerate}
 \end{resposta*}
@@ -563,38 +647,62 @@ g)
 \begin{enumerate} [\quad a)] %s
   \item     Não está correta. Marcando-se o ponto correspondente à metade do percurso, é fácil verificar que a tartaruga ainda não alcançou esse ponto. Portanto, a tartaruga não percorreu mais do que a metade do percurso total.          
 
-\begin{imagem*}[breakable]{}{}   Imagem idêntica aquela do enunciado, exceto pela inclusão da fração   $\frac{1}{2}$  \end{imagem*}
+\end{enumerate}
 
-  \item     Não está correta. Dividindo-se o percurso em quartos, como ilustra a figura a seguir, fica claro que o ponto correspondente a     $\frac{3}{4}$     do percurso está adiante da localização da tartaruga. Portanto, a tartaruga não percorreu mais do que     $\frac{3}{4}$     do percurso total.          
+ \includegraphics[width=195px, keepaspectratio]{../../livro/media/cap3/secoes/png/ativ9_resp_a}
 
-\begin{imagem*}[breakable]{}{}   Imagem idêntica aquela do enunciado, exceto pela inclusão das frações   $\frac{1}{4}$  ,   $\frac{2}{4}$   e   $\frac{3}{4}$  .           \includegraphics[width=55mm, keepaspectratio]{../../livro/media//undefined/tartaruga_quartos.jpg}   \end{imagem*}
+\begin{enumerate} [\quad a)] %s
+\item[b)]     Não está correta. Dividindo-se o percurso em quartos, como ilustra a figura a seguir, fica claro que o ponto correspondente a     $\frac{3}{4}$     do percurso está adiante da localização da tartaruga. Portanto, a tartaruga não percorreu mais do que     $\frac{3}{4}$     do percurso total.          
 
-  \item     Está correta. Dividindo-se o percurso em oitavos, como ilustra a figura a seguir, fica claro que o ponto correspondente a     $\frac{3}{8}$     do percurso está antes da localização da tartaruga. Portanto, verifica-se que a tartaruga percorreu mais do que     $\frac{3}{8}$     do percurso total.          
+\end{enumerate}
 
-\begin{imagem*}[breakable]{}{}   Imagem idêntica aquela do enunciado, mas com as frações   $\frac{1}{8}$  ,   $\frac{2}{8}$  ,   $\frac{3}{8}$  ,   $\frac{4}{8}$  ,   $\frac{5}{8}$  ,   $\frac{6}{8}$   e   $\frac{7}{8}$  .           \includegraphics[width=55mm, keepaspectratio]{../../livro/media//undefined/tartaruga_oitavos.jpg}\end{imagem*}
+ \includegraphics[width=195px, keepaspectratio]{../../livro/media/cap3/secoes/png/ativ9_resp_b}
 
-  \item     Está correta. Dividindo-se o percurso em quartos, como ilustra a figura a seguir, verifica-se que a localização da tartaruga é anterior ao ponto correspondente a     $\frac{3}{4}$     do percurso. Portanto, a tartaruga percorreu menos do que     $\frac{3}{4}$     do percurso total.         
+\begin{enumerate} [\quad a)] %s
 
-\begin{imagem*}[breakable]{}{}   Imagem idêntica aquela do item b)\end{imagem*}
 
-  \item     Não está correta. Dividindo-se o percurso em oitavos, como ilustra a figura a seguir, fica claro que o ponto correspondente a     $\frac{2}{8}$     do percurso está antes da localização da tartaruga. Portanto,verifica-se que tartaruga percorreu mais do que     $\frac{2}{8}$     do percurso.          
+  \item[c)]     Está correta. Dividindo-se o percurso em oitavos, como ilustra a figura a seguir, fica claro que o ponto correspondente a     $\frac{3}{8}$     do percurso está antes da localização da tartaruga. Portanto, verifica-se que a tartaruga percorreu mais do que     $\frac{3}{8}$     do percurso total.          
+\end{enumerate}
 
-\begin{imagem*}[breakable]{}{}   Imagem idêntica aquela do item c)\end{imagem*}
+ \includegraphics[width=195px, keepaspectratio]{../../livro/media/cap3/secoes/png/ativ9_resp_c}
 
-  \item     Está correta. Dividindo-se o percurso em terços, fica claro que o ponto correspondente a     $\frac{2}{3}$     do percurso está adiante da localização da tartaruga. Portanto, verifica-se que a tartaruga percorreu menos do que     $\frac{2}{3}$     do percurso          
+\begin{enumerate} [\quad a)] %s
+  \item[d)]     Está correta. Dividindo-se o percurso em quartos, como ilustra a figura a seguir, verifica-se que a localização da tartaruga é anterior ao ponto correspondente a     $\frac{3}{4}$     do percurso. Portanto, a tartaruga percorreu menos do que     $\frac{3}{4}$     do percurso total.         
+\end{enumerate}
 
-\begin{imagem*}[breakable]{}{}   Imagem idêntica aquela do enunciado, mas com as marcas dos terços como na figura a seguir.           \includegraphics[width=55mm, keepaspectratio]{../../livro/media//undefined/tartaruga_tercos.jpg}   \end{imagem*}
+ \includegraphics[width=195px, keepaspectratio]{../../livro/media/cap3/secoes/png/ativ9_resp_d}
 
-  \item     Não está correta. Dividindo-se o percurso em quartos, como ilustra a figura a seguir, fica claro que o ponto correspondente a     $\frac{3}{4}$     do percurso está adiante da localização da tartaruga. Portanto, verifica-se que a tartaruga percorreu menos do que     $\frac{3}{4}$     do percurso.          
+\begin{enumerate} [\quad a)] %s
+  \item[e)]     Não está correta. Dividindo-se o percurso em oitavos, como ilustra a figura a seguir, fica claro que o ponto correspondente a     $\frac{2}{8}$     do percurso está antes da localização da tartaruga. Portanto,verifica-se que tartaruga percorreu mais do que     $\frac{2}{8}$     do percurso.          
+\end{enumerate}
 
-\begin{imagem*}[breakable]{}{}   Imagem idêntica aquela do item b)\end{imagem*}
+ \includegraphics[width=195px, keepaspectratio]{../../livro/media/cap3/secoes/png/ativ9_resp_e}
 
-\item     Não está correta. Dividindo-se o percurso em oitavos, fica claro que o ponto correspondente a     $\frac{5}{8}$     do percurso está adiante da localização da tartaruga. Portanto,verifica-se que a tartaruga não alcançou     $\frac{5}{8}$     do percurso total.          
+\begin{enumerate} [\quad a)] %s
 
-\begin{imagem*}[breakable]{}{}   identica à imagem de c.     \includegraphics[width=55mm, keepaspectratio]{../../livro/media//undefined/tartaruga_oitavos.jpg}\end{imagem*}
+  \item[f)]     Está correta. Dividindo-se o percurso em terços, fica claro que o ponto correspondente a     $\frac{2}{3}$     do percurso está adiante da localização da tartaruga. Portanto, verifica-se que a tartaruga percorreu menos do que     $\frac{2}{3}$     do percurso          
+\end{enumerate}
 
-  \item     Está correta. De acordo com a resposta do item a), a tarataruga não alcançou a metade do percurso. Poranto, para alcançar a chegada, a tartaruga ainda precisa percorrer mais do que a metade do caminho.
-  \item     Não está correta. A tartaruga já percorreu mais do que      $\frac{1}{3}$     do percurso e todo o percurso corresponde a      $\frac{3}{3}$    . Portanto, para alcançar a chegada, a tartaruga precisa percorrer menos do que     $\frac{2}{3}$     do caminho.
+ \includegraphics[width=195px, keepaspectratio]{../../livro/media/cap3/secoes/png/ativ9_resp_f}
+
+\begin{enumerate} [\quad a)] %s
+
+  \item[g)]     Não está correta. Dividindo-se o percurso em quartos, como ilustra a figura a seguir, fica claro que o ponto correspondente a     $\frac{3}{4}$     do percurso está adiante da localização da tartaruga. Portanto, verifica-se que a tartaruga percorreu menos do que     $\frac{3}{4}$     do percurso.          
+\end{enumerate}
+
+ \includegraphics[width=195px, keepaspectratio]{../../livro/media/cap3/secoes/png/ativ9_resp_g}
+
+\begin{enumerate} [\quad a)] %s
+
+\item[h)]     Não está correta. Dividindo-se o percurso em oitavos, fica claro que o ponto correspondente a     $\frac{5}{8}$     do percurso está adiante da localização da tartaruga. Portanto,verifica-se que a tartaruga não alcançou     $\frac{5}{8}$     do percurso total.          
+\end{enumerate}
+
+ \includegraphics[width=195px, keepaspectratio]{../../livro/media/cap3/secoes/png/ativ9_resp_h}
+
+\begin{enumerate} [\quad a)] %s
+
+  \item[i)]     Está correta. De acordo com a resposta do item a), a tarataruga não alcançou a metade do percurso. Poranto, para alcançar a chegada, a tartaruga ainda precisa percorrer mais do que a metade do caminho.
+  \item[j)]     Não está correta. A tartaruga já percorreu mais do que      $\frac{1}{3}$     do percurso e todo o percurso corresponde a      $\frac{3}{3}$    . Portanto, para alcançar a chegada, a tartaruga precisa percorrer menos do que     $\frac{2}{3}$     do caminho.
 \end{enumerate} %s
 \end{resposta*}
 
@@ -717,6 +825,16 @@ d)
 \end{tikzpicture}
 
 \end{resposta*}
+
+\subsection{Sobre o Organizando as Ideias}
+
+
+
+Após o Organizando as Idéias, passar-se-á a falar apenas em ``fração'' ao referir-se a frações na reta numérica, subentendendo que já esteja claro aos alunos que trata-se de uma ``fração da unidade'', unidade que já está identificada na reta pelo segmento de extremos 0 e 1, mesmo que estes estejam implícitos a partir de alguma outra informação.
+
+Espera-se que, ao longo desta lição, o aluno tenha associado fração a uma quantidade. Assim, no parágrafo que trata sobre a ordem na reta numérica, fala-se nos ``números representados na reta numérica'', incluindo-se, entre eles, as frações.
+
+Lembre que a justaposição de segmentos pode sempre ser feita com a ajuda do compasso, evitando-se assim, medida.
 
 
 \subsection{Atividade 11}
@@ -1124,4 +1242,3 @@ b) Para facilitar a visualização apresentamos apenas o segmento de 0 a 2 ampli
 
 
 \end{multicols}
-\end{document}

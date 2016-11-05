@@ -84,7 +84,21 @@ marginpar=10mm
 \RequirePackage{titlesec} % needed for define chapter and section style.
 \setcounter{chapter}{0}
 %\setcounter{subsection}{1}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \titleformat{\chapter} % redefining chapter appearence
+% %{} % style
+% {\titlefont\huge\bf} % style
+% {} % label
+% {0pt} % separation
+% {\begin{tikzpicture}[remember picture,overlay]
+%     \filldraw [x=1mm,y=1mm, special, overlay] (37,0) circle [radius=9];
+%     \filldraw [x=1mm,y=1mm, attention, overlay] (58,0) circle [radius=9];
+%     \filldraw [x=1mm,y=1mm, light, overlay] (79,0) circle [radius=9];
+%     \filldraw [x=1mm,y=1mm, common, overlay] (210,-9) -- (100 ,-9) arc (-90:-270:9) --(100,9)
+%     -- (210,9) (118, 0) node{\color{white} Lição \thechapter} (105,-27);
+%   \end{tikzpicture}
+% } % before title
+% [\vspace{3cm} \hfill{\bf\bigtitlefont\raggedright\color{special} #1}] % after title
 
 % Section style ---- EXPLORANDO O ASSUNDO, ORGANIZANDO AS IDEIAS, MÃO NA MASSA, etc.
 %\newcommand*\sectionlabel{}
