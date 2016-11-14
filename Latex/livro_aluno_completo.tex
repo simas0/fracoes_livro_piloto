@@ -1,4 +1,4 @@
-\documentclass[a4,12pt]{book}
+\documentclass[a4,12pt,openany]{book}
 
 \usepackage{template}
 
@@ -7,16 +7,56 @@
 
 \begin{document}
 
-% \input{capa.tex}
-% \frontmatter
-% \input{contra_capa.tex}
-% \input{introducao.tex}
-% \setcounter{page}{0}
+\pagenumbering{roman} 
+\input{introducao.tex}
+\clearpage
+% 
+% \titleformat{\chapter} % redefining chapter appearence for regular sections
+% %{} % style
+% {\titlefont\Huge\bf} % style
+% {} % label
+% {0pt} % separation
+% {\begin{tikzpicture}[remember picture,overlay]
+%     \filldraw [x=1mm,y=1mm, special, overlay] (37,0) circle [radius=9];
+%     \filldraw [x=1mm,y=1mm, attention, overlay] (58,0) circle [radius=9];
+%     \filldraw [x=1mm,y=1mm, light, overlay] (79,0) circle [radius=9];
+%     \filldraw [x=1mm,y=1mm, common, overlay] (210,-9) -- (100 ,-9) arc (-90:-270:9) --(100,9)
+%     -- (210,9) (118, 0) node{\color{white} Lição \thechapter} (105,-27);
+%   \end{tikzpicture}
+% } % before title
+% [\vspace{3cm} \hfill{\bf\bigtitlefont\raggedright\color{special} #1}] % after title
+% 
+% 
+% 
 % \mainmatter
-\input{cap1_aluno.tex}
+% \mbox{ }
+% \thispagestyle{empty}
+% % \clearpage
+% \setcounter{page}{1}
+% \input{cap1_aluno}
 % \input{cap2_aluno}
 % \input{cap3_aluno}
 % \input{cap4_aluno}
 % \input{cap5_aluno}
+% 
+% \titleformat{\chapter} % redefining chapter appearence for last sections
+% %{} % style
+% {\titlefont\Huge\bf} % style
+% {} % label
+% {0pt} % separation
+% {\begin{tikzpicture}[remember picture,overlay]
+%     \filldraw [x=1mm,y=1mm, special, overlay] (37,0) circle [radius=9];
+%     \filldraw [x=1mm,y=1mm, attention, overlay] (58,0) circle [radius=9];
+%     \filldraw [x=1mm,y=1mm, light, overlay] (79,0) circle [radius=9];
+%     \filldraw [x=1mm,y=1mm, common, overlay] (210,-9) -- (100 ,-9) arc (-90:-270:9) --(100,9)
+%     -- (210,9);% (118, 0) node{\color{white} Lição \thechapter} (105,-27);
+%   \end{tikzpicture}
+% } % before title
+% [\vspace{3cm} \hfill{\bf\bigtitlefont\raggedright\color{special} #1}] % after title
+% %\titlespacing*{\chapter}{0pt}{50pt}{100pt} % {<command>}{<left>}{<before-sep>}{<after-sep>
+% \clearpage
+% \input{cap6_folhas_para_reproducao}
+% \clearpage
+ \input{bibliografia}
 
 \end{document}
