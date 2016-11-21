@@ -1,0 +1,71 @@
+\documentclass[oneside]{book}
+
+\usepackage{tikz, lipsum, titling, setspace}
+\usepackage[pages=some]{background}
+
+\RequirePackage{geometry}
+\geometry{
+textwidth=157mm,
+paperwidth=196mm,
+paperheight=280mm,
+top=1in,
+left=12mm,
+right=20mm,
+footskip=.7in,
+marginpar=10mm
+}
+
+\usetikzlibrary{calc}
+\backgroundsetup{%
+ position=current page.center,
+ angle=0,
+ scale=1,
+ contents={%
+  \begin{tikzpicture}%
+    [
+      normal lines/.style={gray, very thin},
+      every node/.append style={black, align=center, opacity=1}
+    ]
+    \foreach \y in {0.71,1.41,...,25.56}
+      \draw[normal lines] (0,\y) -- (8.5in,\y);
+    \draw[normal lines, red] (3cm,0) -- (3cm,11in);
+     \node (t) [font=\LARGE, anchor=south] at ($(0,25.56)!1/2!(8.5in,25.56)$) {\thetitle};
+%     \node (d) [font=\large, anchor=south west, xshift=1.5em] at (0,25.6) {\today};
+%     \node (p) [font=\large, anchor=south east, xshift=-1.5em] at (8.5in,25.56) {p.~\thepage};
+  \end{tikzpicture}%
+}}
+%\renewcommand{\rmdefault}{augie}
+
+\title{Notas de aula}
+\author{Me}
+
+\begin{document}
+
+\def\Bg{\newpage
+\BgThispage
+\quad
+
+\newpage
+}
+
+\pagestyle{empty}
+  %\doublespacing
+%Dia:\; \quad / \quad /  
+  
+\lipsum[1-5]
+
+\Bg
+\Bg
+
+\lipsum[1-5]
+
+\Bg
+
+%\backgroundsetup{contents=B,color=blue}
+%\BgThispage
+\lipsum[1-5]  
+  
+  
+  %\kant[1-6]
+
+\end{document}

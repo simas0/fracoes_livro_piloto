@@ -1,22 +1,31 @@
 \RequirePackage{amsmath,amssymb}
 
-
 \RequirePackage[brazil]{babel}
 
 % varias melhorias de typeset
 \RequirePackage{microtype}
 
-\RequirePackage{geometry}
-\geometry{
-textwidth=157mm,
+\RequirePackage[textwidth=157mm,
 paperwidth=196mm,
 paperheight=280mm,
 top=1in,
 left=12mm,
 right=20mm,
 footskip=.7in,
-marginpar=10mm
-}
+marginpar=10mm]{geometry}
+%\geometry{
+% textwidth=157mm,
+% paperwidth=196mm,
+% paperheight=280mm,
+% top=1in,
+% left=12mm,
+% right=20mm,
+% footskip=.7in,
+% marginpar=10mm
+% }
+
+% Place crop marks
+\RequirePackage[center,height=297mm,width=210mm,cam]{crop}
 
 % Para enumerates customizados
 \RequirePackage{enumerate}
@@ -27,9 +36,6 @@ marginpar=10mm
 % Para usar tabelas balanceadas
 \RequirePackage{tabulary}
 \RequirePackage{longtable}% para quebrar tabela entre páginas
-
-% Place crop marks
-\RequirePackage[center,height=297mm,width=210mm,cam]{crop}
 
 % Choose font
 \RequirePackage{ifxetex}
@@ -58,19 +64,19 @@ marginpar=10mm
 
 % To define colors
 \RequirePackage[dvipsnames]{xcolor}
-\definecolor{light}{RGB}{21,101,175}
-\definecolor{special}{RGB}{154,195,33}
-\definecolor{common}{RGB}{204,216,241}
-\definecolor{common}{RGB}{108,153,215}
-\definecolor{attention}{RGB}{210,32,39}
-\definecolor{special}{RGB}{179,220,47}
-
-% By davidgav see http://www.colourlovers.com/palette/2562636/Christina
-\definecolor{dark}{RGB}{78,57,93}
-\definecolor{common}{RGB}{130,112,133}
-\definecolor{special}{RGB}{142,190,148}
-\definecolor{light}{RGB}{204,252,142}
-\definecolor{attention}{RGB}{220,91,62}
+% \definecolor{light}{RGB}{21,101,175}
+% \definecolor{special}{RGB}{154,195,33}
+% \definecolor{common}{RGB}{204,216,241}
+% \definecolor{common}{RGB}{108,153,215}
+% \definecolor{attention}{RGB}{210,32,39}
+% \definecolor{special}{RGB}{179,220,47}
+% 
+% % By davidgav see http://www.colourlovers.com/palette/2562636/Christina
+% \definecolor{dark}{RGB}{78,57,93}
+% \definecolor{common}{RGB}{130,112,133}
+% \definecolor{special}{RGB}{142,190,148}
+% \definecolor{light}{RGB}{204,252,142}
+% \definecolor{attention}{RGB}{220,91,62}
 
 % By davidgav see www.colourlovers.com/palette/2350697/This_is_for_YOU!
 \definecolor{dark}{RGB}     {97,83,117}

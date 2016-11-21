@@ -91,6 +91,7 @@ Por exemplo,
 \begin{center}
     \includegraphics[width=400pt, keepaspectratio]{../../livro/media/cap1/secoes/pngs_licao_01/orgideias_fig05.png}  
   \end{center}
+\clearpage
 
 \section{MÃO NA MASSA }
 
@@ -150,23 +151,27 @@ Por exemplo,
   Em alguns retângulos as partes não têm a mesma forma.  
   Veja alguns exemplos curiosos em que as   ``partes iguais''   podem gerar confusão.  
   
-  \begin{center}
-    \includegraphics[width=380pt, keepaspectratio]{../../livro/media/cap1/secoes/pngs_licao_01/reflet_fig01.png}  
-  \end{center}
-
-  \begin{center}
-    \includegraphics[width=260pt, keepaspectratio]{../../livro/media/cap1/secoes/pngs_licao_01/reflet_fig02.png}  
-  \end{center}
+  \noindent\begin{tabular}{ll}
+    \includegraphics[width=220pt, keepaspectratio]{../../livro/media/cap1/secoes/pngs_licao_01/reflet_fig01.png} & \includegraphics[width=180pt, keepaspectratio]{../../livro/media/cap1/secoes/pngs_licao_01/reflet_fig02.png}
+  \end{tabular}
+  \vspace{1cm}
+  
+  \noindent  \noindent\begin{tabular}{ll}
+    \includegraphics[width=180pt, keepaspectratio]{../../livro/media/cap1/secoes/pngs_licao_01/reflet_fig03.png}   & \includegraphics[width=200pt, keepaspectratio]{../../livro/media/cap1/secoes/pngs_licao_01/reflet_fig04.png}  
+  \end{tabular}
+  
+  
 
   
 \end{refletindo*}
+
 
 \subsection{Atividade}
 
 Em cinco das figuras a seguir a parte em vermelho é um terço da figura. Identifique essas figuras.
 
 \begin{center}
-\begin{tabular}{ccc}
+\begin{longtable}{ccc}
 a)
 \parbox[t][3cm][c]{5cm}{
   \begin{tikzpicture}[scale=0.7]
@@ -297,7 +302,7 @@ j)
  \draw (0,0) -- (\x:2cm);}
 \end{tikzpicture}
 }
-\end{tabular}
+\end{longtable}
 \end{center}
 
 \subsection{Atividade}
@@ -546,51 +551,55 @@ Usando os Círculos de Frações, responda:
 
 \begin{center}
  
- \begin{tabular}{ccccc}
+ \begin{tabular}{ccccccccc}
 
  \begin{tikzpicture}
-\fill[attention] (0,0) circle (10);
+\fill[black] (0,0) circle (10);
  \end{tikzpicture}
-& \parbox[t][.6cm][c]{1cm}{ }\quad\quad\quad\quad&
+& \parbox[t][.6cm][c]{1cm}{ }\quad&
  \begin{tikzpicture}
 \fill[pink] (0,0) circle (10);
 \draw[line width =.25mm, white] (-90:10) -- (90:10);	
 \end{tikzpicture}
-& \quad\quad\quad\quad&
+& \quad&
  \begin{tikzpicture}
-\fill[orange] (0,0) circle (10);
+\fill[common] (0,0) circle (10);
 \foreach \x in {30,150,270} \draw[line width =.25mm, white] (0,0)--(\x:10);
 \end{tikzpicture}
-\\
+& \quad&
  \begin{tikzpicture}
-\fill[yellow] (0,0) circle (10);
+\fill[attention] (0,0) circle (10);
 \foreach \x in {0,90} \draw[line width =.25mm, white] (\x:-10)--(\x:10);
 \end{tikzpicture}
-&\parbox[t][.6cm][c]{1cm}{ }&
+& \quad&
  \begin{tikzpicture}
 \fill[OliveGreen] (0,0) circle (10);
 \foreach \x in {18,90,...,360} \draw[line width =.25mm, white] (0,0)--(\x:10);
-\end{tikzpicture}
-&&
+\end{tikzpicture}\\
 \begin{tikzpicture}
-\fill[common] (0,0) circle (10);
+\fill[Purple] (0,0) circle (10);
 \foreach \x in {0,60,...,360} \draw[line width =.25mm, white] (0,0)--(\x:10);
 \end{tikzpicture}
-\\
+& \parbox[t][.6cm][c]{1cm}{ }\quad&
 \begin{tikzpicture}
-\fill[Blue] (0,0) circle (10);
-\foreach \x in {0,45,...,360} \draw[line width =.25mm, white] (0,0)--(\x:10);
+\fill[yellow] (0,0) circle (10);
+\foreach \x in {0,51.428,...,360} \draw[line width =.25mm, white] (0,0)--(\x:10);
 \end{tikzpicture}
 &\parbox[t][.6cm][c]{1cm}{ }&
 \begin{tikzpicture}
-\fill[Purple] (0,0) circle (10);
-\foreach \x in {0,36,...,360} \draw[line width =.25mm, white] (0,0)--(\x:10);
+\fill[gray] (0,0) circle (10);
+\foreach \x in {0,45,...,360} \draw[line width =.25mm, white] (0,0)--(\x:10);
 \end{tikzpicture}
-&&
+& \quad&
 \begin{tikzpicture}
-\fill[black] (0,0) circle (10);
+\fill[orange] (0,0) circle (10);
 \foreach \x in {0,30,...,360} \draw[line width =.25mm, white] (0,0)--(\x:10);
 \end{tikzpicture}
+& \quad&
+\begin{tikzpicture}
+\draw (0,0) circle (10);
+\foreach \x in {0,36,...,360} \draw[line width =.25mm] (0,0)--(\x:10);
+\end{tikzpicture}&&
 
 \end{tabular}
 
@@ -598,19 +607,19 @@ Usando os Círculos de Frações, responda:
 
 
 \begin{enumerate}[a)]
-   \item  Qual a cor da peça que é igual a um terço do círculo preto?
-  \item  Qual a cor do peça que é igual a um quarto do círculo preto?
-  \item  Qual a cor do peça que é igual a um sétimo do círculo preto?
-  \item  Qual a cor do peça que é igual a um nono do círculo preto?
+   \item  Qual é a cor da peça que é igual a um terço do círculo preto?
+  \item  Qual é a cor do peça que é igual a um quarto do círculo preto?
+  \item  Qual é  a cor do peça que é igual a um sétimo do círculo preto?
+  \item  Qual é a cor do peça que é igual a um nono do círculo preto?
   \item  Que fração do círculo preto é igual a uma peça da cor roxa?
   \item  Que fração do círculo preto é igual a uma peça da cor cinza?
   \item  Que fração do círculo preto é igual a uma peça da cor branco?
   \item  Que fração do círculo preto é igual a uma peça da cor rosa?
-  \item  Qual fração do círculo preto é maior, um terço ou um sétimo. Explique a sua resposta.
-  \item  Qual fração do círculo preto é menor, um nono ou um quarto. Explique a sua resposta.
-  \item  Qual fração do círculo preto é menor, um quinto ou um sétimo. Explique a sua resposta.
-  \item  Qual fração do círculo preto é maior, um oitavo ou um quarto. Explique a sua resposta.
-  \item  Qual fração do círculo preto é maior, um sexto ou um sétimo. Explique a sua resposta.
+  \item  Qual é fração do círculo preto é maior, um terço ou um sétimo. Explique a sua resposta.
+  \item  Qual é fração do círculo preto é menor, um nono ou um quarto. Explique a sua resposta.
+  \item  Qual é fração do círculo preto é menor, um quinto ou um sétimo. Explique a sua resposta.
+  \item  Qual é fração do círculo preto é maior, um oitavo ou um quarto. Explique a sua resposta.
+  \item  Qual é fração do círculo preto é maior, um sexto ou um sétimo. Explique a sua resposta.
 \end{enumerate}
 
 \subsection{Atividade}

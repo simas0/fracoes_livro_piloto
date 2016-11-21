@@ -1,11 +1,24 @@
+
 \documentclass[oneside]{book}
 
 \usepackage{template_professor}
 
-% Parallelepiped definitions
-
-
 \begin{document}
+
+% Public domain font used here (http://www.1001freefonts.com/homemade_apple.font) should be install to use properly
+% Notebook page definition
+\def\Bg{\newpage
+ \vspace*{-3cm}
+\hspace{-2cm} \begin{tikzpicture}[anchor=north, normal lines/.style={gray, very thin}, every node/.append style={black, align=center, opacity=1}]
+    \foreach \y in {0.71,1.41,...,25.56}
+      \draw[normal lines, lightgray] (0,\y) -- (7.8 in,\y);
+    \draw[normal lines, attention] (2cm,0) -- (2cm,11in);
+     \node (t) [ font=\LARGE, anchor=south] at ($(0,25.76)!1/2!(7.8 in,25.76)$) {\fontspec{Homemade Apple} Notas de Aula};
+  \end{tikzpicture}%
+\quad
+\newpage
+}
+  
 \pagenumbering{gobble}
 \input{cap1_professor}
 \clearpage
