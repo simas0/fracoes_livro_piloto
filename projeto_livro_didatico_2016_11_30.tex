@@ -1,0 +1,421 @@
+\documentclass[10 pt]{article}
+
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage{amsfonts}
+\usepackage[autostyle]{csquotes}
+\usepackage{graphicx}
+\usepackage{hyperref}% to use \url{..} or \hyperref[label_name]{''link text''}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\usepackage[autostyle]{csquotes}
+%\input{unirioprojeto.tex}
+\usepackage[final]{pdfpages}
+%usepackage{tabularx}
+%\usepackage[table]{xcolor}
+\usepackage{pdflscape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+ %%%%%%%%%%%%%%%%%%%%%%%%para adicionar o número total de páginas %%e.g 1 de 2%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{Página \thepage \hspace{1pt} de \pageref{LastPage}}
+
+ %%%%%%%%%%%%%%%%%%%%%Cabeçalho %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fancyhead[C]{LIVRO ABERTO DE MATEMÁTICA}
+\renewcommand{\headrulewidth}{0.05cm}
+\setlength{\headheight}{0.5cm} 
+ 
+ % \addtolength{\textwidth}{100pt} \addtolength{\textheight}{58pt}
+% \addtolength{\hoffset}{-50pt} \addtolength{\voffset}{-15pt}
+% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+% %EndMSIPreambleData
+% \setlength{\topmargin}{-0.5 in} \setlength{\textwidth}{6.80 in}
+% %\setlength{\oddsidemargin}{0.2 in} \setlength{\evensidemargin}{0.2 in}
+% \setlength{\textheight}{9.6 in} \setlength{\marginparwidth}{0.3 in}
+% \setlength{\marginparsep}{0.3 in}
+\renewcommand{\baselinestretch}{1.5}
+
+
+
+\begin{document}
+
+%    \titulo{Unirio de portas abertas}{2.2010}
+%\includegraphics[scale=0.25]{unirio.png} %\includegraphics[scale=0.7]{faperj}
+
+\begin{center}
+{\Large{\bf   Livro Aberto de Matemática}}
+ \end{center}
+
+\begin{flushright}
+  \noindent
+  \begin{tabular}{llll}
+    &&\\
+    &\textbf{Coordenadores:}& Fábio Luiz Borges Simas (UNIRIO)\\
+    & & Augusto Quadros Teixeira (IMPA)
+
+  \end{tabular}
+
+\end{flushright}
+\vspace{0.3cm}
+
+Este é um esforço de professores da Educação Básica e Superior, assim como de entusiastas, para produzir coleções de livros didáticos de Matemática, voltadas para a Educação Básica, construídas de maneira colaborativa, fortemente baseadas em trabalhos de pesquisa em Educação e Ensino de Matemática.
+Aos recursos produzidos será atribuída a licença {\it Creative Commons} by-sa que garantirá livre visualização, distribuição e derivação do material. 
+
+Outra característica desta proposta é a sua construção em constante contato com professores da Educação Básica de diversas regiões do Brasil através de atividades sistemáticas: 
+1. revisão curricular, com o envio de trechos do material produzido a professores de escolas que deverão responder a questões pontuais sobre a qualidade do material; 
+2. testes do material, onde professores da Educação Básica serão solicitados a experimentar o material em suas aulas e responderem a um questionário específico; 
+3. articulação com cursos de formação continuada de professores a fim de experimentar e revisar o material.
+
+A colaboração se dará através de uma Plataforma explicando a filosofia do projeto, onde será possível visualizar, baixar e comentar o texto já produzido.
+Após cadastrar-se, o visitante também poderá editar o texto no próprio site, assim como na Wikipédia.
+Com a diferença de que neste projeto todas as edições serão avaliadas pela equipe de revisão.
+
+\section{Introdução}
+
+
+Recentemente o Brasil recebeu através do matemático Artur Avila a Medalha Fields, prêmio equivalente ao Nobel para matemática, conquistou a $34^a$ posição entre 109 países na $55^a$ Olimpíada Internacional de Matemática de 2014, que envolve jovens de até 19 anos.
+Contudo, a realidade é outra quando voltam-se os olhos para o Ensino Básico. Na edição de 2012, o Brasil amargou uma das últimas posições no ranking de países que realizaram o PISA ({\it Programme for International Student Assessment}), que avalia estudantes de 15 anos a cada 3 anos mundo afora.
+Esse resultado mostra que a educação matemática do brasileiro é desigual como a sociedade.
+Enquanto apenas $1\%$ dos estudantes nesta idade consegue desenvolver e trabalhar com modelos em situações complexas, aproximadamente $67\%$ dos estudantes brasileiros nesta idade conseguem, no máximo, extrair informações relevantes de um texto e usar aritmética básica, fórmulas, procedimentos e convenções para resolver problemas envolvendo números \cite[Country Note - Brazil]{pisa2012} p. 2.
+
+Existem diversos entraves para a melhoria do ensino nas escolas de Educação Básica dentre os quais destacam-se a má formação dos professores e a qualidade do livro didático adotado.
+Cabe ressaltar a interdependência deste dois aspectos quando \blockquote{o livro didático é, na maioria dos casos, a única fonte de referência do professor para organizar suas aulas, e até mesmo para firmar seus conhecimentos e dosar a apresentação que fará em classe.} (\cite{lima2001exame} p. 1 ). 
+Isso acontece especialmente devido à posição de destaque que se encontra o livro didático na cultura educacional brasileira como observa  \cite{machado} p. 31
+\blockquote{``($\cdots$) o livro `adotado' pelo professor - consumível ou não - praticamente determina o conteúdo a ser ensinado. O professor abdica do privilégio de projetar os caminhos a serem trilhados, em consonância com as circunstâncias - experiências, interesses, perspectivas - de seus alunos, passando a conformar-se, mais ou menos acriticamente, com o encadeamento de temas propostos pelo autor. Tal encadeamento ora tem características idiossincráticas, ora resulta da cristalização de certos percursos, que de tanto serem repetidos, adquirem certa aparência de necessidade lógica; nos dois casos, a passividade do professor torna um pouco mais difícil a já complexa tarefa da construção da autonomia intelectual dos alunos.''} 
+
+Alguns autores defendem que professores usando distintos livros textos valem-se de diferentes tipos de estratégias de ensino. 
+Fan e Kaeley concluíram que livros textos \blockquote{podem afetar as estratégias de ensino pela transmissão de mensagens pedagógicas aos professores e encorajando ou desencorajando a aplicação de diferentes estratégias de ensino no ambiente curricular} (ver \cite{fan2000influence}). Apple sugere que {\it 
+\blockquote{($\cdots$) it is the textbook which establishes so much of the material conditions for teaching and learning in classrooms ($\cdots$) and ($\cdots$) often defines what is elite and legitimate culture to pass on}} (ver \cite{apple2013teachers} p. 81). Robitaille e Travers argumentam que a grande dependência sobre livros textos é ainda maior em matemática que em outras disciplinas:
+{\it \blockquote{($\cdots$) perhaps more characteristic of the teaching of mathematics than of any other subject}} (ver \cite{robitaille1992international} p. 706).
+
+Deste modo para se alcançar os objetivos de aprendizagem em escala nacional torna-se indispensável a produção de livros didáticos que representem o currículo nacional nas salas de aula e que criem a oportunidades de envolvimento dos estudantes em atividades com os níveis cognitivos almejados. 
+No processo de criação de currículo único dos EUA, o {\it Common Core Standards}, foram publicados nas décadas de 80 e 90 pelo {\it National Council of Teachers of Mathematics} (NCTM) relatórios que buscavam criar uma visão coerente do que significa o letramento matemático num mundo em que os procedimentos matemáticos apoiam-se cada vez mais em computadores e também buscavam fornecer recomendações para que o ensino de matemática estivesse mais pautado na resolução de problemas, na comunicação, na reflexão e nas conexões entre a matemática e outras áreas do conhecimento.
+Considerando que as recomendações deste documento apenas seriam seguidas se houvessem modelos de currículo,  no final de 1992, a {\it National Science Foundation} (NSF) investiu 70 milhões de dólares na elaboração de 13 livros didáticos que refletissem as recomendações curriculares do NCTM. 
+Os livros produzidos neste contexto eram consideravelmente diferentes dos utilizados na época nos Estados Unidos, eles exigiam formas diferentes de avaliação e de administração da sala de aula, além disso, possuíam exercícios com demandas cognitivas mais elevadas que o usual. 
+Por estas características o material foi rejeitado em diversos distritos. 
+Os estudos realizados com estudantes foram quase uniformes em concluir um aumento na aprendizagem e no interesse dos estudantes pela matemática. 
+Sua inserção no mercado de livros do Ensino Médio não foi tão grande, mas no Ensino Fundamental alcançou entre 20 e 25$\%$ do total de vendas deste segmento. 
+Contudo o impacto da coleção financiada pela NSF foi muito maior visto que as editoras comerciais passaram a ter entre suas coleções ao menos uma que seguia as recomendações do NCTM para o ensino de matemática e, portanto, valendo-se das estratégias utilizadas pela coleção da NSF (ver \cite{hirsch2007perspectives} p. ix e x).
+
+Sobre a qualidade dos livros escolhidos pelas escolas \cite{machado} p. 32 afirma que
+\blockquote{``($\cdots$) certamente existem livros de boa qualidade -- e nem sempre os mais adotados pelas escolas; o fato de os professores eventualmente escolherem aqueles que oferecem mais facilidades imediatistas do que recursos efetivos para um trabalho proveitoso em classe deve-se à cristalização de uma forma de utilização inadequada a que foram conduzidos, sobretudo, em razão de condições de trabalho reconhecidamente insatisfatórias.''}
+
+De acordo com uma pesquisa realizada em Santa Maria - RS (ver \cite{zambon}) a escolha das coleções no contexto do Plano Nacional do Livro Didático (PNLD) se inicia com a chegada de amostras das editoras e visitas de representantes às escolas, alguns diretores sequer sabem da existência do Guia do Livro Didático e os livros mais escolhidos costumam ser aqueles com maior trabalho de {\it marketing} realizado pelas editoras (visita de representantes e o envio de exemplares aos professores e às escolas).
+
+Esta proposta surge para construir coleções de livros didáticos elaborados colaborativamente com participação dos próprios professores.
+A colaboração dos professores se dará por participação espontânea por meio de comentários e sugestões na plataforma e no fórum de discussões, e também de maneira sistemática através da solicitação, por parte da equipe organizadora, para que professores da Educação Básica apresentem um parecer sobre trechos do livro, que apliquem trechos do material em suas aulas e retornem com observações e também através da articulação com projetos de capacitação de professores.
+Tudo isso durante a elaboração das coleções.
+Na medida em que os professores se tornem colaboradores, a escolha desta coleção será um movimento natural.
+Além de colocar o professor em uma posição adequada para repensar o lugar do livro didático na sala de aula e seu próprio papel de educador criativo.
+
+Um livro aberto nos moldes desta proposta possibilita que o professor crie a sua própria versão do livro incluindo exemplos do contexto de sua comunidade, aprofundamentos que lhe pareçam pertinentes ou mesmo edições que não tenham sido aceitas pelos revisores deste projeto.
+Este modelo de livro aberto, incluindo a maneira de fazer aqui apresentada, pode ser ainda mais bem aproveitado em disciplinas como história, língua portuguesa e geografia por contemplar regionalismos sem o esforço de se iniciar a elaboração da coleção do início.
+Todo o ferramental tecnológico da plataforma será documentado em repositório aberto no {\it \href{https://github.com/livro-aberto}{GitHub}}, para facilitar seu acesso e replicação em outros contextos.
+
+\section{Relevância da proposta}
+
+Esta proposta pretende melhorar a qualidade dos livros didáticos pois a elaboração será baseada em trabalhos de pesquisa científica sobre Educação e sobre o Ensino de Matemática e realizada por pesquisadores qualificados e professores de escolas conceituadas. 
+Como outras coleções também podem se apropriar de trechos desta obra, pode-se modificar o design das coleções das demais editoras.
+
+Apesar de toda a beleza desta iniciativa, de pouco ela vale se os professores das escolas decidirem não usufruir dos recursos disponíveis em nossos livros.
+Neste sentido será fundamental a popularização e a divulgação massiva do material entre os professores das escolas ainda na fase de elaboração.
+Na medida em que eles se tornam autores ou colaboradores das coleções, é natural que as escolham para trabalhar com seus alunos.
+O envolvimento constante com diversos professores da Educação Básica também deve propiciar o engajamento nesta proposta.
+Espera-se que o professor-autor se diferencie do professor-consumidor do livro, adquira numa postura mais criativa no processo de ensino em contraposição ao lugar de mero reprodutor do conteúdo na ordem e do modo que são apresentados no livro didático escolhido.
+
+Ao ser construída com a filosofia {\it open source}, esta obra adquire um caráter permanente, de modo que independente dos organizadores, qualquer pessoa ou editora pode fazer uso dos recursos nela disponíveis. 
+
+O preço de venda dos livros desta coleção não pode ser alto porque qualquer um pode editar e imprimir o mesmo material disponível no site.
+Além disso, qualquer pessoa, empresa ou mesmo o governo podem imprimir e vender a mesma coleção ou derivações dela.
+Acredita-se que a ``Educação Aberta'' tenha potencial para readequar os preços dos livros didáticos brasileiros em um nível muito abaixo do atual.
+
+\section{Objetivos}
+
+
+\begin{enumerate} [\quad a)] %d
+  \item     Produzir coleções de livros didáticos de matemática para o Educação Básica com código aberto, impresso e digital, de livre distribuição, permitindo derivações contendo volumes para os estudantes e os respectivos manuais de professores nos moldes do PNLD.
+  \item     Desenvolver e manter uma Plataforma digital contendo um ambiente de elaboração onde os professores possam visualizar, copiar e colaborar com a coleção.
+  \item Desenvolver um ambiente de colaboração em rede para que professores troquem experiências de sala de aula e discutam questões currículares.
+  \item     Impactar positivamente na qualidade dos livros didáticos de matemática utilizados nas escolas públicas da Educação  Básica, mesmo naqueles produzidos por outras editoras.
+  \item     Reduzir os preços das coleções de livros didáticos de matemática no Brasil.
+  \item     Conseguir adesão de diversos professores das escolas de Educação Básica para a ideia de ``Educação Aberta'' e para estas coleções.
+  \item     Estabelecer uma metodologia e plataforma de cooperação para produção de material didático que possam ser reproduzidos em projetos análogos para outras disciplinas.
+\end{enumerate} %d
+
+
+
+\section{Método}
+
+O projeto será apresentado em uma Plataforma na internet, onde poderão ser visualizados e baixados o sumário de cada livro e o capítulo da coleção em suas versões mais recentes sempre em formato html e pdf.
+Haverá um fórum para discussões gerais sobre o projeto e para sugestões gerais disponível para participação de toda a comunidade, embora seja necessário um registro.
+O usuário poderá editar o texto diretamente.
+Para isso deverá se registrar e concordar com os termos da licença e ceder os direitos sobre a autoria do material para o IMPA-OS.
+Então com um clique acessará um editor de textos com o código da seção que está visualizando.
+Ao término da edição, o coordenador da área (eixo) será informado das alterações linha por linha através do sistema de controle de versões do repositório do  {\it GitHub}.
+Estas modificações ficarão disponíveis no texto em html por tempo determinado e depois serão omitidas até a aprovação do coordenador de eixo. 
+A versão em pdf somente contará com as versões aprovadas e será indicada para impressão.
+Os frequentes comentários dos coordenadores devem ser um termômetro do bom andamento do projeto.
+
+O conteúdo desta obra será aquele determinado pela Base Nacional Comum Curricular (BNCC) complementado com tópicos extras a serem selecionados pela equipe organizadora.
+A BNCC divide a matemática da Educação Básica em 5 eixos: Geometria, Medida e Forma, Probabilidade e Estatística, Números e Operações e Álgebra e Funções.
+Inicialmente a Equipe produzirá todo o conteúdo do primeiro livro.
+Mas acredita-se que muito em breve surgirão contribuições de Trabalhos de Conclusão de Curso de graduação e do Profmat, também devem ser incorporados alguns trabalhos já existentes de autores que aceitem disponibilizá-los nos termos da licença desta coleção.
+Além disso, qualquer pessoa que tenha interesse, pode editar o texto, modificando, excluindo ou adicionando novos trechos.
+
+\subsection{Funções desempenhadas na equipe organizadora}
+
+A equipe organizadora estará responsável pela produção acadêmica do Material Didático incluindo o texto para o estudante, o texto do Manual do Professor, atividades e descrição de atividades eletrônicas. A formatação do texto, layout das seções, criação de figuras e implementação de recursos digitais será responsabilidade do IMPA. De maneira mais detalhada, na equipe organizadora teremos as seguintes funções:
+\vspace{0.2cm}
+
+{\it A. Coordenação de eixo.}
+\begin{itemize} %s
+  \item     Criação de roteiro detalhado para cada seção (lição ou capítulo) de seu eixo listando seus objetivos gerais e habilidades do BNCC que serão trabalhadas, objetivos de cada atividade e exemplo, definindo os métodos pedagógicos a serem utilizados. Este roteiro aos colegas de eixo deve ser elaborado antes da efetiva redação da seção. Ele deve ser discutido com os demais coordenadores de eixo antes de ser implementado pelos elaboradores. Este roteiro deve ser pautado em sua experiência acadêmica e em trabalhos de pesquisa científica nas áreas de Ensino e Educação Matemática.
+  \item     Acompanhar de modo contínuo a redação do material de modo a influenciar sua elaboração na direção do roteiro criado e corrigir possíveis incongruências.
+  \item     Estar atualizado sobre o material já produzido pelos demais eixos.
+  \item     Estar em constante diálogo com os coordenadores dos outros eixos para adequação de linguagem e forma do texto.
+  \item     Efetuar correções e melhorias no material do eixo.
+  \item     Adequar o texto à norma culta e ao nível de escolaridade.
+  \item     Verificar se há saltos no nível de dificuldade do material do eixo.
+  \item     Apresentar o material nas reuniões dos comitês de elaboração.
+  \item     Verificar, em conjuntos com os demais coordenadores de eixo, se há saltos no nível de dificuldade no conteúdo de cada volume.
+  \item     Determinar, em conjuntos com os demais coordenadores de eixo, o número máximo de páginas para cada eixo.
+  \item     Analisar a relevância para a coleção e a consistência matemática de conteúdos submetidos à equipe.
+  \item     Analisar os relatórios de revisões externas e testes do material e efetuar as alterações que julgar necessárias, convidando membros da equipe para auxiliar nesta tarefa, caso julgue necessário.
+  \item     Informar ao gestor do projeto sobre qualquer mal funcionamento de seu comitê que possa gerar atrasos ou que implique em prejuízo à qualidade do recurso didático.
+\end{itemize} %s
+\vspace{0.2cm}
+
+{\it A. Elaboração de texto para os estudantes (por eixo).}
+\begin{itemize} %d
+  \item     Elaborar o texto voltado para o estudante do Material Didático seguindo as indicações do Coordenador de Eixo.
+  \item     Adaptar o material sempre que solicitado pelo coordenador de seu eixo.
+  \item     Descrever detalhadamente todas as figuras que se fizerem necessárias ao texto sob sua responsabilidade.
+  \item     Analisar criticamente os roteiros de lições elaboradas pelo coordenador do eixo ao qual está vinculado.
+  \item     Concepção de recursos digitais para o Material Didático, consistindo em texto para o estudante e especificação detalhada sobre os aspectos de uso e interface do aplicativo computacional voltado à sua implementação por desenvolvedor de software.
+\end{itemize} %d
+\vspace{0.2cm}
+
+{\it B. Elaboração de atividades gerais (por eixo).}
+\begin{itemize} %d
+  \item   Elaboração de atividades para o Material Didático, as respectivas resoluções, texto destinado ao professor contendo os objetivos acadêmicos, as habilidades que pretende-se desenvolver nos estudantes, recomendações para a implementação da atividade e classificação de atividades por níveis cognitivos sempre seguindo as orientações do coordenador do eixo.
+  \item   Descrever de maneira detalhada todas as figuras que se fizerem necessárias às atividades, preferencialmente oferencendo um esboço detalhado da figura à mão.
+  \item   Analisar criticamente os roteiros de lições elaboradas pelo coordenador do eixo ao qual está vinculado.
+  \item   Concepção de atividades eletrônicas educativas ou recursos digitais para o Material Didático, consistindo em texto para o estudante com instruções para a atividade e especificação detalhada sobre os aspectos de uso e interface do aplicativo computacional voltado à sua implementação por desenvolvedor de software. Além disso, também é parte desta função elaborar texto destinado ao professor contendo os objetivos acadêmicos e as habilidades que pretende-se desenvolver nos estudantes através de cada atividade bem como as soluções das atividades.
+\end{itemize} %d
+\vspace{0.2cm}
+
+{\it E: Revisão externa e testes do Material Didático (por volume).}
+\begin{itemize} %s
+  \item     Elaborar de questionário de avaliação curricular e questionário de avaliação didática para seções específicas do Material Didático. 
+  \item     Enviar o Material Didático a professores externos à equipe e solicitar resposta aos questionários supracitados.
+  \item     Postar relatório escrito na Plataforma sobre os resultados dos questionários.
+  \item     Auxiliar na divulgação e teste do material em capacitações ou treinamento de professores.
+\end{itemize} %s
+\vspace{0.2cm}
+
+{\it F: Desenvolvimento e manutenção da Plataforma (por volume).}
+\begin{itemize} %s
+  \item     Desenvolver plataforma online para elaboração de livros de matemática com uma interface amigável e acessível ao Professor de Matemática. Esta plataforma deve permitir facilmente colaborações externas e favorecer derivações dos recursos didáticos nela produzidos.
+  \item     Responsabilizar-se por manter a Plataforma acessível tanto para visualização como para edição.
+  \item     Zelar pela integridade dos arquivos postados na Plataforma (manter {\it backup}).
+  \item     Proteger a Plataforma de eventuais invasores.
+  \item     Fornecer o suporte necessário às equipes de elaboração quando solicitado.
+\end{itemize} %s
+\vspace{0.2cm}
+
+{\it G: Gestão do projeto (por volume).}
+\begin{itemize} %d
+  \item     Elaboração conceitual dos contratos de prestação de serviços entre a Equipe e o IMPA.
+  \item     Buscar financiadores para o projeto.
+  \item     Fazer a interlocução entre a Equipe e o IMPA. 
+  \item     Avaliar o cumprimento dos prazos pelos demais membros da Equipe.
+  \item     Decidir pela aprovação ou não das tarefas desenvolvidas pelos demais membros da Equipe.
+  \item     Avaliar as sugestões sobre alterações em quantidade, sequência e conteúdo a ser tratado em cada capítulo.
+  \item     Manter a Equipe informada caso existam quaisquer alterações conceituais nos capítulos.
+  \item     Informar à Contratante decisões que envolvam pagamento com antecedência superior a 3 (três) dias úteis da data do pagamento.
+  \item     Zelar pela qualidade e pelo cumprimento dos prazos das tarefas desenvolvidas pela Equipe.
+  \item     Convidar e viabilizar a participação dos convidados externos à Equipe (chamados consultores ad hoc).
+  \item     Zelar para que não permaneça na Plataforma material de terceiros protegido por direitos autorais.
+\end{itemize} %d
+
+\subsection{Da experimentação do material}
+
+Todo material será submetido a dois níveis de testes. 
+Uma avaliação do ponto de vista do currículo, em que professores da Educação Básica ou especialistas são convidados a uma leitura crítica de capítulos elaborados e a responderem um questionário com considerações específicas. 
+Outra avaliação de caráter pedagógico, em que professores da Educação Básica são convidados a aplicar o conteúdo em suas aulas e a responderem a um questionário específico sobre o uso do material com seus estudantes. Também pretende-se trabalhar em conjunto com cursos de formação continuada de professores a fim de experimentar o material ainda durante sua elaboração.
+
+\subsection{Do editoração do material}
+
+Todas as figuras e a diagramação do texto, além da efetiva implementação dos recursos digitais, serão de responsabilidade do IMPA, não cabendo a esta equipe organizadora obrigações com estas tarefas.
+
+\subsection{Dos direitos autorais e da licença}
+
+
+Ao conteúdo produzido no contexto deste projeto está atribuída a licença {\it Creative Commons} by-sa-nc.
+Também é permitido, e encorajado, que instituições de ensino distribuam gratuitamente versões impressas da coleção a seus estudantes. 
+
+Todos os elaboradores e colaboradores, antes de editarem o texto na plataforma, devem ceder os direitos autorais ao IMPA do material postado na Plataforma.
+O IMPA se compromete contratualmente a aumentar os direitos da comunidade com relação ao uso do  material, através da imposição da licensa {\it Creative Commons} by-sa até 10 anos depois do lançamento da versão impressa.
+
+A estratégia de permitir o uso comercial do material após alguns anos por qualquer indivíduo ou organização serve para estimular derivações do material.
+O uso comercial por terceiros com esta licença é perfeitamente factível especialmente porque as derivações realizadas por terceiros não precisam estar disponíveis ao público, então o agente poderá competir com exclusividade de suas modificações.
+
+\subsection{Da remuneração da equipe}
+
+Os membros da equipe serão contratados pelo IMPA como prestadores de serviços para funções específicas. 
+Os contratos possuirão durações variáveis e valores que dependerão das tarefas a serem desempenhadas.
+O pagamento será feito adiantado embora fique acordado um bônus pelo cumprimento de prazos e qualidade que pode chegar ao dobro do valor pago inicialmente.
+
+
+\section{Etapas de desenvolvimento do projeto}
+O desenvolvimento desta proposta se dará em etapas. São elas Piloto, Ensino Médio, Ensino Fundamental (anos finais) e Ensino Fundamental (anos iniciais).
+
+\subsection{Etapa piloto}
+
+Nesta etapa serão desenvolvidos e testados o modo de trabalho da equipe, a plataforma de desenvolvimento acadêmico, as revisões externas e os testes do material, além da interlocução com as equipes de {\it design} e de desenvolvimento de atividades eletrônicas e teste de ações mitigadoras para evitar atraso para o cumprimento das etapas. 
+Esta parte será realizada com uma equipe fixa de 6 pessoas e outros convidados para tarefas específicas e deve entregar um livro didático sobre frações contendo livro do aluno e manual do professor (estará disponível em \url{umlivroaberto.com}). 
+Sempre buscando aprimorar os métodos e tecnologias utilizados.
+
+O conteúdo do material didático a ser produzido será pautado no seguinte roteiro:
+
+\begin{itemize} %d
+  \item     Introdução
+  \item     Lição 1: Equipartição; frações unitárias até um décimo: conceito, linguagem, comparação simples contextualizada.
+  \item     Lição 2: Representação simbólica, representação na reta numérica e ordenação das frações     $1/n$  com  $n \in \mathbb{N}$    , frações unitárias decimais.
+  \item     Lição 3: A reta numérica.
+  \item     Lição 4: Frações equivalentes e comparação de frações gerais.
+  \item     Lição 5: Adição e subtração de frações.
+\end{itemize} %d
+
+Esta etapa se inicia em 05 de fevereiro e termina em 30 de agosto de 2016.
+
+\subsection{Etapa Ensino Médio}
+
+Nesta etapa será produzida a coleção para o Ensino Médio tendo como meta a concorrência no PNLD de abril de 2019.
+O modo de funcionamento desenvolvido na Etapa Piloto será replicado nesta fase sempre com duas ou três equipes trabalhando simultaneamente em eixos diferentes.
+O exemplo de duas lições em um mesmo eixo neste modo de trabalho foi resumido no diagrama abaixo onde cores diferentes são utilizadas para expressar tarefas de atores distintos.
+
+\noindent\includegraphics[width=1.0\textwidth]{sequencia_tarefas_cortado.png}
+
+O cronograma de execução da etapa do Ensino Médio está representado na figura abaixo. A elaboração do Volume 1 se iniciará em 23 de agosto de 2016 e a entrega do terceiro volume está prevista para o dia 11 de fevereiro de 2019.
+
+\noindent\includegraphics[width=1.0\textwidth]{cronograma_colecao.png}
+\vspace{0.2 cm}
+
+A coleção é composta por três volumes, um para cada série do Ensino Médio. A matemática ensinada na Educação Básica é separada nos cinco eixos  Geometria, Medida e Forma, Probabilidade e Estatística, Números e Operações, Álgebra e Funções. O eixo Probabilidade e Estatística merece um cuidado especial por ser quase inexistente nos livros deste nível de escolaridade e ser praticamente desconhecida dos professores da Educação Básica. Por estes motivos serão dedicados 6 meses em cada volume deste eixo, enquanto para os demais eixos serão gastos apenas 4 meses.
+\clearpage
+
+\noindent{\bf Recursos financeiros para a etapa do Ensino Médio}
+\vspace{0.2 cm}
+
+\begin{table}[h] \label{tab por eixo}
+  \begin{center}
+\begin{tabular}[h!]{|l|c|c|}
+   \hline
+%\rowcolor{lightgray}
+\bf CUSTO COM PESSOAL: Por eixo & de 4 meses &  de 6 meses \\
+   \hline
+   Coordenação de eixo & R$\$$ 15.000,00 & R$\$$ 22.500,00\\
+   \hline
+   Texto para o estudante & R$\$$ 6.000,00 & R$\$$ 9.000,00\\
+   \hline
+   Texto para o professor & R$\$$ 5.000,00 & R$\$$ 7.500,00\\
+   \hline
+   Atividades gerais & R$\$$ 6.000,00 & R$\$$ 9.000,00\\
+   \hline
+   Atividades eletrônicas & R$\$$ 6.000,00  & R$\$$ 9.000,00\\
+   \hline
+   {\bf Total} & {\bf R$\$$ 38.000,00} &  {\bf R$\$$ 57.000,00}\\
+   \hline
+\end{tabular}
+  \end{center}
+  \caption{Custo de cada um dos eixos de 4 meses e do eixo de Probabilidade e Estatística por volume}
+ \end{table}
+ 
+ 
+\begin{table}[h] \label{tab por volume}
+  \begin{center}
+  \begin{tabular}[h]{lr}
+  \begin{tabular}[h!]{|l|c|}
+   \hline
+%\rowcolor{lightgray}
+\multicolumn{2}{|c|}{{\bf EXTRAS por volume}} \\
+   \hline
+   Quantidade de viagens & 8\\
+   \hline
+   Custo médio por passagem & R$\$$ 1.000,00\\
+   \hline
+   Quantidade de diárias por viagem & 3\\
+   \hline
+   Valor da diária & R$\$$ 400,00\\
+   \hline
+   {\bf Total com viagens} & {\bf R$\$$ 17.600,00} \\
+   \hline
+   Consultoria Adhoc & R$\$$ 24.000,00 \\
+   \hline
+   Material de Consumo & R$\$$ 24.000,00 \\
+   \hline
+   {\bf Total} & {\bf R$\$$ 65.600,00} \\
+   \hline
+\end{tabular} &
+\begin{tabular}[h!]{|l|c|}
+   \hline
+%\rowcolor{lightgray}
+\multicolumn{2}{|c|}{{\bf CUSTO COM PESSOAL: Por volume}}  \\
+\hline
+   Revisão externa e testes & R$\$$ 7.000,00 \\
+   \hline
+   Suporte da plataforma & R$\$$ 30.000,00\\
+   \hline
+   Gestão do projeto & R$\$$ 30.000,00\\
+   \hline
+   {\bf Total} & {\bf R$\$$ 67.000,00}\\
+   \hline
+\end{tabular}
+\end{tabular}
+  \end{center}
+ \end{table}
+ 
+ 
+
+ \begin{table}[h!]\label{tab orcamento}
+  \begin{center}
+   \begin{tabular}{|c|c|}
+   \hline
+   \multicolumn{2}{|c|}{{\bf ORÇAMENTO RESUMIDO}} \\
+   \hline   
+   Custeio de pessoal por volume &  R$\$$ 300.000,00 \\
+   \hline
+   Custeio de viagens por volume &  R$\$$ 17.600,00 \\
+   \hline
+   Custeio de capital por volume &  R$\$$ 24.000,00 \\
+   \hline
+    Total por volume &  R$\$$ 341.600,00\\
+   \hline
+    Total da coleção & R$\$$ 1.024.800,00\\
+   \hline
+   {\bf CUSTO MÉDIO MENSAL}&{\bf R$\$$ 34.160,00}\\
+   \hline
+   \end{tabular}
+  \end{center}
+  \caption{Custo da coleção do Ensino Médio}
+ \end{table}
+
+
+\bibliographystyle{apalike}
+% chamando o arquivo refs.bib
+ \bibliography{refs}
+\end{document}
